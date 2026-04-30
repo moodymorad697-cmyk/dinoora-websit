@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "首页",
+    "services": "服务",
+    "about": "关于我们",
+    "track": "追踪",
+    "contact": "联系我们",
+    "getQuote": "获取报价"
+  },
+  "hero": {
+    "title": "您值得信赖的",
+    "subtitle": "中国贸易合作伙伴",
+    "description": "完整的端到端解决方案：采购、质量检验、仓储、运输、清关和物流服务，面向中东市场",
+    "getQuote": "获取免费报价",
+    "ourServices": "我们的服务"
+  },
+  "stats": {
+    "years": "年经验",
+    "clients": "满意客户",
+    "countries": "服务国家",
+    "success": "成功率"
+  },
+  "services": {
+    "title": "完整的贸易解决方案",
+    "description": "从采购到交付，我们处理您中国贸易之旅的每一步",
+    "sourcing": {
+      "title": "产品采购",
+      "description": "通过我们的专业采购团队在中国寻找最佳供应商和产品"
+    },
+    "inspection": {
+      "title": "质量检验",
+      "description": "通过彻底的检验和工厂审计确保产品质量"
+    },
+    "warehousing": {
+      "title": "仓储",
+      "description": "在中国战略地点提供安全存储解决方案"
+    },
+    "shipping": {
+      "title": "运输与货运",
+      "description": "为您的所有运输需求提供空运、海运、铁路和卡车运输选择"
+    },
+    "customs": {
+      "title": "清关",
+      "description": "专业的报关和文件服务"
+    },
+    "logistics": {
+      "title": "物流解决方案",
+      "description": "端到端的供应链管理和履行服务"
+    }
+  },
+  "whyChooseUs": {
+    "title": "为什么选择我们？",
+    "description": "我们将本地专业知识与全球影响力相结合，提供卓越的成果",
+    "endToEnd": "端到端解决方案",
+    "endToEndDesc": "从采购到最终交付的完整服务",
+    "middleEast": "专注中东",
+    "middleEastDesc": "对区域市场和要求的深入了解",
+    "quality": "质量保证",
+    "qualityDesc": "多个检验阶段和供应商验证",
+    "technology": "技术驱动",
+    "technologyDesc": "实时跟踪和数字流程"
+  },
+  "cta": {
+    "title": "准备好开始您的中国贸易之旅了吗？",
+    "description": "今天获取免费报价，了解我们如何帮助您在中国贸易中取得成功",
+    "button": "获取您的免费报价"
+  },
+  "footer": {
+    "tagline": "您值得信赖的中国贸易合作伙伴，为中东市场提供完整的端到端解决方案。",
+    "quickLinks": "快速链接",
+    "services": "服务",
+    "contact": "联系我们",
+    "rights": "版权所有",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "cookies": "Cookie政策"
+  }
+}

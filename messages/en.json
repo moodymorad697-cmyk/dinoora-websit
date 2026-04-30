@@ -1,0 +1,272 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "track": "Track",
+    "contact": "Contact",
+    "getQuote": "Get Quote",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Available 24/7 for Your Business",
+    "title": {
+      "line1": "Your Gateway to",
+      "line2": "China Trade"
+    },
+    "description": "We handle everything from finding suppliers to delivering products. Simple, fast, and reliable trade solutions for your business.",
+    "cta": {
+      "primary": "Start Your Order",
+      "secondary": "Explore Services"
+    },
+    "trust": "businesses trust us"
+  },
+  "whyUs": {
+    "badge": "Why Choose Us",
+    "title": "What Makes Us Different",
+    "subtitle": "We don't just move goods. We negotiate better prices, ensure quality, and deliver faster than others.",
+    "items": {
+      "negotiation": {
+        "title": "Expert Negotiation",
+        "desc": "Our team negotiates directly with factories to get you prices others can't match"
+      },
+      "quality": {
+        "title": "Quality First",
+        "desc": "We inspect every product personally before shipping. No surprises, no disappointments"
+      },
+      "speed": {
+        "title": "Fast & Reliable",
+        "desc": "From order to delivery in record time. We handle urgent shipments with ease"
+      },
+      "price": {
+        "title": "Best Value",
+        "desc": "Transparent pricing with no hidden fees. You always know what you're paying for"
+      }
+    }
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "Everything You Need",
+    "viewAll": "View All Services",
+    "sourcing": "Product Sourcing",
+    "sourcingDesc": "Find the right suppliers and products for your business",
+    "inspection": "Quality Check",
+    "inspectionDesc": "Professional inspection before shipping to ensure quality",
+    "warehousing": "Storage",
+    "warehousingDesc": "Secure warehousing in China until you're ready to ship",
+    "shipping": "Shipping",
+    "shippingDesc": "Air, sea, and land shipping options to your destination",
+    "customs": "Customs",
+    "customsDesc": "We handle all paperwork and customs clearance",
+    "logistics": "Logistics",
+    "logisticsDesc": "Complete supply chain management from start to finish"
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Tell us what you need. We'll handle the rest.",
+    "button": "Get a Free Quote"
+  },
+  "quote": {
+    "title": "Get Your Free Quote",
+    "subtitle": "3 simple steps to start your order",
+    "back": "Back",
+    "next": "Continue",
+    "submit": "Send Request",
+    "step1": {
+      "title": "What do you need?",
+      "subtitle": "Select the service that matches your needs"
+    },
+    "step2": {
+      "title": "How can we reach you?",
+      "subtitle": "Choose your preferred contact method",
+      "whatsapp": "Your WhatsApp Number",
+      "email": "Your Email Address"
+    },
+    "step3": {
+      "title": "Tell us more",
+      "subtitle": "Share details about what you're looking for",
+      "placeholder": "Example: I'm looking for electronics suppliers in Shenzhen. Need 500 units with custom branding. Shipping to Dubai..."
+    },
+    "success": {
+      "title": "Request Sent!",
+      "message": "We'll contact you within 24 hours with your personalized quote.",
+      "backHome": "Back to Home"
+    },
+    "info": {
+      "response": "Response Time",
+      "cost": "Quote Cost",
+      "commitment": "Commitment"
+    }
+  },
+  "workflow": {
+    "badge": "How We Work",
+    "title": "Shipment Handling Process",
+    "subtitle": "Clear operational workflow from supplier to destination",
+    "steps": {
+      "supplier": {
+        "title": "Supplier Confirmation",
+        "desc": "Verify production capability, export license status, and order readiness before scheduling pickup"
+      },
+      "intake": {
+        "title": "Warehouse Intake",
+        "desc": "Receive cargo at our facility, document condition, verify quantities, and assign tracking references"
+      },
+      "inspection": {
+        "title": "Inspection Handling",
+        "desc": "Physical verification against specifications, packaging check, and quality documentation"
+      },
+      "dispatch": {
+        "title": "Export Dispatch",
+        "desc": "Complete export documentation, customs filing, and coordinate carrier handoff"
+      }
+    },
+    "details": {
+      "coordination": {
+        "title": "Multi-supplier Coordination",
+        "desc": "Consolidate cargo from multiple suppliers into single shipments when beneficial"
+      },
+      "documentation": {
+        "title": "Documentation Preparation",
+        "desc": "Prepare commercial invoices, packing lists, certificates, and customs paperwork"
+      },
+      "tracking": {
+        "title": "Shipment Tracking",
+        "desc": "Monitor movement from warehouse intake through final delivery confirmation"
+      }
+    }
+  },
+  "industries": {
+    "badge": "Industries",
+    "title": "Sectors We Support",
+    "subtitle": "Practical experience across product categories",
+    "capabilities": "Typical handling:",
+    "consumer": {
+      "title": "Consumer Goods",
+      "desc": "Apparel, accessories, home products, and personal items",
+      "capabilities": "Multi-SKU consolidation, quality sampling, packaging compliance"
+    },
+    "electronics": {
+      "title": "Electronics",
+      "desc": "Devices, components, accessories, and consumer technology",
+      "capabilities": "ESD protection, battery compliance, fragile handling protocols"
+    },
+    "furniture": {
+      "title": "Furniture",
+      "desc": "Indoor and outdoor furniture, fixtures, and home furnishings",
+      "capabilities": "Assembly verification, damage prevention, volume optimization"
+    },
+    "industrial": {
+      "title": "Industrial Supplies",
+      "desc": "Machinery parts, tools, hardware, and manufacturing inputs",
+      "capabilities": "Technical specifications review, weight handling, hazmat screening"
+    },
+    "retail": {
+      "title": "Retail Products",
+      "desc": "Store supplies, display items, packaging, and promotional materials",
+      "capabilities": "Labeling requirements, bulk consolidation, seasonal scheduling"
+    },
+    "packaging": {
+      "title": "Packaging Materials",
+      "desc": "Boxes, containers, labels, and shipping supplies",
+      "capabilities": "Volume quotes, standard sizing, print verification"
+    }
+  },
+  "risk": {
+    "badge": "Risk Management",
+    "title": "How We Handle Risks",
+    "subtitle": "Operational approach to common trade challenges",
+    "items": {
+      "supplier": {
+        "title": "Supplier Reliability",
+        "desc": "Verification of export license, production capacity, and previous shipment history"
+      },
+      "accuracy": {
+        "title": "Cargo Accuracy",
+        "desc": "Physical count verification, specification matching, and quality sampling before export"
+      },
+      "documentation": {
+        "title": "Documentation Correctness",
+        "desc": "Review of commercial invoices, HS codes, and required certificates for destination country"
+      },
+      "readiness": {
+        "title": "Shipment Readiness",
+        "desc": "Packaging adequacy, labeling compliance, and carrier booking confirmation"
+      }
+    },
+    "prevention": {
+      "title": "Prevention Measures",
+      "items": [
+        "Pre-shipment supplier verification calls",
+        "Photo documentation of cargo condition at intake",
+        "Double-check documentation before customs submission",
+        "Carrier booking confirmation 48 hours before pickup",
+        "Proactive communication of any delays or issues"
+      ]
+    }
+  },
+  "cases": {
+    "badge": "Examples",
+    "title": "Recent Shipments",
+    "subtitle": "Operational examples of completed work",
+    "route": "Route",
+    "scope": "Scope",
+    "outcome": "Result",
+    "case1": {
+      "type": "Sea Freight",
+      "route": "Guangzhou → Jeddah",
+      "scope": "3 suppliers consolidated, FCL container, mixed consumer goods",
+      "outcome": "Delivered on schedule with all documentation correct"
+    },
+    "case2": {
+      "type": "Air Freight",
+      "route": "Shenzhen → Dubai",
+      "scope": "Electronics shipment, battery compliance handling, urgent delivery",
+      "outcome": "Shipped within 72 hours of warehouse intake"
+    },
+    "case3": {
+      "type": "Land + Sea",
+      "route": "Yiwu → Istanbul",
+      "scope": "Rail to port, sea freight, customs brokerage included",
+      "outcome": "Cost-effective routing with reliable transit time"
+    }
+  },
+  "knowledge": {
+    "badge": "Insights",
+    "title": "For Traders",
+    "subtitle": "Practical information to help plan your shipments",
+    "items": {
+      "shippingCosts": {
+        "title": "Understanding Shipping Costs",
+        "desc": "Factors that affect rates: weight, volume, route, season, and fuel adjustments"
+      },
+      "exportPrep": {
+        "title": "Preparing Goods for Export",
+        "desc": "Packaging standards, labeling requirements, and documentation timelines"
+      },
+      "supplierTiming": {
+        "title": "Managing Supplier Timelines",
+        "desc": "Realistic production schedules, buffer time, and coordination workflows"
+      },
+      "shippingMethods": {
+        "title": "Choosing Shipping Methods",
+        "desc": "Air vs sea vs rail: cost, speed, and suitability for different cargo types"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Your direct line to China. We negotiate better prices, ensure quality, and deliver faster.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "home": "Home",
+    "about": "About",
+    "getQuote": "Get Quote",
+    "sourcing": "Sourcing",
+    "shipping": "Shipping",
+    "warehousing": "Storage",
+    "inspection": "Quality Check",
+    "rights": "All rights reserved",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}
