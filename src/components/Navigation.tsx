@@ -69,17 +69,15 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <button 
+          <button
             onClick={() => scrollToSection('hero')}
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-              <Globe className="w-6 h-6 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-lg font-bold text-gray-900 tracking-tight">DINOORA</div>
-              <div className="text-xs text-gray-500 font-medium">China Trade Experts</div>
-            </div>
+            <img
+              src="/logo-dinoora.png"
+              alt="DINOORA"
+              className="h-10 w-auto"
+            />
           </button>
 
           {/* Desktop Navigation - Quick Links */}
