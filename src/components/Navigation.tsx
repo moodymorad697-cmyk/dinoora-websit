@@ -67,16 +67,16 @@ export default function Navigation() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/98 backdrop-blur-md shadow-lg border-b border-gray-100' : 'bg-white/80 backdrop-blur-sm'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-32">
           {/* Logo */}
           <button
             onClick={() => scrollToSection('hero')}
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 hover:scale-110 transition-all duration-300 drop-shadow-2xl"
           >
             <img
               src="/logo-dinoora.png"
               alt="DINOORA"
-              className="h-10 w-auto"
+              className="h-[104px] w-auto drop-shadow-xl"
             />
           </button>
 
