@@ -129,81 +129,81 @@ export default function Home() {
   const services = [
     { 
       icon: Search, 
-      title: "Product Sourcing", 
-      desc: "Access our network of 500+ pre-vetted factories across 30 Chinese provinces. We match your specs to verified suppliers through AI-powered analysis.",
-      features: ["Factory verification", "Price benchmarking", "Sample management"],
+      title: "توريد المنتجات", 
+      desc: "وصول مباشر لشبكة +500 مصنع موثق عبر 30 مقاطعة صينية. نطابق مواصفاتك مع أفضل الموردين عبر تحليل ذكي.",
+      features: ["تدقيق المصانع", "مقارنة الأسعار", "إدارة العينات"],
       gradient: "from-blue-500 to-blue-600",
       color: "blue"
     },
     { 
       icon: ShieldCheck, 
-      title: "Quality Control", 
-      desc: "Multi-stage inspection protocols following AQL standards. Our bilingual QC engineers ensure every shipment meets your exact specifications.",
-      features: ["AQL sampling", "In-line inspection", "Factory audit"],
+      title: "فحص الجودة", 
+      desc: "بروتوكولات فحص متعددة المراحل وفق معايير AQL. مهندسو جودة ثنائيو اللغة يضمنون مطابقة كل شحنة لمواصفاتك.",
+      features: ["عينات AQL", "فحص خط الإنتاج", "تدقيق المصنع"],
       gradient: "from-emerald-500 to-green-600",
       color: "emerald"
     },
     { 
       icon: Warehouse, 
-      title: "Warehousing & Consolidation", 
-      desc: "Smart warehousing in Guangzhou and Yiwu with barcode tracking, multi-supplier consolidation, and climate-controlled storage zones.",
-      features: ["Multi-source consolidation", "Real-time inventory", "Secure storage"],
+      title: "التخزين والتجميع", 
+      desc: "مستودعات ذكية في غوانزو وإيوو مع تتبع بالباركود، تجميع متعدد الموردين، ومناطق تخزين مكيفة.",
+      features: ["تجميع متعدد", "جرد لحظي", "تخزين آمن"],
       gradient: "from-violet-500 to-purple-600",
       color: "violet"
     },
     { 
       icon: Ship, 
-      title: "International Shipping", 
-      desc: "Sea, air, rail, and express delivery to 50+ countries. Automated booking, real-time GPS tracking, and optimized routing for cost savings.",
-      features: ["Sea & air freight", "Rail cargo", "Express delivery"],
+      title: "الشحن الدولي", 
+      desc: "شحن بحري وجوي وبري وسريع لأكثر من 50 دولة. حجز آلي، تتبع GPS لحظي، ومسارات محسّنة لتوفير التكاليف.",
+      features: ["بحري وجوي", "شحن سكك حديدية", "توصيل سريع"],
       gradient: "from-cyan-500 to-blue-600",
       color: "cyan"
     },
     { 
       icon: FileCheck, 
-      title: "Customs & Compliance", 
-      desc: "Full documentation management, HS code classification, duty optimization, and compliance with SASO, ESMA, and international regulations.",
-      features: ["HS classification", "Duty optimization", "SASO/ESMA compliance"],
+      title: "الجمارك والامتثال", 
+      desc: "إدارة كاملة للمستندات، تصنيف رموز HS، تحسين الرسوم، والامتثال لمعايير SASO وESMA الدولية.",
+      features: ["تصنيف HS", "تحسين الرسوم", "امتثال SASO/ESMA"],
       gradient: "from-amber-500 to-orange-600",
       color: "amber"
     },
     { 
       icon: Package, 
-      title: "Door-to-Door DDP", 
-      desc: "Complete DDP solutions from Chinese factory floor to your warehouse door. All-inclusive pricing with zero hidden fees.",
-      features: ["DDP all-inclusive", "Last-mile delivery", "POD confirmation"],
+      title: "توصيل باب-لباب DDP", 
+      desc: "حلول DDP متكاملة من أرضية المصنع الصيني إلى باب مستودعك. تسعير شامل بدون رسوم مخفية.",
+      features: ["DDP شامل", "توصيل نهائي", "تأكيد الاستلام"],
       gradient: "from-rose-500 to-pink-600",
       color: "rose"
     },
   ];
 
   const features = [
-    { icon: Target, title: "AI-Powered Supplier Matching", desc: "Our proprietary algorithm analyzes 12,000+ data points to find factories that match your product specs, quality tier, and budget within 48 hours.", gradient: "from-blue-500 to-cyan-500", bgImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" },
-    { icon: Shield, title: "Trade Risk Shield", desc: "Comprehensive trade insurance, escrow payment protection, and quality guarantees. We cover your investment from order to delivery.", gradient: "from-emerald-500 to-green-500", bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" },
-    { icon: BarChart3, title: "Cost Intelligence", desc: "Our sourcing data shows clients save 23-40% vs. direct buying. Real-time price benchmarking across 500+ verified factories.", gradient: "from-purple-500 to-pink-500", bgImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" },
-    { icon: Handshake, title: "Bilingual Account Teams", desc: "Dedicated Mandarin-Arabic-English account managers who understand both Chinese factory culture and Middle East business expectations.", gradient: "from-orange-500 to-amber-500", bgImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" },
-    { icon: Clock, title: "Speed-to-Market", desc: "Parallel processing of sourcing, QC, and logistics cuts lead times by 40%. Your products reach market faster than competitors.", gradient: "from-rose-500 to-red-500", bgImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" },
-    { icon: BadgeCheck, title: "Global Compliance", desc: "SASO, ESMA, CE, FDA — we handle certification for every destination. Zero customs rejections across 15,000+ shipments.", gradient: "from-indigo-500 to-violet-500", bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" },
+    { icon: Target, title: "مطابقة ذكية للموردين", desc: "خوارزمية تحلل +12,000 نقطة بيانات لإيجاد المصانع المطابقة لمواصفاتك وميزانيتك خلال 48 ساعة.", gradient: "from-blue-500 to-cyan-500", bgImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" },
+    { icon: Shield, title: "حماية الاستثمار", desc: "تأمين تجاري شامل، حماية مدفوعات عبر الضمان، وكفالات جودة. نغطي استثمارك من الطلب حتى التسليم.", gradient: "from-emerald-500 to-green-500", bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" },
+    { icon: BarChart3, title: "ذكاء التكلفة", desc: "عملاؤنا يوفرون 23-40% مقارنة بالشراء المباشر. مقارنة أسعار لحظية عبر +500 مصنع موثق.", gradient: "from-purple-500 to-pink-500", bgImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" },
+    { icon: Handshake, title: "فريق ثلاثي اللغات", desc: "مديرو حسابات بالعربية والصينية والإنجليزية يفهمون ثقافة المصانع الصينية وتوقعات الأعمال العربية.", gradient: "from-orange-500 to-amber-500", bgImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" },
+    { icon: Clock, title: "سرعة الوصول للسوق", desc: "معالجة متوازية للتوريد والفحص واللوجستيك تخفض المدة 40%. منتجاتك تصل السوق أسرع من المنافسين.", gradient: "from-rose-500 to-red-500", bgImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" },
+    { icon: BadgeCheck, title: "امتثال عالمي", desc: "SASO, ESMA, CE, FDA — نتولى الشهادات لكل وجهة. صفر رفض جمركي عبر +15,000 شحنة.", gradient: "from-indigo-500 to-violet-500", bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" },
   ];
 
   const processSteps = [
-    { step: "01", icon: MessageCircle, title: "Discovery & Strategy", desc: "In-depth consultation to map your product specs, target costs, quality tier, and delivery timeline into an actionable sourcing plan." },
-    { step: "02", icon: Search, title: "Source & Negotiate", desc: "AI-powered factory matching across 30 provinces. We shortlist top 3 suppliers, negotiate pricing, and manage sample production." },
-    { step: "03", icon: ShieldCheck, title: "Inspect & Verify", desc: "AQL-standard inspections at 3 checkpoints: pre-production, during manufacturing, and final pre-shipment. Photo + video evidence." },
-    { step: "04", icon: Truck, title: "Ship & Deliver", desc: "Consolidated shipping via optimal routes. Full customs clearance, real-time tracking, and DDP delivery to your warehouse door." },
+    { step: "01", icon: MessageCircle, title: "الاستشارة والتخطيط", desc: "استشارة معمقة لتحديد مواصفات منتجك، التكلفة المستهدفة، مستوى الجودة، وجدول التسليم في خطة تنفيذية." },
+    { step: "02", icon: Search, title: "البحث والتفاوض", desc: "مطابقة ذكية للمصانع عبر 30 مقاطعة. نختار أفضل 3 موردين، نتفاوض على السعر، وندير إنتاج العينات." },
+    { step: "03", icon: ShieldCheck, title: "الفحص والتحقق", desc: "فحص بمعايير AQL في 3 نقاط: قبل الإنتاج، أثناء التصنيع، والفحص النهائي قبل الشحن. أدلة مصورة ومرئية." },
+    { step: "04", icon: Truck, title: "الشحن والتسليم", desc: "شحن مجمّع عبر مسارات محسّنة. تخليص جمركي كامل، تتبع لحظي، وتوصيل DDP حتى باب مستودعك." },
   ];
 
   const testimonials = [
-    { name: "Michael Chen", role: "CEO, TechGear Inc. — Riyadh", content: "Dinoora cut our sourcing costs by 35% while actually improving product quality. Their factory vetting process caught issues we would never have found ourselves. A true game-changer for our business.", rating: 5 },
-    { name: "Sarah Ahmed", role: "Procurement Director, Luxe Brands — Dubai", content: "We've been importing from China for 8 years, but Dinoora's QC protocols are on another level. Zero defect shipments in 14 months. They've become our exclusive sourcing partner.", rating: 5 },
-    { name: "David Park", role: "Operations Manager, AutoParts Co. — Jeddah", content: "From supplier verification to customs clearance to door delivery — they handle the entire pipeline. Our import operation went from chaos to clockwork in 3 months.", rating: 5 },
+    { name: "أحمد العمري", role: "المدير التنفيذي — شركة تقنيات الخليج، الرياض", content: "دينورا خفضت تكاليف التوريد 35% مع تحسين الجودة فعلياً. عملية فحص المصانع لديهم اكتشفت مشاكل ما كنا لنجدها بأنفسنا. تغيير حقيقي لأعمالنا.", rating: 5 },
+    { name: "سارة الهاشمي", role: "مديرة المشتريات — Luxe Brands، دبي", content: "نستورد من الصين منذ 8 سنوات، لكن بروتوكولات فحص الجودة في دينورا على مستوى آخر. صفر عيوب في 14 شهر. أصبحوا شريكنا الحصري للتوريد.", rating: 5 },
+    { name: "خالد الزهراني", role: "مدير العمليات — قطع غيار الخليج، جدة", content: "من التحقق من المورد إلى التخليص الجمركي إلى التوصيل — يديرون كل شيء. عمليات الاستيراد تحولت من فوضى إلى نظام في 3 أشهر.", rating: 5 },
   ];
 
   const knowledgeArticles = [
-    { icon: BookOpen, title: "Complete China Sourcing Guide 2024", category: "Guide", readTime: "15 min", href: "/blog" },
-    { icon: FileText, title: "Incoterms Explained: EXW to DDP", category: "Shipping", readTime: "12 min", href: "/blog" },
-    { icon: Lightbulb, title: "AQL Quality Control Checklist", category: "Quality", readTime: "10 min", href: "/blog" },
-    { icon: HelpCircle, title: "Customs & Import Regulations FAQ", category: "Customs", readTime: "14 min", href: "/blog" },
+    { icon: BookOpen, title: "دليل التوريد الشامل من الصين 2024", category: "دليل", readTime: "15 دقيقة", href: "/blog" },
+    { icon: FileText, title: "شروط التجارة الدولية: EXW إلى DDP", category: "شحن", readTime: "12 دقيقة", href: "/blog" },
+    { icon: Lightbulb, title: "قائمة فحص الجودة AQL", category: "جودة", readTime: "10 دقائق", href: "/blog" },
+    { icon: HelpCircle, title: "الجمارك ولوائح الاستيراد", category: "جمارك", readTime: "14 دقيقة", href: "/blog" },
   ];
 
   return (
@@ -268,21 +268,21 @@ export default function Home() {
                 {/* Badge */}
                 <div className="section-badge animate-hero-shine">
                   <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Available 24/7 — Trusted by 500+ Businesses</span>
+                  <span>متاحون 24/7 — موثوق من +500 شركة</span>
                 </div>
 
                 {/* Main Heading */}
                 <h1 className="text-[2.75rem] sm:text-6xl lg:text-[4.25rem] xl:text-7xl font-extrabold leading-[1.08] tracking-tight">
-                  <span className="text-white block">Your Gateway to</span>
+                  <span className="text-white block">بوابتك إلى</span>
                   <span className="block mt-2 gradient-text-blue animate-gradient bg-[length:200%_200%]">
-                    China Trade
+                    تجارة الصين
                   </span>
-                  <span className="block mt-1 text-white">Excellence</span>
+                  <span className="block mt-1 text-white">بامتياز</span>
                 </h1>
 
                 {/* Description */}
                 <p className="text-lg sm:text-xl text-slate-400 max-w-lg leading-relaxed">
-                  From supplier sourcing to doorstep delivery — we handle the complexity so you can focus on growing your business.
+                  من التوريد إلى التسليم حتى بابك — نتولّى التعقيدات حتى تركّز على تنمية أعمالك.
                 </p>
 
                 {/* CTAs */}
@@ -291,7 +291,7 @@ export default function Home() {
                     onClick={() => scrollToSection('quote')}
                     className="btn-premium animate-hero-shine group"
                   >
-                    <span>Start Your Project</span>
+                    <span>ابدأ مشروعك</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <button 
@@ -299,16 +299,16 @@ export default function Home() {
                     className="btn-outline group"
                   >
                     <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    Explore Services
+                    استكشف خدماتنا
                   </button>
                 </div>
 
                 {/* Inline Stats Row */}
                 <div className="flex items-center gap-6 sm:gap-8 pt-8 border-t border-white/[0.06]">
                   {[
-                    { val: "500+", label: "Projects" },
-                    { val: "50+", label: "Countries" },
-                    { val: "99%", label: "Quality" },
+                    { val: "500+", label: "مشروع" },
+                    { val: "50+", label: "دولة" },
+                    { val: "99%", label: "جودة" },
                   ].map((stat, i) => (
                     <div key={i} className="flex items-center gap-6 sm:gap-8">
                       <div className="text-center">
@@ -335,8 +335,8 @@ export default function Home() {
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600" />
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-2xl font-bold text-white">Quick Quote</h3>
-                        <p className="text-sm text-slate-500 mt-1">Get a response within 24 hours</p>
+                        <h3 className="text-2xl font-bold text-white">عرض سعر سريع</h3>
+                        <p className="text-sm text-slate-500 mt-1">احصل على رد خلال 24 ساعة</p>
                       </div>
                       <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/25 rotate-3 hover:rotate-0 transition-transform duration-300">
                         <Globe className="w-7 h-7 text-white" />
@@ -348,19 +348,19 @@ export default function Home() {
                   <div className="px-8 pb-8 space-y-4">
                     <div className="relative">
                       <Users className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                      <input type="text" placeholder="Your Name" className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
+                      <input type="text" placeholder="اسمك" className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
                     </div>
                     <div className="relative">
                       <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                      <input type="email" placeholder="Business Email" className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
+                      <input type="email" placeholder="بريدك الإلكتروني" className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
                     </div>
                     <div className="relative">
                       <Package className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                      <input type="text" placeholder="Product Category" className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
+                      <input type="text" placeholder="نوع المنتج" className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
                     </div>
                     <button className="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-bold text-base hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 animate-hero-shine">
                       <Send className="w-4 h-4" />
-                      Get Free Quote
+                      احصل على عرض مجاني
                     </button>
                   </div>
 
@@ -368,11 +368,11 @@ export default function Home() {
                   <div className="px-8 py-5 bg-white/[0.02] border-t border-white/[0.06] flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-slate-400">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                      <span>No obligation</span>
+                      <span>بدون التزام</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-400">
                       <ShieldCheck className="w-4 h-4 text-blue-400" />
-                      <span>100% Confidential</span>
+                      <span>سري 100%</span>
                     </div>
                   </div>
                 </div>
@@ -383,9 +383,9 @@ export default function Home() {
           {/* === TRUSTED BY MARQUEE === */}
           <FadeIn delay={500}>
             <div className="mt-20 pt-10 border-t border-white/[0.04]">
-              <p className="text-center text-sm text-slate-600 uppercase tracking-widest font-medium mb-8">Trusted across industries worldwide</p>
+              <p className="text-center text-sm text-slate-600 uppercase tracking-widest font-medium mb-8">موثوق عبر القطاعات حول العالم</p>
               <div className="flex items-center justify-center gap-10 sm:gap-16 flex-wrap opacity-40">
-                {["Consumer Goods", "Electronics", "Industrial", "Furniture", "Retail", "Automotive"].map((industry, i) => (
+                {["سلع استهلاكية", "إلكترونيات", "صناعي", "أثاث", "تجزئة", "سيارات"].map((industry, i) => (
                   <div key={i} className="flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-colors">
                     <Building2 className="w-5 h-5" />
                     <span className="text-sm font-medium whitespace-nowrap">{industry}</span>
@@ -398,7 +398,7 @@ export default function Home() {
 
         {/* === SCROLL INDICATOR === */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-          <span className="text-xs text-slate-600 uppercase tracking-widest">Scroll</span>
+          <span className="text-xs text-slate-600 uppercase tracking-widest">انزل</span>
           <div className="w-6 h-10 rounded-full border-2 border-slate-700 flex items-start justify-center p-1.5">
             <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-scroll-indicator" />
           </div>
@@ -409,7 +409,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES SECTION */}
-      <section id="services" className="relative py-28 lg:py-36 overflow-hidden bg-slate-950">
+      <section id="services" className="relative py-28 lg:py-36 overflow-hidden section-darker">
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-600/[0.06] rounded-full blur-[120px]" />
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-cyan-500/[0.05] rounded-full blur-[100px]" />
         <div className="absolute inset-0 dot-pattern" />
@@ -418,13 +418,13 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="section-badge mb-6">
               <Zap className="w-4 h-4" />
-              <span>Our Services</span>
+              <span>خدماتنا</span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              End-to-End <span className="gradient-text-blue">Solutions</span>
+              حلول <span className="gradient-text-blue">متكاملة</span> من الألف إلى الياء
             </h2>
             <p className="text-xl text-slate-400">
-              Comprehensive trade services designed for enterprise success
+              خدمات تجارية شاملة مصممة لنجاح أعمالك
             </p>
           </div>
         </FadeIn>
@@ -453,18 +453,18 @@ export default function Home() {
       </section>
 
       {/* FEATURES GRID */}
-      <PremiumSection id="features" className="bg-slate-900" bgImage="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80" overlay="bg-slate-950/93">
+      <PremiumSection id="features" className="section-navy" bgImage="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80" overlay="bg-slate-950/95">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="section-badge mb-6">
               <Award className="w-4 h-4" />
-              <span>Why Choose Us</span>
+              <span>لماذا نحن</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Why Industry Leaders <span className="gradient-text-blue">Choose Us</span>
+              لماذا يختارنا <span className="gradient-text-blue">رواد الأعمال</span>
             </h2>
             <p className="text-xl text-slate-400">
-              Precision, reliability, and results that drive growth
+              دقة، موثوقية، ونتائج تدفع النمو
             </p>
           </div>
         </FadeIn>
@@ -502,10 +502,10 @@ export default function Home() {
           <div className="mt-20 p-8 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-sm">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { value: 500, suffix: "+", label: "Suppliers Verified" },
-                { value: 50, suffix: "+", label: "Countries Served" },
-                { value: 99, suffix: "%", label: "Quality Rate" },
-                { value: 40, suffix: "%", label: "Cost Savings" },
+                { value: 500, suffix: "+", label: "مورد موثق" },
+                { value: 50, suffix: "+", label: "دولة نخدمها" },
+                { value: 99, suffix: "%", label: "معدل الجودة" },
+                { value: 40, suffix: "%", label: "توفير التكاليف" },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-4xl lg:text-5xl font-bold gradient-text-blue mb-2">
@@ -520,18 +520,18 @@ export default function Home() {
       </PremiumSection>
 
       {/* PROCESS SECTION */}
-      <PremiumSection id="process" className="bg-slate-950">
+      <PremiumSection id="process" className="section-darker">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="section-badge mb-6">
               <Workflow className="w-4 h-4" />
-              <span>Our Process</span>
+              <span>كيف نعمل</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              How We Deliver <span className="gradient-text-blue">Excellence</span>
+              عملية من <span className="gradient-text-blue">4 خطوات</span> محسّنة
             </h2>
             <p className="text-xl text-slate-400">
-              A proven 4-step process from concept to delivery
+              من الاستشارة الأولى إلى التسليم، كل خطوة مصممة لأقصى كفاءة
             </p>
           </div>
         </FadeIn>
@@ -560,18 +560,18 @@ export default function Home() {
       </PremiumSection>
 
       {/* TESTIMONIALS */}
-      <PremiumSection id="testimonials" className="bg-slate-900">
+      <PremiumSection id="testimonials" className="section-navy">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="section-badge mb-6">
               <Star className="w-4 h-4" />
-              <span>Testimonials</span>
+              <span>عملاؤنا</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Client <span className="gradient-text-blue">Success Stories</span>
+              قصص <span className="gradient-text-blue">نجاح عملائنا</span>
             </h2>
             <p className="text-xl text-slate-400">
-              Hear from businesses that transformed their China trade operations with us
+              اسمع من شركات حوّلت عملياتها التجارية مع الصين بشراكتنا
             </p>
           </div>
         </FadeIn>
@@ -602,18 +602,18 @@ export default function Home() {
       </PremiumSection>
 
       {/* KNOWLEDGE SECTION */}
-      <PremiumSection id="knowledge" className="bg-slate-950">
+      <PremiumSection id="knowledge" className="section-darker">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="section-badge mb-6">
               <BookOpen className="w-4 h-4" />
-              <span>Resources</span>
+              <span>مركز المعرفة</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Trade <span className="gradient-text-blue">Intelligence</span>
+              <span className="gradient-text-blue">ذكاء</span> تجاري
             </h2>
             <p className="text-xl text-slate-400">
-              Expert insights to optimize your China trade strategy
+              رؤى خبيرة لتحسين استراتيجية تجارتك مع الصين
             </p>
           </div>
         </FadeIn>
@@ -621,7 +621,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {knowledgeArticles.map((article, i) => (
             <FadeIn key={i} delay={i * 100}>
-              <a href={`/${pathname.split('/')[1] || 'en'}${article.href}`} className="group glow-card p-6 cursor-pointer block">
+              <a href={`/${pathname.split('/')[1] || 'ar'}${article.href}`} className="group glow-card p-6 cursor-pointer block">
                 <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
                   <article.icon className="w-6 h-6 text-blue-400" />
                 </div>
@@ -629,7 +629,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-white mt-2 mb-3 group-hover:text-blue-300 transition-colors">{article.title}</h3>
                 <span className="text-sm text-slate-500 flex items-center gap-1">
                   <Clock className="w-3.5 h-3.5" />
-                  {article.readTime} read
+                  {article.readTime}
                 </span>
               </a>
             </FadeIn>
@@ -638,9 +638,9 @@ export default function Home() {
 
         <FadeIn delay={300}>
           <div className="mt-12 text-center">
-            <a href={`/${pathname.split('/')[1] || 'en'}/blog`} className="inline-flex items-center gap-2 px-8 py-4 border border-blue-500/20 text-blue-400 rounded-full font-semibold text-base hover:bg-blue-500/10 hover:border-blue-500/30 transition-all">
+            <a href={`/${pathname.split('/')[1] || 'ar'}/blog`} className="inline-flex items-center gap-2 px-8 py-4 border border-blue-500/20 text-blue-400 rounded-full font-semibold text-base hover:bg-blue-500/10 hover:border-blue-500/30 transition-all">
               <BookOpen className="w-5 h-5" />
-              View All Articles & Guides
+              عرض جميع المقالات
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -648,12 +648,12 @@ export default function Home() {
       </PremiumSection>
 
       {/* OPERATIONS - Daily Capabilities Section */}
-      <PremiumSection id="operations" className="bg-slate-900" bgImage="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80" overlay="bg-slate-950/95">
+      <PremiumSection id="operations" className="section-navy" bgImage="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80" overlay="bg-slate-950/95">
         <FadeIn>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <div className="section-badge mb-6">
               <Workflow className="w-4 h-4" />
-              <span>يومياتنا / Our Operations</span>
+              <span>عملياتنا اليومية</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               كل قدرة تُدار <span className="gradient-text-blue">كوحدة نظام</span>
@@ -672,7 +672,7 @@ export default function Home() {
                 { 
                   stage: "01", 
                   title: "المورد - مزامنة", 
-                  subtitle: "Supplier Sync",
+                  subtitle: "مزامنة المورد",
                   desc: "مواءمة المورد مع المواصفات والمدة والإيقاع التشغيلي—ثم التحقق قبل أي التزام مالي.",
                   output: "تثبيت المواصفات ومزامنتها مع المورد قبل الالتزام.",
                   prevent: "يمنع عدم التطابق بين نية الشراء ومخرجات المصنع."
@@ -680,7 +680,7 @@ export default function Home() {
                 { 
                   stage: "02", 
                   title: "المستودع - تسجيل", 
-                  subtitle: "Warehouse Intake",
+                  subtitle: "استلام المستودع",
                   desc: "استلام الشحنة وتسجيلها وترميزها وإدخالها ضمن مسار التجميع.",
                   output: "شحنة مرمّزة ضمن مسار التجميع.",
                   prevent: "يمنع ضياع البضاعة وتداخل دورات التجميع."
@@ -688,7 +688,7 @@ export default function Home() {
                 { 
                   stage: "03", 
                   title: "الفحص - تحقق", 
-                  subtitle: "Quality Verification",
+                  subtitle: "تحقق الجودة",
                   desc: "تنفيذ أخذ العينات وتسجيل الأدلة ومعالجة الانحرافات قبل تصريح الشحن.",
                   output: "تقرير فحص مسجل وشحنة مؤهلة للتصدير.",
                   prevent: "يمنع المنتجات الرديئة من الوصول للعميل."
@@ -696,7 +696,7 @@ export default function Home() {
                 { 
                   stage: "04", 
                   title: "الإرسال - تصريح", 
-                  subtitle: "Export Clearance",
+                  subtitle: "تصريح التصدير",
                   desc: "تدقيق المستندات التجارية مقابل واقع الشحنة—ومواءمتها لمتطلبات وجهة الوصول.",
                   output: "مستندات موثقة ومطابقة للشحنة.",
                   prevent: "يمنع التأخير الجمركي والغرامات."
@@ -704,7 +704,7 @@ export default function Home() {
                 { 
                   stage: "05", 
                   title: "التسليم - تأكيد", 
-                  subtitle: "Delivery Confirm",
+                  subtitle: "تأكيد التسليم",
                   desc: "مزامنة الحجز والتسليم ومواعيد الإغلاق بين المستودع والناقل.",
                   output: "شحنة متنقلة ضمن موعد إغلاق محدد.",
                   prevent: "يمنع فشل الإرسال في جدولة النقل."
@@ -798,7 +798,7 @@ export default function Home() {
       </PremiumSection>
 
       {/* Incoterms Section - Trade Terms Explanation */}
-      <section className="relative py-16 bg-slate-900 overflow-hidden">
+      <section className="relative py-16 section-darker overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div 
@@ -918,7 +918,7 @@ export default function Home() {
       </section>
 
       {/* QUOTE SECTION */}
-      <section id="quote" className="relative py-32 bg-slate-950 overflow-hidden">
+      <section id="quote" className="relative py-32 section-navy overflow-hidden">
         {/* Background Orbs */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px] animate-float" />
@@ -932,13 +932,13 @@ export default function Home() {
               <div>
                 <div className="section-badge mb-6">
                   <Rocket className="w-4 h-4" />
-                  <span>Get Started</span>
+                  <span>ابدأ الآن</span>
                 </div>
                 <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                  Ready to Transform Your <span className="gradient-text-blue">Supply Chain?</span>
+                  جاهز لتحويل <span className="gradient-text-blue">سلسلة توريدك؟</span>
                 </h2>
                 <p className="text-xl text-slate-400 mb-10 leading-relaxed">
-                  Get a comprehensive quote within 24 hours. No obligation, just expert insights tailored to your business.
+                  احصل على عرض سعر شامل خلال 24 ساعة. بدون التزام، فقط رؤى خبيرة مصممة لأعمالك.
                 </p>
 
                 <div className="space-y-5">
@@ -947,7 +947,7 @@ export default function Home() {
                       <Phone className="w-6 h-6 text-emerald-400" />
                     </div>
                     <div>
-                      <div className="text-sm text-slate-500">Call us directly</div>
+                      <div className="text-sm text-slate-500">اتصل بنا مباشرة</div>
                       <div className="text-white font-semibold">+86 155 8723 7864</div>
                     </div>
                   </div>
@@ -956,7 +956,7 @@ export default function Home() {
                       <Mail className="w-6 h-6 text-blue-400" />
                     </div>
                     <div>
-                      <div className="text-sm text-slate-500">Email us</div>
+                      <div className="text-sm text-slate-500">راسلنا</div>
                       <div className="text-white font-semibold">maomoody524@gmail.com</div>
                     </div>
                   </div>
@@ -968,25 +968,25 @@ export default function Home() {
                 <div className="relative glass-card p-8">
                   <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <input type="text" placeholder="Full Name" className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none transition-all" />
-                      <input type="email" placeholder="Business Email" className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none transition-all" />
+                      <input type="text" placeholder="الاسم الكامل" className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none transition-all" />
+                      <input type="email" placeholder="البريد الإلكتروني" className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none transition-all" />
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <input type="text" placeholder="Company Name" className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none transition-all" />
-                      <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none transition-all" />
+                      <input type="text" placeholder="اسم الشركة" className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none transition-all" />
+                      <input type="tel" placeholder="رقم الهاتف" className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none transition-all" />
                     </div>
                     <select className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-slate-500 focus:border-blue-500/50 focus:outline-none transition-all">
-                      <option>Industry</option>
-                      <option>Industrial Equipment</option>
-                      <option>Consumer Electronics</option>
-                      <option>Automotive</option>
-                      <option>Textiles & Fashion</option>
-                      <option>Other</option>
+                      <option>القطاع</option>
+                      <option>معدات صناعية</option>
+                      <option>إلكترونيات استهلاكية</option>
+                      <option>سيارات</option>
+                      <option>منسوجات وأزياء</option>
+                      <option>أخرى</option>
                     </select>
-                    <textarea rows={4} placeholder="Tell us about your project requirements..." className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none resize-none transition-all" />
+                    <textarea rows={4} placeholder="أخبرنا عن متطلبات مشروعك..." className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:border-blue-500/50 focus:outline-none resize-none transition-all" />
                     <button type="submit" className="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-blue-500/30 transition-all flex items-center justify-center gap-2">
                       <Send className="w-5 h-5" />
-                      Get Premium Quote
+                      احصل على عرض سعر
                     </button>
                   </form>
                 </div>

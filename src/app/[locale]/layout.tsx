@@ -18,9 +18,9 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Dinoora - Global Trade Solutions | China-Middle East Commerce",
-  description: "Dinoora provides complete end-to-end trade solutions between China and Middle East markets: sourcing, quality inspection, warehousing, shipping, customs clearance, and logistics services.",
-  keywords: ["Dinoora", "China trade", "Middle East commerce", "sourcing", "shipping", "logistics", "import", "export", "customs clearance", "Saudi Arabia", "UAE"],
+  title: "دينورا - حلول التجارة العالمية | Dinoora Global Trade",
+  description: "دينورا تقدم حلول تجارة متكاملة بين الصين والشرق الأوسط: توريد، فحص جودة، تخزين، شحن، تخليص جمركي، وخدمات لوجستية شاملة.",
+  keywords: ["دينورا", "Dinoora", "تجارة الصين", "استيراد", "تصدير", "شحن", "توريد", "تخليص جمركي", "السعودية", "الإمارات", "China trade"],
 };
 
 export default async function LocaleLayout({

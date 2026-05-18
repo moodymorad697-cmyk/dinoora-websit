@@ -37,7 +37,7 @@ export default function Footer() {
   const tiktokLink = "https://www.tiktok.com/@kingmorad0?is_from_webapp=1&sender_device=pc";
 
   return (
-    <footer className="bg-slate-950 text-slate-100">
+    <footer className="text-slate-100" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #020617 100%)' }}>
       {/* Map Section */}
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -85,8 +85,8 @@ export default function Footer() {
                 <span className="text-white font-bold text-lg">D</span>
               </div>
               <div>
-                <div className="text-lg font-bold text-white">Dinoora</div>
-                <div className="text-xs text-slate-400">Global Trade</div>
+                <div className="text-lg font-bold text-white">دينورا</div>
+                <div className="text-xs text-slate-400">حلول التجارة العالمية</div>
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">

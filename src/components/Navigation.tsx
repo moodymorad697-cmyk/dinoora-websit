@@ -22,7 +22,7 @@ export default function Navigation() {
   const router = useRouter();
   const t = useTranslations('nav');
 
-  const locale = pathname.split('/')[1] || 'en';
+  const locale = pathname.split('/')[1] || 'ar';
   const isAr = locale === 'ar';
 
   useEffect(() => {

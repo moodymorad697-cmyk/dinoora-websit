@@ -194,7 +194,7 @@ export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'en';
+  const locale = pathname.split('/')[1] || 'ar';
   const isAr = locale === 'ar';
 
   const filteredPosts = blogPosts.filter((post) => {
@@ -209,10 +209,10 @@ export default function BlogPage() {
   const featuredPosts = blogPosts.filter(p => p.featured);
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 overflow-x-hidden">
+    <main className="min-h-screen text-slate-100 overflow-x-hidden" style={{ background: 'var(--bg-dark)' }}>
       
       {/* HERO */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-32 pb-20 overflow-hidden section-darker">
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1920&q=80')" }} />
@@ -280,7 +280,7 @@ export default function BlogPage() {
 
       {/* FEATURED POSTS */}
       {activeCategory === "all" && searchQuery === "" && (
-        <section className="py-16">
+        <section className="py-16 section-navy">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-10">
               <Star className="w-5 h-5 text-amber-400" />
@@ -294,7 +294,7 @@ export default function BlogPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">
-                        {categories.find(c => c.id === post.category)?.label}
+                        {isAr ? categories.find(c => c.id === post.category)?.labelAr : categories.find(c => c.id === post.category)?.label}
                       </span>
                       <h3 className={`font-bold text-white group-hover:text-blue-300 transition-colors mb-2 ${i === 0 ? 'text-2xl' : 'text-lg'}`}>
                         {isAr ? post.titleAr : post.title}
@@ -313,7 +313,7 @@ export default function BlogPage() {
       )}
 
       {/* ALL POSTS GRID */}
-      <section className="py-16">
+      <section className="py-16 section-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-2xl font-bold text-white">
@@ -339,7 +339,7 @@ export default function BlogPage() {
                     <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: `url('${post.image}')` }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-60" />
                     <span className="absolute top-4 left-4 px-3 py-1 bg-blue-500/20 backdrop-blur-sm text-blue-400 text-xs font-semibold rounded-full uppercase tracking-wider border border-blue-500/20">
-                      {categories.find(c => c.id === post.category)?.label}
+                      {isAr ? categories.find(c => c.id === post.category)?.labelAr : categories.find(c => c.id === post.category)?.label}
                     </span>
                   </div>
                   
@@ -378,7 +378,7 @@ export default function BlogPage() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden section-navy">
         <div className="absolute inset-0">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/8 rounded-full blur-[150px]" />
         </div>
