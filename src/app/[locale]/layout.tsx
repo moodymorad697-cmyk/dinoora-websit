@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Cairo } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -8,7 +8,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactFloatingBar from "@/components/ContactFloatingBar";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const cairo = Cairo({ subsets: ["arabic"], variable: '--font-cairo' });
 
 const locales = ['en', 'ar', 'zh'];
 
@@ -31,14 +32,13 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   
-  // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <body className={`${inter.className} pt-16`}>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="scroll-smooth">
+      <body className={`${inter.variable} ${cairo.variable} ${locale === 'ar' ? 'font-[family-name:var(--font-cairo)]' : 'font-[family-name:var(--font-inter)]'}`}>
         <NextIntlClientProvider messages={messages}>
           <Navigation />
           {children}
