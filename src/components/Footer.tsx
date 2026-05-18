@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 // Social Media Icons as SVG components
@@ -26,8 +25,7 @@ const TikTokIcon = () => (
 
 export default function Footer() {
   const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'en';
-  const t = useTranslations('footer');
+  const locale = pathname.split('/')[1] || 'ar';
 
   // Contact Info
   const whatsappNumber = "008615587237864";
@@ -90,7 +88,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              {t('tagline')}
+              شريكك الموثوق لحلول التجارة المتكاملة بين الصين والشرق الأوسط — توريد، فحص جودة، تخزين، شحن، وتخليص جمركي.
             </p>
             
             {/* Social Media Icons */}
@@ -128,7 +126,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4">
-              {t('contact')}
+              تواصل معنا
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -160,27 +158,27 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4">
-              {t('services')}
+              خدماتنا
             </h3>
             <ul className="space-y-3">
               <li>
                 <Link href={`/${locale}/services/sourcing`} className="text-slate-300 hover:text-white transition-colors text-sm">
-                  {t('sourcing')}
+                  توريد المنتجات
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/services/shipping`} className="text-slate-300 hover:text-white transition-colors text-sm">
-                  {t('shipping')}
+                  الشحن الدولي
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/services/warehousing`} className="text-slate-300 hover:text-white transition-colors text-sm">
-                  {t('warehousing')}
+                  التخزين والتجميع
                 </Link>
               </li>
               <li>
                 <Link href={`/${locale}/services/inspection`} className="text-slate-300 hover:text-white transition-colors text-sm">
-                  {t('inspection')}
+                  فحص الجودة
                 </Link>
               </li>
             </ul>
@@ -190,14 +188,14 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Dinoora. {t('rights')}
+            © {new Date().getFullYear()} دينورا. جميع الحقوق محفوظة
           </p>
           <div className="flex gap-6">
             <Link href={`/${locale}/privacy`} className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
-              {t('privacy')}
+              سياسة الخصوصية
             </Link>
             <Link href={`/${locale}/terms`} className="text-slate-500 hover:text-slate-300 text-sm transition-colors">
-              {t('terms')}
+              الشروط والأحكام
             </Link>
           </div>
         </div>

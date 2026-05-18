@@ -195,7 +195,6 @@ export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'ar';
-  const isAr = locale === 'ar';
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchCategory = activeCategory === "all" || post.category === activeCategory;
@@ -225,20 +224,13 @@ export default function BlogPage() {
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-semibold tracking-wider uppercase backdrop-blur-sm mb-6">
               <BookOpen className="w-4 h-4" />
-              <span>{isAr ? 'مركز المعرفة التجارية' : 'Trade Knowledge Hub'}</span>
+              <span>مركز المعرفة التجارية</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-              {isAr ? (
-                <>مدونة <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">دينورا</span> التجارية</>
-              ) : (
-                <>Dinoora <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">Trade Blog</span></>
-              )}
+              مدونة <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">دينورا</span> التجارية
             </h1>
             <p className="text-lg sm:text-xl text-slate-400 leading-relaxed mb-10">
-              {isAr 
-                ? 'دليلك الشامل لكل ما يتعلق بالاستيراد والتصدير من الصين — التوريد، الشحن، الجمارك، فحص الجودة، التخزين، والوساطة التجارية'
-                : 'Your comprehensive guide to China trade — sourcing, shipping, customs, quality control, warehousing, and commercial brokerage'
-              }
+              دليلك الشامل لكل ما يتعلق بالاستيراد والتصدير من الصين — التوريد، الشحن، الجمارك، فحص الجودة، التخزين، والوساطة التجارية
             </p>
 
             {/* Search Bar */}
@@ -248,7 +240,7 @@ export default function BlogPage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder={isAr ? "ابحث عن مقالات..." : "Search articles..."}
+                placeholder="ابحث عن مقالات..."
                 className="w-full pl-12 pr-4 py-4 bg-white/[0.04] border border-white/[0.08] rounded-2xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all text-base"
               />
             </div>
@@ -271,7 +263,7 @@ export default function BlogPage() {
                 }`}
               >
                 <cat.icon className="w-4 h-4" />
-                {isAr ? cat.labelAr : cat.label}
+                {cat.labelAr}
               </button>
             ))}
           </div>
@@ -284,7 +276,7 @@ export default function BlogPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-10">
               <Star className="w-5 h-5 text-amber-400" />
-              <h2 className="text-2xl font-bold text-white">{isAr ? 'مقالات مميزة' : 'Featured Articles'}</h2>
+              <h2 className="text-2xl font-bold text-white">مقالات مميزة</h2>
             </div>
             <div className="grid lg:grid-cols-3 gap-6">
               {featuredPosts.map((post, i) => (
@@ -294,10 +286,10 @@ export default function BlogPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-3 uppercase tracking-wider">
-                        {isAr ? categories.find(c => c.id === post.category)?.labelAr : categories.find(c => c.id === post.category)?.label}
+                        {categories.find(c => c.id === post.category)?.labelAr}
                       </span>
                       <h3 className={`font-bold text-white group-hover:text-blue-300 transition-colors mb-2 ${i === 0 ? 'text-2xl' : 'text-lg'}`}>
-                        {isAr ? post.titleAr : post.title}
+                        {post.titleAr}
                       </h3>
                       <div className="flex items-center gap-4 text-xs text-slate-400">
                         <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" />{post.readTime}</span>
@@ -318,17 +310,17 @@ export default function BlogPage() {
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-2xl font-bold text-white">
               {activeCategory === "all" 
-                ? (isAr ? 'جميع المقالات' : 'All Articles')
-                : (isAr ? categories.find(c => c.id === activeCategory)?.labelAr : categories.find(c => c.id === activeCategory)?.label)
+                ? 'جميع المقالات'
+                : categories.find(c => c.id === activeCategory)?.labelAr
               }
             </h2>
-            <span className="text-sm text-slate-500">{filteredPosts.length} {isAr ? 'مقال' : 'articles'}</span>
+            <span className="text-sm text-slate-500">{filteredPosts.length} مقال</span>
           </div>
 
           {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
               <Search className="w-12 h-12 text-slate-700 mx-auto mb-4" />
-              <p className="text-slate-500 text-lg">{isAr ? 'لا توجد مقالات مطابقة' : 'No articles found'}</p>
+              <p className="text-slate-500 text-lg">لا توجد مقالات مطابقة</p>
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -339,17 +331,17 @@ export default function BlogPage() {
                     <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: `url('${post.image}')` }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-60" />
                     <span className="absolute top-4 left-4 px-3 py-1 bg-blue-500/20 backdrop-blur-sm text-blue-400 text-xs font-semibold rounded-full uppercase tracking-wider border border-blue-500/20">
-                      {isAr ? categories.find(c => c.id === post.category)?.labelAr : categories.find(c => c.id === post.category)?.label}
+                      {categories.find(c => c.id === post.category)?.labelAr}
                     </span>
                   </div>
                   
                   {/* Content */}
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-300 transition-colors leading-snug">
-                      {isAr ? post.titleAr : post.title}
+                      {post.titleAr}
                     </h3>
                     <p className="text-sm text-slate-400 mb-4 leading-relaxed line-clamp-2">
-                      {isAr ? post.excerptAr : post.excerpt}
+                      {post.excerptAr}
                     </p>
                     
                     {/* Tags */}
@@ -384,16 +376,16 @@ export default function BlogPage() {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            {isAr ? 'جاهز لبدء مشروعك التجاري مع الصين؟' : 'Ready to Start Your China Trade Journey?'}
+جاهز لبدء مشروعك التجاري مع الصين؟
           </h2>
           <p className="text-lg text-slate-400 mb-8">
-            {isAr ? 'فريقنا من الخبراء جاهز لمساعدتك. احصل على استشارة مجانية اليوم.' : 'Our team of experts is ready to help. Get a free consultation today.'}
+فريقنا من الخبراء جاهز لمساعدتك. احصل على استشارة مجانية اليوم.
           </p>
           <Link 
             href={`/${locale}#quote`}
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all"
           >
-            {isAr ? 'احصل على عرض سعر' : 'Get a Free Quote'}
+احصل على عرض سعر
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

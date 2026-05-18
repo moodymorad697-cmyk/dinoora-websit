@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { 
   ArrowRight, Globe, Search, ShieldCheck, Warehouse, Ship, FileCheck, Package,
@@ -119,11 +118,11 @@ export default function Home() {
   };
 
   const navItems = [
-    { id: 'services', label: 'Services' },
-    { id: 'features', label: 'Why Us' },
-    { id: 'process', label: 'Process' },
-    { id: 'knowledge', label: 'Knowledge' },
-    { id: 'quote', label: 'Get Quote', highlight: true },
+    { id: 'services', label: 'الخدمات' },
+    { id: 'features', label: 'لماذا نحن' },
+    { id: 'process', label: 'العملية' },
+    { id: 'knowledge', label: 'المعرفة' },
+    { id: 'quote', label: 'احصل على عرض', highlight: true },
   ];
 
   const services = [
@@ -207,172 +206,138 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 overflow-x-hidden">
+    <main className="min-h-screen text-slate-100 overflow-x-hidden" style={{ background: 'var(--bg-primary)' }}>
 
-      {/* HERO SECTION */}
+      {/* ══════════════════════ HERO SECTION ══════════════════════ */}
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-        {/* === BACKGROUND LAYERS === */}
-        {/* Layer 1: Base Image */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-cover bg-center scale-105" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=2560&q=90')" }} />
-        </div>
-        {/* Layer 2: Dark gradient overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-slate-950 via-slate-950/[0.98] to-blue-950/95" />
-        {/* Layer 3: Radial color accents */}
-        <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_at_20%_50%,_rgba(59,130,246,0.12),transparent_60%)]" />
-        <div className="absolute inset-0 z-[2] bg-[radial-gradient(ellipse_at_80%_20%,_rgba(6,182,212,0.08),transparent_50%)]" />
-        {/* Layer 4: Grid pattern */}
-        <div className="absolute inset-0 z-[3] grid-pattern opacity-60" />
+        {/* BG: Base */}
+        <div className="absolute inset-0 z-0" style={{ background: 'linear-gradient(135deg, #020617 0%, #0a0f2e 30%, #0c1445 60%, #020617 100%)' }} />
+        
+        {/* BG: Mesh gradient */}
+        <div className="absolute inset-0 z-[1] mesh-gradient" />
+        
+        {/* BG: Aurora blobs */}
+        <div className="absolute top-[-10%] right-[-5%] w-[700px] h-[700px] rounded-full animate-aurora z-[2]" style={{ background: 'radial-gradient(circle, rgba(37,99,235,0.2), transparent 70%)' }} />
+        <div className="absolute bottom-[-15%] left-[-10%] w-[600px] h-[600px] rounded-full animate-aurora z-[2]" style={{ background: 'radial-gradient(circle, rgba(6,182,212,0.15), transparent 70%)', animationDelay: '4s' }} />
+        <div className="absolute top-[30%] left-[40%] w-[500px] h-[500px] rounded-full animate-breathe z-[2]" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.1), transparent 60%)' }} />
 
-        {/* === FLOATING ORBS === */}
-        <div className="absolute top-[10%] left-[5%] w-[450px] h-[450px] bg-blue-600/15 rounded-full blur-[130px] animate-float z-[4]" />
-        <div className="absolute bottom-[15%] right-[8%] w-[350px] h-[350px] bg-cyan-500/12 rounded-full blur-[110px] animate-float z-[4]" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-[40%] left-[50%] -translate-x-1/2 w-[500px] h-[500px] bg-indigo-600/8 rounded-full blur-[160px] animate-pulse-glow z-[4]" />
+        {/* BG: Grid */}
+        <div className="absolute inset-0 z-[3] grid-pattern opacity-40" />
 
-        {/* === FLOATING PARTICLES === */}
+        {/* BG: Particles */}
         {[
-          { top: '15%', left: '10%', size: 3, delay: '0s' },
-          { top: '25%', left: '85%', size: 2, delay: '1s' },
-          { top: '60%', left: '15%', size: 2, delay: '2s' },
-          { top: '75%', left: '75%', size: 3, delay: '0.5s' },
-          { top: '35%', left: '60%', size: 2, delay: '1.5s' },
-          { top: '80%', left: '40%', size: 2, delay: '3s' },
-          { top: '10%', left: '50%', size: 3, delay: '2.5s' },
-          { top: '50%', left: '90%', size: 2, delay: '0.8s' },
+          { top: '12%', right: '8%', size: 3 },
+          { top: '28%', right: '82%', size: 2 },
+          { top: '55%', right: '12%', size: 2 },
+          { top: '72%', right: '70%', size: 3 },
+          { top: '38%', right: '55%', size: 2 },
+          { top: '85%', right: '35%', size: 2 },
         ].map((p, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-blue-400/30 z-[5]"
-            style={{
-              top: p.top,
-              left: p.left,
-              width: `${p.size}px`,
-              height: `${p.size}px`,
-              animation: `particle-float ${6 + i}s ease-in-out infinite`,
-              animationDelay: p.delay,
-            }}
-          />
+          <div key={i} className="absolute rounded-full bg-blue-400/40 z-[4]" style={{ top: p.top, right: p.right, width: `${p.size}px`, height: `${p.size}px`, animation: `particle-float ${7 + i}s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }} />
         ))}
 
-        {/* === DECORATIVE LINES === */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent z-[5]" />
-        <div className="absolute bottom-40 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent z-[5]" />
+        {/* Decorative lines */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-l from-transparent via-blue-500/30 to-transparent z-[5]" />
 
-        {/* === MAIN CONTENT === */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+        {/* ═══ CONTENT ═══ */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-28 w-full">
+          <div className="grid lg:grid-cols-2 gap-14 xl:gap-24 items-center">
             
-            {/* LEFT COLUMN - Text & CTA */}
+            {/* RIGHT (RTL) - Main Text */}
             <FadeIn>
-              <div className="space-y-7">
-                {/* Badge */}
+              <div className="space-y-8">
                 <div className="section-badge animate-hero-shine">
-                  <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>متاحون 24/7 — موثوق من +500 شركة</span>
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>متاحون على مدار الساعة — شريك +500 شركة عربية</span>
                 </div>
 
-                {/* Main Heading */}
-                <h1 className="text-[2.75rem] sm:text-6xl lg:text-[4.25rem] xl:text-7xl font-extrabold leading-[1.08] tracking-tight">
-                  <span className="text-white block">بوابتك إلى</span>
-                  <span className="block mt-2 gradient-text-blue animate-gradient bg-[length:200%_200%]">
-                    تجارة الصين
-                  </span>
-                  <span className="block mt-1 text-white">بامتياز</span>
+                <h1 className="text-[2.75rem] sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-extrabold leading-[1.05] tracking-tight">
+                  <span className="text-white block">شريكك الاستراتيجي</span>
+                  <span className="block mt-3 gradient-text-blue animate-gradient bg-[length:200%_200%]">للتجارة مع الصين</span>
+                  <span className="block mt-2 text-white/90 text-[0.7em]">من المصنع إلى بابك</span>
                 </h1>
 
-                {/* Description */}
-                <p className="text-lg sm:text-xl text-slate-400 max-w-lg leading-relaxed">
-                  من التوريد إلى التسليم حتى بابك — نتولّى التعقيدات حتى تركّز على تنمية أعمالك.
+                <p className="text-lg sm:text-xl text-slate-400 max-w-xl leading-relaxed">
+                  نتولّى كل التعقيدات — توريد، فحص جودة، تخزين، شحن، وتخليص جمركي — حتى تركّز أنت على تنمية أعمالك وأرباحك.
                 </p>
 
-                {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                  <button 
-                    onClick={() => scrollToSection('quote')}
-                    className="btn-premium animate-hero-shine group"
-                  >
-                    <span>ابدأ مشروعك</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <div className="flex flex-col sm:flex-row gap-4 pt-3">
+                  <button onClick={() => scrollToSection('quote')} className="btn-premium animate-hero-shine group">
+                    <Sparkles className="w-5 h-5" />
+                    <span>ابدأ مشروعك الآن</span>
+                    <ArrowRight className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                   </button>
-                  <button 
-                    onClick={() => scrollToSection('services')}
-                    className="btn-outline group"
-                  >
+                  <button onClick={() => scrollToSection('services')} className="btn-outline group">
                     <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     استكشف خدماتنا
                   </button>
                 </div>
 
-                {/* Inline Stats Row */}
-                <div className="flex items-center gap-6 sm:gap-8 pt-8 border-t border-white/[0.06]">
+                {/* Stats */}
+                <div className="flex items-center gap-0 pt-10">
                   {[
-                    { val: "500+", label: "مشروع" },
-                    { val: "50+", label: "دولة" },
-                    { val: "99%", label: "جودة" },
+                    { val: "500+", label: "مشروع ناجح" },
+                    { val: "50+", label: "دولة نخدمها" },
+                    { val: "99%", label: "رضا العملاء" },
                   ].map((stat, i) => (
-                    <div key={i} className="flex items-center gap-6 sm:gap-8">
-                      <div className="text-center">
-                        <div className="text-2xl sm:text-3xl font-bold text-white animate-count-glow">{stat.val}</div>
-                        <div className="text-xs sm:text-sm text-slate-500 mt-0.5">{stat.label}</div>
+                    <div key={i} className="flex items-center">
+                      <div className="text-center px-6 sm:px-8">
+                        <div className="text-3xl sm:text-4xl font-extrabold text-white text-shadow-glow">{stat.val}</div>
+                        <div className="text-xs sm:text-sm text-slate-500 mt-1 font-medium">{stat.label}</div>
                       </div>
-                      {i < 2 && <div className="hero-stat-divider hidden sm:block" />}
+                      {i < 2 && <div className="hero-stat-divider" />}
                     </div>
                   ))}
                 </div>
               </div>
             </FadeIn>
 
-            {/* RIGHT COLUMN - Quick Quote Card */}
+            {/* LEFT (RTL) - Quick Quote Card */}
             <FadeIn delay={300}>
               <div className="relative">
-                {/* Glow behind card */}
-                <div className="absolute -inset-3 bg-gradient-to-br from-blue-600/25 via-cyan-500/15 to-indigo-600/20 rounded-[2rem] blur-2xl opacity-70" />
+                <div className="absolute -inset-4 bg-gradient-to-br from-blue-600/30 via-cyan-500/20 to-violet-600/15 rounded-[2.5rem] blur-3xl opacity-60 animate-breathe" />
                 
-                {/* Card */}
-                <div className="relative bg-slate-900/80 backdrop-blur-2xl rounded-3xl border border-white/[0.08] shadow-2xl shadow-black/30 overflow-hidden">
-                  {/* Card Header */}
+                <div className="relative rounded-3xl border border-white/[0.1] shadow-2xl shadow-black/40 overflow-hidden" style={{ background: 'linear-gradient(160deg, rgba(15,23,42,0.9), rgba(3,7,18,0.95))' }}>
                   <div className="relative px-8 pt-8 pb-6">
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600" />
+                    <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-l from-blue-500 via-cyan-400 to-blue-600" />
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-2xl font-bold text-white">عرض سعر سريع</h3>
-                        <p className="text-sm text-slate-500 mt-1">احصل على رد خلال 24 ساعة</p>
+                        <h3 className="text-2xl font-extrabold text-white">عرض سعر مجاني</h3>
+                        <p className="text-sm text-slate-500 mt-1">رد مضمون خلال 24 ساعة</p>
                       </div>
-                      <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/25 rotate-3 hover:rotate-0 transition-transform duration-300">
+                      <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/30 rotate-3 hover:rotate-0 transition-transform duration-500">
                         <Globe className="w-7 h-7 text-white" />
                       </div>
                     </div>
                   </div>
                   
-                  {/* Card Body */}
                   <div className="px-8 pb-8 space-y-4">
                     <div className="relative">
-                      <Users className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                      <input type="text" placeholder="اسمك" className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
+                      <Users className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                      <input type="text" placeholder="اسمك الكامل" className="w-full pr-11 pl-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
                     </div>
                     <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                      <input type="email" placeholder="بريدك الإلكتروني" className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
+                      <Mail className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                      <input type="email" placeholder="بريدك الإلكتروني" className="w-full pr-11 pl-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
                     </div>
                     <div className="relative">
-                      <Package className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
-                      <input type="text" placeholder="نوع المنتج" className="w-full pl-11 pr-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
+                      <Package className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                      <input type="text" placeholder="نوع المنتج المطلوب" className="w-full pr-11 pl-4 py-3.5 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:bg-white/[0.06] focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all" />
                     </div>
-                    <button className="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-bold text-base hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 animate-hero-shine">
+                    <button className="w-full py-4 bg-gradient-to-l from-blue-600 to-cyan-500 text-white rounded-xl font-bold text-base hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 animate-hero-shine">
                       <Send className="w-4 h-4" />
-                      احصل على عرض مجاني
+                      احصل على عرض سعر الآن
                     </button>
                   </div>
 
-                  {/* Card Footer */}
                   <div className="px-8 py-5 bg-white/[0.02] border-t border-white/[0.06] flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-slate-400">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                      <span>بدون التزام</span>
+                      <span>بدون أي التزام</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-slate-400">
                       <ShieldCheck className="w-4 h-4 text-blue-400" />
-                      <span>سري 100%</span>
+                      <span>بياناتك محمية 100%</span>
                     </div>
                   </div>
                 </div>
@@ -380,15 +345,22 @@ export default function Home() {
             </FadeIn>
           </div>
 
-          {/* === TRUSTED BY MARQUEE === */}
+          {/* Trusted By */}
           <FadeIn delay={500}>
-            <div className="mt-20 pt-10 border-t border-white/[0.04]">
-              <p className="text-center text-sm text-slate-600 uppercase tracking-widest font-medium mb-8">موثوق عبر القطاعات حول العالم</p>
-              <div className="flex items-center justify-center gap-10 sm:gap-16 flex-wrap opacity-40">
-                {["سلع استهلاكية", "إلكترونيات", "صناعي", "أثاث", "تجزئة", "سيارات"].map((industry, i) => (
-                  <div key={i} className="flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-colors">
-                    <Building2 className="w-5 h-5" />
-                    <span className="text-sm font-medium whitespace-nowrap">{industry}</span>
+            <div className="mt-24 pt-12 border-t border-white/[0.05]">
+              <p className="text-center text-sm text-slate-600 uppercase tracking-[0.2em] font-bold mb-10">موثوق من شركات رائدة في هذه القطاعات</p>
+              <div className="flex items-center justify-center gap-8 sm:gap-14 flex-wrap opacity-50 hover:opacity-70 transition-opacity duration-500">
+                {[
+                  { icon: Boxes, name: "سلع استهلاكية" },
+                  { icon: Zap, name: "إلكترونيات" },
+                  { icon: Factory, name: "صناعات ثقيلة" },
+                  { icon: Building2, name: "أثاث ومفروشات" },
+                  { icon: TrendingUp, name: "تجارة التجزئة" },
+                  { icon: Truck, name: "قطع غيار" },
+                ].map((ind, i) => (
+                  <div key={i} className="flex items-center gap-2.5 text-slate-400 hover:text-blue-300 transition-colors duration-300 cursor-default">
+                    <ind.icon className="w-5 h-5" />
+                    <span className="text-sm font-bold whitespace-nowrap">{ind.name}</span>
                   </div>
                 ))}
               </div>
@@ -396,51 +368,54 @@ export default function Home() {
           </FadeIn>
         </div>
 
-        {/* === SCROLL INDICATOR === */}
+        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-          <span className="text-xs text-slate-600 uppercase tracking-widest">انزل</span>
-          <div className="w-6 h-10 rounded-full border-2 border-slate-700 flex items-start justify-center p-1.5">
+          <span className="text-[10px] text-slate-600 uppercase tracking-[0.25em] font-bold">اكتشف المزيد</span>
+          <div className="w-6 h-10 rounded-full border-2 border-slate-700/60 flex items-start justify-center p-1.5">
             <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-scroll-indicator" />
           </div>
         </div>
 
-        {/* === BOTTOM GRADIENT FADE === */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-[6]" />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-[#030712] via-[#030712]/80 to-transparent z-[6]" />
       </section>
 
-      {/* SERVICES SECTION */}
-      <section id="services" className="relative py-28 lg:py-36 overflow-hidden section-darker">
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-600/[0.06] rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-cyan-500/[0.05] rounded-full blur-[100px]" />
-        <div className="absolute inset-0 dot-pattern" />
+      {/* ══════════════════════ SECTION DIVIDER ══════════════════════ */}
+      <div className="section-divider" />
+
+      {/* ══════════════════════ SERVICES SECTION ══════════════════════ */}
+      <section id="services" className="relative py-32 lg:py-40 overflow-hidden section-darker">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/[0.07] rounded-full blur-[140px] animate-breathe" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/[0.05] rounded-full blur-[120px] animate-breathe" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute inset-0 dot-pattern opacity-50" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="section-badge mb-6">
               <Zap className="w-4 h-4" />
-              <span>خدماتنا</span>
+              <span>خدماتنا الاحترافية</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              حلول <span className="gradient-text-blue">متكاملة</span> من الألف إلى الياء
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+              حلول <span className="gradient-text-blue">متكاملة</span> من المصنع إلى بابك
             </h2>
-            <p className="text-xl text-slate-400">
-              خدمات تجارية شاملة مصممة لنجاح أعمالك
+            <p className="text-xl text-slate-400 leading-relaxed">
+              ست خدمات أساسية مصممة بدقة لتغطي كل مرحلة من مراحل سلسلة التوريد الدولية
             </p>
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
           {services.map((service, i) => (
             <FadeIn key={i} delay={i * 100}>
-              <div className="group h-full glow-card p-7">
-                <div className={`w-14 h-14 mb-5 rounded-2xl flex items-center justify-center bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
-                  <service.icon className="w-7 h-7 text-white" />
+              <div className="group h-full premium-card p-8">
+                <div className={`w-16 h-16 mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br ${service.gradient} shadow-xl shadow-${service.color}-500/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">{service.title}</h3>
-                <p className="text-slate-400 mb-5 text-sm leading-relaxed">{service.desc}</p>
+                <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-blue-300 transition-colors">{service.title}</h3>
+                <p className="text-slate-400 mb-6 text-sm leading-relaxed">{service.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {service.features.map((feature, j) => (
-                    <span key={j} className="px-3 py-1.5 bg-white/5 text-slate-300 rounded-lg text-xs border border-white/5">
+                    <span key={j} className="px-3 py-1.5 bg-white/[0.04] text-slate-300 rounded-lg text-xs font-medium border border-white/[0.06] hover:bg-white/[0.08] transition-colors">
                       {feature}
                     </span>
                   ))}
@@ -452,7 +427,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURES GRID */}
+      <div className="section-divider" />
+
+      {/* ══════════════════════ FEATURES GRID ══════════════════════ */}
       <PremiumSection id="features" className="section-navy" bgImage="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80" overlay="bg-slate-950/95">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -519,7 +496,9 @@ export default function Home() {
         </FadeIn>
       </PremiumSection>
 
-      {/* PROCESS SECTION */}
+      <div className="section-divider" />
+
+      {/* ══════════════════════ PROCESS SECTION ══════════════════════ */}
       <PremiumSection id="process" className="section-darker">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -559,7 +538,9 @@ export default function Home() {
         </div>
       </PremiumSection>
 
-      {/* TESTIMONIALS */}
+      <div className="section-divider" />
+
+      {/* ══════════════════════ TESTIMONIALS ══════════════════════ */}
       <PremiumSection id="testimonials" className="section-navy">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -601,7 +582,9 @@ export default function Home() {
         </div>
       </PremiumSection>
 
-      {/* KNOWLEDGE SECTION */}
+      <div className="section-divider" />
+
+      {/* ══════════════════════ KNOWLEDGE SECTION ══════════════════════ */}
       <PremiumSection id="knowledge" className="section-darker">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -647,7 +630,9 @@ export default function Home() {
         </FadeIn>
       </PremiumSection>
 
-      {/* OPERATIONS - Daily Capabilities Section */}
+      <div className="section-divider" />
+
+      {/* ══════════════════════ OPERATIONS ══════════════════════ */}
       <PremiumSection id="operations" className="section-navy" bgImage="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80" overlay="bg-slate-950/95">
         <FadeIn>
           <div className="text-center max-w-4xl mx-auto mb-16">
@@ -797,7 +782,9 @@ export default function Home() {
         </FadeIn>
       </PremiumSection>
 
-      {/* Incoterms Section - Trade Terms Explanation */}
+      <div className="section-divider" />
+
+      {/* ══════════════════════ INCOTERMS ══════════════════════ */}
       <section className="relative py-16 section-darker overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -917,7 +904,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* QUOTE SECTION */}
+      <div className="section-divider" />
+
+      {/* ══════════════════════ QUOTE SECTION ══════════════════════ */}
       <section id="quote" className="relative py-32 section-navy overflow-hidden">
         {/* Background Orbs */}
         <div className="absolute inset-0">
