@@ -135,7 +135,7 @@ export default function ContactFloatingBar() {
       </button>
 
       {/* Desktop Floating Bar - Right Side */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-3">
+      <div className="fixed right-5 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-2.5">
         {contactItems.map((item, index) => (
           <a
             key={index}
@@ -144,19 +144,19 @@ export default function ContactFloatingBar() {
             rel={item.isExternal ? "noopener noreferrer" : undefined}
             className="group relative flex items-center justify-end"
           >
-            <div className="absolute right-full mr-3 px-4 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-slate-700">
-              <div className="font-medium">{item.label}</div>
-              <div className="text-xs text-slate-400">{item.sublabel}</div>
+            <div className="absolute right-full mr-3 px-3 py-1.5 bg-slate-900/95 backdrop-blur-sm text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap border border-white/10 shadow-xl translate-x-2 group-hover:translate-x-0">
+              <div className="font-bold">{item.label}</div>
+              <div className="text-[10px] text-slate-400">{item.sublabel}</div>
             </div>
-            <div className={`w-12 h-12 ${item.bgColor} rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform`}>
-              <item.icon className="w-5 h-5" />
+            <div className={`w-11 h-11 ${item.bgColor} rounded-xl flex items-center justify-center text-white shadow-lg shadow-black/30 hover:scale-110 hover:shadow-xl transition-all duration-300`}>
+              <item.icon className="w-4.5 h-4.5" />
             </div>
           </a>
         ))}
       </div>
 
       {/* Desktop Social Bar - Left Side */}
-      <div className="fixed left-6 bottom-6 z-40 hidden lg:flex flex-col gap-3">
+      <div className="fixed left-5 bottom-6 z-40 hidden lg:flex flex-col gap-2">
         {socialItems.map((item, index) => (
           <a
             key={index}
@@ -165,10 +165,10 @@ export default function ContactFloatingBar() {
             rel="noopener noreferrer"
             className="group relative flex items-center"
           >
-            <div className="absolute left-full ml-3 px-4 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-slate-700">
+            <div className="absolute left-full ml-3 px-3 py-1.5 bg-slate-900/95 backdrop-blur-sm text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap border border-white/10 shadow-xl -translate-x-2 group-hover:translate-x-0">
               {item.label}
             </div>
-            <div className={`w-12 h-12 ${item.color} rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform`}>
+            <div className={`w-10 h-10 ${item.color} rounded-xl flex items-center justify-center text-white shadow-lg shadow-black/30 hover:scale-110 transition-all duration-300`}>
               <item.icon />
             </div>
           </a>

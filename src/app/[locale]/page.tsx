@@ -129,60 +129,60 @@ export default function Home() {
     { 
       icon: Search, 
       title: "توريد المنتجات", 
-      desc: "وصول مباشر لشبكة +500 مصنع موثق عبر 30 مقاطعة صينية. نطابق مواصفاتك مع أفضل الموردين عبر تحليل ذكي.",
-      features: ["تدقيق المصانع", "مقارنة الأسعار", "إدارة العينات"],
+      desc: "وصول مباشر لشبكة +500 مصنع مُدقَّق ميدانياً عبر 30 مقاطعة صينية. خوارزمية ذكية تطابق مواصفاتك مع أنسب 3 موردين خلال 48 ساعة.",
+      features: ["تدقيق ميداني", "مقارنة أسعار", "إدارة العينات", "تأمين الدفع"],
       gradient: "from-blue-500 to-blue-600",
       color: "blue"
     },
     { 
       icon: ShieldCheck, 
       title: "فحص الجودة", 
-      desc: "بروتوكولات فحص متعددة المراحل وفق معايير AQL. مهندسو جودة ثنائيو اللغة يضمنون مطابقة كل شحنة لمواصفاتك.",
-      features: ["عينات AQL", "فحص خط الإنتاج", "تدقيق المصنع"],
+      desc: "بروتوكولات فحص ثلاثية المراحل (AQL Level II) مع تقارير مصوّرة. مهندسو جودة في 12 مدينة صناعية يضمنون صفر عيوب.",
+      features: ["معيار AQL-II", "فحص 3 مراحل", "تقرير مصوّر", "شهادة مطابقة"],
       gradient: "from-emerald-500 to-green-600",
       color: "emerald"
     },
     { 
       icon: Warehouse, 
       title: "التخزين والتجميع", 
-      desc: "مستودعات ذكية في غوانزو وإيوو مع تتبع بالباركود، تجميع متعدد الموردين، ومناطق تخزين مكيفة.",
-      features: ["تجميع متعدد", "جرد لحظي", "تخزين آمن"],
+      desc: "3 مستودعات ذكية (+8,000م²) في إيوو وغوانزو وشنزن. تجميع متعدد الموردين، فرز بالباركود، وتخزين مكيّف حسب المنتج.",
+      features: ["3 مستودعات", "تجميع ذكي", "جرد إلكتروني", "تخزين مكيّف"],
       gradient: "from-violet-500 to-purple-600",
       color: "violet"
     },
     { 
       icon: Ship, 
       title: "الشحن الدولي", 
-      desc: "شحن بحري وجوي وبري وسريع لأكثر من 50 دولة. حجز آلي، تتبع GPS لحظي، ومسارات محسّنة لتوفير التكاليف.",
-      features: ["بحري وجوي", "شحن سكك حديدية", "توصيل سريع"],
+      desc: "شحن بحري وجوي وبري وقطارات لأكثر من 50 دولة. حجز تلقائي، تتبع GPS لحظي، ومسارات محسّنة تخفض التكلفة حتى 30%.",
+      features: ["بحري وجوي", "قطارات دولية", "تتبع GPS", "توفير 30%"],
       gradient: "from-cyan-500 to-blue-600",
       color: "cyan"
     },
     { 
       icon: FileCheck, 
       title: "الجمارك والامتثال", 
-      desc: "إدارة كاملة للمستندات، تصنيف رموز HS، تحسين الرسوم، والامتثال لمعايير SASO وESMA الدولية.",
-      features: ["تصنيف HS", "تحسين الرسوم", "امتثال SASO/ESMA"],
+      desc: "تخليص جمركي شامل مع تصنيف HS دقيق، تحسين الرسوم، وامتثال كامل لمعايير SASO، ESMA، CE، وFDA. صفر رفض جمركي.",
+      features: ["تصنيف HS", "تخفيض رسوم", "SASO/ESMA/CE", "صفر رفض"],
       gradient: "from-amber-500 to-orange-600",
       color: "amber"
     },
     { 
       icon: Package, 
-      title: "توصيل باب-لباب DDP", 
-      desc: "حلول DDP متكاملة من أرضية المصنع الصيني إلى باب مستودعك. تسعير شامل بدون رسوم مخفية.",
-      features: ["DDP شامل", "توصيل نهائي", "تأكيد الاستلام"],
+      title: "توصيل DDP للباب", 
+      desc: "حلول باب-لباب شاملة من أرضية المصنع إلى مستودعك. تسعير ثابت شفاف — بدون رسوم مخفية أو مفاجآت.",
+      features: ["DDP شامل", "سعر ثابت", "توصيل نهائي", "تأمين شحن"],
       gradient: "from-rose-500 to-pink-600",
       color: "rose"
     },
   ];
 
   const features = [
-    { icon: Target, title: "مطابقة ذكية للموردين", desc: "خوارزمية تحلل +12,000 نقطة بيانات لإيجاد المصانع المطابقة لمواصفاتك وميزانيتك خلال 48 ساعة.", gradient: "from-blue-500 to-cyan-500", bgImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" },
-    { icon: Shield, title: "حماية الاستثمار", desc: "تأمين تجاري شامل، حماية مدفوعات عبر الضمان، وكفالات جودة. نغطي استثمارك من الطلب حتى التسليم.", gradient: "from-emerald-500 to-green-500", bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" },
-    { icon: BarChart3, title: "ذكاء التكلفة", desc: "عملاؤنا يوفرون 23-40% مقارنة بالشراء المباشر. مقارنة أسعار لحظية عبر +500 مصنع موثق.", gradient: "from-purple-500 to-pink-500", bgImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" },
-    { icon: Handshake, title: "فريق ثلاثي اللغات", desc: "مديرو حسابات بالعربية والصينية والإنجليزية يفهمون ثقافة المصانع الصينية وتوقعات الأعمال العربية.", gradient: "from-orange-500 to-amber-500", bgImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" },
-    { icon: Clock, title: "سرعة الوصول للسوق", desc: "معالجة متوازية للتوريد والفحص واللوجستيك تخفض المدة 40%. منتجاتك تصل السوق أسرع من المنافسين.", gradient: "from-rose-500 to-red-500", bgImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" },
-    { icon: BadgeCheck, title: "امتثال عالمي", desc: "SASO, ESMA, CE, FDA — نتولى الشهادات لكل وجهة. صفر رفض جمركي عبر +15,000 شحنة.", gradient: "from-indigo-500 to-violet-500", bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" },
+    { icon: Target, title: "مطابقة ذكية للموردين", desc: "خوارزمية تحلل +12,000 نقطة بيانات لإيجاد المصانع الأنسب. 3 خيارات مؤهلة خلال 48 ساعة بدل أسابيع البحث العشوائي.", gradient: "from-blue-500 to-cyan-500", bgImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" },
+    { icon: Shield, title: "حماية كاملة لاستثمارك", desc: "تأمين تجاري، ضمان استرداد، حماية مدفوعات عبر Escrow، وكفالة جودة. لن تخسر ريالاً واحداً بدون تعويض.", gradient: "from-emerald-500 to-green-500", bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" },
+    { icon: BarChart3, title: "توفير 23–40% من التكاليف", desc: "مقارنة أسعار فورية عبر +500 مصنع. عملاؤنا يوفرون ما بين 23% إلى 40% مقارنة بالتوريد المباشر غير المدار.", gradient: "from-purple-500 to-pink-500", bgImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" },
+    { icon: Handshake, title: "فريق عربي-صيني متخصص", desc: "مديرو حسابات يتقنون العربية والصينية والإنجليزية. يفهمون ثقافة المصانع وتوقعات العميل العربي بدقة.", gradient: "from-orange-500 to-amber-500", bgImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" },
+    { icon: Clock, title: "أسرع 40% من المنافسين", desc: "معالجة متوازية: التوريد والفحص والشحن يعملون معاً. منتجاتك تصل السوق قبل المنافس بأسابيع.", gradient: "from-rose-500 to-red-500", bgImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" },
+    { icon: BadgeCheck, title: "صفر رفض جمركي", desc: "SASO, ESMA, CE, FDA, GCC — نتولى كل الشهادات والمطابقة. سجل نظيف 100% عبر +15,000 شحنة.", gradient: "from-indigo-500 to-violet-500", bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" },
   ];
 
   const processSteps = [
@@ -538,9 +538,7 @@ export default function Home() {
         </div>
       </PremiumSection>
 
-      <div className="section-divider" />
-
-      {/* ══════════════════════ TESTIMONIALS ══════════════════════ */}
+      {/* TESTIMONIALS */}
       <PremiumSection id="testimonials" className="section-navy">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -582,9 +580,7 @@ export default function Home() {
         </div>
       </PremiumSection>
 
-      <div className="section-divider" />
-
-      {/* ══════════════════════ KNOWLEDGE SECTION ══════════════════════ */}
+      {/* KNOWLEDGE SECTION */}
       <PremiumSection id="knowledge" className="section-darker">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -630,9 +626,7 @@ export default function Home() {
         </FadeIn>
       </PremiumSection>
 
-      <div className="section-divider" />
-
-      {/* ══════════════════════ OPERATIONS ══════════════════════ */}
+      {/* OPERATIONS - Daily Capabilities Section */}
       <PremiumSection id="operations" className="section-navy" bgImage="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80" overlay="bg-slate-950/95">
         <FadeIn>
           <div className="text-center max-w-4xl mx-auto mb-16">
@@ -782,9 +776,7 @@ export default function Home() {
         </FadeIn>
       </PremiumSection>
 
-      <div className="section-divider" />
-
-      {/* ══════════════════════ INCOTERMS ══════════════════════ */}
+      {/* Incoterms Section - Trade Terms Explanation */}
       <section className="relative py-16 section-darker overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
@@ -904,9 +896,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="section-divider" />
-
-      {/* ══════════════════════ QUOTE SECTION ══════════════════════ */}
+      {/* QUOTE SECTION */}
       <section id="quote" className="relative py-32 section-navy overflow-hidden">
         {/* Background Orbs */}
         <div className="absolute inset-0">

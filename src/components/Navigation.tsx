@@ -55,19 +55,19 @@ export default function Navigation() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-[#030712]/95 backdrop-blur-2xl border-b border-white/[0.06] shadow-2xl shadow-black/40' 
-        : 'bg-gradient-to-b from-[#030712]/90 to-transparent'
+        ? 'bg-[#030712]/90 backdrop-blur-xl border-b border-white/[0.05] shadow-2xl shadow-black/50' 
+        : 'bg-gradient-to-b from-[#020617]/80 to-transparent'
     }`}>
-      <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-blue-500 via-cyan-400 to-blue-600 transition-all duration-150" style={{ width: `${scrollProgress}%` }} />
+      <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-blue-500 via-cyan-400 to-blue-600 transition-all duration-150 opacity-80" style={{ width: `${scrollProgress}%` }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-[76px]">
+        <div className="flex justify-between items-center h-[68px]">
           
           <Link href={`/${locale}`} className="flex items-center gap-3 group">
             <img
               src="/logo-dinoora.png"
               alt="دينورا"
-              className="h-12 w-auto group-hover:brightness-125 transition-all duration-300"
+              className="h-10 w-auto group-hover:brightness-125 transition-all duration-300"
             />
           </Link>
 
@@ -76,7 +76,7 @@ export default function Navigation() {
               <Link
                 key={i}
                 href={`/${locale}${item.href}`}
-                className="relative px-5 py-2.5 rounded-xl font-semibold text-[14px] text-slate-400 hover:text-white transition-all duration-300 group"
+                className="relative px-4 py-2 rounded-lg font-semibold text-[13px] text-slate-400 hover:text-white transition-all duration-300 group"
               >
                 {item.label}
                 <span className="absolute bottom-0 right-1/2 translate-x-1/2 w-0 h-[2px] bg-gradient-to-l from-blue-500 to-cyan-400 rounded-full group-hover:w-3/4 transition-all duration-300" />
@@ -86,7 +86,7 @@ export default function Navigation() {
             <div ref={servicesRef} className="relative">
               <button
                 onClick={() => setShowServices(!showServices)}
-                className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl font-semibold text-[14px] text-slate-400 hover:text-white transition-all duration-300"
+                className="flex items-center gap-1.5 px-4 py-2 rounded-lg font-semibold text-[13px] text-slate-400 hover:text-white transition-all duration-300"
               >
                 الخدمات
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showServices ? 'rotate-180' : ''}`} />
@@ -135,7 +135,7 @@ export default function Navigation() {
             
             <Link 
               href={`/${locale}#quote`}
-              className="mr-3 px-6 py-2.5 bg-gradient-to-l from-blue-600 to-cyan-500 text-white rounded-full font-bold text-sm hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-2"
+              className="mr-3 px-5 py-2 bg-gradient-to-l from-blue-600 to-cyan-500 text-white rounded-full font-bold text-xs hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-1.5"
             >
               <Sparkles className="w-4 h-4" />
               احصل على عرض سعر
