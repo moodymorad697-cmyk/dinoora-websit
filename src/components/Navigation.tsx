@@ -55,20 +55,23 @@ export default function Navigation() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-[#030712]/90 backdrop-blur-xl border-b border-white/[0.05] shadow-2xl shadow-black/50' 
-        : 'bg-gradient-to-b from-[#020617]/80 to-transparent'
+        ? 'bg-[#030712]/95 backdrop-blur-2xl border-b border-white/[0.08] shadow-2xl shadow-black/60' 
+        : 'bg-gradient-to-b from-[#020617]/90 to-transparent'
     }`}>
-      <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-blue-500 via-cyan-400 to-blue-600 transition-all duration-150 opacity-80" style={{ width: `${scrollProgress}%` }} />
+      <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-blue-500 via-cyan-400 via-violet-400 to-blue-600 transition-all duration-150 opacity-90 animate-gradient bg-[length:200%_100%]" style={{ width: `${scrollProgress}%` }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-[68px]">
           
           <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <img
-              src="/logo-dinoora.png"
-              alt="دينورا"
-              className="h-10 w-auto group-hover:brightness-125 transition-all duration-300"
-            />
+            <div className="relative">
+              <img
+                src="/logo-dinoora.png"
+                alt="دينورا"
+                className="h-10 w-auto group-hover:brightness-125 transition-all duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -79,7 +82,7 @@ export default function Navigation() {
                 className="relative px-4 py-2 rounded-lg font-semibold text-[13px] text-slate-400 hover:text-white transition-all duration-300 group"
               >
                 {item.label}
-                <span className="absolute bottom-0 right-1/2 translate-x-1/2 w-0 h-[2px] bg-gradient-to-l from-blue-500 to-cyan-400 rounded-full group-hover:w-3/4 transition-all duration-300" />
+                <span className="absolute bottom-0 right-1/2 translate-x-1/2 w-0 h-[2px] bg-gradient-to-l from-blue-500 via-cyan-400 to-violet-400 rounded-full group-hover:w-3/4 transition-all duration-300 animate-gradient bg-[length:200%_100%]" />
               </Link>
             ))}
             
@@ -93,17 +96,17 @@ export default function Navigation() {
               </button>
               
               {showServices && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[560px] rounded-3xl shadow-2xl shadow-black/50 border border-white/[0.08] p-6 grid grid-cols-2 gap-3" style={{ background: 'linear-gradient(135deg, rgba(15,23,42,0.97), rgba(3,7,18,0.98))', backdropFilter: 'blur(20px)' }}>
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 border-r border-b border-white/[0.08]" style={{ background: 'rgba(15,23,42,0.97)' }} />
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[560px] rounded-3xl shadow-2xl shadow-black/60 border border-white/[0.1] p-6 grid grid-cols-2 gap-3 animate-scale-in" style={{ background: 'linear-gradient(135deg, rgba(15,23,42,0.98), rgba(3,7,18,0.99))', backdropFilter: 'blur(25px)' }}>
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 border-r border-b border-white/[0.1]" style={{ background: 'rgba(15,23,42,0.98)' }} />
                   {serviceItems.map((svc, i) => (
                     <Link
                       key={i}
                       href={`/${locale}${svc.href}`}
                       onClick={() => setShowServices(false)}
-                      className="flex items-start gap-3 p-4 rounded-2xl hover:bg-white/[0.04] transition-all duration-300 group"
+                      className="flex items-start gap-3 p-4 rounded-2xl hover:bg-white/[0.06] transition-all duration-300 group hover:scale-[1.02]"
                     >
-                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500/15 to-cyan-500/10 flex items-center justify-center flex-shrink-0 group-hover:from-blue-500/25 group-hover:to-cyan-500/15 transition-all border border-blue-500/10">
-                        <svc.icon className="w-5 h-5 text-blue-400" />
+                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500/15 to-cyan-500/10 flex items-center justify-center flex-shrink-0 group-hover:from-blue-500/25 group-hover:to-cyan-500/15 transition-all border border-blue-500/10 group-hover:border-blue-500/20">
+                        <svc.icon className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors" />
                       </div>
                       <div>
                         <div className="text-sm font-bold text-white group-hover:text-blue-300 transition-colors">{svc.label}</div>
@@ -111,10 +114,10 @@ export default function Navigation() {
                       </div>
                     </Link>
                   ))}
-                  <div className="col-span-2 mt-2 pt-3 border-t border-white/[0.06]">
-                    <Link href={`/${locale}/#services`} onClick={() => setShowServices(false)} className="flex items-center justify-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-bold py-2 transition-colors">
+                  <div className="col-span-2 mt-2 pt-3 border-t border-white/[0.08]">
+                    <Link href={`/${locale}/#services`} onClick={() => setShowServices(false)} className="flex items-center justify-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-bold py-2 transition-colors group">
                       عرض جميع الخدمات
-                      <ArrowLeft className="w-4 h-4" />
+                      <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
@@ -135,7 +138,7 @@ export default function Navigation() {
             
             <Link 
               href={`/${locale}#quote`}
-              className="mr-3 px-5 py-2 bg-gradient-to-l from-blue-600 to-cyan-500 text-white rounded-full font-bold text-xs hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-1.5"
+              className="mr-3 px-5 py-2 bg-gradient-to-l from-blue-600 via-violet-500 to-cyan-500 text-white rounded-full font-bold text-xs hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-1.5 animate-gradient bg-[length:200%_200%]"
             >
               <Sparkles className="w-4 h-4" />
               احصل على عرض سعر

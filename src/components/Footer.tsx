@@ -27,25 +27,26 @@ export default function Footer() {
   const locale = pathname.split('/')[1] || 'ar';
 
   return (
-    <footer className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #060b18 0%, #020617 100%)' }}>
+    <footer className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #060b18 0%, #020617 50%, #030712 100%)' }}>
       {/* BG Accent */}
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/[0.04] rounded-full blur-[120px]" />
-      <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-cyan-500/[0.03] rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/[0.06] rounded-full blur-[140px] animate-morph-blob" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-violet-500/[0.05] rounded-full blur-[120px] animate-morph-blob" style={{ animationDelay: '3s' }} />
+      <div className="absolute top-[30%] left-[20%] w-[300px] h-[300px] bg-cyan-500/[0.04] rounded-full blur-[100px] animate-morph-blob" style={{ animationDelay: '5s' }} />
 
       {/* CTA Banner */}
       <div className="relative border-b border-white/[0.05]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-l from-blue-950/50 to-slate-900/50 rounded-2xl p-8 border border-white/[0.06]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-l from-blue-950/60 via-slate-900/50 to-violet-950/60 rounded-2xl p-8 border border-white/[0.08] backdrop-blur-sm animate-glow-pulse">
             <div>
               <h3 className="text-xl font-extrabold text-white mb-1">جاهز لبدء مشروعك مع الصين؟</h3>
               <p className="text-sm text-slate-400">احصل على استشارة مجانية وعرض سعر خلال 24 ساعة — بدون أي التزام</p>
             </div>
             <div className="flex gap-3">
-              <a href={`https://wa.me/8615587237864`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-green-600 to-emerald-500 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-green-500/20 transition-all hover:-translate-y-0.5">
+              <a href={`https://wa.me/8615587237864`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-green-600 to-emerald-500 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-green-500/30 transition-all hover:-translate-y-0.5">
                 <MessageCircle className="w-4 h-4" />
                 واتساب مباشر
               </a>
-              <Link href={`/${locale}#quote`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-blue-600 to-cyan-500 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-blue-500/20 transition-all hover:-translate-y-0.5">
+              <Link href={`/${locale}#quote`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-blue-600 via-violet-500 to-cyan-500 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5 animate-gradient bg-[length:200%_200%]">
                 <Send className="w-4 h-4" />
                 طلب عرض سعر
               </Link>
@@ -61,7 +62,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+              <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 animate-glow-pulse">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
               <span className="text-lg font-extrabold text-white tracking-tight">دينورا</span>
@@ -76,7 +77,7 @@ export default function Footer() {
                 { icon: TelegramIcon, href: "https://t.me/DINOORACOMPANY", bg: "hover:bg-sky-500" },
                 { icon: () => <MessageCircle className="w-4 h-4" />, href: "https://wa.me/8615587237864", bg: "hover:bg-green-600" },
               ].map((s, i) => (
-                <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" className={`w-8 h-8 bg-white/[0.05] border border-white/[0.08] rounded-lg flex items-center justify-center text-slate-400 hover:text-white ${s.bg} hover:border-transparent transition-all duration-300`}>
+                <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" className={`w-8 h-8 bg-white/[0.05] border border-white/[0.08] rounded-lg flex items-center justify-center text-slate-400 hover:text-white ${s.bg} hover:border-transparent transition-all duration-300 hover:scale-110 hover:shadow-lg`}>
                   <s.icon />
                 </a>
               ))}
