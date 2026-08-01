@@ -76,6 +76,43 @@ export default function InspectionPage() {
               من ما قبل الإنتاج إلى التسليم النهائي، نضمن أن منتجاتك تلبي أعلى معايير الجودة
             </p>
 
+            {/* Inspection Images Gallery */}
+            <div className="grid md:grid-cols-3 gap-4 mb-16">
+              <div className="relative h-64 rounded-2xl overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" 
+                  alt="فحص المنتجات" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+                <div className="absolute bottom-4 right-4">
+                  <p className="text-white font-semibold">فحص المنتجات</p>
+                </div>
+              </div>
+              <div className="relative h-64 rounded-2xl overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" 
+                  alt="تدقيق المصانع" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+                <div className="absolute bottom-4 right-4">
+                  <p className="text-white font-semibold">تدقيق المصانع</p>
+                </div>
+              </div>
+              <div className="relative h-64 rounded-2xl overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" 
+                  alt="فحص الجودة" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+                <div className="absolute bottom-4 right-4">
+                  <p className="text-white font-semibold">فحص الجودة</p>
+                </div>
+              </div>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 transition-all group">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
