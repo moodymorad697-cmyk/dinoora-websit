@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { 
   ChevronDown, Search, ShieldCheck, Warehouse, Ship, FileCheck, Package,
-  ArrowLeft, Phone, Sparkles, MessageCircle
+  ArrowLeft, Phone, Sparkles, MessageCircle, Globe
 } from 'lucide-react';
 
 export default function Navigation() {
@@ -125,6 +125,14 @@ export default function Navigation() {
             </div>
 
             <div className="w-px h-6 bg-white/10 mx-3" />
+
+            <Link 
+              href={locale === 'ar' ? pathname.replace(/^\/ar/, '/en') : pathname.replace(/^\/en/, '/ar')}
+              className="flex items-center gap-2 text-slate-400 hover:text-amber-400 transition-all duration-300 px-3 py-2 rounded-xl hover:bg-amber-500/5"
+            >
+              <Globe className="w-4 h-4" />
+              <span className="text-xs font-bold hidden xl:inline">{locale === 'ar' ? 'English' : 'العربية'}</span>
+            </Link>
 
             <a href="https://wa.me/8615587237864" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-green-400 transition-all duration-300 px-3 py-2 rounded-xl hover:bg-green-500/5">
               <MessageCircle className="w-4 h-4" />
