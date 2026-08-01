@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { 
   ArrowRight, Globe, Search, ShieldCheck, Warehouse, Ship, FileCheck, Package,
   Factory, Boxes, Zap, Award, CheckCircle2, Star, Building2, Truck, Shield,
@@ -189,7 +190,7 @@ export default function Home() {
     { icon: BarChart3, title: "توفير 23–40% من التكاليف", desc: "مقارنة أسعار فورية عبر +500 مصنع. عملاؤنا يوفرون ما بين 23% إلى 40% مقارنة بالتوريد المباشر غير المدار.", gradient: "from-purple-500 to-pink-500", color: "purple", bgImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" },
     { icon: Handshake, title: "فريق عربي-صيني متخصص", desc: "مديرو حسابات يتقنون العربية والصينية والإنجليزية. يفهمون ثقافة المصانع وتوقعات العميل العربي بدقة.", gradient: "from-orange-500 to-amber-500", color: "amber", bgImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" },
     { icon: Clock, title: "أسرع 40% من المنافسين", desc: "معالجة متوازية: التوريد والفحص والشحن يعملون معاً. منتجاتك تصل السوق قبل المنافس بأسابيع.", gradient: "from-rose-500 to-red-500", color: "rose", bgImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" },
-    { icon: BadgeCheck, title: "صفر رفض جمركي", desc: "SASO, ESMA, CE, FDA, GCC — نتولى كل الشهادات والمطابقة. سجل نظيف 100% عبر +15,000 شحنة.", gradient: "from-indigo-500 to-violet-500", color: "indigo", bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" },
+    { icon: BadgeCheck, title: "صفر رفض جمركي", desc: "نتولى كل إجراءات التخليص الجمركي والمطابقة. سجل نظيف 100% عبر +15,000 شحنة.", gradient: "from-indigo-500 to-violet-500", color: "indigo", bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" },
   ];
 
   const processSteps = [
@@ -211,6 +212,9 @@ export default function Home() {
     { icon: Lightbulb, title: "قائمة فحص الجودة AQL", category: "جودة", readTime: "10 دقائق", href: "/blog" },
     { icon: HelpCircle, title: "الجمارك ولوائح الاستيراد", category: "جمارك", readTime: "14 دقيقة", href: "/blog" },
   ];
+
+  const pathname = usePathname();
+  const locale = pathname.split('/')[1] || 'ar';
 
   return (
     <main className="min-h-screen text-slate-100 overflow-x-hidden" style={{ background: 'var(--bg-primary)' }}>
