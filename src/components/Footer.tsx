@@ -61,23 +61,38 @@ export default function Footer() {
           
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 animate-glow-pulse">
-                <Sparkles className="w-4 h-4 text-white" />
+            <div className="flex items-center gap-3 mb-5">
+              <div className="relative">
+                <img
+                  src="/logo-dinoora.png"
+                  alt="دينورا"
+                  className="h-12 w-auto brightness-125"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-full blur-xl opacity-60" />
               </div>
-              <span className="text-lg font-extrabold text-white tracking-tight">دينورا</span>
+              <div>
+                <span className="text-xl font-extrabold text-white tracking-tight block">دينورا</span>
+                <span className="text-xs text-amber-400 font-medium tracking-wider uppercase">Dinoora International</span>
+              </div>
             </div>
-            <p className="text-slate-500 text-xs leading-relaxed mb-5">
+            <p className="text-slate-400 text-sm leading-relaxed mb-6">
               شريكك الاستراتيجي للتجارة الدولية — من المصنع الصيني حتى مستودعك.
             </p>
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               {[
-                { icon: FacebookIcon, href: "https://www.facebook.com/share/17mLtvZn95/?mibextid=wwXIfr", bg: "hover:bg-blue-600" },
-                { icon: TikTokIcon, href: "https://www.tiktok.com/@kingmorad0?is_from_webapp=1&sender_device=pc", bg: "hover:bg-slate-600" },
-                { icon: TelegramIcon, href: "https://t.me/DINOORACOMPANY", bg: "hover:bg-sky-500" },
-                { icon: () => <MessageCircle className="w-4 h-4" />, href: "https://wa.me/8615587237864", bg: "hover:bg-green-600" },
+                { icon: FacebookIcon, href: "https://www.facebook.com/share/17mLtvZn95/?mibextid=wwXIfr", color: "bg-blue-600", label: "Facebook" },
+                { icon: TikTokIcon, href: "https://www.tiktok.com/@kingmorad0?is_from_webapp=1&sender_device=pc", color: "bg-slate-700", label: "TikTok" },
+                { icon: TelegramIcon, href: "https://t.me/DINOORACOMPANY", color: "bg-sky-500", label: "Telegram" },
+                { icon: () => <MessageCircle className="w-5 h-5" />, href: "https://wa.me/8615587237864", color: "bg-green-600", label: "WhatsApp" },
               ].map((s, i) => (
-                <a key={i} href={s.href} target="_blank" rel="noopener noreferrer" className={`w-8 h-8 bg-white/[0.05] border border-white/[0.08] rounded-lg flex items-center justify-center text-slate-400 hover:text-white ${s.bg} hover:border-transparent transition-all duration-300 hover:scale-110 hover:shadow-lg`}>
+                <a 
+                  key={i} 
+                  href={s.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={`w-10 h-10 ${s.color} rounded-xl flex items-center justify-center text-white shadow-lg shadow-black/20 hover:shadow-xl hover:scale-110 transition-all duration-300 group`}
+                  title={s.label}
+                >
                   <s.icon />
                 </a>
               ))}
@@ -86,7 +101,7 @@ export default function Footer() {
 
           {/* الخدمات */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-4">الخدمات</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">الخدمات</h4>
             <ul className="space-y-2.5">
               {[
                 { label: "توريد المنتجات", href: "/services/sourcing" },
@@ -98,7 +113,7 @@ export default function Footer() {
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
-                    <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-blue-400" />
+                    <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-amber-400" />
                     {item.label}
                   </Link>
                 </li>
@@ -108,7 +123,7 @@ export default function Footer() {
 
           {/* روابط */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-4">الشركة</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">الشركة</h4>
             <ul className="space-y-2.5">
               {[
                 { label: "الرئيسية", href: "/" },
@@ -120,7 +135,7 @@ export default function Footer() {
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
-                    <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-blue-400" />
+                    <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-amber-400" />
                     {item.label}
                   </Link>
                 </li>
@@ -130,7 +145,7 @@ export default function Footer() {
 
           {/* التواصل */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-4">تواصل معنا</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">تواصل معنا</h4>
             <ul className="space-y-3">
               <li>
                 <a href="https://wa.me/8615587237864" className="flex items-center gap-2.5 text-slate-400 hover:text-white transition-colors group">

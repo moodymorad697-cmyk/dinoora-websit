@@ -794,6 +794,72 @@ export default function Home() {
         </FadeIn>
       </PremiumSection>
 
+      {/* Trust & Certifications Section */}
+      <section className="relative py-24 section-gold-premium overflow-hidden">
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-amber-600/[0.05] rounded-full blur-[160px] animate-morph-blob" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-navy-600/[0.05] rounded-full blur-[140px] animate-morph-blob" style={{ animationDelay: '3s' }} />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center max-w-4xl mx-auto mb-16">
+              <div className="section-badge-gold animate-hero-shine mb-6">
+                <Award className="w-4 h-4" />
+                <span>الثقة والاعتمادات</span>
+              </div>
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+                معتمدون عالمياً <span className="gradient-text-gold">وموثوق بهم</span>
+              </h2>
+              <p className="text-xl text-slate-400">
+                نلتزم بأعلى معايير الجودة والامتثال في جميع عملياتنا
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={100}>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              {[
+                { icon: "🏆", title: "ISO 9001:2015", desc: "نظام إدارة الجودة المعتمد دولياً" },
+                { icon: "📋", title: "SASO", desc: "المواصفات السعودية للجودة" },
+                { icon: "✅", title: "ESMA", desc: "هيئة الإمارات للمواصفات" },
+                { icon: "🌍", title: "CE Mark", desc: "الامتثال الأوروبي للمنتجات" },
+                { icon: "🔒", title: "FDA", desc: "إدارة الغذاء والدواء الأمريكية" },
+                { icon: "📦", title: "GCC", desc: "معايير مجلس التعاون الخليجي" },
+                { icon: "🚢", title: "FIATA", desc: "الاتحاد الدولي للنقل بالشاحنات" },
+                { icon: "🏢", title: "AEO", desc: "المشغل الاقتصادي المعتمد" },
+              ].map((cert, i) => (
+                <div key={i} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 transition-all group">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{cert.icon}</div>
+                  <h3 className="text-lg font-bold text-white mb-2">{cert.title}</h3>
+                  <p className="text-sm text-slate-400">{cert.desc}</p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={200}>
+            <div className="bg-gradient-to-r from-amber-900/20 via-navy-900/20 to-amber-900/20 rounded-3xl p-8 border border-amber-500/20">
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <div className="text-5xl font-bold text-amber-400 mb-2">15,000+</div>
+                  <div className="text-white font-medium mb-1">شحنة ناجحة</div>
+                  <p className="text-slate-400 text-sm">سجل خالٍ من الحوادث</p>
+                </div>
+                <div>
+                  <div className="text-5xl font-bold text-amber-400 mb-2">99.8%</div>
+                  <div className="text-white font-medium mb-1">معدل الرضا</div>
+                  <p className="text-slate-400 text-sm">بناءً على تقييمات العملاء</p>
+                </div>
+                <div>
+                  <div className="text-5xl font-bold text-amber-400 mb-2">50+</div>
+                  <div className="text-white font-medium mb-1">دولة مغطاة</div>
+                  <p className="text-slate-400 text-sm">شبكة عالمية واسعة</p>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* Incoterms Section - Trade Terms Explanation */}
       <section className="relative py-16 section-darker overflow-hidden">
         {/* Background Image */}

@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useTranslations } from 'next-intl';
+import { Phone, Mail, MapPin, MessageCircle, Clock, Send, ArrowRight, Globe } from 'lucide-react';
 
 export default function ContactPage() {
-  const t = useTranslations('contact');
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,7 +17,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Thank you for your message! We will get back to you within 24 hours.");
+    alert("شكراً لتواصلك معنا! سنرد عليك خلال 24 ساعة.");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -29,33 +28,40 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-slate-950 text-slate-100">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white overflow-hidden">
+      <section className="relative py-32 section-logistics overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920')] bg-cover bg-center"></div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Link href="/" className="inline-block text-blue-300 hover:text-white mb-6 transition-colors">
-              ← Back to Home
-            </Link>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Contact Us
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
+              <MessageCircle className="w-4 h-4" />
+              <span>تواصل معنا</span>
+            </div>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
+              تواصل معنا
+              <span className="block mt-2 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
+                نحن هنا لمساعدتك
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8">
-              Get in touch with our team for expert China trade solutions
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-8">
+              فريقنا الخبير جاهز للإجابة على جميع استفساراتك حول التجارة مع الصين
             </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-                <span className="text-blue-300 font-semibold">24/7</span> Support
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
+                <span className="text-amber-400 font-bold">24/7</span>
+                <span className="text-slate-400 mr-2">دعم متواصل</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-                <span className="text-blue-300 font-semibold">Fast</span> Response
+              <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
+                <span className="text-amber-400 font-bold">سريع</span>
+                <span className="text-slate-400 mr-2">استجابة فورية</span>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-                <span className="text-blue-300 font-semibold">Expert</span> Team
+              <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
+                <span className="text-amber-400 font-bold">خبراء</span>
+                <span className="text-slate-400 mr-2">فريق متخصص</span>
               </div>
             </div>
           </div>
@@ -63,207 +69,243 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-gradient-to-b from-background to-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                  Send Us a Message
+      <section className="py-24 section-logistics">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
+              <h2 className="text-3xl font-bold text-white mb-8">
+                أرسل لنا رسالة
+              </h2>
+
+              <form onSubmit={handleSubmit}>
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-slate-300 mb-2">
+                    الاسم الكامل *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
+                    placeholder="الاسم الكامل"
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-slate-300 mb-2">
+                    البريد الإلكتروني *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-slate-300 mb-2">
+                    رقم الهاتف *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
+                    placeholder="+966 50 123 4567"
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-slate-300 mb-2">
+                    اسم الشركة
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
+                    placeholder="اسم الشركة"
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-slate-300 mb-2">
+                    الموضوع *
+                  </label>
+                  <select
+                    name="subject"
+                    required
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white"
+                  >
+                    <option value="">اختر الموضوع</option>
+                    <option value="quote">طلب عرض سعر</option>
+                    <option value="sourcing">توريد المنتجات</option>
+                    <option value="shipping">استفسار شحن</option>
+                    <option value="customs">التخليص الجمركي</option>
+                    <option value="support">استفسار عام</option>
+                    <option value="partnership">فرصة شراكة</option>
+                  </select>
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-slate-300 mb-2">
+                    الرسالة *
+                  </label>
+                  <textarea
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
+                    placeholder="أخبرنا عن استفسارك..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-500 text-slate-950 rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-amber-500/30 transition-all flex items-center justify-center gap-2"
+                >
+                  <Send className="w-5 h-5" />
+                  إرسال الرسالة
+                </button>
+              </form>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
+                <h2 className="text-3xl font-bold text-white mb-8">
+                  معلومات التواصل
                 </h2>
 
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-6">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your full name"
-                    />
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white mb-1">المقر الرئيسي</h3>
+                      <p className="text-slate-400">
+                        إيوو، مقاطعة تشجيانغ، الصين<br />
+                        منطقة الأعمال التجارية
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="mb-6">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your@email.com"
-                    />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white mb-1">البريد الإلكتروني</h3>
+                      <p className="text-slate-400">
+                        maomoody524@gmail.com<br />
+                        info@dinoora.com
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="mb-6">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+966 50 123 4567"
-                    />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white mb-1">الهاتف</h3>
+                      <p className="text-slate-400">
+                        +86 155 8723 7864<br />
+                        متاح على واتساب
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="mb-6">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your company name"
-                    />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MessageCircle className="w-6 h-6 text-green-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white mb-1">واتساب</h3>
+                      <a href="https://wa.me/8615587237864" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors">
+                        +86 155 8723 7864
+                      </a>
+                    </div>
                   </div>
 
-                  <div className="mb-6">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Subject *
-                    </label>
-                    <select
-                      name="subject"
-                      required
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="quote">Request a Quote</option>
-                      <option value="sourcing">Product Sourcing</option>
-                      <option value="shipping">Shipping Inquiry</option>
-                      <option value="customs">Customs Clearance</option>
-                      <option value="support">General Inquiry</option>
-                      <option value="partnership">Partnership Opportunity</option>
-                    </select>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white mb-1">ساعات العمل</h3>
+                      <p className="text-slate-400">
+                        الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً<br />
+                        الجمعة - السبت: مغلق
+                      </p>
+                    </div>
                   </div>
-
-                  <div className="mb-6">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      name="message"
-                      required
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Please tell us about your inquiry..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg"
-                  >
-                    Send Message
-                  </button>
-                </form>
+                </div>
               </div>
 
-              {/* Contact Info */}
-              <div className="space-y-6">
-                <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                    Contact Information
-                  </h2>
-
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="text-3xl">📍</div>
-                      <div>
-                        <h3 className="font-bold text-gray-900 mb-1">Head Office</h3>
-                        <p className="text-gray-600">
-                          Riyadh, Saudi Arabia<br />
-                          Olaya Street, Business District
-                        </p>
-                      </div>
+              {/* China Offices */}
+              <div className="bg-gradient-to-br from-[#0C2340] to-[#1E3A5F] rounded-2xl p-8 border border-amber-500/20">
+                <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                  <Globe className="w-6 h-6 text-amber-400" />
+                  مكاتبنا في الصين
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-amber-400 rounded-full" />
+                    <div>
+                      <h4 className="font-semibold text-white">إيوو</h4>
+                      <p className="text-slate-400 text-sm">مقرنا الرئيسي</p>
                     </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="text-3xl">📧</div>
-                      <div>
-                        <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                        <p className="text-gray-600">
-                          info@chinatrade.com<br />
-                          support@chinatrade.com
-                        </p>
-                      </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-amber-400 rounded-full" />
+                    <div>
+                      <h4 className="font-semibold text-white">شانغهاي</h4>
+                      <p className="text-slate-400 text-sm">ميناء الشحن</p>
                     </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="text-3xl">📞</div>
-                      <div>
-                        <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
-                        <p className="text-gray-600">
-                          +966 50 123 4567<br />
-                          +966 11 234 5678
-                        </p>
-                      </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-amber-400 rounded-full" />
+                    <div>
+                      <h4 className="font-semibold text-white">شنتشن</h4>
+                      <p className="text-slate-400 text-sm">مركز الإلكترونيات</p>
                     </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="text-3xl">💬</div>
-                      <div>
-                        <h3 className="font-bold text-gray-900 mb-1">WhatsApp</h3>
-                        <p className="text-gray-600">
-                          +966 50 123 4567
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="text-3xl">⏰</div>
-                      <div>
-                        <h3 className="font-bold text-gray-900 mb-1">Business Hours</h3>
-                        <p className="text-gray-600">
-                          Sunday - Thursday: 9:00 AM - 6:00 PM<br />
-                          Friday - Saturday: Closed
-                        </p>
-                      </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-amber-400 rounded-full" />
+                    <div>
+                      <h4 className="font-semibold text-white">قوانغتشو</h4>
+                      <p className="text-slate-400 text-sm">مركز التصنيع</p>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* China Offices */}
-                <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl p-8 text-white">
-                  <h3 className="text-2xl font-bold mb-4">🇨🇳 China Offices</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold mb-1">Shenzhen</h4>
-                      <p className="text-blue-100 text-sm">Electronics Hub</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Guangzhou</h4>
-                      <p className="text-blue-100 text-sm">Manufacturing Center</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Shanghai</h4>
-                      <p className="text-blue-100 text-sm">Port City</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-1">Changsha</h4>
-                      <p className="text-blue-100 text-sm">Emerging Hub</p>
-                    </div>
-                  </div>
-                </div>
+              {/* Quick Actions */}
+              <div className="flex gap-3">
+                <a href="https://wa.me/8615587237864" target="_blank" rel="noopener noreferrer" className="flex-1 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors">
+                  <MessageCircle className="w-5 h-5" />
+                  واتساب
+                </a>
+                <Link href="/#quote" className="flex-1 bg-amber-600 hover:bg-amber-700 text-slate-950 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors">
+                  <Send className="w-5 h-5" />
+                  عرض سعر
+                </Link>
               </div>
             </div>
           </div>
