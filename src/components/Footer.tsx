@@ -27,16 +27,16 @@ export default function Footer() {
   const locale = pathname.split('/')[1] || 'ar';
 
   return (
-    <footer className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #060b18 0%, #020617 50%, #030712 100%)' }}>
+    <footer className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0C2340 0%, #1E3A5F 50%, #0C2340 100%)' }}>
       {/* BG Accent */}
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/[0.06] rounded-full blur-[140px] animate-morph-blob" />
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-violet-500/[0.05] rounded-full blur-[120px] animate-morph-blob" style={{ animationDelay: '3s' }} />
-      <div className="absolute top-[30%] left-[20%] w-[300px] h-[300px] bg-cyan-500/[0.04] rounded-full blur-[100px] animate-morph-blob" style={{ animationDelay: '5s' }} />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-600/[0.06] rounded-full blur-[140px] animate-morph-blob" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-navy-500/[0.05] rounded-full blur-[120px] animate-morph-blob" style={{ animationDelay: '3s' }} />
+      <div className="absolute top-[30%] left-[20%] w-[300px] h-[300px] bg-steel-500/[0.04] rounded-full blur-[100px] animate-morph-blob" style={{ animationDelay: '5s' }} />
 
       {/* CTA Banner */}
       <div className="relative border-b border-white/[0.05]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-l from-blue-950/60 via-slate-900/50 to-violet-950/60 rounded-2xl p-8 border border-white/[0.08] backdrop-blur-sm animate-glow-pulse">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-l from-amber-950/60 via-navy-900/50 to-amber-950/60 rounded-2xl p-8 border border-white/[0.08] backdrop-blur-sm animate-glow-pulse">
             <div>
               <h3 className="text-xl font-extrabold text-white mb-1">جاهز لبدء مشروعك مع الصين؟</h3>
               <p className="text-sm text-slate-400">احصل على استشارة مجانية وعرض سعر خلال 24 ساعة — بدون أي التزام</p>
@@ -46,7 +46,7 @@ export default function Footer() {
                 <MessageCircle className="w-4 h-4" />
                 واتساب مباشر
               </a>
-              <Link href={`/${locale}#quote`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-blue-600 via-violet-500 to-cyan-500 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5 animate-gradient bg-[length:200%_200%]">
+              <Link href={`/${locale}#quote`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-amber-600 via-yellow-500 to-amber-600 text-slate-950 rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-amber-500/30 transition-all hover:-translate-y-0.5 animate-gradient bg-[length:200%_200%]">
                 <Send className="w-4 h-4" />
                 طلب عرض سعر
               </Link>

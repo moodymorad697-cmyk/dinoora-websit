@@ -3,22 +3,46 @@
 @tailwind utilities;
 
 :root {
+  /* Logistics Professional Colors */
+  --brand-navy: #1E3A5F;
+  --brand-navy-deep: #0C2340;
+  --brand-steel: #4682B4;
+  --brand-ocean: #0C2340;
+  
+  /* Gold Premium Colors */
+  --brand-gold: #D4AF37;
+  --brand-gold-light: #E5C158;
+  --brand-gold-dark: #B8941F;
+  --brand-gold-darker: #C5A028;
+  
+  /* Accent Colors */
+  --brand-emerald: #10B981;
+  --brand-slate: #64748B;
   --brand-blue: #2563eb;
   --brand-blue-light: #3b82f6;
   --brand-cyan: #06b6d4;
-  --brand-gold: #f59e0b;
-  --brand-emerald: #10b981;
   --brand-purple: #8b5cf6;
   --brand-rose: #f43f5e;
+  
+  /* Background Colors */
   --bg-primary: #030712;
   --bg-secondary: #0a0f1f;
   --bg-tertiary: #111827;
+  --bg-navy: #0C2340;
+  --bg-gold: #1C1917;
+  
+  /* Glass & Border */
   --glass-bg: rgba(15, 23, 42, 0.6);
   --glass-border: rgba(255, 255, 255, 0.08);
+  
+  /* Glow Effects */
   --glow-blue: rgba(37, 99, 235, 0.4);
   --glow-cyan: rgba(6, 182, 212, 0.3);
-  --glow-gold: rgba(245, 158, 11, 0.3);
+  --glow-gold: rgba(212, 175, 55, 0.4);
+  --glow-navy: rgba(30, 58, 95, 0.4);
+  --glow-steel: rgba(70, 130, 180, 0.3);
   --glow-purple: rgba(139, 92, 246, 0.3);
+  --glow-emerald: rgba(16, 185, 129, 0.3);
 }
 
 @layer base {
@@ -60,6 +84,23 @@
   }
   .section-gold {
     background: linear-gradient(135deg, #020617 0%, #1c1917 30%, #292524 50%, #1c1917 70%, #020617 100%);
+  }
+  
+  /* New Logistics-Themed Backgrounds */
+  .section-logistics {
+    background: linear-gradient(135deg, var(--bg-navy) 0%, var(--brand-navy) 25%, var(--brand-navy-deep) 50%, var(--brand-navy) 75%, var(--bg-navy) 100%);
+  }
+  .section-gold-premium {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-gold) 25%, #2D2620 50%, var(--bg-gold) 75%, var(--bg-primary) 100%);
+  }
+  .section-navy-deep {
+    background: linear-gradient(135deg, var(--bg-navy) 0%, var(--brand-navy-deep) 30%, #081830 50%, var(--brand-navy-deep) 70%, var(--bg-navy) 100%);
+  }
+  .section-steel {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #1A2F4A 25%, var(--brand-navy) 50%, #1A2F4A 75%, var(--bg-primary) 100%);
+  }
+  .section-gold-navy {
+    background: linear-gradient(135deg, var(--bg-navy) 0%, var(--brand-navy) 25%, #2D2A24 50%, var(--brand-navy) 75%, var(--bg-navy) 100%);
   }
 
   /* ═══════ CONTAINERS ═══════ */
@@ -217,11 +258,31 @@
 
   .btn-gold {
     @apply inline-flex items-center justify-center gap-3 px-8 py-4 text-slate-950 rounded-2xl font-bold text-lg transition-all duration-300;
-    background: linear-gradient(135deg, #fbbf24, #f59e0b);
-    box-shadow: 0 4px 25px rgba(245,158,11,0.35);
+    background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-dark));
+    box-shadow: 0 4px 25px var(--glow-gold);
   }
   .btn-gold:hover {
-    box-shadow: 0 8px 40px rgba(245,158,11,0.55);
+    box-shadow: 0 8px 40px rgba(212, 175, 55, 0.55);
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  .btn-navy {
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 text-white rounded-2xl font-bold text-lg transition-all duration-300;
+    background: linear-gradient(135deg, var(--brand-navy), var(--brand-navy-deep));
+    box-shadow: 0 4px 25px var(--glow-navy);
+  }
+  .btn-navy:hover {
+    box-shadow: 0 8px 40px rgba(30, 58, 95, 0.55);
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  .btn-steel {
+    @apply inline-flex items-center justify-center gap-3 px-8 py-4 text-white rounded-2xl font-bold text-lg transition-all duration-300;
+    background: linear-gradient(135deg, var(--brand-steel), var(--brand-navy));
+    box-shadow: 0 4px 25px var(--glow-steel);
+  }
+  .btn-steel:hover {
+    box-shadow: 0 8px 40px rgba(70, 130, 180, 0.55);
     transform: translateY(-3px) scale(1.02);
   }
 

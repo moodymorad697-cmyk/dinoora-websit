@@ -10,20 +10,20 @@ export default function InspectionPage() {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80')" }} />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-900/90 to-emerald-950/80" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,_rgba(16,185,129,0.15),transparent_50%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0C2340]/95 via-[#1E3A5F]/90 to-[#0C2340]/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,_rgba(212,175,55,0.15),transparent_50%)]" />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
               <ShieldCheck className="w-4 h-4" />
               فحص الجودة / Inspection
             </div>
             
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
               فحص الجودة
-              <span className="block mt-2 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
                 الشامل
               </span>
             </h1>
@@ -34,15 +34,15 @@ export default function InspectionPage() {
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-emerald-400 font-bold">100%</span>
+                <span className="text-amber-400 font-bold">100%</span>
                 <span className="text-slate-400 mr-2">تغطية الفحص</span>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-emerald-400 font-bold">50+</span>
+                <span className="text-amber-400 font-bold">50+</span>
                 <span className="text-slate-400 mr-2">مفتش معتمد</span>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-emerald-400 font-bold">99.5%</span>
+                <span className="text-amber-400 font-bold">99.5%</span>
                 <span className="text-slate-400 mr-2">معدل الدقة</span>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function InspectionPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/#quote"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-500 text-white rounded-full font-semibold text-lg hover:shadow-xl transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-500 text-slate-950 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
               >
                 اطلب عرض سعر
               </Link>
@@ -66,7 +66,7 @@ export default function InspectionPage() {
       </section>
 
       {/* Service Details */}
-      <section className="py-24 bg-slate-900">
+      <section className="py-24 section-logistics">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-4 text-center">
@@ -77,7 +77,7 @@ export default function InspectionPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-emerald-500/50 hover:bg-slate-800 transition-all group">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 transition-all group">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <ClipboardCheck className="w-8 h-8 text-white" />
                 </div>

@@ -58,7 +58,7 @@ export default function Navigation() {
         ? 'bg-[#030712]/95 backdrop-blur-2xl border-b border-white/[0.08] shadow-2xl shadow-black/60' 
         : 'bg-gradient-to-b from-[#020617]/90 to-transparent'
     }`}>
-      <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-blue-500 via-cyan-400 via-violet-400 to-blue-600 transition-all duration-150 opacity-90 animate-gradient bg-[length:200%_100%]" style={{ width: `${scrollProgress}%` }} />
+      <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-amber-500 via-yellow-400 via-amber-600 to-amber-500 transition-all duration-150 opacity-90 animate-gradient bg-[length:200%_100%]" style={{ width: `${scrollProgress}%` }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-[68px]">
@@ -70,7 +70,7 @@ export default function Navigation() {
                 alt="دينورا"
                 className="h-10 w-auto group-hover:brightness-125 transition-all duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           </Link>
 
@@ -82,7 +82,7 @@ export default function Navigation() {
                 className="relative px-4 py-2 rounded-lg font-semibold text-[13px] text-slate-400 hover:text-white transition-all duration-300 group"
               >
                 {item.label}
-                <span className="absolute bottom-0 right-1/2 translate-x-1/2 w-0 h-[2px] bg-gradient-to-l from-blue-500 via-cyan-400 to-violet-400 rounded-full group-hover:w-3/4 transition-all duration-300 animate-gradient bg-[length:200%_100%]" />
+                <span className="absolute bottom-0 right-1/2 translate-x-1/2 w-0 h-[2px] bg-gradient-to-l from-amber-500 via-yellow-400 to-amber-600 rounded-full group-hover:w-3/4 transition-all duration-300 animate-gradient bg-[length:200%_100%]" />
               </Link>
             ))}
             
@@ -138,7 +138,7 @@ export default function Navigation() {
             
             <Link 
               href={`/${locale}#quote`}
-              className="mr-3 px-5 py-2 bg-gradient-to-l from-blue-600 via-violet-500 to-cyan-500 text-white rounded-full font-bold text-xs hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-1.5 animate-gradient bg-[length:200%_200%]"
+              className="mr-3 px-5 py-2 bg-gradient-to-l from-amber-600 via-yellow-500 to-amber-600 text-slate-950 rounded-full font-bold text-xs hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-1.5 animate-gradient bg-[length:200%_200%]"
             >
               <Sparkles className="w-4 h-4" />
               احصل على عرض سعر

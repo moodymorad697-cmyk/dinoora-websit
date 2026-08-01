@@ -7,14 +7,14 @@ export default function CustomsPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white overflow-hidden">
+      <section className="relative py-32 section-logistics text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920')] bg-cover bg-center"></div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Link href="/services" className="inline-block text-blue-300 hover:text-white mb-6 transition-colors">
+            <Link href="/services" className="inline-block text-amber-300 hover:text-white mb-6 transition-colors">
               ← Back to Services
             </Link>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -26,13 +26,13 @@ export default function CustomsPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-                <span className="text-blue-300 font-semibold">100%</span> Compliance
+                <span className="text-amber-300 font-semibold">100%</span> Compliance
               </div>
               <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-                <span className="text-blue-300 font-semibold">50+</span> Countries
+                <span className="text-amber-300 font-semibold">50+</span> Countries
               </div>
               <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-                <span className="text-blue-300 font-semibold">24/7</span> Support
+                <span className="text-amber-300 font-semibold">24/7</span> Support
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function CustomsPage() {
       </section>
 
       {/* Service Details */}
-      <section className="py-24 bg-gradient-to-b from-background to-gray-50">
+      <section className="py-24 section-logistics">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">

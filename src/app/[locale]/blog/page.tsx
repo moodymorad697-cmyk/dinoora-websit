@@ -211,23 +211,23 @@ export default function BlogPage() {
     <main className="min-h-screen text-slate-100 overflow-x-hidden" style={{ background: 'var(--bg-dark)' }}>
       
       {/* HERO */}
-      <section className="relative pt-32 pb-20 overflow-hidden section-darker">
+      <section className="relative pt-32 pb-20 overflow-hidden section-logistics">
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1920&q=80')" }} />
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/95 to-slate-950" />
         </div>
-        <div className="absolute top-20 left-10 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[130px] animate-float" />
-        <div className="absolute bottom-0 right-10 w-[300px] h-[300px] bg-cyan-500/8 rounded-full blur-[100px] animate-float" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-20 left-10 w-[400px] h-[400px] bg-amber-600/10 rounded-full blur-[130px] animate-float" />
+        <div className="absolute bottom-0 right-10 w-[300px] h-[300px] bg-navy-500/8 rounded-full blur-[100px] animate-float" style={{ animationDelay: '3s' }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-semibold tracking-wider uppercase backdrop-blur-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-semibold tracking-wider uppercase backdrop-blur-sm mb-6">
               <BookOpen className="w-4 h-4" />
               <span>مركز المعرفة التجارية</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-              مدونة <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">دينورا</span> التجارية
+              مدونة <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500">دينورا</span> التجارية
             </h1>
             <p className="text-lg sm:text-xl text-slate-400 leading-relaxed mb-10">
               دليلك الشامل لكل ما يتعلق بالاستيراد والتصدير من الصين — التوريد، الشحن، الجمارك، فحص الجودة، التخزين، والوساطة التجارية
@@ -241,7 +241,7 @@ export default function BlogPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="ابحث عن مقالات..."
-                className="w-full pl-12 pr-4 py-4 bg-white/[0.04] border border-white/[0.08] rounded-2xl text-white placeholder-slate-500 focus:border-blue-500/40 focus:outline-none focus:ring-1 focus:ring-blue-500/20 transition-all text-base"
+                className="w-full pl-12 pr-4 py-4 bg-white/[0.04] border border-white/[0.08] rounded-2xl text-white placeholder-slate-500 focus:border-amber-500/40 focus:outline-none focus:ring-1 focus:ring-amber-500/20 transition-all text-base"
               />
             </div>
           </div>

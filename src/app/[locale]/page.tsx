@@ -177,12 +177,12 @@ export default function Home() {
   ];
 
   const features = [
-    { icon: Target, title: "مطابقة ذكية للموردين", desc: "خوارزمية تحلل +12,000 نقطة بيانات لإيجاد المصانع الأنسب. 3 خيارات مؤهلة خلال 48 ساعة بدل أسابيع البحث العشوائي.", gradient: "from-blue-500 to-cyan-500", bgImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" },
-    { icon: Shield, title: "حماية كاملة لاستثمارك", desc: "تأمين تجاري، ضمان استرداد، حماية مدفوعات عبر Escrow، وكفالة جودة. لن تخسر ريالاً واحداً بدون تعويض.", gradient: "from-emerald-500 to-green-500", bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" },
-    { icon: BarChart3, title: "توفير 23–40% من التكاليف", desc: "مقارنة أسعار فورية عبر +500 مصنع. عملاؤنا يوفرون ما بين 23% إلى 40% مقارنة بالتوريد المباشر غير المدار.", gradient: "from-purple-500 to-pink-500", bgImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" },
-    { icon: Handshake, title: "فريق عربي-صيني متخصص", desc: "مديرو حسابات يتقنون العربية والصينية والإنجليزية. يفهمون ثقافة المصانع وتوقعات العميل العربي بدقة.", gradient: "from-orange-500 to-amber-500", bgImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" },
-    { icon: Clock, title: "أسرع 40% من المنافسين", desc: "معالجة متوازية: التوريد والفحص والشحن يعملون معاً. منتجاتك تصل السوق قبل المنافس بأسابيع.", gradient: "from-rose-500 to-red-500", bgImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" },
-    { icon: BadgeCheck, title: "صفر رفض جمركي", desc: "SASO, ESMA, CE, FDA, GCC — نتولى كل الشهادات والمطابقة. سجل نظيف 100% عبر +15,000 شحنة.", gradient: "from-indigo-500 to-violet-500", bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" },
+    { icon: Target, title: "مطابقة ذكية للموردين", desc: "خوارزمية تحلل +12,000 نقطة بيانات لإيجاد المصانع الأنسب. 3 خيارات مؤهلة خلال 48 ساعة بدل أسابيع البحث العشوائي.", gradient: "from-blue-500 to-cyan-500", color: "blue", bgImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" },
+    { icon: Shield, title: "حماية كاملة لاستثمارك", desc: "تأمين تجاري، ضمان استرداد، حماية مدفوعات عبر Escrow، وكفالة جودة. لن تخسر ريالاً واحداً بدون تعويض.", gradient: "from-emerald-500 to-green-500", color: "emerald", bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" },
+    { icon: BarChart3, title: "توفير 23–40% من التكاليف", desc: "مقارنة أسعار فورية عبر +500 مصنع. عملاؤنا يوفرون ما بين 23% إلى 40% مقارنة بالتوريد المباشر غير المدار.", gradient: "from-purple-500 to-pink-500", color: "purple", bgImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" },
+    { icon: Handshake, title: "فريق عربي-صيني متخصص", desc: "مديرو حسابات يتقنون العربية والصينية والإنجليزية. يفهمون ثقافة المصانع وتوقعات العميل العربي بدقة.", gradient: "from-orange-500 to-amber-500", color: "amber", bgImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" },
+    { icon: Clock, title: "أسرع 40% من المنافسين", desc: "معالجة متوازية: التوريد والفحص والشحن يعملون معاً. منتجاتك تصل السوق قبل المنافس بأسابيع.", gradient: "from-rose-500 to-red-500", color: "rose", bgImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" },
+    { icon: BadgeCheck, title: "صفر رفض جمركي", desc: "SASO, ESMA, CE, FDA, GCC — نتولى كل الشهادات والمطابقة. سجل نظيف 100% عبر +15,000 شحنة.", gradient: "from-indigo-500 to-violet-500", color: "indigo", bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" },
   ];
 
   const processSteps = [
@@ -210,38 +210,49 @@ export default function Home() {
 
       {/* ══════════════════════ HERO SECTION ══════════════════════ */}
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-        {/* BG: Base */}
-        <div className="absolute inset-0 z-0" style={{ background: 'linear-gradient(135deg, #020617 0%, #0a0f2e 25%, #0c1445 50%, #1e1b4b 75%, #020617 100%)' }} />
+        {/* BG: Base - Navy logistics theme */}
+        <div className="absolute inset-0 z-0" style={{ background: 'linear-gradient(135deg, #0C2340 0%, #1E3A5F 25%, #0C2340 50%, #1A2F4A 75%, #0C2340 100%)' }} />
+        
+        {/* BG: Real logistics image - Container ship */}
+        <div className="absolute inset-0 z-[1]">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-fixed"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80')",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0C2340]/95 via-[#1E3A5F]/90 to-[#0C2340]/95" />
+        </div>
         
         {/* BG: Mesh gradient */}
-        <div className="absolute inset-0 z-[1] mesh-gradient" />
+        <div className="absolute inset-0 z-[2] mesh-gradient opacity-50" />
         
-        {/* BG: Premium Aurora blobs */}
-        <div className="absolute top-[-15%] right-[-10%] w-[800px] h-[800px] rounded-full animate-morph-blob z-[2]" style={{ background: 'radial-gradient(circle, rgba(37,99,235,0.25), rgba(6,182,212,0.15), transparent 70%)' }} />
-        <div className="absolute bottom-[-20%] left-[-15%] w-[700px] h-[700px] rounded-full animate-morph-blob z-[2]" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.2), rgba(6,182,212,0.12), transparent 70%)', animationDelay: '3s' }} />
-        <div className="absolute top-[25%] left-[35%] w-[600px] h-[600px] rounded-full animate-morph-blob z-[2]" style={{ background: 'radial-gradient(circle, rgba(245,158,11,0.08), rgba(37,99,235,0.1), transparent 60%)', animationDelay: '5s' }} />
-        <div className="absolute bottom-[30%] right-[20%] w-[400px] h-[400px] rounded-full animate-morph-blob z-[2]" style={{ background: 'radial-gradient(circle, rgba(6,182,212,0.15), rgba(139,92,246,0.1), transparent 65%)', animationDelay: '2s' }} />
+        {/* BG: Gold and Navy Aurora blobs */}
+        <div className="absolute top-[-15%] right-[-10%] w-[800px] h-[800px] rounded-full animate-morph-blob z-[3]" style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.15), rgba(30,58,95,0.12), rgba(70,130,180,0.08), transparent 70%)' }} />
+        <div className="absolute bottom-[-20%] left-[-15%] w-[700px] h-[700px] rounded-full animate-morph-blob z-[3]" style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.12), rgba(30,58,95,0.15), rgba(16,185,129,0.08), transparent 70%)', animationDelay: '3s' }} />
+        <div className="absolute top-[25%] left-[35%] w-[600px] h-[600px] rounded-full animate-morph-blob z-[3]" style={{ background: 'radial-gradient(circle, rgba(70,130,180,0.1), rgba(212,175,55,0.12), rgba(30,58,95,0.06), transparent 60%)', animationDelay: '5s' }} />
+        <div className="absolute bottom-[30%] right-[20%] w-[400px] h-[400px] rounded-full animate-morph-blob z-[3]" style={{ background: 'radial-gradient(circle, rgba(70,130,180,0.12), rgba(16,185,129,0.1), transparent 65%)', animationDelay: '2s' }} />
 
         {/* BG: Grid */}
-        <div className="absolute inset-0 z-[3] grid-pattern opacity-30" />
+        <div className="absolute inset-0 z-[4] grid-pattern opacity-20" />
 
-        {/* BG: Particles */}
+        {/* BG: Logistics-themed particles */}
         {[
-          { top: '8%', right: '12%', size: 4, color: 'bg-blue-400' },
-          { top: '22%', right: '78%', size: 3, color: 'bg-cyan-400' },
-          { top: '45%', right: '15%', size: 3, color: 'bg-violet-400' },
-          { top: '68%', right: '65%', size: 4, color: 'bg-blue-400' },
-          { top: '35%', right: '50%', size: 2, color: 'bg-cyan-400' },
-          { top: '82%', right: '30%', size: 3, color: 'bg-violet-400' },
-          { top: '15%', right: '45%', size: 2, color: 'bg-blue-400' },
-          { top: '55%', right: '85%', size: 3, color: 'bg-cyan-400' },
+          { top: '8%', right: '12%', size: 4, color: 'bg-amber-400' },
+          { top: '22%', right: '78%', size: 3, color: 'bg-slate-400' },
+          { top: '45%', right: '15%', size: 3, color: 'bg-yellow-400' },
+          { top: '68%', right: '65%', size: 4, color: 'bg-emerald-400' },
+          { top: '35%', right: '50%', size: 2, color: 'bg-amber-400' },
+          { top: '82%', right: '30%', size: 3, color: 'bg-slate-400' },
+          { top: '15%', right: '45%', size: 2, color: 'bg-yellow-400' },
+          { top: '55%', right: '85%', size: 3, color: 'bg-emerald-400' },
         ].map((p, i) => (
-          <div key={i} className={`absolute rounded-full ${p.color}/50 z-[4] animate-glow-pulse`} style={{ top: p.top, right: p.right, width: `${p.size}px`, height: `${p.size}px`, animation: `particle-float ${6 + i}s ease-in-out infinite`, animationDelay: `${i * 0.6}s` }} />
+          <div key={i} className={`absolute rounded-full ${p.color}/50 z-[5] animate-glow-pulse`} style={{ top: p.top, right: p.right, width: `${p.size}px`, height: `${p.size}px`, animation: `particle-float ${6 + i}s ease-in-out infinite`, animationDelay: `${i * 0.6}s` }} />
         ))}
 
         {/* Decorative lines */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-l from-transparent via-blue-500/40 to-transparent z-[5]" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-l from-transparent via-cyan-500/30 to-transparent z-[5]" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-l from-transparent via-amber-500/40 to-transparent z-[6]" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-l from-transparent via-slate-500/30 to-transparent z-[6]" />
 
         {/* ═══ CONTENT ═══ */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-28 w-full">
@@ -266,12 +277,12 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-3 animate-text-reveal" style={{ animationDelay: '0.4s' }}>
-                  <button onClick={() => scrollToSection('quote')} className="btn-ultra animate-hero-shine group">
+                  <button onClick={() => scrollToSection('quote')} className="btn-gold animate-hero-shine group">
                     <Sparkles className="w-5 h-5" />
                     <span>ابدأ مشروعك الآن</span>
                     <ArrowRight className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                   </button>
-                  <button onClick={() => scrollToSection('services')} className="btn-outline group">
+                  <button onClick={() => scrollToSection('services')} className="btn-navy group">
                     <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     استكشف خدماتنا
                   </button>
@@ -390,10 +401,10 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* ══════════════════════ SERVICES SECTION ══════════════════════ */}
-      <section id="services" className="relative py-32 lg:py-40 overflow-hidden section-premium">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/[0.08] rounded-full blur-[160px] animate-morph-blob" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-violet-600/[0.06] rounded-full blur-[140px] animate-morph-blob" style={{ animationDelay: '3s' }} />
-        <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-cyan-500/[0.05] rounded-full blur-[100px] animate-morph-blob" style={{ animationDelay: '5s' }} />
+      <section id="services" className="relative py-32 lg:py-40 overflow-hidden section-logistics">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-500/[0.08] rounded-full blur-[160px] animate-morph-blob" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-navy-600/[0.06] rounded-full blur-[140px] animate-morph-blob" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-steel-500/[0.05] rounded-full blur-[100px] animate-morph-blob" style={{ animationDelay: '5s' }} />
         <div className="absolute inset-0 dot-pattern opacity-40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
@@ -437,7 +448,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* ══════════════════════ FEATURES GRID ══════════════════════ */}
-      <PremiumSection id="features" className="section-rich" bgImage="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80" overlay="bg-slate-950/96">
+      <PremiumSection id="features" className="section-gold-premium" bgImage="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80" overlay="bg-[#0C2340]/96">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="section-badge-gold animate-hero-shine mb-6">

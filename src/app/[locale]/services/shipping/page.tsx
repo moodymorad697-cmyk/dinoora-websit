@@ -10,20 +10,20 @@ export default function ShippingPage() {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80')" }} />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-900/90 to-blue-950/80" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,_rgba(59,130,246,0.15),transparent_50%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0C2340]/95 via-[#1E3A5F]/90 to-[#0C2340]/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,_rgba(212,175,55,0.15),transparent_50%)]" />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
               <Ship className="w-4 h-4" />
               الشحن / Shipping
             </div>
             
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
               حلول الشحن
-              <span className="block mt-2 bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-400 bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
                 العالمية
               </span>
             </h1>
@@ -34,15 +34,15 @@ export default function ShippingPage() {
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-cyan-400 font-bold">50+</span>
+                <span className="text-amber-400 font-bold">50+</span>
                 <span className="text-slate-400 mr-2">دولة</span>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-cyan-400 font-bold">4</span>
+                <span className="text-amber-400 font-bold">4</span>
                 <span className="text-slate-400 mr-2">طرق شحن</span>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-cyan-400 font-bold">24/7</span>
+                <span className="text-amber-400 font-bold">24/7</span>
                 <span className="text-slate-400 mr-2">تتبع مباشر</span>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function ShippingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/#quote"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-500 text-white rounded-full font-semibold text-lg hover:shadow-xl transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-500 text-slate-950 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
               >
                 احسب تكلفة الشحن
                 <ArrowRight className="w-5 h-5" />
@@ -67,7 +67,7 @@ export default function ShippingPage() {
       </section>
 
       {/* Shipping Methods */}
-      <section className="py-24 bg-slate-900">
+      <section className="py-24 section-logistics">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">طرق الشحن</h2>

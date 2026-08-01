@@ -15,19 +15,19 @@ export default function SourcingPage() {
               backgroundImage: "url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&q=80')",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-slate-900/90 to-blue-950/80" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,_rgba(59,130,246,0.15),transparent_50%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0C2340]/95 via-[#1E3A5F]/90 to-[#0C2340]/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,_rgba(212,175,55,0.15),transparent_50%)]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-500/20 mb-6">
-            <Search className="w-4 h-4 text-blue-400" />
-            <span className="text-sm font-medium text-blue-400">خدمة التوريد</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 backdrop-blur-sm rounded-full border border-amber-500/20 mb-6">
+            <Search className="w-4 h-4 text-amber-400" />
+            <span className="text-sm font-medium text-amber-400">خدمة التوريد</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             التوريد من الصين
-            <span className="block mt-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">
               بخبرة وموثوقية
             </span>
           </h1>
@@ -39,7 +39,7 @@ export default function SourcingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/#quote"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/30 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-500 text-slate-950 rounded-xl font-semibold hover:shadow-xl hover:shadow-amber-500/30 transition-all"
             >
               اطلب عرض سعر
               <ArrowRight className="w-5 h-5" />
@@ -55,7 +55,7 @@ export default function SourcingPage() {
       </section>
 
       {/* Service Details */}
-      <section className="py-24 bg-slate-900">
+      <section className="py-24 section-logistics">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-4 text-center">
@@ -66,8 +66,8 @@ export default function SourcingPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-blue-500/50 hover:bg-slate-800 transition-all group">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 transition-all group">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Search className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">تحديد الموردين</h3>
@@ -75,9 +75,9 @@ export default function SourcingPage() {
                   نحدد ونتحقق من الموردين الموثوقين في جميع أنحاء الصين، لضمان عملك مع شركاء يحققون متطلبات الجودة والكمية.
                 </p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-blue-400" /> قاعدة بيانات شاملة للموردين</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-blue-400" /> التحقق من المصانع والتدقيق</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-blue-400" /> تقييم القدرة الإنتاجية</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-amber-400" /> قاعدة بيانات شاملة للموردين</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-amber-400" /> التحقق من المصانع والتدقيق</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-amber-400" /> تقييم القدرة الإنتاجية</li>
                   <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-blue-400" /> التحقق من شهادات الجودة</li>
                 </ul>
               </div>
