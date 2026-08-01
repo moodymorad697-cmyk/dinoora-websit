@@ -7,7 +7,8 @@ import {
   Factory, Boxes, Zap, Award, CheckCircle2, Star, Building2, Truck, Shield,
   BarChart3, Phone, Mail, MessageCircle, BookOpen, FileText, Lightbulb, 
   HelpCircle, Send, MapPin, TrendingUp, Users, Clock, ChevronDown, Play,
-  X, Menu, Sparkles, Target, Workflow, Rocket, Handshake, BadgeCheck
+  X, Menu, Sparkles, Target, Workflow, Rocket, Handshake, BadgeCheck,
+  Facebook, Send as SendIcon, MessageSquare
 } from "lucide-react";
 
 // Premium Components
@@ -794,72 +795,6 @@ export default function Home() {
         </FadeIn>
       </PremiumSection>
 
-      {/* Trust & Certifications Section */}
-      <section className="relative py-24 section-gold-premium overflow-hidden">
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-amber-600/[0.05] rounded-full blur-[160px] animate-morph-blob" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-navy-600/[0.05] rounded-full blur-[140px] animate-morph-blob" style={{ animationDelay: '3s' }} />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <div className="text-center max-w-4xl mx-auto mb-16">
-              <div className="section-badge-gold animate-hero-shine mb-6">
-                <Award className="w-4 h-4" />
-                <span>الثقة والاعتمادات</span>
-              </div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                معتمدون عالمياً <span className="gradient-text-gold">وموثوق بهم</span>
-              </h2>
-              <p className="text-xl text-slate-400">
-                نلتزم بأعلى معايير الجودة والامتثال في جميع عملياتنا
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={100}>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {[
-                { icon: "🏆", title: "ISO 9001:2015", desc: "نظام إدارة الجودة المعتمد دولياً" },
-                { icon: "📋", title: "SASO", desc: "المواصفات السعودية للجودة" },
-                { icon: "✅", title: "ESMA", desc: "هيئة الإمارات للمواصفات" },
-                { icon: "🌍", title: "CE Mark", desc: "الامتثال الأوروبي للمنتجات" },
-                { icon: "🔒", title: "FDA", desc: "إدارة الغذاء والدواء الأمريكية" },
-                { icon: "📦", title: "GCC", desc: "معايير مجلس التعاون الخليجي" },
-                { icon: "🚢", title: "FIATA", desc: "الاتحاد الدولي للنقل بالشاحنات" },
-                { icon: "🏢", title: "AEO", desc: "المشغل الاقتصادي المعتمد" },
-              ].map((cert, i) => (
-                <div key={i} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-800 transition-all group">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{cert.icon}</div>
-                  <h3 className="text-lg font-bold text-white mb-2">{cert.title}</h3>
-                  <p className="text-sm text-slate-400">{cert.desc}</p>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={200}>
-            <div className="bg-gradient-to-r from-amber-900/20 via-navy-900/20 to-amber-900/20 rounded-3xl p-8 border border-amber-500/20">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <div className="text-5xl font-bold text-amber-400 mb-2">15,000+</div>
-                  <div className="text-white font-medium mb-1">شحنة ناجحة</div>
-                  <p className="text-slate-400 text-sm">سجل خالٍ من الحوادث</p>
-                </div>
-                <div>
-                  <div className="text-5xl font-bold text-amber-400 mb-2">99.8%</div>
-                  <div className="text-white font-medium mb-1">معدل الرضا</div>
-                  <p className="text-slate-400 text-sm">بناءً على تقييمات العملاء</p>
-                </div>
-                <div>
-                  <div className="text-5xl font-bold text-amber-400 mb-2">50+</div>
-                  <div className="text-white font-medium mb-1">دولة مغطاة</div>
-                  <p className="text-slate-400 text-sm">شبكة عالمية واسعة</p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* Incoterms Section - Trade Terms Explanation */}
       <section className="relative py-16 section-darker overflow-hidden">
         {/* Background Image */}
@@ -1056,6 +991,29 @@ export default function Home() {
               </div>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Social Media Section */}
+      <section className="py-12 section-darker">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="text-lg font-semibold text-slate-400 mb-6">تابعنا على وسائل التواصل الاجتماعي</h3>
+            <div className="flex justify-center gap-4">
+              <a href="https://www.facebook.com/share/17mLtvZn95/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-all">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://www.tiktok.com/@kingmorad0?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 hover:border-slate-700 transition-all">
+                <SendIcon className="w-5 h-5" />
+              </a>
+              <a href="https://t.me/DINOORACOMPANY" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-sky-500 hover:border-sky-500 transition-all">
+                <MessageSquare className="w-5 h-5" />
+              </a>
+              <a href="https://wa.me/8615587237864" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-green-600 hover:border-green-600 transition-all">
+                <MessageCircle className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>

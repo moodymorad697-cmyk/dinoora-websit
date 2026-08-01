@@ -76,6 +76,43 @@ export default function WarehousingPage() {
               تخزين آمن ومرن مع أنظمة متقدمة لإدارة المخزون
             </p>
 
+            {/* Warehouse Images Gallery */}
+            <div className="grid md:grid-cols-3 gap-4 mb-16">
+              <div className="relative h-64 rounded-2xl overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" 
+                  alt="مستودع حديث" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+                <div className="absolute bottom-4 right-4">
+                  <p className="text-white font-semibold">مستودع حديث</p>
+                </div>
+              </div>
+              <div className="relative h-64 rounded-2xl overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" 
+                  alt="رفوف التخزين" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+                <div className="absolute bottom-4 right-4">
+                  <p className="text-white font-semibold">رفوف التخزين</p>
+                </div>
+              </div>
+              <div className="relative h-64 rounded-2xl overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" 
+                  alt="نظام إدارة المخزون" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+                <div className="absolute bottom-4 right-4">
+                  <p className="text-white font-semibold">نظام إدارة المخزون</p>
+                </div>
+              </div>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-8 mb-16">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-purple-500/50 hover:bg-slate-800 transition-all group">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">

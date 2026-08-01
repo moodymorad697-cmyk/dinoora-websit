@@ -74,6 +74,43 @@ export default function ShippingPage() {
             <p className="text-xl text-slate-400">اختر الطريقة المناسبة لاحتياجاتك</p>
           </div>
 
+          {/* Shipping Images Gallery */}
+          <div className="grid md:grid-cols-3 gap-4 mb-16">
+            <div className="relative h-64 rounded-2xl overflow-hidden group">
+              <img 
+                src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" 
+                alt="سفينة حاويات" 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+              <div className="absolute bottom-4 right-4">
+                <p className="text-white font-semibold">سفينة حاويات</p>
+              </div>
+            </div>
+            <div className="relative h-64 rounded-2xl overflow-hidden group">
+              <img 
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" 
+                alt="طائرة شحن" 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+              <div className="absolute bottom-4 right-4">
+                <p className="text-white font-semibold">طائرة شحن</p>
+              </div>
+            </div>
+            <div className="relative h-64 rounded-2xl overflow-hidden group">
+              <img 
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" 
+                alt="ميناء الشحن" 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+              <div className="absolute bottom-4 right-4">
+                <p className="text-white font-semibold">ميناء الشحن</p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Plane, title: "الشحن الجوي", time: "3-7 أيام", desc: "أسرع طريقة للشحنات العاجلة", color: "from-sky-500 to-blue-500", border: "sky" },

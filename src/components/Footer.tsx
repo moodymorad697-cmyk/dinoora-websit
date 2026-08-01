@@ -70,33 +70,10 @@ export default function Footer() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-full blur-xl opacity-60" />
               </div>
-              <div>
-                <span className="text-xl font-extrabold text-white tracking-tight block">دينورا</span>
-                <span className="text-xs text-amber-400 font-medium tracking-wider uppercase">Dinoora International</span>
-              </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               شريكك الاستراتيجي للتجارة الدولية — من المصنع الصيني حتى مستودعك.
             </p>
-            <div className="flex gap-3">
-              {[
-                { icon: FacebookIcon, href: "https://www.facebook.com/share/17mLtvZn95/?mibextid=wwXIfr", color: "bg-blue-600", label: "Facebook" },
-                { icon: TikTokIcon, href: "https://www.tiktok.com/@kingmorad0?is_from_webapp=1&sender_device=pc", color: "bg-slate-700", label: "TikTok" },
-                { icon: TelegramIcon, href: "https://t.me/DINOORACOMPANY", color: "bg-sky-500", label: "Telegram" },
-                { icon: () => <MessageCircle className="w-5 h-5" />, href: "https://wa.me/8615587237864", color: "bg-green-600", label: "WhatsApp" },
-              ].map((s, i) => (
-                <a 
-                  key={i} 
-                  href={s.href} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className={`w-10 h-10 ${s.color} rounded-xl flex items-center justify-center text-white shadow-lg shadow-black/20 hover:shadow-xl hover:scale-110 transition-all duration-300 group`}
-                  title={s.label}
-                >
-                  <s.icon />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* الخدمات */}

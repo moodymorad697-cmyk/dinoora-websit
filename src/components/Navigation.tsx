@@ -68,13 +68,9 @@ export default function Navigation() {
               <img
                 src="/logo-dinoora.png"
                 alt="دينورا"
-                className="h-14 w-auto brightness-125 drop-shadow-lg shadow-amber-500/20 transition-all duration-300 group-hover:scale-110 group-hover:brightness-150"
+                className="h-16 w-auto brightness-125 drop-shadow-lg shadow-amber-500/20 transition-all duration-300 group-hover:scale-105 group-hover:brightness-150"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-yellow-500/30 rounded-full blur-xl opacity-60" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-xl font-extrabold text-white tracking-tight block group-hover:text-amber-400 transition-colors">دينورا</span>
-              <span className="text-[10px] text-amber-400 font-medium tracking-wider uppercase opacity-80">International Trade</span>
             </div>
           </Link>
 
