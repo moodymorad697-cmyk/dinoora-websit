@@ -8,7 +8,7 @@ import {
   BarChart3, Phone, Mail, MessageCircle, BookOpen, FileText, Lightbulb, 
   HelpCircle, Send, MapPin, TrendingUp, Users, Clock, ChevronDown, Play,
   X, Menu, Sparkles, Target, Workflow, Rocket, Handshake, BadgeCheck,
-  Facebook, Send as SendIcon, MessageSquare
+  Send as SendIcon, MessageSquare
 } from "lucide-react";
 
 // Premium Components
@@ -133,7 +133,8 @@ export default function Home() {
       desc: "وصول مباشر لشبكة +500 مصنع مُدقَّق ميدانياً عبر 30 مقاطعة صينية. خوارزمية ذكية تطابق مواصفاتك مع أنسب 3 موردين خلال 48 ساعة.",
       features: ["تدقيق ميداني", "مقارنة أسعار", "إدارة العينات", "تأمين الدفع"],
       gradient: "from-blue-500 to-blue-600",
-      color: "blue"
+      color: "blue",
+      href: "/services/sourcing"
     },
     { 
       icon: ShieldCheck, 
@@ -141,7 +142,8 @@ export default function Home() {
       desc: "بروتوكولات فحص ثلاثية المراحل (AQL Level II) مع تقارير مصوّرة. مهندسو جودة في 12 مدينة صناعية يضمنون صفر عيوب.",
       features: ["معيار AQL-II", "فحص 3 مراحل", "تقرير مصوّر", "شهادة مطابقة"],
       gradient: "from-emerald-500 to-green-600",
-      color: "emerald"
+      color: "emerald",
+      href: "/services/inspection"
     },
     { 
       icon: Warehouse, 
@@ -149,7 +151,8 @@ export default function Home() {
       desc: "3 مستودعات ذكية (+8,000م²) في إيوو وغوانزو وشنزن. تجميع متعدد الموردين، فرز بالباركود، وتخزين مكيّف حسب المنتج.",
       features: ["3 مستودعات", "تجميع ذكي", "جرد إلكتروني", "تخزين مكيّف"],
       gradient: "from-violet-500 to-purple-600",
-      color: "violet"
+      color: "violet",
+      href: "/services/warehousing"
     },
     { 
       icon: Ship, 
@@ -157,7 +160,8 @@ export default function Home() {
       desc: "شحن بحري وجوي وبري وقطارات لأكثر من 50 دولة. حجز تلقائي، تتبع GPS لحظي، ومسارات محسّنة تخفض التكلفة حتى 30%.",
       features: ["بحري وجوي", "قطارات دولية", "تتبع GPS", "توفير 30%"],
       gradient: "from-cyan-500 to-blue-600",
-      color: "cyan"
+      color: "cyan",
+      href: "/services/shipping"
     },
     { 
       icon: FileCheck, 
@@ -165,7 +169,8 @@ export default function Home() {
       desc: "تخليص جمركي شامل مع تصنيف HS دقيق، تحسين الرسوم، وامتثال كامل لمعايير SASO، ESMA، CE، وFDA. صفر رفض جمركي.",
       features: ["تصنيف HS", "تخفيض رسوم", "SASO/ESMA/CE", "صفر رفض"],
       gradient: "from-amber-500 to-orange-600",
-      color: "amber"
+      color: "amber",
+      href: "/services/customs"
     },
     { 
       icon: Package, 
@@ -173,7 +178,8 @@ export default function Home() {
       desc: "حلول باب-لباب شاملة من أرضية المصنع إلى مستودعك. تسعير ثابت شفاف — بدون رسوم مخفية أو مفاجآت.",
       features: ["DDP شامل", "سعر ثابت", "توصيل نهائي", "تأمين شحن"],
       gradient: "from-rose-500 to-pink-600",
-      color: "rose"
+      color: "rose",
+      href: "/services/logistics"
     },
   ];
 
@@ -426,7 +432,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
           {services.map((service, i) => (
             <FadeIn key={i} delay={i * 100}>
-              <div className="group h-full ultra-card p-8">
+              <Link href={`/${locale}${service.href}`} className="group h-full ultra-card p-8 block">
                 <div className={`w-16 h-16 mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br ${service.gradient} shadow-xl shadow-${service.color}-500/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-glow-pulse`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -439,7 +445,7 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </Link>
             </FadeIn>
           ))}
         </div>
@@ -1001,7 +1007,9 @@ export default function Home() {
             <h3 className="text-lg font-semibold text-slate-400 mb-6">تابعنا على وسائل التواصل الاجتماعي</h3>
             <div className="flex justify-center gap-4">
               <a href="https://www.facebook.com/share/17mLtvZn95/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-all">
-                <Facebook className="w-5 h-5" />
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
               </a>
               <a href="https://www.tiktok.com/@kingmorad0?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 hover:border-slate-700 transition-all">
                 <SendIcon className="w-5 h-5" />
