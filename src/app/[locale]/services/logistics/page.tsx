@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Truck, Package, Award, Globe, TrendingUp, Users, Clock, Zap, CheckCircle2 } from 'lucide-react';
+import { Truck, Package, Award, Globe, TrendingUp, Users, Clock, Zap, CheckCircle2, Cpu, Warehouse, ArrowRight, Link2, BarChart3 } from 'lucide-react';
 
 export default function LogisticsPage() {
   const [isVisible, setIsVisible] = useState(false);

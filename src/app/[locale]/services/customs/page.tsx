@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FileCheck, Shield, Award, Globe, TrendingUp, Users, Clock, Zap, CheckCircle2 } from 'lucide-react';
+import { FileCheck, Shield, Award, Globe, TrendingUp, Users, Clock, Zap, CheckCircle2, FileText, ShieldCheck, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export default function CustomsPage() {
   const [isVisible, setIsVisible] = useState(false);

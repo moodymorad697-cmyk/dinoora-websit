@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Ship, Plane, TrainFront, Truck, Globe, Shield, Award, TrendingUp, Clock, Zap, CheckCircle2 } from 'lucide-react';
+import { Ship, Plane, TrainFront, Truck, Globe, Shield, Award, TrendingUp, Clock, Zap, CheckCircle2, ArrowRight, Train } from 'lucide-react';
 
 export default function ShippingPage() {
   const [isVisible, setIsVisible] = useState(false);
