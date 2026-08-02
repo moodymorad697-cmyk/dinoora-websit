@@ -131,7 +131,7 @@ export default function Navigation() {
             <div className="w-px h-6 bg-white/10 mx-3" />
 
             <Link 
-              href={locale === 'ar' ? pathname.replace(/^\/ar/, '/en').replace(/^\/$/, '/en') : pathname.replace(/^\/en/, '/ar').replace(/^\/$/, '/ar')}
+              href={`/${locale === 'ar' ? 'en' : 'ar'}${pathname.replace(/^\/(ar|en)/, '')}`}
               className="flex items-center gap-2 text-slate-400 hover:text-amber-400 transition-all duration-300 px-3 py-2 rounded-xl hover:bg-amber-500/5"
             >
               <Globe className="w-4 h-4" />
