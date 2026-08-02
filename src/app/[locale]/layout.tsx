@@ -6,7 +6,6 @@ import { getMessages } from 'next-intl/server';
 import "../globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ContactFloatingBar from "@/components/ContactFloatingBar";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const cairo = Cairo({ subsets: ["arabic"], variable: '--font-cairo' });
@@ -43,7 +42,6 @@ export default async function LocaleLayout({
           <Navigation />
           {children}
           <Footer />
-          <ContactFloatingBar />
         </NextIntlClientProvider>
       </body>
     </html>
