@@ -213,7 +213,6 @@ export default function Home() {
     { icon: HelpCircle, title: "الجمارك ولوائح الاستيراد", category: "جمارك", readTime: "14 دقيقة", href: "/blog" },
   ];
 
-  const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'ar';
 
   return (
