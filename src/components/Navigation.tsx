@@ -134,16 +134,6 @@ export default function Navigation() {
               <span className="text-xs font-bold hidden xl:inline">{locale === 'ar' ? 'English' : 'العربية'}</span>
             </Link>
 
-            <a href="https://wa.me/8615587237864" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-green-400 transition-all duration-300 px-3 py-2 rounded-xl hover:bg-green-500/5">
-              <MessageCircle className="w-4 h-4" />
-              <span className="text-xs font-bold hidden xl:inline">واتساب</span>
-            </a>
-
-            <a href="tel:+8615587237864" className="flex items-center gap-2 text-slate-400 hover:text-emerald-400 transition-all duration-300 px-3 py-2 rounded-xl hover:bg-emerald-500/5">
-              <Phone className="w-4 h-4" />
-              <span className="text-xs font-bold hidden xl:inline">+86 155 8723 7864</span>
-            </a>
-            
             <Link 
               href={`/${locale}#quote`}
               className="mr-3 px-5 py-2 bg-gradient-to-l from-amber-600 via-yellow-500 to-amber-600 text-slate-950 rounded-full font-bold text-xs hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-1.5 animate-gradient bg-[length:200%_200%]"
