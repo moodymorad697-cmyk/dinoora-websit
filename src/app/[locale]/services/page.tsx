@@ -113,9 +113,15 @@ export default function ServicesPage() {
   const services = [
     {
       icon: Search,
-      title: "Product Sourcing",
-      description: "Find the best suppliers and products in China with our expert sourcing team. We handle supplier verification, price negotiation, and quality assurance.",
-      features: [
+      title: locale === 'ar' ? 'توريد المنتجات' : 'Product Sourcing',
+      description: locale === 'ar' ? 'ابحث عن أفضل الموردين والمنتجات في الصين مع فريق التوريد الخبير لدينا. نتعامل مع التحقق من الموردين والتفاوض على الأسعار وضمان الجودة.' : 'Find the best suppliers and products in China with our expert sourcing team. We handle supplier verification, price negotiation, and quality assurance.',
+      features: locale === 'ar' ? [
+        "تحديد والتحقق من الموردين",
+        "التفاوض على الأسعار وإدارة MOQ",
+        "الحصول على العينات واختبارها",
+        "توريد المعدات الصناعية",
+        "توريد قطع الغيار"
+      ] : [
         "Supplier identification and verification",
         "Price negotiation and MOQ management",
         "Sample acquisition and testing",
@@ -128,9 +134,15 @@ export default function ServicesPage() {
     },
     {
       icon: ShieldCheck,
-      title: "Quality Inspection",
-      description: "Ensure product quality with thorough inspections and factory audits. Our expert teams verify compliance with your specifications.",
-      features: [
+      title: locale === 'ar' ? 'فحص الجودة' : 'Quality Inspection',
+      description: locale === 'ar' ? 'ضمان جودة المنتجات مع فحوصات شاملة وتدقيق المصانع. فرقنا الخبراء تتحقق من الامتثال لمواصفاتك.' : 'Ensure product quality with thorough inspections and factory audits. Our expert teams verify compliance with your specifications.',
+      features: locale === 'ar' ? [
+        "فحص ما قبل الشحن",
+        "فحص أثناء الإنتاج",
+        "تدقيق المصانع",
+        "التحقق من امتثال الموردين",
+        "الإشراف على التحميل"
+      ] : [
         "Pre-shipment inspection",
         "In-process inspection",
         "Factory audits",
@@ -143,9 +155,15 @@ export default function ServicesPage() {
     },
     {
       icon: Warehouse,
-      title: "Warehousing",
-      description: "Secure storage solutions in strategic locations across China. We offer inventory management and order consolidation services.",
-      features: [
+      title: locale === 'ar' ? 'التخزين والتجميع' : 'Warehousing',
+      description: locale === 'ar' ? 'حلول تخزين آمنة في مواقع استراتيجية عبر الصين. نقدم خدمات إدارة المخزون وتجميع الطلبات.' : 'Secure storage solutions in strategic locations across China. We offer inventory management and order consolidation services.',
+      features: locale === 'ar' ? [
+        "تخزين آمن في الصين",
+        "مواقع استراتيجية بالقرب من مراكز التصنيع",
+        "تخزين مجاني (فترة محدودة)",
+        "إدارة المخزون",
+        "تجميع الطلبات"
+      ] : [
         "Secure warehousing in China",
         "Strategic locations near manufacturing hubs",
         "Free storage (limited period)",
@@ -158,9 +176,15 @@ export default function ServicesPage() {
     },
     {
       icon: Ship,
-      title: "Shipping & Freight",
-      description: "Air, sea, rail, and trucking options for all your shipping needs. We provide DDP and DAP solutions for hassle-free delivery.",
-      features: [
+      title: locale === 'ar' ? 'الشحن الدولي' : 'Shipping & Freight',
+      description: locale === 'ar' ? 'خيارات الشحن الجوي والبحري والسككي والبري لجميع احتياجات الشحن الخاصة بك.' : 'Air, sea, rail, and trucking options for all your shipping needs. We provide DDP and DAP solutions for hassle-free delivery.',
+      features: locale === 'ar' ? [
+        "الشحن الجوي (تسليم سريع)",
+        "الشحن البحري (اقتصادي)",
+        "الشحن السككي (عبر الحدود)",
+        "DDP (من الباب للباب)",
+        "تأمين البضائع"
+      ] : [
         "Air freight (fast delivery)",
         "Sea freight (cost-effective)",
         "Rail freight (cross-border)",
@@ -173,9 +197,15 @@ export default function ServicesPage() {
     },
     {
       icon: FileCheck,
-      title: "Customs Clearance",
-      description: "Expert customs brokerage and documentation services. We handle import/export licensing and regulatory compliance.",
-      features: [
+      title: locale === 'ar' ? 'التخليص الجمركي' : 'Customs Clearance',
+      description: locale === 'ar' ? 'خدمات التخليص الجمركي والوثائق الاحترافية. نتعامل مع التراخيص والامتثال التنظيمي.' : 'Expert customs brokerage and documentation services. We handle import/export licensing and regulatory compliance.',
+      features: locale === 'ar' ? [
+        "تراخيص الاستيراد والتصدير",
+        "التخليص الجمركي",
+        "معالجة الوثائق",
+        "تحسين الرسوم الجمركية",
+        "الامتثال التنظيمي"
+      ] : [
         "Import/export licensing",
         "Customs brokerage",
         "Document processing",
@@ -188,9 +218,15 @@ export default function ServicesPage() {
     },
     {
       icon: Package,
-      title: "Logistics Solutions",
-      description: "End-to-end supply chain management and fulfillment services. We provide technology-driven logistics solutions.",
-      features: [
+      title: locale === 'ar' ? 'الحلول اللوجستية' : 'Logistics Solutions',
+      description: locale === 'ar' ? 'إدارة سلسلة التوريد من البداية للنهاية. نقدم حلول لوجستية مدعومة بالتكنولوجيا.' : 'End-to-end supply chain management and fulfillment services. We provide technology-driven logistics solutions.',
+      features: locale === 'ar' ? [
+        "حلول شاملة من البداية للنهاية",
+        "إدارة سلسلة التوريد",
+        "تنفيذ الطلبات",
+        "دعم الشحن المباشر",
+        "تكامل API"
+      ] : [
         "End-to-end solutions",
         "Supply chain management",
         "Order fulfillment",
@@ -204,17 +240,17 @@ export default function ServicesPage() {
   ];
 
   const shippingModes = [
-    { icon: Plane, title: "Air Freight", desc: "Fastest delivery option for urgent shipments", time: "3-7 days", gradient: "from-sky-400 to-blue-500" },
-    { icon: Ship, title: "Sea Freight", desc: "Cost-effective for large volume shipments", time: "20-45 days", gradient: "from-cyan-400 to-blue-500" },
-    { icon: TrainFront, title: "Rail Freight", desc: "Balance of speed and cost for Eurasia", time: "15-20 days", gradient: "from-emerald-400 to-green-500" },
-    { icon: Truck, title: "Road Freight", desc: "Flexible for regional and cross-border delivery", time: "5-15 days", gradient: "from-amber-400 to-orange-500" },
+    { icon: Plane, title: locale === 'ar' ? 'الشحن الجوي' : 'Air Freight', desc: locale === 'ar' ? 'خيار التسليم الأسرع للشحنات العاجلة' : 'Fastest delivery option for urgent shipments', time: locale === 'ar' ? '3-7 أيام' : '3-7 days', gradient: "from-sky-400 to-blue-500" },
+    { icon: Ship, title: locale === 'ar' ? 'الشحن البحري' : 'Sea Freight', desc: locale === 'ar' ? 'اقتصادي للشحنات الكبيرة' : 'Cost-effective for large volume shipments', time: locale === 'ar' ? '20-45 يوم' : '20-45 days', gradient: "from-cyan-400 to-blue-500" },
+    { icon: TrainFront, title: locale === 'ar' ? 'الشحن السككي' : 'Rail Freight', desc: locale === 'ar' ? 'توازن بين السرعة والتكلفة' : 'Balance of speed and cost for Eurasia', time: locale === 'ar' ? '15-20 يوم' : '15-20 days', gradient: "from-emerald-400 to-green-500" },
+    { icon: Truck, title: locale === 'ar' ? 'الشحن البري' : 'Road Freight', desc: locale === 'ar' ? 'مرن للتوصيل الإقليمي وعبر الحدود' : 'Flexible for regional and cross-border delivery', time: locale === 'ar' ? '5-15 يوم' : '5-15 days', gradient: "from-amber-400 to-orange-500" },
   ];
 
   const stats = [
-    { icon: TrendingUp, value: "10K+", label: "Shipments Delivered", gradient: "from-blue-500 to-cyan-500" },
-    { icon: Users, value: "500+", label: "Active Clients", gradient: "from-emerald-500 to-green-500" },
-    { icon: Globe, value: "50+", label: "Countries Served", gradient: "from-purple-500 to-pink-500" },
-    { icon: Clock, value: "24/7", label: "Support Available", gradient: "from-amber-500 to-orange-500" },
+    { icon: TrendingUp, value: "10K+", label: locale === 'ar' ? 'شحنة تم تسليمها' : 'Shipments Delivered', gradient: "from-blue-500 to-cyan-500" },
+    { icon: Users, value: "500+", label: locale === 'ar' ? 'عميل نشط' : 'Active Clients', gradient: "from-emerald-500 to-green-500" },
+    { icon: Globe, value: "50+", label: locale === 'ar' ? 'دولة مخدومة' : 'Countries Served', gradient: "from-purple-500 to-pink-500" },
+    { icon: Clock, value: "24/7", label: locale === 'ar' ? 'دعم متاح' : 'Support Available', gradient: "from-amber-500 to-orange-500" },
   ];
 
   return (
@@ -235,18 +271,18 @@ export default function ServicesPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-500/20 mb-6">
             <Zap className="w-4 h-4 text-blue-400" />
-            <span className="text-sm font-medium text-blue-400">حلول تجارة شاملة</span>
+            <span className="text-sm font-medium text-blue-400">{locale === 'ar' ? 'حلول تجارة شاملة' : 'Comprehensive Trade Solutions'}</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            خدماتنا
+            {locale === 'ar' ? 'خدماتنا' : 'Our Services'}
             <span className="block mt-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              المتكاملة
+              {locale === 'ar' ? 'المتكاملة' : 'Integrated'}
             </span>
           </h1>
           
           <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            من التوريد إلى التسليم، نتعامل مع كل خطوة من رحلة تجارتك مع الصين بالخبرة والموثوقية
+            {locale === 'ar' ? 'من التوريد إلى التسليم، نتعامل مع كل خطوة من رحلة تجارتك مع الصين بالخبرة والموثوقية' : 'From sourcing to delivery, we handle every step of your China trade journey with expertise and reliability'}
           </p>
 
           {/* Stats Row */}
@@ -270,13 +306,13 @@ export default function ServicesPage() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 text-blue-400 text-sm font-semibold rounded-full mb-4">
               <Briefcase className="w-4 h-4" />
-              ما نقدمه
+              {locale === 'ar' ? 'ما نقدمه' : 'What We Offer'}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              حلول متكاملة
+              {locale === 'ar' ? 'حلول متكاملة' : 'Integrated Solutions'}
             </h2>
             <p className="text-lg text-slate-400">
-              خدمات شاملة مصممة لتبسيط عمليات تجارتك مع الصين
+              {locale === 'ar' ? 'خدمات شاملة مصممة لتبسيط عمليات تجارتك مع الصين' : 'Comprehensive services designed to simplify your China trade operations'}
             </p>
           </div>
 
@@ -298,13 +334,13 @@ export default function ServicesPage() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 text-cyan-400 text-sm font-semibold rounded-full mb-4">
               <Ship className="w-4 h-4" />
-              خيارات الشحن
+              {locale === 'ar' ? 'خيارات الشحن' : 'Shipping Options'}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              طرق شحن متعددة
+              {locale === 'ar' ? 'طرق شحن متعددة' : 'Multiple Shipping Methods'}
             </h2>
             <p className="text-lg text-slate-400">
-              اختر طريقة الشحن المثالية لجدولك الزمني وميزانيتك
+              {locale === 'ar' ? 'اختر طريقة الشحن المثالية لجدولك الزمني وميزانيتك' : 'Choose the perfect shipping method for your timeline and budget'}
             </p>
           </div>
 
@@ -336,22 +372,22 @@ export default function ServicesPage() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white text-sm font-semibold rounded-full border border-white/20 mb-4">
               <BarChart3 className="w-4 h-4" />
-              How It Works
+              {locale === 'ar' ? 'كيف نعمل' : 'How It Works'}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Simple Process, Powerful Results
+              {locale === 'ar' ? 'عملية بسيطة، نتائج قوية' : 'Simple Process, Powerful Results'}
             </h2>
             <p className="text-lg text-gray-300">
-              Four simple steps to start your China trade journey
+              {locale === 'ar' ? 'أربع خطوات بسيطة لبدء رحلتك التجارية مع الصين' : 'Four simple steps to start your China trade journey'}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { step: "01", icon: Search, title: "Consultation", desc: "Tell us what you need" },
-              { step: "02", icon: Factory, title: "Sourcing", desc: "We find the best suppliers" },
-              { step: "03", icon: ShieldCheck, title: "Quality Control", desc: "We inspect everything" },
-              { step: "04", icon: Truck, title: "Delivery", desc: "Goods arrive at your door" },
+              { step: "01", icon: Search, title: locale === 'ar' ? 'الاستشارة' : 'Consultation', desc: locale === 'ar' ? 'أخبرنا بما تحتاج' : 'Tell us what you need' },
+              { step: "02", icon: Factory, title: locale === 'ar' ? 'التوريد' : 'Sourcing', desc: locale === 'ar' ? 'نبحث عن أفضل الموردين' : 'We find the best suppliers' },
+              { step: "03", icon: ShieldCheck, title: locale === 'ar' ? 'مراقبة الجودة' : 'Quality Control', desc: locale === 'ar' ? 'نفحص كل شيء' : 'We inspect everything' },
+              { step: "04", icon: Truck, title: locale === 'ar' ? 'التسليم' : 'Delivery', desc: locale === 'ar' ? 'تصل البضائع إلى بابك' : 'Goods arrive at your door' },
             ].map((item, index) => (
               <div key={index} className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300">
@@ -381,24 +417,24 @@ export default function ServicesPage() {
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            جاهز للبدء؟
+            {locale === 'ar' ? 'جاهز للبدء؟' : 'Ready to Get Started?'}
           </h2>
           <p className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
-            تواصل معنا اليوم للحصول على استشارة مجانية وعرض سعر. دعنا نتعامل مع احتياجات تجارتك مع الصين.
+            {locale === 'ar' ? 'تواصل معنا اليوم للحصول على استشارة مجانية وعرض سعر. دعنا نتعامل مع احتياجات تجارتك مع الصين.' : 'Contact us today for a free consultation and quote. Let us handle your China trade needs.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href={`/${locale}#quote`}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all"
             >
-              اطلب عرض سعر مجاني
+              {locale === 'ar' ? 'اطلب عرض سعر مجاني' : 'Get a Free Quote'}
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
               href={`/${locale}#quote`}
               className="inline-flex items-center justify-center px-8 py-4 bg-slate-800 text-white border-2 border-slate-700 rounded-xl font-semibold hover:bg-slate-700 hover:border-slate-600 transition-all"
             >
-              تواصل معنا
+              {locale === 'ar' ? 'تواصل معنا' : 'Contact Us'}
             </Link>
           </div>
         </div>
