@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Ship, ArrowRight, Anchor, Plane, Truck, Train, Globe, Clock, CheckCircle2, TrendingUp, Zap, Shield, Award } from 'lucide-react';
+import Image from "next/image";
+import { Ship, Plane, TrainFront, Truck, Globe, Shield, Award, TrendingUp, Clock, Zap, CheckCircle2 } from 'lucide-react';
 
 export default function ShippingPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -127,10 +128,13 @@ export default function ShippingPage() {
           {/* Shipping Images Gallery - Enhanced */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" 
                 alt="سفينة حاويات" 
+                width={800}
+                height={600}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
               <div className="absolute bottom-4 right-4 left-4">
@@ -142,10 +146,13 @@ export default function ShippingPage() {
               </div>
             </div>
             <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" 
                 alt="طائرة شحن" 
+                width={800}
+                height={600}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
               <div className="absolute bottom-4 right-4 left-4">
@@ -157,10 +164,13 @@ export default function ShippingPage() {
               </div>
             </div>
             <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-              <img 
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" 
-                alt="ميناء الشحن" 
+              <Image 
+                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" 
+                alt="شحن عالمي" 
+                width={800}
+                height={600}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
               <div className="absolute bottom-4 right-4 left-4">

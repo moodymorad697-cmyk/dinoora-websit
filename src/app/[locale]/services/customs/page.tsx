@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FileText, ShieldCheck, Award, Zap, CheckCircle2, Globe, Clock, TrendingUp, Users, AlertTriangle } from 'lucide-react';
+import Image from "next/image";
+import { FileCheck, Shield, Award, Globe, TrendingUp, Users, Clock, Zap, CheckCircle2 } from 'lucide-react';
 
 export default function CustomsPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -129,10 +130,13 @@ export default function CustomsPage() {
             {/* Customs Images Gallery - Enhanced */}
             <div className="grid md:grid-cols-3 gap-6 mb-16">
               <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80" 
                   alt="التخليص الجمركي" 
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">
@@ -144,10 +148,13 @@ export default function CustomsPage() {
                 </div>
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" 
                   alt="الوثائق الجمركية" 
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">
@@ -159,10 +166,13 @@ export default function CustomsPage() {
                 </div>
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-                <img 
-                  src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80" 
-                  alt="ميناء الشحن" 
+                <Image 
+                  src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" 
+                  alt="الامتثال الجمركي" 
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">

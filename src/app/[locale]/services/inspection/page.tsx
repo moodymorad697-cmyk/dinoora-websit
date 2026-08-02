@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ShieldCheck, Microscope, Factory, ClipboardCheck, CheckCircle2, Award, AlertTriangle, FileCheck, TrendingUp, Users, Clock, Zap } from 'lucide-react';
 
 export default function InspectionPage() {
@@ -129,10 +130,13 @@ export default function InspectionPage() {
             {/* Inspection Images Gallery - Enhanced */}
             <div className="grid md:grid-cols-3 gap-6 mb-16">
               <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" 
                   alt="فحص المنتجات" 
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">
@@ -144,10 +148,13 @@ export default function InspectionPage() {
                 </div>
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" 
                   alt="تدقيق المصانع" 
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">
@@ -159,10 +166,13 @@ export default function InspectionPage() {
                 </div>
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" 
-                  alt="فحص الجودة" 
+                <Image 
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" 
+                  alt="تقارير الجودة" 
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">

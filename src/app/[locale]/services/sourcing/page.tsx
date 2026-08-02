@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Search, ArrowRight, CheckCircle2, Globe, ShieldCheck, TrendingUp, Users, Clock, Zap, Factory, Award } from 'lucide-react';
+import Image from "next/image";
+import { Search, Factory, Award, Globe, TrendingUp, Users, Clock, Zap, CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function SourcingPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -135,10 +136,13 @@ export default function SourcingPage() {
             {/* Sourcing Images Gallery - Enhanced */}
             <div className="grid md:grid-cols-3 gap-6 mb-16">
               <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80" 
                   alt="مصنع صيني" 
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">
@@ -150,10 +154,13 @@ export default function SourcingPage() {
                 </div>
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" 
                   alt="فحص المنتجات" 
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">
@@ -165,10 +172,13 @@ export default function SourcingPage() {
                 </div>
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden group cursor-pointer">
-                <img 
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80" 
-                  alt="شحن البضائع" 
+                <Image 
+                  src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80" 
+                  alt="توريد عالمي" 
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                 <div className="absolute bottom-4 right-4 left-4">

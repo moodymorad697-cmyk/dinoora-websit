@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { 
   ChevronDown, Search, ShieldCheck, Warehouse, Ship, FileCheck, Package,
@@ -64,11 +65,14 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-[68px]">
           
           <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="relative">
-              <img
+            <div className="relative h-16 w-auto">
+              <Image
                 src="/logo-dinoora.png"
                 alt="دينورا"
-                className="h-16 w-auto brightness-125 drop-shadow-lg shadow-amber-500/20 transition-all duration-300 group-hover:scale-105 group-hover:brightness-150"
+                width={64}
+                height={64}
+                className="brightness-125 drop-shadow-lg shadow-amber-500/20 transition-all duration-300 group-hover:scale-105 group-hover:brightness-150"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-yellow-500/30 rounded-full blur-xl opacity-60" />
             </div>
