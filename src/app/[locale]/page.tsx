@@ -92,6 +92,7 @@ const AnimatedCounter = ({ end, suffix = "" }: { end: number, suffix?: string })
 
 export default function Home() {
   const pathname = usePathname();
+  const locale = pathname.split('/')[1] || 'ar';
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
@@ -120,37 +121,37 @@ export default function Home() {
   };
 
   const navItems = [
-    { id: 'services', label: 'الخدمات' },
-    { id: 'features', label: 'لماذا نحن' },
-    { id: 'process', label: 'العملية' },
-    { id: 'knowledge', label: 'المعرفة' },
-    { id: 'quote', label: 'احصل على عرض', highlight: true },
+    { id: 'services', label: locale === 'ar' ? 'الخدمات' : 'Services' },
+    { id: 'features', label: locale === 'ar' ? 'لماذا نحن' : 'Why Us' },
+    { id: 'process', label: locale === 'ar' ? 'العملية' : 'Process' },
+    { id: 'knowledge', label: locale === 'ar' ? 'المعرفة' : 'Knowledge' },
+    { id: 'quote', label: locale === 'ar' ? 'احصل على عرض' : 'Get Quote', highlight: true },
   ];
 
   const services = [
-    { 
-      icon: Search, 
-      title: "توريد المنتجات", 
-      desc: "وصول مباشر لشبكة +500 مصنع مُدقَّق ميدانياً عبر 30 مقاطعة صينية. خوارزمية ذكية تطابق مواصفاتك مع أنسب 3 موردين خلال 48 ساعة.",
-      features: ["تدقيق ميداني", "مقارنة أسعار", "إدارة العينات", "تأمين الدفع"],
+    {
+      icon: Search,
+      title: locale === 'ar' ? "توريد المنتجات" : "Product Sourcing",
+      desc: locale === 'ar' ? "وصول مباشر لشبكة +500 مصنع مُدقَّق ميدانياً عبر 30 مقاطعة صينية. خوارزمية ذكية تطابق مواصفاتك مع أنسب 3 موردين خلال 48 ساعة." : "Direct access to a network of 500+ field-verified factories across 30 Chinese provinces. Smart algorithm matches your specs with the best 3 suppliers within 48 hours.",
+      features: locale === 'ar' ? ["تدقيق ميداني", "مقارنة أسعار", "إدارة العينات", "تأمين الدفع"] : ["Field verification", "Price comparison", "Sample management", "Payment security"],
       gradient: "from-blue-500 to-blue-600",
       color: "blue",
       href: "/services/sourcing"
     },
-    { 
-      icon: ShieldCheck, 
-      title: "فحص الجودة", 
-      desc: "بروتوكولات فحص ثلاثية المراحل (AQL Level II) مع تقارير مصوّرة. مهندسو جودة في 12 مدينة صناعية يضمنون صفر عيوب.",
-      features: ["معيار AQL-II", "فحص 3 مراحل", "تقرير مصوّر", "شهادة مطابقة"],
+    {
+      icon: ShieldCheck,
+      title: locale === 'ar' ? "فحص الجودة" : "Quality Inspection",
+      desc: locale === 'ar' ? "بروتوكولات فحص ثلاثية المراحل (AQL Level II) مع تقارير مصوّرة. مهندسو جودة في 12 مدينة صناعية يضمنون صفر عيوب." : "Three-stage inspection protocols (AQL Level II) with photo reports. Quality engineers in 12 industrial cities ensure zero defects.",
+      features: locale === 'ar' ? ["معيار AQL-II", "فحص 3 مراحل", "تقرير مصوّر", "شهادة مطابقة"] : ["AQL-II standard", "3-stage inspection", "Photo report", "Compliance certificate"],
       gradient: "from-emerald-500 to-green-600",
       color: "emerald",
       href: "/services/inspection"
     },
-    { 
-      icon: Warehouse, 
-      title: "التخزين والتجميع", 
-      desc: "3 مستودعات ذكية (+8,000م²) في إيوو وغوانزو وشنزن. تجميع متعدد الموردين، فرز بالباركود، وتخزين مكيّف حسب المنتج.",
-      features: ["3 مستودعات", "تجميع ذكي", "جرد إلكتروني", "تخزين مكيّف"],
+    {
+      icon: Warehouse,
+      title: locale === 'ar' ? "التخزين والتجميع" : "Warehousing",
+      desc: locale === 'ar' ? "3 مستودعات ذكية (+8,000م²) في إيوو وغوانزو وشنزن. تجميع متعدد الموردين، فرز بالباركود، وتخزين مكيّف حسب المنتج." : "3 smart warehouses (+8,000m²) in Yiwu, Guangzhou, and Shenzhen. Multi-supplier consolidation, barcode sorting, and climate-controlled storage.",
+      features: locale === 'ar' ? ["3 مستودعات", "تجميع ذكي", "جرد إلكتروني", "تخزين مكيّف"] : ["3 warehouses", "Smart consolidation", "Digital inventory", "Climate control"],
       gradient: "from-violet-500 to-purple-600",
       color: "violet",
       href: "/services/warehousing"
@@ -213,8 +214,6 @@ export default function Home() {
     { icon: HelpCircle, title: "الجمارك ولوائح الاستيراد", category: "جمارك", readTime: "14 دقيقة", href: "/blog" },
   ];
 
-  const locale = pathname.split('/')[1] || 'ar';
-
   return (
     <main className="min-h-screen text-slate-100 overflow-x-hidden" style={{ background: 'var(--bg-primary)' }}>
 
@@ -273,37 +272,37 @@ export default function Home() {
               <div className="space-y-8">
                 <div className="section-badge animate-hero-shine">
                   <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>متاحون على مدار الساعة — شريك +500 شركة عربية</span>
+                  <span>{locale === 'ar' ? 'متاحون على مدار الساعة — شريك +500 شركة عربية' : 'Available 24/7 — Partner of 500+ Arab Companies'}</span>
                 </div>
 
                 <h1 className="text-[2.75rem] sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-extrabold leading-[1.05] tracking-tight">
-                  <span className="text-white block animate-text-reveal">شريكك الاستراتيجي</span>
-                  <span className="block mt-3 gradient-text-ultra animate-text-reveal" style={{ animationDelay: '0.1s' }}>للتجارة مع الصين</span>
-                  <span className="block mt-2 text-white/90 text-[0.7em] animate-text-reveal" style={{ animationDelay: '0.2s' }}>من المصنع إلى بابك</span>
+                  <span className="text-white block animate-text-reveal">{locale === 'ar' ? 'شريكك الاستراتيجي' : 'Your Strategic Partner'}</span>
+                  <span className="block mt-3 gradient-text-ultra animate-text-reveal" style={{ animationDelay: '0.1s' }}>{locale === 'ar' ? 'للتجارة مع الصين' : 'For China Trade'}</span>
+                  <span className="block mt-2 text-white/90 text-[0.7em] animate-text-reveal" style={{ animationDelay: '0.2s' }}>{locale === 'ar' ? 'من المصنع إلى بابك' : 'From Factory to Your Door'}</span>
                 </h1>
 
                 <p className="text-lg sm:text-xl text-slate-400 max-w-xl leading-relaxed animate-text-reveal" style={{ animationDelay: '0.3s' }}>
-                  نتولّى كل التعقيدات — توريد، فحص جودة، تخزين، شحن، وتخليص جمركي — حتى تركّز أنت على تنمية أعمالك وأرباحك.
+                  {locale === 'ar' ? 'نتولّى كل التعقيدات — توريد، فحص جودة، تخزين، شحن، وتخليص جمركي — حتى تركّز أنت على تنمية أعمالك وأرباحك.' : 'We handle all complexities — sourcing, quality inspection, warehousing, shipping, and customs clearance — so you focus on growing your business and profits.'}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-3 animate-text-reveal" style={{ animationDelay: '0.4s' }}>
                   <button onClick={() => scrollToSection('quote')} className="btn-gold animate-hero-shine group">
                     <Sparkles className="w-5 h-5" />
-                    <span>ابدأ مشروعك الآن</span>
+                    <span>{locale === 'ar' ? 'ابدأ مشروعك الآن' : 'Start Your Project Now'}</span>
                     <ArrowRight className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                   </button>
                   <button onClick={() => scrollToSection('services')} className="btn-navy group">
                     <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    استكشف خدماتنا
+                    {locale === 'ar' ? 'استكشف خدماتنا' : 'Explore Our Services'}
                   </button>
                 </div>
 
                 {/* Stats */}
                 <div className="flex items-center gap-0 pt-10 animate-text-reveal" style={{ animationDelay: '0.5s' }}>
                   {[
-                    { val: "500+", label: "مشروع ناجح" },
-                    { val: "50+", label: "دولة نخدمها" },
-                    { val: "99%", label: "رضا العملاء" },
+                    { val: "500+", label: locale === 'ar' ? "مشروع ناجح" : "Successful Projects" },
+                    { val: "50+", label: locale === 'ar' ? "دولة نخدمها" : "Countries Served" },
+                    { val: "99%", label: locale === 'ar' ? "رضا العملاء" : "Client Satisfaction" },
                   ].map((stat, i) => (
                     <div key={i} className="flex items-center">
                       <div className="text-center px-6 sm:px-8">
@@ -359,11 +358,11 @@ export default function Home() {
                     <div className="px-8 py-5 bg-white/[0.02] border-t border-white/[0.06] flex items-center justify-between">
                       <div className="flex items-center gap-2 text-sm text-slate-400">
                         <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                        <span>بدون أي التزام</span>
+                        <span>{locale === 'ar' ? 'بدون أي التزام' : 'No Commitment'}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-slate-400">
                         <ShieldCheck className="w-4 h-4 text-blue-400" />
-                        <span>بياناتك محمية 100%</span>
+                        <span>{locale === 'ar' ? 'بياناتك محمية 100%' : 'Your Data 100% Protected'}</span>
                       </div>
                     </div>
                   </div>
@@ -375,15 +374,15 @@ export default function Home() {
           {/* Trusted By */}
           <FadeIn delay={500}>
             <div className="mt-24 pt-12 border-t border-white/[0.05]">
-              <p className="text-center text-sm text-slate-600 uppercase tracking-[0.2em] font-bold mb-10">موثوق من شركات رائدة في هذه القطاعات</p>
+              <p className="text-center text-sm text-slate-600 uppercase tracking-[0.2em] font-bold mb-10">{locale === 'ar' ? 'موثوق من شركات رائدة في هذه القطاعات' : 'Trusted by Leading Companies in These Sectors'}</p>
               <div className="flex items-center justify-center gap-8 sm:gap-14 flex-wrap opacity-50 hover:opacity-70 transition-opacity duration-500">
                 {[
-                  { icon: Boxes, name: "سلع استهلاكية" },
-                  { icon: Zap, name: "إلكترونيات" },
-                  { icon: Factory, name: "صناعات ثقيلة" },
-                  { icon: Building2, name: "أثاث ومفروشات" },
-                  { icon: TrendingUp, name: "تجارة التجزئة" },
-                  { icon: Truck, name: "قطع غيار" },
+                  { icon: Boxes, name: locale === 'ar' ? "سلع استهلاكية" : "Consumer Goods" },
+                  { icon: Zap, name: locale === 'ar' ? "إلكترونيات" : "Electronics" },
+                  { icon: Factory, name: locale === 'ar' ? "صناعات ثقيلة" : "Heavy Industries" },
+                  { icon: Building2, name: locale === 'ar' ? "أثاث ومفروشات" : "Furniture" },
+                  { icon: TrendingUp, name: locale === 'ar' ? "تجارة التجزئة" : "Retail" },
+                  { icon: Truck, name: locale === 'ar' ? "قطع غيار" : "Spare Parts" },
                 ].map((ind, i) => (
                   <div key={i} className="flex items-center gap-2.5 text-slate-400 hover:text-blue-300 transition-colors duration-300 cursor-default">
                     <ind.icon className="w-5 h-5" />
@@ -421,13 +420,13 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-20">
             <div className="section-badge animate-hero-shine mb-6">
               <Zap className="w-4 h-4" />
-              <span>خدماتنا الاحترافية</span>
+              <span>{locale === 'ar' ? 'خدماتنا الاحترافية' : 'Our Professional Services'}</span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-              حلول <span className="gradient-text-ultra">متكاملة</span> من المصنع إلى بابك
+              {locale === 'ar' ? 'حلول ' : 'Integrated '}<span className="gradient-text-ultra">{locale === 'ar' ? 'متكاملة' : 'Solutions'}</span> {locale === 'ar' ? 'من المصنع إلى بابك' : 'From Factory to Your Door'}
             </h2>
             <p className="text-xl text-slate-400 leading-relaxed">
-              ست خدمات أساسية مصممة بدقة لتغطي كل مرحلة من مراحل سلسلة التوريد الدولية
+              {locale === 'ar' ? 'ست خدمات أساسية مصممة بدقة لتغطي كل مرحلة من مراحل سلسلة التوريد الدولية' : 'Six core services precisely designed to cover every stage of the international supply chain'}
             </p>
           </div>
         </FadeIn>
