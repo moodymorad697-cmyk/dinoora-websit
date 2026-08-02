@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 import { Phone, Mail, MapPin, MessageCircle, Clock, Send, ArrowRight, Globe } from 'lucide-react';
 
 export default function ContactPage() {
+  const locale = useLocale();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,7 +19,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("شكراً لتواصلك معنا! سنرد عليك خلال 24 ساعة.");
+    alert(locale === 'ar' ? "شكراً لتواصلك معنا! سنرد عليك خلال 24 ساعة." : "Thank you for contacting us! We will respond within 24 hours.");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -39,29 +41,29 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
               <MessageCircle className="w-4 h-4" />
-              <span>تواصل معنا</span>
+              <span>{locale === 'ar' ? 'تواصل معنا' : 'Contact Us'}</span>
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
-              تواصل معنا
+              {locale === 'ar' ? 'تواصل معنا' : 'Contact Us'}
               <span className="block mt-2 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
-                نحن هنا لمساعدتك
+                {locale === 'ar' ? 'نحن هنا لمساعدتك' : 'We Are Here to Help'}
               </span>
             </h1>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-8">
-              فريقنا الخبير جاهز للإجابة على جميع استفساراتك حول التجارة مع الصين
+              {locale === 'ar' ? 'فريقنا الخبير جاهز للإجابة على جميع استفساراتك حول التجارة مع الصين' : 'Our expert team is ready to answer all your inquiries about China trade'}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
                 <span className="text-amber-400 font-bold">24/7</span>
-                <span className="text-slate-400 mr-2">دعم متواصل</span>
+                <span className="text-slate-400 mr-2">{locale === 'ar' ? 'دعم متواصل' : 'Ongoing Support'}</span>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-amber-400 font-bold">سريع</span>
-                <span className="text-slate-400 mr-2">استجابة فورية</span>
+                <span className="text-amber-400 font-bold">{locale === 'ar' ? 'سريع' : 'Fast'}</span>
+                <span className="text-slate-400 mr-2">{locale === 'ar' ? 'استجابة فورية' : 'Instant Response'}</span>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-amber-400 font-bold">خبراء</span>
-                <span className="text-slate-400 mr-2">فريق متخصص</span>
+                <span className="text-amber-400 font-bold">{locale === 'ar' ? 'خبراء' : 'Experts'}</span>
+                <span className="text-slate-400 mr-2">{locale === 'ar' ? 'فريق متخصص' : 'Specialized Team'}</span>
               </div>
             </div>
           </div>
@@ -75,13 +77,13 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
               <h2 className="text-3xl font-bold text-white mb-8">
-                أرسل لنا رسالة
+                {locale === 'ar' ? 'أرسل لنا رسالة' : 'Send Us a Message'}
               </h2>
 
               <form onSubmit={handleSubmit}>
                 <div className="mb-6">
                   <label className="block text-sm font-semibold text-slate-300 mb-2">
-                    الاسم الكامل *
+                    {locale === 'ar' ? 'الاسم الكامل *' : 'Full Name *'}
                   </label>
                   <input
                     type="text"
@@ -90,13 +92,13 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
-                    placeholder="الاسم الكامل"
+                    placeholder={locale === 'ar' ? 'الاسم الكامل' : 'Full Name'}
                   />
                 </div>
 
                 <div className="mb-6">
                   <label className="block text-sm font-semibold text-slate-300 mb-2">
-                    البريد الإلكتروني *
+                    {locale === 'ar' ? 'البريد الإلكتروني *' : 'Email *'}
                   </label>
                   <input
                     type="email"
@@ -111,7 +113,7 @@ export default function ContactPage() {
 
                 <div className="mb-6">
                   <label className="block text-sm font-semibold text-slate-300 mb-2">
-                    رقم الهاتف *
+                    {locale === 'ar' ? 'رقم الهاتف *' : 'Phone Number *'}
                   </label>
                   <input
                     type="tel"
@@ -120,13 +122,13 @@ export default function ContactPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
-                    placeholder="+966 50 123 4567"
+                    placeholder={locale === 'ar' ? '+966 50 123 4567' : '+966 50 123 4567'}
                   />
                 </div>
 
                 <div className="mb-6">
                   <label className="block text-sm font-semibold text-slate-300 mb-2">
-                    اسم الشركة
+                    {locale === 'ar' ? 'اسم الشركة' : 'Company Name'}
                   </label>
                   <input
                     type="text"
@@ -134,13 +136,13 @@ export default function ContactPage() {
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
-                    placeholder="اسم الشركة"
+                    placeholder={locale === 'ar' ? 'اسم الشركة' : 'Company Name'}
                   />
                 </div>
 
                 <div className="mb-6">
                   <label className="block text-sm font-semibold text-slate-300 mb-2">
-                    الموضوع *
+                    {locale === 'ar' ? 'الموضوع *' : 'Subject *'}
                   </label>
                   <select
                     name="subject"
@@ -149,19 +151,19 @@ export default function ContactPage() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white"
                   >
-                    <option value="">اختر الموضوع</option>
-                    <option value="quote">طلب عرض سعر</option>
-                    <option value="sourcing">توريد المنتجات</option>
-                    <option value="shipping">استفسار شحن</option>
-                    <option value="customs">التخليص الجمركي</option>
-                    <option value="support">استفسار عام</option>
-                    <option value="partnership">فرصة شراكة</option>
+                    <option value="">{locale === 'ar' ? 'اختر الموضوع' : 'Select Subject'}</option>
+                    <option value="quote">{locale === 'ar' ? 'طلب عرض سعر' : 'Request Quote'}</option>
+                    <option value="sourcing">{locale === 'ar' ? 'توريد المنتجات' : 'Product Sourcing'}</option>
+                    <option value="shipping">{locale === 'ar' ? 'استفسار شحن' : 'Shipping Inquiry'}</option>
+                    <option value="customs">{locale === 'ar' ? 'التخليص الجمركي' : 'Customs Clearance'}</option>
+                    <option value="support">{locale === 'ar' ? 'استفسار عام' : 'General Inquiry'}</option>
+                    <option value="partnership">{locale === 'ar' ? 'فرصة شراكة' : 'Partnership Opportunity'}</option>
                   </select>
                 </div>
 
                 <div className="mb-6">
                   <label className="block text-sm font-semibold text-slate-300 mb-2">
-                    الرسالة *
+                    {locale === 'ar' ? 'الرسالة *' : 'Message *'}
                   </label>
                   <textarea
                     name="message"
@@ -170,7 +172,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     rows={5}
                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
-                    placeholder="أخبرنا عن استفسارك..."
+                    placeholder={locale === 'ar' ? 'أخبرنا عن استفسارك...' : 'Tell us about your inquiry...'}
                   />
                 </div>
 
@@ -179,7 +181,7 @@ export default function ContactPage() {
                   className="w-full px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-500 text-slate-950 rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-amber-500/30 transition-all flex items-center justify-center gap-2"
                 >
                   <Send className="w-5 h-5" />
-                  إرسال الرسالة
+                  {locale === 'ar' ? 'إرسال الرسالة' : 'Send Message'}
                 </button>
               </form>
             </div>
@@ -188,7 +190,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  معلومات التواصل
+                  {locale === 'ar' ? 'معلومات التواصل' : 'Contact Information'}
                 </h2>
 
                 <div className="space-y-6">
@@ -197,10 +199,10 @@ export default function ContactPage() {
                       <MapPin className="w-6 h-6 text-amber-400" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">المقر الرئيسي</h3>
+                      <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'المقر الرئيسي' : 'Headquarters'}</h3>
                       <p className="text-slate-400">
-                        إيوو، مقاطعة تشجيانغ، الصين<br />
-                        منطقة الأعمال التجارية
+                        {locale === 'ar' ? 'إيوو، مقاطعة تشجيانغ، الصين' : 'Yiwu, Zhejiang Province, China'}<br />
+                        {locale === 'ar' ? 'منطقة الأعمال التجارية' : 'Commercial Business District'}
                       </p>
                     </div>
                   </div>
@@ -210,7 +212,7 @@ export default function ContactPage() {
                       <Mail className="w-6 h-6 text-amber-400" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">البريد الإلكتروني</h3>
+                      <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</h3>
                       <p className="text-slate-400">
                         maomoody524@gmail.com<br />
                         info@dinoora.com
@@ -223,10 +225,10 @@ export default function ContactPage() {
                       <Phone className="w-6 h-6 text-amber-400" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">الهاتف</h3>
+                      <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'رقم الهاتف' : 'Phone'}</h3>
                       <p className="text-slate-400">
                         +86 155 8723 7864<br />
-                        متاح على واتساب
+                        {locale === 'ar' ? 'متاح على واتساب' : 'Available on WhatsApp'}
                       </p>
                     </div>
                   </div>
@@ -236,7 +238,7 @@ export default function ContactPage() {
                       <MessageCircle className="w-6 h-6 text-green-400" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">واتساب</h3>
+                      <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'واتساب' : 'WhatsApp'}</h3>
                       <a href="https://wa.me/8615587237864" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors">
                         +86 155 8723 7864
                       </a>
@@ -248,10 +250,10 @@ export default function ContactPage() {
                       <Clock className="w-6 h-6 text-amber-400" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">ساعات العمل</h3>
+                      <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'ساعات العمل' : 'Working Hours'}</h3>
                       <p className="text-slate-400">
-                        الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً<br />
-                        الجمعة - السبت: مغلق
+                        {locale === 'ar' ? 'الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً' : 'Sunday - Thursday: 9:00 AM - 6:00 PM'}<br />
+                        {locale === 'ar' ? 'الجمعة - السبت: مغلق' : 'Friday - Saturday: Closed'}
                       </p>
                     </div>
                   </div>

@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useLocale } from "next-intl";
 import { Target, Eye, Heart, Zap, CheckCircle2, Award, Users, Globe } from 'lucide-react';
 
 export default function AboutPage() {
+  const locale = useLocale();
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
       {/* Hero Section - Dark Theme */}
@@ -18,41 +20,41 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
               <Globe className="w-4 h-4" />
-              من نحن / About Us
+              {locale === 'ar' ? 'من نحن' : 'About Us'}
             </div>
-            
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
-              عن دينورا
+              {locale === 'ar' ? 'عن دينورا' : 'About Dinoora'}
               <span className="block mt-2 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
-                شريكك الموثوق
+                {locale === 'ar' ? 'شريكك الموثوق' : 'Your Trusted Partner'}
               </span>
             </h1>
             
             <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-8">
-              شريكك الموثوق لتجارة الصين، يخدم أسواق الشرق الأوسط بحلول شاملة من البداية للنهاية
+              {locale === 'ar' ? 'شريكك الموثوق لتجارة الصين، يخدم أسواق الشرق الأوسط بحلول شاملة من البداية للنهاية' : 'Your trusted partner for China trade, serving Middle East markets with comprehensive end-to-end solutions'}
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
                 <span className="text-amber-400 font-bold">10+</span>
-                <span className="text-slate-400 mr-2">سنوات خبرة</span>
+                <span className="text-slate-400 mr-2">{locale === 'ar' ? 'سنوات خبرة' : 'Years Experience'}</span>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
                 <span className="text-amber-400 font-bold">5000+</span>
-                <span className="text-slate-400 mr-2">عميل سعيد</span>
+                <span className="text-slate-400 mr-2">{locale === 'ar' ? 'عميل سعيد' : 'Happy Clients'}</span>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
                 <span className="text-amber-400 font-bold">50+</span>
-                <span className="text-slate-400 mr-2">دولة</span>
+                <span className="text-slate-400 mr-2">{locale === 'ar' ? 'دولة' : 'Countries'}</span>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 href="/#quote"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-500 text-slate-950 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
               >
-                تواصل معنا
+                {locale === 'ar' ? 'تواصل معنا' : 'Contact Us'}
               </Link>
             </div>
           </div>
@@ -64,10 +66,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-4 text-center">
-              قصتنا
+              {locale === 'ar' ? 'قصتنا' : 'Our Story'}
             </h2>
             <p className="text-xl text-slate-400 mb-12 text-center max-w-3xl mx-auto">
-              سد الفجوة بين المصنعين الصينيين والشركات في الشرق الأوسط
+              {locale === 'ar' ? 'سد الفجوة بين المصنعين الصينيين والشركات في الشرق الأوسط' : 'Bridging the gap between Chinese manufacturers and Middle East companies'}
             </p>
 
             <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -75,15 +77,15 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">مهمتنا</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">{locale === 'ar' ? 'مهمتنا' : 'Our Mission'}</h3>
                 <p className="text-slate-400 mb-4">
-                  جعل تجارة الصين متاحة وشفافة وفعالة للشركات من جميع الأحجام. نؤمن ببناء شراكات طويلة الأمد بناءً على الثقة والجودة والنجاح المتبادل.
+                  {locale === 'ar' ? 'جعل تجارة الصين متاحة وشفافة وفعالة للشركات من جميع الأحجام. نؤمن ببناء شراكات طويلة الأمد بناءً على الثقة والجودة والنجاح المتبادل.' : 'Making China trade accessible, transparent, and efficient for businesses of all sizes. We believe in building long-term partnerships based on trust, quality, and mutual success.'}
                 </p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> تسعير شفاف</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> ضمان الجودة</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> التركيز على نجاح العميل</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> شراكات طويلة الأمد</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> {locale === 'ar' ? 'تسعير شفاف' : 'Transparent Pricing'}</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> {locale === 'ar' ? 'ضمان الجودة' : 'Quality Assurance'}</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> {locale === 'ar' ? 'التركيز على نجاح العميل' : 'Client Success Focus'}</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> {locale === 'ar' ? 'شراكات طويلة الأمد' : 'Long-term Partnerships'}</li>
                 </ul>
               </div>
 
@@ -91,28 +93,28 @@ export default function AboutPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Eye className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">رؤيتنا</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">{locale === 'ar' ? 'رؤيتنا' : 'Our Vision'}</h3>
                 <p className="text-slate-400 mb-4">
-                  أن نكون المزود الرائد لحلول تجارة الصين في الشرق الأوسط، معروفون بالتميز والابتكار والالتزام الراسخ بنجاح العملاء.
+                  {locale === 'ar' ? 'أن نكون المزود الرائد لحلول تجارة الصين في الشرق الأوسط، معروفون بالتميز والابتكار والالتزام الراسخ بنجاح العملاء.' : 'To be the leading provider of China trade solutions in the Middle East, known for excellence, innovation, and unwavering commitment to client success.'}
                 </p>
                 <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> قيادة السوق</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> مدفوع بالابتكار</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> التميز في الخدمة</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> وصول عالمي</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> {locale === 'ar' ? 'قيادة السوق' : 'Market Leadership'}</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> {locale === 'ar' ? 'مدفوع بالابتكار' : 'Innovation Driven'}</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> {locale === 'ar' ? 'التميز في الخدمة' : 'Service Excellence'}</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> {locale === 'ar' ? 'وصول عالمي' : 'Global Reach'}</li>
                 </ul>
               </div>
             </div>
 
             {/* Values */}
             <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 rounded-3xl p-12 border border-slate-700 mb-16">
-              <h3 className="text-3xl font-bold mb-8 text-center text-white">قيمنا الأساسية</h3>
+              <h3 className="text-3xl font-bold mb-8 text-center text-white">{locale === 'ar' ? 'قيمنا الأساسية' : 'Our Core Values'}</h3>
               <div className="grid md:grid-cols-4 gap-6">
                 {[
-                  { icon: Heart, title: "الثقة", desc: "بناء علاقات دائمة", color: "from-red-500 to-pink-500" },
-                  { icon: Award, title: "الجودة", desc: "التميز في كل شيء", color: "from-amber-500 to-orange-500" },
-                  { icon: Globe, title: "العالمية", desc: "حلول عالمية", color: "from-blue-500 to-cyan-500" },
-                  { icon: Zap, title: "الكفاءة", desc: "خدمة سريعة وموثوقة", color: "from-yellow-500 to-amber-500" }
+                  { icon: Heart, title: locale === 'ar' ? "الثقة" : "Trust", desc: locale === 'ar' ? "بناء علاقات دائمة" : "Building lasting relationships", color: "from-red-500 to-pink-500" },
+                  { icon: Award, title: locale === 'ar' ? "الجودة" : "Quality", desc: locale === 'ar' ? "التميز في كل شيء" : "Excellence in everything", color: "from-amber-500 to-orange-500" },
+                  { icon: Globe, title: locale === 'ar' ? "العالمية" : "Global", desc: locale === 'ar' ? "حلول عالمية" : "Global solutions", color: "from-blue-500 to-cyan-500" },
+                  { icon: Zap, title: locale === 'ar' ? "الكفاءة" : "Efficiency", desc: locale === 'ar' ? "خدمة سريعة وموثوقة" : "Fast and reliable service", color: "from-yellow-500 to-amber-500" }
                 ].map((value, index) => (
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-slate-700 hover:border-indigo-500/50 hover:bg-slate-800 transition-all">
                     <div className={`w-14 h-14 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>

@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { ArrowLeft, Send, Mail, MessageCircle } from "lucide-react";
 
 export default function QuotePage() {
   const t = useTranslations('quote');
+  const locale = useLocale();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     contact: "",
@@ -17,10 +19,10 @@ export default function QuotePage() {
   const [submitted, setSubmitted] = useState(false);
 
   const services = [
-    { id: "sourcing", icon: "🔍", title: "Product Sourcing", desc: "Find suppliers & products" },
-    { id: "inspection", icon: "✓", title: "Quality Check", desc: "Inspect before shipping" },
-    { id: "shipping", icon: "🚢", title: "Shipping Only", desc: "Transport your goods" },
-    { id: "complete", icon: "🌐", title: "Complete Service", desc: "From A to Z solution" },
+    { id: "sourcing", icon: "🔍", title: locale === 'ar' ? "توريد المنتجات" : "Product Sourcing", desc: locale === 'ar' ? "البحث عن الموردين والمنتجات" : "Find suppliers & products" },
+    { id: "inspection", icon: "✓", title: locale === 'ar' ? "فحص الجودة" : "Quality Check", desc: locale === 'ar' ? "فحص قبل الشحن" : "Inspect before shipping" },
+    { id: "shipping", icon: "🚢", title: locale === 'ar' ? "شحن فقط" : "Shipping Only", desc: locale === 'ar' ? "نقل بضائعك" : "Transport your goods" },
+    { id: "complete", icon: "🌐", title: locale === 'ar' ? "خدمة كاملة" : "Complete Service", desc: locale === 'ar' ? "حل من أ إلى ز" : "From A to Z solution" },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -37,14 +39,14 @@ export default function QuotePage() {
             <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
               <Send className="w-10 h-10 text-white" />
             </div>
-            <h2 className="text-3xl font-bold text-white mb-4">تم الإرسال بنجاح!</h2>
-            <p className="text-slate-400 mb-8">سنتواصل معك قريباً</p>
-            <Link 
+            <h2 className="text-3xl font-bold text-white mb-4">{locale === 'ar' ? 'تم الإرسال بنجاح!' : 'Successfully Submitted!'}</h2>
+            <p className="text-slate-400 mb-8">{locale === 'ar' ? 'سنتواصل معك قريباً' : 'We will contact you soon'}</p>
+            <Link
               href="/"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-full font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all"
             >
               <ArrowLeft className="w-4 h-4" />
-              العودة للرئيسية
+              {locale === 'ar' ? 'العودة للرئيسية' : 'Back to Home'}
             </Link>
           </div>
         </div>
@@ -57,20 +59,20 @@ export default function QuotePage() {
       {/* Header */}
       <div className="bg-slate-900/50 backdrop-blur-sm border-b border-slate-800">
         <div className="max-w-4xl mx-auto px-4 py-6">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            العودة للرئيسية
+            {locale === 'ar' ? 'العودة للرئيسية' : 'Back to Home'}
           </Link>
         </div>
       </div>
 
       <div className="max-w-2xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">اطلب عرض سعر</h1>
-          <p className="text-slate-400">املأ النموذج أدناه للحصول على عرض سعر مخصص</p>
+          <h1 className="text-4xl font-bold text-white mb-4">{locale === 'ar' ? 'اطلب عرض سعر' : 'Get a Quote'}</h1>
+          <p className="text-slate-400">{locale === 'ar' ? 'املأ النموذج أدناه للحصول على عرض سعر مخصص' : 'Fill out the form below to get a custom quote'}</p>
         </div>
 
         {/* Progress Steps */}
@@ -91,8 +93,8 @@ export default function QuotePage() {
           {/* Step 1: Service Selection */}
           {step === 1 && (
             <div className="space-y-6">
-              <h2 className="text-xl font-bold text-white">اختر الخدمة</h2>
-              <p className="text-slate-400">حدد الخدمة التي تحتاجها</p>
+              <h2 className="text-xl font-bold text-white">{locale === 'ar' ? 'اختر الخدمة' : 'Select Service'}</h2>
+              <p className="text-slate-400">{locale === 'ar' ? 'حدد الخدمة التي تحتاجها' : 'Select the service you need'}</p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {services.map((service) => (
@@ -121,21 +123,21 @@ export default function QuotePage() {
           {/* Step 2: Contact Info */}
           {step === 2 && (
             <div className="space-y-6">
-              <h2 className="text-xl font-bold text-white">معلومات الاتصال</h2>
-              <p className="text-slate-400">اختر طريقة التواصل المفضلة</p>
-              
+              <h2 className="text-xl font-bold text-white">{locale === 'ar' ? 'معلومات الاتصال' : 'Contact Information'}</h2>
+              <p className="text-slate-400">{locale === 'ar' ? 'اختر طريقة التواصل المفضلة' : 'Choose your preferred contact method'}</p>
+
               <div className="flex gap-4 mb-6">
                 <button
                   type="button"
                   onClick={() => setFormData({ ...formData, contactType: 'whatsapp' })}
                   className={`flex-1 py-4 px-6 rounded-xl border-2 flex items-center justify-center gap-3 transition-all ${
-                    formData.contactType === 'whatsapp' 
-                      ? 'border-green-500 bg-green-500/10' 
+                    formData.contactType === 'whatsapp'
+                      ? 'border-green-500 bg-green-500/10'
                       : 'border-slate-700 hover:border-slate-600 bg-slate-800/50'
                   }`}
                 >
                   <MessageCircle className="w-5 h-5 text-green-400" />
-                  <span className="font-semibold text-white">واتساب</span>
+                  <span className="font-semibold text-white">{locale === 'ar' ? 'واتساب' : 'WhatsApp'}</span>
                 </button>
                 <button
                   type="button"
@@ -147,21 +149,22 @@ export default function QuotePage() {
                   }`}
                 >
                   <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="font-semibold text-white">البريد</span>
+                  <span className="font-semibold text-white">{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</span>
                 </button>
               </div>
 
-              <div>
+              <div className="mb-6">
                 <label className="block text-sm font-semibold text-slate-300 mb-2">
-                  {formData.contactType === 'whatsapp' ? 'رقم الواتساب' : 'البريد الإلكتروني'}
+                  {formData.contactType === 'whatsapp' ? (locale === 'ar' ? 'رقم واتساب' : 'WhatsApp Number') : (locale === 'ar' ? 'البريد الإلكتروني' : 'Email')} *
                 </label>
                 <input
-                  type={formData.contactType === 'email' ? 'email' : 'tel'}
+                  type={formData.contactType === 'whatsapp' ? 'tel' : 'email'}
+                  name="contact"
                   required
                   value={formData.contact}
                   onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
-                  className="w-full px-4 py-4 border border-slate-700 rounded-xl bg-slate-800/50 focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white text-lg placeholder-slate-500"
-                  placeholder={formData.contactType === 'whatsapp' ? '+966 50 123 4567' : 'you@example.com'}
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-500"
+                  placeholder={formData.contactType === 'whatsapp' ? '+966 50 123 4567' : 'your@email.com'}
                 />
               </div>
 
@@ -169,17 +172,16 @@ export default function QuotePage() {
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="flex-1 py-4 border border-slate-700 rounded-xl font-semibold hover:bg-slate-800 transition-colors text-white"
+                  className="flex-1 py-3 px-6 bg-slate-800 text-slate-300 rounded-lg font-semibold hover:bg-slate-700 transition-all"
                 >
-                  السابق
+                  {locale === 'ar' ? 'السابق' : 'Previous'}
                 </button>
                 <button
                   type="button"
                   onClick={() => setStep(3)}
-                  disabled={!formData.contact}
-                  className="flex-1 py-4 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 py-3 px-6 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all"
                 >
-                  التالي
+                  {locale === 'ar' ? 'التالي' : 'Next'}
                 </button>
               </div>
             </div>
@@ -188,16 +190,21 @@ export default function QuotePage() {
           {/* Step 3: Details */}
           {step === 3 && (
             <div className="space-y-6">
-              <h2 className="text-xl font-bold text-white">التفاصيل</h2>
-              <p className="text-slate-400">أخبرنا المزيد عن مشروعك</p>
-              
-              <div>
+              <h2 className="text-xl font-bold text-white">{locale === 'ar' ? 'تفاصيل إضافية' : 'Additional Details'}</h2>
+              <p className="text-slate-400">{locale === 'ar' ? 'أخبرنا المزيد عن احتياجاتك' : 'Tell us more about your needs'}</p>
+
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-slate-300 mb-2">
+                  {locale === 'ar' ? 'التفاصيل' : 'Details'} *
+                </label>
                 <textarea
+                  name="details"
+                  required
                   value={formData.details}
                   onChange={(e) => setFormData({ ...formData, details: e.target.value })}
-                  rows={5}
-                  className="w-full px-4 py-4 border border-slate-700 rounded-xl bg-slate-800/50 focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none text-white placeholder-slate-500"
-                  placeholder="اكتب تفاصيل مشروعك هنا..."
+                  rows={6}
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-500"
+                  placeholder={locale === 'ar' ? 'أخبرنا عن المنتجات التي تحتاجها، الكميات، المواصفات...' : 'Tell us about the products you need, quantities, specifications...'}
                 />
               </div>
 
@@ -205,16 +212,16 @@ export default function QuotePage() {
                 <button
                   type="button"
                   onClick={() => setStep(2)}
-                  className="flex-1 py-4 border border-slate-700 rounded-xl font-semibold hover:bg-slate-800 transition-colors text-white"
+                  className="flex-1 py-3 px-6 bg-slate-800 text-slate-300 rounded-lg font-semibold hover:bg-slate-700 transition-all"
                 >
-                  السابق
+                  {locale === 'ar' ? 'السابق' : 'Previous'}
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-4 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all flex items-center justify-center gap-2"
+                  className="flex-1 py-3 px-6 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all flex items-center justify-center gap-2"
                 >
-                  <Send className="w-4 h-4" />
-                  إرسال
+                  <Send className="w-5 h-5" />
+                  {locale === 'ar' ? 'إرسال الطلب' : 'Submit Request'}
                 </button>
               </div>
             </div>
@@ -225,15 +232,15 @@ export default function QuotePage() {
         <div className="mt-12 grid sm:grid-cols-3 gap-6 text-center">
           <div className="p-4 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700">
             <div className="text-2xl font-bold text-white mb-1">24h</div>
-            <div className="text-sm text-slate-400">وقت الرد</div>
+            <div className="text-sm text-slate-400">{locale === 'ar' ? 'وقت الرد' : 'Response Time'}</div>
           </div>
           <div className="p-4 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700">
             <div className="text-2xl font-bold text-white mb-1">0</div>
-            <div className="text-sm text-slate-400">التكلفة</div>
+            <div className="text-sm text-slate-400">{locale === 'ar' ? 'التكلفة' : 'Cost'}</div>
           </div>
           <div className="p-4 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700">
             <div className="text-2xl font-bold text-white mb-1">100%</div>
-            <div className="text-sm text-slate-400">الالتزام</div>
+            <div className="text-sm text-slate-400">{locale === 'ar' ? 'الالتزام' : 'Commitment'}</div>
           </div>
         </div>
       </div>
