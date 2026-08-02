@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
 import Link from "next/link";
 import { 
   ArrowRight, Globe, Search, ShieldCheck, Warehouse, Ship, FileCheck, Package,
@@ -92,7 +93,7 @@ const AnimatedCounter = ({ end, suffix = "" }: { end: number, suffix?: string })
 
 export default function Home() {
   const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'ar';
+  const locale = useLocale();
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
