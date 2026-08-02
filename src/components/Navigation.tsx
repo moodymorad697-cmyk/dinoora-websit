@@ -65,16 +65,16 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-[68px]">
           
           <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="relative h-24 w-auto">
+            <div className="relative h-32 w-auto">
               <Image
                 src="/logo-dinoora.png"
                 alt="دينورا"
-                width={96}
-                height={96}
-                className="brightness-125 drop-shadow-lg shadow-amber-500/20 transition-all duration-300 group-hover:scale-105 group-hover:brightness-150"
+                width={128}
+                height={128}
+                className="brightness-125 drop-shadow-2xl shadow-amber-500/30 transition-all duration-300 group-hover:scale-110 group-hover:brightness-150"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-yellow-500/30 rounded-full blur-xl opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/40 to-yellow-500/40 rounded-full blur-2xl opacity-70" />
             </div>
           </Link>
 
