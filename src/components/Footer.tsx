@@ -45,12 +45,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <div className="relative h-12 w-auto">
+              <div className="relative h-20 w-auto">
                 <Image
                   src="/logo-dinoora.png"
                   alt="دينورا"
-                  width={48}
-                  height={48}
+                  width={80}
+                  height={80}
                   className="brightness-125"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-full blur-xl opacity-60" />
