@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import { 
   Search, 
   ShieldCheck, 
@@ -106,6 +107,8 @@ n          </div>
 
 export default function ServicesPage() {
   const t = useTranslations();
+  const pathname = usePathname();
+  const locale = pathname.split('/')[1] || 'ar';
 
   const services = [
     {
@@ -121,7 +124,7 @@ export default function ServicesPage() {
       ],
       gradient: "from-blue-500 to-blue-700",
       bgImage: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80",
-      link: "/services/sourcing"
+      link: `/${locale}/services/sourcing`
     },
     {
       icon: ShieldCheck,
@@ -136,7 +139,7 @@ export default function ServicesPage() {
       ],
       gradient: "from-emerald-500 to-green-600",
       bgImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
-      link: "/services/inspection"
+      link: `/${locale}/services/inspection`
     },
     {
       icon: Warehouse,
@@ -151,7 +154,7 @@ export default function ServicesPage() {
       ],
       gradient: "from-purple-500 to-purple-700",
       bgImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80",
-      link: "/services/warehousing"
+      link: `/${locale}/services/warehousing`
     },
     {
       icon: Ship,
@@ -166,7 +169,7 @@ export default function ServicesPage() {
       ],
       gradient: "from-cyan-500 to-blue-600",
       bgImage: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80",
-      link: "/services/shipping"
+      link: `/${locale}/services/shipping`
     },
     {
       icon: FileCheck,
@@ -181,7 +184,7 @@ export default function ServicesPage() {
       ],
       gradient: "from-amber-500 to-orange-600",
       bgImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80",
-      link: "/services/customs"
+      link: `/${locale}/services/customs`
     },
     {
       icon: Package,
@@ -196,7 +199,7 @@ export default function ServicesPage() {
       ],
       gradient: "from-pink-500 to-rose-600",
       bgImage: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80",
-      link: "/services/logistics"
+      link: `/${locale}/services/logistics`
     }
   ];
 
@@ -385,14 +388,14 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/#quote"
+              href={`/${locale}#quote`}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all"
             >
               اطلب عرض سعر مجاني
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
-              href="/#quote"
+              href={`/${locale}#quote`}
               className="inline-flex items-center justify-center px-8 py-4 bg-slate-800 text-white border-2 border-slate-700 rounded-xl font-semibold hover:bg-slate-700 hover:border-slate-600 transition-all"
             >
               تواصل معنا
