@@ -10,26 +10,26 @@ export default function Footer() {
   const locale = pathname.split('/')[1] || 'ar';
 
   return (
-    <footer className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0C2340 0%, #1E3A5F 50%, #0C2340 100%)' }}>
+    <footer className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)' }}>
       {/* BG Accent */}
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-600/[0.06] rounded-full blur-[140px] animate-morph-blob" />
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-navy-500/[0.05] rounded-full blur-[120px] animate-morph-blob" style={{ animationDelay: '3s' }} />
-      <div className="absolute top-[30%] left-[20%] w-[300px] h-[300px] bg-steel-500/[0.04] rounded-full blur-[100px] animate-morph-blob" style={{ animationDelay: '5s' }} />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/[0.06] rounded-full blur-[140px] animate-float" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-600/[0.05] rounded-full blur-[120px] animate-float" style={{ animationDelay: '3s' }} />
+      <div className="absolute top-[30%] left-[20%] w-[300px] h-[300px] bg-pink-600/[0.04] rounded-full blur-[100px] animate-float" style={{ animationDelay: '5s' }} />
 
       {/* CTA Banner */}
       <div className="relative border-b border-white/[0.05]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-l from-amber-950/60 via-navy-900/50 to-amber-950/60 rounded-2xl p-8 border border-white/[0.08] backdrop-blur-sm animate-glow-pulse">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-indigo-950/60 via-purple-900/50 to-indigo-950/60 rounded-2xl p-8 border border-indigo-500/20 backdrop-blur-sm">
             <div>
               <h3 className="text-xl font-extrabold text-white mb-1">جاهز لبدء مشروعك مع الصين؟</h3>
               <p className="text-sm text-slate-400">احصل على استشارة مجانية وعرض سعر خلال 24 ساعة — بدون أي التزام</p>
             </div>
             <div className="flex gap-3">
-              <a href={`https://wa.me/8615587237864`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-green-600 to-emerald-500 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-green-500/30 transition-all hover:-translate-y-0.5">
+              <a href={`https://wa.me/8615587237864`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-green-500/30 transition-all hover:-translate-y-0.5">
                 <MessageCircle className="w-4 h-4" />
                 واتساب مباشر
               </a>
-              <Link href={`/${locale}#quote`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-l from-amber-600 via-yellow-500 to-amber-600 text-slate-950 rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-amber-500/30 transition-all hover:-translate-y-0.5 animate-gradient bg-[length:200%_200%]">
+              <Link href={`/${locale}#quote`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-indigo-500/30 transition-all hover:-translate-y-0.5 animate-gradient-shift bg-[length:200%_200%]">
                 <Send className="w-4 h-4" />
                 طلب عرض سعر
               </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
       {/* Main Grid - Compact */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
-          
+
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-3 mb-5">
@@ -51,9 +51,9 @@ export default function Footer() {
                   alt="دينورا"
                   width={112}
                   height={112}
-                  className="brightness-125 drop-shadow-xl shadow-amber-500/25"
+                  className="brightness-110 drop-shadow-xl shadow-indigo-500/25"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/35 to-yellow-500/35 rounded-full blur-2xl opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/35 to-purple-500/35 rounded-full blur-2xl opacity-60" />
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* الخدمات */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">الخدمات</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-4">الخدمات</h4>
             <ul className="space-y-2.5">
               {[
                 { label: "توريد المنتجات", href: "/services/sourcing" },
@@ -75,7 +75,7 @@ export default function Footer() {
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
-                    <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-amber-400" />
+                    <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-indigo-400" />
                     {item.label}
                   </Link>
                 </li>

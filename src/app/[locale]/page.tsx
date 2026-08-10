@@ -10,7 +10,9 @@ import {
   BarChart3, Phone, Mail, MessageCircle, BookOpen, FileText, Lightbulb, 
   HelpCircle, Send, MapPin, TrendingUp, Users, Clock, ChevronDown, Play,
   X, Menu, Sparkles, Target, Workflow, Rocket, Handshake, BadgeCheck,
-  Send as SendIcon, MessageSquare
+  Send as SendIcon, MessageSquare, MousePointer2, ArrowUpRight, 
+  Zap as ZapIcon, Flame, Infinity, ShieldAlert, Globe2, TrendingUp as TrendingUpIcon,
+  Layers, Grid3x3, Sparkles as SparklesIcon, Waves, ArrowDown, ChevronRight
 } from "lucide-react";
 
 // Premium Components
@@ -220,90 +222,124 @@ export default function Home() {
 
       {/* ══════════════════════ HERO SECTION ══════════════════════ */}
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-        {/* BG: Base - Navy logistics theme */}
-        <div className="absolute inset-0 z-0" style={{ background: 'linear-gradient(135deg, #0C2340 0%, #1E3A5F 25%, #0C2340 50%, #1A2F4A 75%, #0C2340 100%)' }} />
+        {/* BG: Modern gradient with glassmorphism */}
+        <div className="absolute inset-0 z-0" style={{ 
+          background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #0f172a 50%, #1e293b 75%, #0f172a 100%)' 
+        }} />
         
-        {/* BG: Real logistics image - Container ship */}
-        <div className="absolute inset-0 z-[1]">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-fixed"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80')",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0C2340]/95 via-[#1E3A5F]/90 to-[#0C2340]/95" />
-        </div>
+        {/* BG: Animated gradient overlay */}
+        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-indigo-900/20 via-purple-900/20 to-pink-900/20 animate-gradient-shift" />
         
-        {/* BG: Mesh gradient */}
-        <div className="absolute inset-0 z-[2] mesh-gradient opacity-50" />
-        
-        {/* BG: Gold and Navy Aurora blobs */}
-        <div className="absolute top-[-15%] right-[-10%] w-[800px] h-[800px] rounded-full animate-morph-blob z-[3]" style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.15), rgba(30,58,95,0.12), rgba(70,130,180,0.08), transparent 70%)' }} />
-        <div className="absolute bottom-[-20%] left-[-15%] w-[700px] h-[700px] rounded-full animate-morph-blob z-[3]" style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.12), rgba(30,58,95,0.15), rgba(16,185,129,0.08), transparent 70%)', animationDelay: '3s' }} />
-        <div className="absolute top-[25%] left-[35%] w-[600px] h-[600px] rounded-full animate-morph-blob z-[3]" style={{ background: 'radial-gradient(circle, rgba(70,130,180,0.1), rgba(212,175,55,0.12), rgba(30,58,95,0.06), transparent 60%)', animationDelay: '5s' }} />
-        <div className="absolute bottom-[30%] right-[20%] w-[400px] h-[400px] rounded-full animate-morph-blob z-[3]" style={{ background: 'radial-gradient(circle, rgba(70,130,180,0.12), rgba(16,185,129,0.1), transparent 65%)', animationDelay: '2s' }} />
+        {/* BG: Floating orbs with modern colors */}
+        <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full z-[2]" style={{ 
+          background: 'radial-gradient(circle, rgba(99,102,241,0.3), rgba(168,85,247,0.2), transparent 70%)',
+          animation: 'float 20s ease-in-out infinite'
+        }} />
+        <div className="absolute bottom-[-15%] left-[-10%] w-[500px] h-[500px] rounded-full z-[2]" style={{ 
+          background: 'radial-gradient(circle, rgba(236,72,153,0.25), rgba(99,102,241,0.2), transparent 70%)',
+          animation: 'float 25s ease-in-out infinite reverse'
+        }} />
+        <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] rounded-full z-[2]" style={{ 
+          background: 'radial-gradient(circle, rgba(34,211,238,0.2), rgba(99,102,241,0.15), transparent 70%)',
+          animation: 'float 18s ease-in-out infinite',
+          animationDelay: '5s'
+        }} />
 
         {/* BG: Grid */}
         <div className="absolute inset-0 z-[4] grid-pattern opacity-20" />
 
-        {/* BG: Logistics-themed particles */}
+        {/* BG: Modern geometric patterns */}
+        <div className="absolute inset-0 z-[3] opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(99,102,241,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(99,102,241,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }} />
+        </div>
+
+        {/* BG: Floating particles with modern colors */}
         {[
-          { top: '8%', right: '12%', size: 4, color: 'bg-amber-400' },
-          { top: '22%', right: '78%', size: 3, color: 'bg-slate-400' },
-          { top: '45%', right: '15%', size: 3, color: 'bg-yellow-400' },
-          { top: '68%', right: '65%', size: 4, color: 'bg-emerald-400' },
-          { top: '35%', right: '50%', size: 2, color: 'bg-amber-400' },
-          { top: '82%', right: '30%', size: 3, color: 'bg-slate-400' },
-          { top: '15%', right: '45%', size: 2, color: 'bg-yellow-400' },
-          { top: '55%', right: '85%', size: 3, color: 'bg-emerald-400' },
+          { top: '10%', right: '15%', size: 3, color: 'bg-indigo-400' },
+          { top: '25%', right: '75%', size: 2, color: 'bg-purple-400' },
+          { top: '50%', right: '20%', size: 3, color: 'bg-pink-400' },
+          { top: '70%', right: '60%', size: 2, color: 'bg-cyan-400' },
+          { top: '40%', right: '45%', size: 2, color: 'bg-indigo-400' },
+          { top: '85%', right: '35%', size: 3, color: 'bg-purple-400' },
         ].map((p, i) => (
-          <div key={i} className={`absolute rounded-full ${p.color}/50 z-[5] animate-glow-pulse`} style={{ top: p.top, right: p.right, width: `${p.size}px`, height: `${p.size}px`, animation: `particle-float ${6 + i}s ease-in-out infinite`, animationDelay: `${i * 0.6}s` }} />
+          <div key={i} className={`absolute rounded-full ${p.color}/40 z-[4]`} style={{ 
+            top: p.top, 
+            right: p.right, 
+            width: `${p.size}px`, 
+            height: `${p.size}px`,
+            animation: `float ${8 + i * 2}s ease-in-out infinite`,
+            animationDelay: `${i * 0.8}s`
+          }} />
         ))}
 
-        {/* Decorative lines */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-l from-transparent via-amber-500/40 to-transparent z-[6]" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-l from-transparent via-slate-500/30 to-transparent z-[6]" />
+        {/* Decorative glassmorphism cards */}
+        <div className="absolute top-[15%] left-[10%] w-64 h-64 rounded-2xl z-[3] backdrop-blur-xl bg-white/5 border border-white/10" style={{
+          animation: 'float 15s ease-in-out infinite'
+        }} />
+        <div className="absolute bottom-[20%] right-[15%] w-48 h-48 rounded-2xl z-[3] backdrop-blur-xl bg-white/5 border border-white/10" style={{
+          animation: 'float 18s ease-in-out infinite reverse',
+          animationDelay: '3s'
+        }} />
 
         {/* ═══ CONTENT ═══ */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-28 w-full">
           <div className="grid lg:grid-cols-2 gap-14 xl:gap-24 items-center">
             
-            {/* RIGHT (RTL) - Main Text */}
+            {/* Main Content */}
             <FadeIn>
-              <div className="space-y-8">
-                <div className="section-badge animate-hero-shine">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>{locale === 'ar' ? 'متاحون على مدار الساعة — شريك +500 شركة عربية' : 'Available 24/7 — Partner of 500+ Arab Companies'}</span>
+              <div className="space-y-10">
+                {/* Modern badge */}
+                <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 backdrop-blur-sm">
+                  <div className="relative">
+                    <div className="w-2.5 h-2.5 rounded-full bg-indigo-400" />
+                    <div className="absolute inset-0 w-2.5 h-2.5 rounded-full bg-indigo-400 animate-ping opacity-75" />
+                  </div>
+                  <span className="text-sm font-medium text-indigo-300">{locale === 'ar' ? 'شريك +500 شركة عربية' : 'Partner of 500+ Arab Companies'}</span>
+                  <ChevronRight className="w-4 h-4 text-indigo-400" />
                 </div>
 
-                <h1 className="text-[2.75rem] sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-extrabold leading-[1.05] tracking-tight">
-                  <span className="text-white block animate-text-reveal">{locale === 'ar' ? 'شريكك الاستراتيجي' : 'Your Strategic Partner'}</span>
-                  <span className="block mt-3 gradient-text-ultra animate-text-reveal" style={{ animationDelay: '0.1s' }}>{locale === 'ar' ? 'للتجارة مع الصين' : 'For China Trade'}</span>
-                  <span className="block mt-2 text-white/90 text-[0.7em] animate-text-reveal" style={{ animationDelay: '0.2s' }}>{locale === 'ar' ? 'من المصنع إلى بابك' : 'From Factory to Your Door'}</span>
+                {/* Modern heading with gradient */}
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
+                  <span className="block text-white mb-2">{locale === 'ar' ? 'شريكك الاستراتيجي' : 'Your Strategic Partner'}</span>
+                  <span className="block bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">{locale === 'ar' ? 'للتجارة مع الصين' : 'For China Trade'}</span>
+                  <span className="block text-2xl sm:text-3xl text-slate-400 font-medium">{locale === 'ar' ? 'من المصنع إلى بابك' : 'From Factory to Your Door'}</span>
                 </h1>
 
-                <p className="text-lg sm:text-xl text-slate-400 max-w-xl leading-relaxed animate-text-reveal" style={{ animationDelay: '0.3s' }}>
+                {/* Modern description */}
+                <p className="text-lg sm:text-xl text-slate-400 max-w-2xl leading-relaxed">
                   {locale === 'ar' ? 'نتولّى كل التعقيدات — توريد، فحص جودة، تخزين، شحن، وتخليص جمركي — حتى تركّز أنت على تنمية أعمالك وأرباحك.' : 'We handle all complexities — sourcing, quality inspection, warehousing, shipping, and customs clearance — so you focus on growing your business and profits.'}
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-3 animate-text-reveal" style={{ animationDelay: '0.4s' }}>
-                  <button onClick={() => scrollToSection('quote')} className="btn-gold animate-hero-shine group">
-                    <Sparkles className="w-5 h-5" />
-                    <span>{locale === 'ar' ? 'ابدأ مشروعك الآن' : 'Start Your Project Now'}</span>
-                    <ArrowRight className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+                {/* Modern CTA buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                  <button onClick={() => scrollToSection('quote')} className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold text-lg overflow-hidden transition-all hover:shadow-2xl hover:shadow-indigo-500/25 hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="relative flex items-center justify-center gap-2">
+                      <SparklesIcon className="w-5 h-5" />
+                      <span>{locale === 'ar' ? 'ابدأ مشروعك الآن' : 'Start Your Project Now'}</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </button>
-                  <button onClick={() => scrollToSection('services')} className="btn-navy group">
-                    <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    {locale === 'ar' ? 'استكشف خدماتنا' : 'Explore Our Services'}
+                  <button onClick={() => scrollToSection('services')} className="group px-8 py-4 bg-white/5 border border-white/10 text-white rounded-xl font-semibold text-lg backdrop-blur-sm hover:bg-white/10 transition-all hover:scale-105">
+                    <div className="flex items-center justify-center gap-2">
+                      <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                      {locale === 'ar' ? 'استكشف خدماتنا' : 'Explore Our Services'}
+                    </div>
                   </button>
                 </div>
 
-                {/* Stats */}
-                <div className="flex items-center gap-0 pt-10 animate-text-reveal" style={{ animationDelay: '0.5s' }}>
+                {/* Modern Stats */}
+                <div className="flex items-center gap-8 pt-8">
                   {[
-                    { val: "500+", label: locale === 'ar' ? "مشروع ناجح" : "Successful Projects" },
-                    { val: "50+", label: locale === 'ar' ? "دولة نخدمها" : "Countries Served" },
-                    { val: "99%", label: locale === 'ar' ? "رضا العملاء" : "Client Satisfaction" },
+                    { val: "500+", label: locale === 'ar' ? "مشروع ناجح" : "Successful Projects", icon: TrendingUpIcon },
+                    { val: "50+", label: locale === 'ar' ? "دولة نخدمها" : "Countries Served", icon: Globe2 },
+                    { val: "99%", label: locale === 'ar' ? "رضا العملاء" : "Client Satisfaction", icon: Star },
                   ].map((stat, i) => (
                     <div key={i} className="flex items-center">
                       <div className="text-center px-6 sm:px-8">
@@ -411,42 +447,80 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* ══════════════════════ SERVICES SECTION ══════════════════════ */}
-      <section id="services" className="relative py-32 lg:py-40 overflow-hidden section-logistics">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-500/[0.08] rounded-full blur-[160px] animate-morph-blob" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-navy-600/[0.06] rounded-full blur-[140px] animate-morph-blob" style={{ animationDelay: '3s' }} />
-        <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-steel-500/[0.05] rounded-full blur-[100px] animate-morph-blob" style={{ animationDelay: '5s' }} />
-        <div className="absolute inset-0 dot-pattern opacity-40" />
+      <section id="services" className="relative py-32 lg:py-40 overflow-hidden">
+        {/* Modern gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900" />
+        
+        {/* Animated gradient orbs */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[160px] animate-float" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[140px] animate-float" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-pink-500/10 rounded-full blur-[100px] animate-float" style={{ animationDelay: '5s' }} />
+        
+        {/* Grid pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(99,102,241,0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(99,102,241,0.3) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px'
+          }} />
+        </div>
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <div className="section-badge animate-hero-shine mb-6">
-              <Zap className="w-4 h-4" />
-              <span>{locale === 'ar' ? 'خدماتنا الاحترافية' : 'Our Professional Services'}</span>
+            {/* Modern badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-6">
+              <ZapIcon className="w-4 h-4 text-indigo-400" />
+              <span className="text-sm font-medium text-indigo-300">{locale === 'ar' ? 'خدماتنا المتكاملة' : 'Our Integrated Services'}</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-              {locale === 'ar' ? 'حلول ' : 'Integrated '}<span className="gradient-text-ultra">{locale === 'ar' ? 'متكاملة' : 'Solutions'}</span> {locale === 'ar' ? 'من المصنع إلى بابك' : 'From Factory to Your Door'}
+            
+            {/* Modern heading */}
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">{locale === 'ar' ? 'حلول شاملة' : 'Comprehensive Solutions'}</span>
+              <span className="block mt-2 text-slate-400 text-2xl sm:text-3xl">{locale === 'ar' ? 'للتجارة مع الصين' : 'For China Trade'}</span>
             </h2>
-            <p className="text-xl text-slate-400 leading-relaxed">
-              {locale === 'ar' ? 'ست خدمات أساسية مصممة بدقة لتغطي كل مرحلة من مراحل سلسلة التوريد الدولية' : 'Six core services precisely designed to cover every stage of the international supply chain'}
+            
+            {/* Modern description */}
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              {locale === 'ar' ? 'من التوريد إلى التوصيل — ندير كل خطوة في سلسلة التوريد بدقة واحترافية.' : 'From sourcing to delivery — we manage every step in the supply chain with precision and professionalism.'}
             </p>
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <FadeIn key={i} delay={i * 100}>
-              <Link href={`/${locale}${service.href}`} className="group h-full ultra-card p-8 block">
-                <div className={`w-16 h-16 mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br ${service.gradient} shadow-xl shadow-${service.color}-500/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-glow-pulse`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-extrabold text-white mb-3 group-hover:text-blue-300 transition-colors">{service.title}</h3>
-                <p className="text-slate-400 mb-6 text-sm leading-relaxed">{service.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {service.features.map((feature, j) => (
-                    <span key={j} className="px-3 py-1.5 bg-white/[0.04] text-slate-300 rounded-lg text-xs font-medium border border-white/[0.06] hover:bg-white/[0.08] hover:border-blue-500/20 transition-all">
-                      {feature}
-                    </span>
-                  ))}
+              <Link href={`/${locale}${service.href}`} className="group h-full relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-indigo-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1">
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                
+                <div className="relative p-6">
+                  {/* Icon */}
+                  <div className={`w-14 h-14 mb-5 rounded-xl flex items-center justify-center bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                    <service.icon className="w-7 h-7 text-white" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">{service.title}</h3>
+                  
+                  {/* Description */}
+                  <p className="text-slate-400 mb-5 text-sm leading-relaxed">{service.desc}</p>
+                  
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-2">
+                    {service.features.map((feature, j) => (
+                      <span key={j} className="px-3 py-1.5 bg-white/5 text-slate-300 rounded-lg text-xs font-medium border border-white/10 hover:bg-white/10 hover:border-indigo-500/30 transition-all">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Arrow indicator */}
+                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300">
+                    <ArrowRight className="w-5 h-5 text-indigo-400" />
+                  </div>
                 </div>
               </Link>
             </FadeIn>
@@ -756,10 +830,10 @@ export default function Home() {
                 { value: "8–15", label: "موردين منسَّقين / دورة", desc: "تحويل نية الشراء إلى منطق تنفيذ جاهز للمستودع." },
                 { value: "0–1%", label: "انحراف في مراجعة المستندات", desc: "مطابقة المستندات مع واقع الشحنة قبل التصريح." },
               ].map((metric, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-4xl font-bold text-white mb-2">{metric.value}</div>
-                  <div className="text-lg font-medium text-blue-400 mb-2">{metric.label}</div>
-                  <p className="text-sm text-slate-500">{metric.desc}</p>
+                <div key={i} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-indigo-500/30 transition-all group">
+                  <div className="text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">{metric.value}</div>
+                  <div className="text-sm text-slate-400 mb-2">{metric.label}</div>
+                  <div className="text-xs text-slate-500">{metric.desc}</div>
                 </div>
               ))}
             </div>
