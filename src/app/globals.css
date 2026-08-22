@@ -591,6 +591,89 @@ main .bg-white {
   background-color: #f5fafb;
 }
 
+/* Legacy pages also use white utility surfaces; keep them inside the brand palette. */
+main .bg-white:not(button):not(a) {
+  background-color: #dcecf0;
+}
+
+main .rounded-2xl.border.bg-white,
+main .rounded-xl.border.bg-white {
+  position: relative;
+  overflow: hidden;
+}
+
+main .rounded-2xl.border.bg-white::before,
+main .rounded-2xl.border.bg-white::after,
+main .rounded-xl.border.bg-white::before,
+main .rounded-xl.border.bg-white::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  border-color: rgba(27, 154, 170, 0.42);
+  z-index: 2;
+}
+
+main .rounded-2xl.border.bg-white::before,
+main .rounded-xl.border.bg-white::before {
+  top: 9px;
+  inset-inline-start: 9px;
+  border-top: 2px solid;
+  border-inline-start: 2px solid;
+}
+
+main .rounded-2xl.border.bg-white::after,
+main .rounded-xl.border.bg-white::after {
+  bottom: 9px;
+  inset-inline-end: 9px;
+  border-bottom: 2px solid;
+  border-inline-end: 2px solid;
+}
+
+main .bg-white\/5 {
+  background-color: rgba(16, 42, 67, 0.06);
+}
+
+.ornate-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.ornate-card::before,
+.ornate-card::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  border-color: rgba(27, 154, 170, 0.48);
+  z-index: 1;
+}
+
+.ornate-card::before {
+  top: 10px;
+  inset-inline-start: 10px;
+  border-top: 2px solid;
+  border-inline-start: 2px solid;
+}
+
+.ornate-card::after {
+  bottom: 10px;
+  inset-inline-end: 10px;
+  border-bottom: 2px solid;
+  border-inline-end: 2px solid;
+}
+
+main > section {
+  content-visibility: auto;
+  contain-intrinsic-size: 720px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > section { content-visibility: visible; }
+}
+
 .site-palette .border-[#dbe5eb] {
   border-color: #c8dce2;
 }
