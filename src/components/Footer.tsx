@@ -3,14 +3,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin, MessageCircle, ArrowLeft, Sparkles, Send } from "lucide-react";
 
 export default function Footer() {
+  const t = useTranslations();
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'ar';
 
   return (
-    <footer className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)' }}>
+    <footer className="relative overflow-hidden border-t border-white/10" style={{ background: 'linear-gradient(180deg, #102a43 0%, #07111f 100%)' }}>
       {/* BG Accent */}
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/[0.06] rounded-full blur-[140px] animate-float" />
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-600/[0.05] rounded-full blur-[120px] animate-float" style={{ animationDelay: '3s' }} />
@@ -21,17 +23,17 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-indigo-950/60 via-purple-900/50 to-indigo-950/60 rounded-2xl p-8 border border-indigo-500/20 backdrop-blur-sm">
             <div>
-              <h3 className="text-xl font-extrabold text-white mb-1">جاهز لبدء مشروعك مع الصين؟</h3>
-              <p className="text-sm text-slate-400">احصل على استشارة مجانية وعرض سعر خلال 24 ساعة — بدون أي التزام</p>
+              <h3 className="text-xl font-extrabold text-white mb-1">{t('cta.title')}</h3>
+              <p className="text-sm text-slate-400">{t('cta.subtitle')}</p>
             </div>
             <div className="flex gap-3">
               <a href={`https://wa.me/8615587237864`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-green-500/30 transition-all hover:-translate-y-0.5">
                 <MessageCircle className="w-4 h-4" />
-                واتساب مباشر
+                WhatsApp
               </a>
               <Link href={`/${locale}#quote`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-indigo-500/30 transition-all hover:-translate-y-0.5 animate-gradient-shift bg-[length:200%_200%]">
                 <Send className="w-4 h-4" />
-                طلب عرض سعر
+                {t('nav.getQuote')}
               </Link>
             </div>
           </div>
@@ -45,33 +47,31 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <div className="relative h-28 w-auto">
+              <div className="relative h-16 w-16">
                 <Image
                   src="/logo-dinoora.png"
                   alt="دينورا"
-                  width={112}
-                  height={112}
-                  className="brightness-110 drop-shadow-xl shadow-indigo-500/25"
+                  width={64}
+                  height={64}
+                  className="h-16 w-16 object-contain brightness-110 drop-shadow-xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/35 to-purple-500/35 rounded-full blur-2xl opacity-60" />
+                <div className="absolute inset-2 rounded-full bg-cyan-300/10 blur-xl" />
               </div>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              شريكك الاستراتيجي للتجارة الدولية — من المصنع الصيني حتى مستودعك.
-            </p>
+            <p className="text-slate-400 text-sm leading-relaxed mb-6">{t('footer.tagline')}</p>
           </div>
 
           {/* الخدمات */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-4">الخدمات</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-4">{t('footer.services')}</h4>
             <ul className="space-y-2.5">
               {[
-                { label: "توريد المنتجات", href: "/services/sourcing" },
-                { label: "فحص الجودة", href: "/services/inspection" },
-                { label: "التخزين والتجميع", href: "/services/warehousing" },
-                { label: "الشحن الدولي", href: "/services/shipping" },
-                { label: "التخليص الجمركي", href: "/services/customs" },
-                { label: "توصيل DDP", href: "/services/logistics" },
+                { label: t('footer.sourcing'), href: "/services/sourcing" },
+                { label: t('footer.inspection'), href: "/services/inspection" },
+                { label: t('footer.warehousing'), href: "/services/warehousing" },
+                { label: t('footer.shipping'), href: "/services/shipping" },
+                { label: t('services.customs'), href: "/services/customs" },
+                { label: t('services.logistics'), href: "/services/logistics" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
@@ -85,15 +85,15 @@ export default function Footer() {
 
           {/* روابط */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">الشركة</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2.5">
               {[
-                { label: "الرئيسية", href: "/" },
-                { label: "لماذا نحن", href: "/#features" },
-                { label: "العمليات", href: "/#operations" },
-                { label: "المدونة", href: "/blog" },
-                { label: "سياسة الخصوصية", href: "/privacy" },
-                { label: "الشروط والأحكام", href: "/terms" },
+                { label: t('footer.home'), href: "/" },
+                { label: t('footer.about'), href: "/about" },
+                { label: t('nav.track'), href: "/track" },
+                { label: t('nav.contact'), href: "/contact" },
+                { label: t('footer.privacy'), href: "/privacy" },
+                { label: t('footer.terms'), href: "/terms" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
@@ -107,7 +107,7 @@ export default function Footer() {
 
           {/* التواصل */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">تواصل معنا</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-3">
               <li>
                 <a href="https://wa.me/8615587237864" className="flex items-center gap-2.5 text-slate-400 hover:text-white transition-colors group">

@@ -2,147 +2,47 @@
 
 import Link from "next/link";
 import { useLocale } from "next-intl";
-import { Target, Eye, Heart, Zap, CheckCircle2, Award, Users, Globe } from 'lucide-react';
+import { ArrowRight, Check, Eye, Handshake, ShieldCheck, Target } from "lucide-react";
 
 export default function AboutPage() {
   const locale = useLocale();
-  return (
-    <main className="min-h-screen bg-slate-950 text-slate-100">
-      {/* Hero Section - Dark Theme */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80')" }} />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0C2340]/95 via-[#1E3A5F]/90 to-[#0C2340]/80" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,_rgba(212,175,55,0.15),transparent_50%)]" />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
-              <Globe className="w-4 h-4" />
-              {locale === 'ar' ? 'من نحن' : 'About Us'}
-            </div>
+  const ar = locale === "ar";
+  const c = ar ? {
+    eyebrow: "عن دينورا", title: "نبني الوضوح في تجارة عابرة للحدود.", intro: "دينورا فريق تشغيل يربط الشركات في الشرق الأوسط بالمصانع وسلاسل الإمداد في الصين. دورنا ليس تمرير الطلب؛ بل جعل كل قرار قابلاً للفهم والمتابعة.", contact: "تحدث مع فريقنا", storyLabel: "القصة وراء النموذج", storyTitle: "حين تكون المسافة هي المشكلة، نكون حاضرين في الطرفين.", story: "بدأت دينورا من ملاحظة عملية: كثير من مشاكل الاستيراد لا تبدأ في الميناء، بل قبل ذلك بكثير؛ مورد غير واضح، مواصفات غير مكتملة، أو شحنة بلا مالك يتابعها. لذلك صممنا نموذجاً يجمع التوريد والتحقق والفحص والتجميع والشحن ضمن مسار واحد.", story2: "وجودنا بالقرب من مراكز التصنيع يمنحنا قدرة على السؤال والتحقق والتدخل مبكراً. وفي جهة العميل، نتحدث بلغة الأعمال والموعد والتكلفة، لا بلغة الإجراءات فقط.", modelTitle: "كيف نعمل كشريك تشغيل", model: ["نفهم الهدف التجاري قبل البحث عن المنتج.", "نوثق المعلومات التي تحتاج قراراً، لا صوراً دعائية.", "ننسق بين المورد والمستودع والناقل بمالك واضح.", "نبلغ عن المخاطر مبكراً ونقترح مساراً عملياً."], missionTitle: "مهمتنا", mission: "تبسيط التجارة مع الصين للشركات التي تحتاج نتيجة يمكن التخطيط لها.", visionTitle: "رؤيتنا", vision: "أن تصبح سلسلة الإمداد بين الصين والشرق الأوسط أكثر وضوحاً وانضباطاً واعتماداً على البيانات.", valuesTitle: "مبادئنا في العمل", values: [["01", "الوضوح", "نوضح ما نعرفه وما يحتاج تحققاً قبل اتخاذ القرار."], ["02", "المسؤولية", "لكل مرحلة شخص يتابعها وتحديث يمكن الرجوع إليه."], ["03", "التحقق", "لا نعتمد على الوصف وحده؛ نطلب دليلاً مناسباً للموقف."], ["04", "الشراكة", "نقيس نجاحنا بقدرة العميل على تكرار العملية بثقة."]], finalTitle: "دعنا نفهم احتياجك أولاً.", finalBody: "لا تحتاج إلى صياغة طلب مثالي. أرسل ما لديك وسيساعدك فريقنا على تحويله إلى خطة واضحة.", finalCta: "ابدأ محادثة"
+  } : {
+    eyebrow: "About Dinoora", title: "We build clarity into cross-border trade.", intro: "Dinoora is an operations team connecting Middle East businesses with factories and supply chains in China. We do more than pass along an order: we make each decision visible and trackable.", contact: "Talk to our team", storyLabel: "The story behind the model", storyTitle: "When distance is the problem, we stay present at both ends.", story: "Dinoora began with a practical observation: many import problems start long before the port, with an unclear supplier, incomplete specifications, or a shipment with no clear owner. We built one operating path across sourcing, verification, inspection, consolidation, and shipping.", story2: "Being close to manufacturing hubs lets us ask better questions, verify earlier, and intervene sooner. On the customer side, we speak in business outcomes, deadlines, and cost, not process language alone.", modelTitle: "How we operate as a partner", model: ["Understand the commercial goal before searching for a product.", "Document what supports a decision, not decorative claims.", "Coordinate suppliers, warehouses, and carriers with clear ownership.", "Surface risks early and recommend a practical route."], missionTitle: "Our mission", mission: "Make China trade simpler for businesses that need a result they can plan around.", visionTitle: "Our vision", vision: "Make supply chains between China and the Middle East clearer, more disciplined, and more data-informed.", valuesTitle: "Our operating principles", values: [["01", "Clarity", "We show what is known and what still needs verification."], ["02", "Ownership", "Each stage has an owner and an update you can reference."], ["03", "Verification", "We do not rely on descriptions alone; we ask for relevant evidence."], ["04", "Partnership", "We measure success by the confidence to repeat the process."]], finalTitle: "Let us understand the need first.", finalBody: "You do not need a perfect brief. Send what you have and our team will help turn it into a clear plan.", finalCta: "Start a conversation"
+  };
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
-              {locale === 'ar' ? 'عن دينورا' : 'About Dinoora'}
-              <span className="block mt-2 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
-                {locale === 'ar' ? 'شريكك الموثوق' : 'Your Trusted Partner'}
-              </span>
-            </h1>
-            
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-8">
-              {locale === 'ar' ? 'شريكك الموثوق لتجارة الصين، يخدم أسواق الشرق الأوسط بحلول شاملة من البداية للنهاية' : 'Your trusted partner for China trade, serving Middle East markets with comprehensive end-to-end solutions'}
-            </p>
+  const trustCards = ar ? [
+    ["حماية استثمارك", "تأمين تجاري، ضمان استرداد، حماية مدفوعات عبر Escrow، وكفالة جودة ضمن خطة واضحة.", "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=85"],
+    ["توفير مدروس", "مقارنة أسعار فورية عبر أكثر من 500 مصنع، مع توضيح الفرق بين السعر والتكلفة النهائية.", "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=85"],
+    ["فريق عربي-صيني", "مديرو حسابات يتقنون العربية والصينية والإنجليزية ويفهمون ثقافة المصنع والعميل.", "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=900&q=85"],
+    ["تنفيذ أسرع", "معالجة متوازية للتوريد والفحص والشحن حتى تصل المنتجات إلى السوق في وقت أقصر.", "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=85"],
+  ] : [
+    ["Protecting your investment", "Trade cover, refund assurance, Escrow payment protection, and quality accountability within a clear plan.", "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=85"],
+    ["Cost-aware sourcing", "Live comparison across 500+ factories, with a clear view of price and total landed cost.", "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=85"],
+    ["Arabic-Chinese team", "Account managers fluent in Arabic, Chinese, and English who understand both sides of the factory relationship.", "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=900&q=85"],
+    ["Parallel execution", "Sourcing, inspection, and shipping move together so your products reach market sooner.", "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=85"],
+  ];
 
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-amber-400 font-bold">10+</span>
-                <span className="text-slate-400 mr-2">{locale === 'ar' ? 'سنوات خبرة' : 'Years Experience'}</span>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-amber-400 font-bold">5000+</span>
-                <span className="text-slate-400 mr-2">{locale === 'ar' ? 'عميل سعيد' : 'Happy Clients'}</span>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
-                <span className="text-amber-400 font-bold">50+</span>
-                <span className="text-slate-400 mr-2">{locale === 'ar' ? 'دولة' : 'Countries'}</span>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/#quote"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-500 text-slate-950 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
-              >
-                {locale === 'ar' ? 'تواصل معنا' : 'Contact Us'}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+  const processSteps = ar ? [
+    ["01", "الاستشارة والتخطيط", "تحديد المواصفات، التكلفة المستهدفة، مستوى الجودة، وجدول التسليم في خطة تنفيذية."],
+    ["02", "البحث والتفاوض", "مطابقة المصانع واختيار أفضل الخيارات والتفاوض على السعر وإدارة العينات."],
+    ["03", "الفحص والتحقق", "فحص قبل الإنتاج وأثناء التصنيع وقبل الشحن مع أدلة مصورة وملاحظات واضحة."],
+    ["04", "الشحن والتسليم", "تجميع الشحنة وتخليصها وتتبعها حتى تصل إلى باب المستودع."],
+  ] : [
+    ["01", "Consultation and planning", "Define specifications, target cost, quality level, and delivery schedule in an execution plan."],
+    ["02", "Research and negotiation", "Match factories, shortlist the right options, negotiate terms, and manage samples."],
+    ["03", "Inspection and verification", "Inspect before production, during manufacturing, and before dispatch with visual evidence."],
+    ["04", "Shipping and delivery", "Consolidate, clear, track, and coordinate the shipment through warehouse delivery."],
+  ];
 
-      {/* Our Story */}
-      <section className="py-24 section-logistics">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-white mb-4 text-center">
-              {locale === 'ar' ? 'قصتنا' : 'Our Story'}
-            </h2>
-            <p className="text-xl text-slate-400 mb-12 text-center max-w-3xl mx-auto">
-              {locale === 'ar' ? 'سد الفجوة بين المصنعين الصينيين والشركات في الشرق الأوسط' : 'Bridging the gap between Chinese manufacturers and Middle East companies'}
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-12 mb-16">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-indigo-500/50 hover:bg-slate-800 transition-all group">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{locale === 'ar' ? 'مهمتنا' : 'Our Mission'}</h3>
-                <p className="text-slate-400 mb-4">
-                  {locale === 'ar' ? 'جعل تجارة الصين متاحة وشفافة وفعالة للشركات من جميع الأحجام. نؤمن ببناء شراكات طويلة الأمد بناءً على الثقة والجودة والنجاح المتبادل.' : 'Making China trade accessible, transparent, and efficient for businesses of all sizes. We believe in building long-term partnerships based on trust, quality, and mutual success.'}
-                </p>
-                <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> {locale === 'ar' ? 'تسعير شفاف' : 'Transparent Pricing'}</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> {locale === 'ar' ? 'ضمان الجودة' : 'Quality Assurance'}</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> {locale === 'ar' ? 'التركيز على نجاح العميل' : 'Client Success Focus'}</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-indigo-400" /> {locale === 'ar' ? 'شراكات طويلة الأمد' : 'Long-term Partnerships'}</li>
-                </ul>
-              </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-purple-500/50 hover:bg-slate-800 transition-all group">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Eye className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{locale === 'ar' ? 'رؤيتنا' : 'Our Vision'}</h3>
-                <p className="text-slate-400 mb-4">
-                  {locale === 'ar' ? 'أن نكون المزود الرائد لحلول تجارة الصين في الشرق الأوسط، معروفون بالتميز والابتكار والالتزام الراسخ بنجاح العملاء.' : 'To be the leading provider of China trade solutions in the Middle East, known for excellence, innovation, and unwavering commitment to client success.'}
-                </p>
-                <ul className="space-y-3 text-slate-300">
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> {locale === 'ar' ? 'قيادة السوق' : 'Market Leadership'}</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> {locale === 'ar' ? 'مدفوع بالابتكار' : 'Innovation Driven'}</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> {locale === 'ar' ? 'التميز في الخدمة' : 'Service Excellence'}</li>
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-purple-400" /> {locale === 'ar' ? 'وصول عالمي' : 'Global Reach'}</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Values */}
-            <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 rounded-3xl p-12 border border-slate-700 mb-16">
-              <h3 className="text-3xl font-bold mb-8 text-center text-white">{locale === 'ar' ? 'قيمنا الأساسية' : 'Our Core Values'}</h3>
-              <div className="grid md:grid-cols-4 gap-6">
-                {[
-                  { icon: Heart, title: locale === 'ar' ? "الثقة" : "Trust", desc: locale === 'ar' ? "بناء علاقات دائمة" : "Building lasting relationships", color: "from-red-500 to-pink-500" },
-                  { icon: Award, title: locale === 'ar' ? "الجودة" : "Quality", desc: locale === 'ar' ? "التميز في كل شيء" : "Excellence in everything", color: "from-amber-500 to-orange-500" },
-                  { icon: Globe, title: locale === 'ar' ? "العالمية" : "Global", desc: locale === 'ar' ? "حلول عالمية" : "Global solutions", color: "from-blue-500 to-cyan-500" },
-                  { icon: Zap, title: locale === 'ar' ? "الكفاءة" : "Efficiency", desc: locale === 'ar' ? "خدمة سريعة وموثوقة" : "Fast and reliable service", color: "from-yellow-500 to-amber-500" }
-                ].map((value, index) => (
-                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-slate-700 hover:border-indigo-500/50 hover:bg-slate-800 transition-all">
-                    <div className={`w-14 h-14 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                      <value.icon className="w-7 h-7 text-white" />
-                    </div>
-                    <h4 className="font-bold text-lg mb-2 text-white">{value.title}</h4>
-                    <p className="text-sm text-slate-400">{value.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-white mb-4">كن شريكاً لنا</h3>
-              <p className="text-xl text-slate-400 mb-8">
-                جرب الفرق في دينورا في حلول تجارة الصين
-              </p>
-              <Link 
-                href="/#quote"
-                className="inline-flex items-center gap-2 px-12 py-5 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-indigo-500/30 transition-all"
-              >
-                تواصل معنا
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
+  return <main className="site-palette bg-[#eaf2f4] text-[#102a43]">
+    <section className="relative isolate overflow-hidden bg-[#102a43] text-white"><div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=2000&q=85')" }} /><div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,22,38,0.96),rgba(9,39,62,0.72),rgba(9,39,62,0.45))]" /><div className="mx-auto flex min-h-[590px] max-w-7xl items-end px-5 pb-20 pt-40 sm:px-8 lg:px-12"><div className="max-w-3xl"><p className="mb-6 border-s-2 border-cyan-300 ps-4 text-sm font-bold uppercase tracking-[0.14em] text-cyan-200">{c.eyebrow}</p><h1 className="max-w-3xl text-5xl font-black leading-[1.04] sm:text-7xl">{c.title}</h1><p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">{c.intro}</p><Link href={`/${locale}/contact`} className="mt-9 inline-flex items-center gap-3 rounded-lg bg-cyan-300 px-6 py-4 font-bold text-[#082238] hover:bg-white">{c.contact}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link></div></div></section>
+    <section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-12"><div><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-700">{c.storyLabel}</p><h2 className="mt-4 text-4xl font-black leading-tight sm:text-5xl">{c.storyTitle}</h2><p className="mt-7 text-lg leading-8 text-[#5d7180]">{c.story}</p><p className="mt-5 text-lg leading-8 text-[#5d7180]">{c.story2}</p></div><div className="rounded-2xl border border-[#dbe5eb] bg-white p-7 shadow-[0_16px_40px_rgba(16,42,67,0.06)]"><div className="flex items-center gap-3 border-b border-[#e4edf1] pb-5"><Handshake className="h-6 w-6 text-cyan-700" /><h3 className="text-xl font-bold">{c.modelTitle}</h3></div><ul className="mt-6 space-y-5">{c.model.map(item => <li key={item} className="flex gap-3 leading-7 text-[#4c6575]"><Check className="mt-1 h-5 w-5 shrink-0 text-emerald-600" />{item}</li>)}</ul></div></section>
+    <section className="bg-[#102a43] px-5 py-24 text-white sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-300">Dinoora / Proof points</p><h2 className="mt-4 text-4xl font-black sm:text-5xl">{ar ? "ما الذي يحصل عليه العميل؟" : "What the client gets"}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{ar ? "مزايا عملية تظهر في طريقة إدارة الطلب، لا في العبارات التسويقية فقط." : "Practical advantages reflected in how the request is managed, not just in marketing language."}</p></div><div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{trustCards.map(([title, body, image]) => <article key={title} className="group overflow-hidden rounded-2xl border border-white/15 bg-white/[0.07]"><div className="h-36 bg-cover bg-center transition duration-700 group-hover:scale-105" style={{ backgroundImage: `url('${image}')` }} /><div className="p-5"><h3 className="text-xl font-bold text-cyan-200">{title}</h3><p className="mt-3 text-sm leading-7 text-slate-300">{body}</p></div></article>)}</div></div></section>
+    <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-700">Dinoora / Process</p><h2 className="mt-4 text-4xl font-black sm:text-5xl">{ar ? "عملية من 4 خطوات محسّنة" : "A focused four-step process"}</h2><p className="mt-5 text-lg leading-8 text-[#5d7180]">{ar ? "من الاستشارة الأولى إلى التسليم، كل خطوة مصممة لأقصى كفاءة." : "From the first consultation to delivery, each step is designed for clarity and efficiency."}</p></div><div className="mt-12 grid gap-5 md:grid-cols-4">{processSteps.map(([number, title, body]) => <article key={number} className="relative border-t-4 border-cyan-700 bg-white p-6 shadow-[0_10px_30px_rgba(16,42,67,0.06)]"><span className="text-4xl font-black text-[#c5d9df]">{number}</span><h3 className="mt-6 text-xl font-bold">{title}</h3><p className="mt-3 leading-7 text-[#617684]">{body}</p></article>)}</div></section>
+    <section className="border-y border-[#dbe5eb] bg-[#eaf2f4] px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><div className="grid gap-5 md:grid-cols-2"><div className="rounded-2xl bg-[#102a43] p-8 text-white"><Target className="h-8 w-8 text-cyan-300" /><h2 className="mt-8 text-2xl font-black">{c.missionTitle}</h2><p className="mt-4 leading-8 text-slate-300">{c.mission}</p></div><div className="rounded-2xl border border-[#cadde3] bg-white p-8"><Eye className="h-8 w-8 text-cyan-700" /><h2 className="mt-8 text-2xl font-black">{c.visionTitle}</h2><p className="mt-4 leading-8 text-[#5d7180]">{c.vision}</p></div></div><h2 className="mt-20 text-3xl font-black">{c.valuesTitle}</h2><div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{c.values.map(([number, title, body]) => <div key={number} className="border-t-2 border-cyan-700 bg-white p-6"><span className="text-sm font-black text-cyan-700">{number}</span><h3 className="mt-6 text-xl font-bold">{title}</h3><p className="mt-3 leading-7 text-[#617684]">{body}</p></div>)}</div></div></section>
+    <section className="bg-[#102a43] px-5 py-20 text-center text-white sm:px-8"><ShieldCheck className="mx-auto h-9 w-9 text-cyan-300" /><h2 className="mx-auto mt-6 max-w-3xl text-3xl font-black sm:text-5xl">{c.finalTitle}</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">{c.finalBody}</p><Link href={`/${locale}/contact`} className="mt-9 inline-flex items-center gap-3 rounded-lg bg-cyan-300 px-7 py-4 font-bold text-[#082238] hover:bg-white">{c.finalCta}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link></section>
+  </main>;
 }

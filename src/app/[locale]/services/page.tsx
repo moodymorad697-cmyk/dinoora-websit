@@ -39,7 +39,8 @@ const ServiceCard3D = ({
   features, 
   gradient, 
   bgImage,
-  link 
+  link,
+  ctaLabel
 }: { 
   icon: any, 
   title: string, 
@@ -47,7 +48,8 @@ const ServiceCard3D = ({
   features: string[], 
   gradient: string,
   bgImage: string,
-  link: string
+  link: string,
+  ctaLabel: string
 }) => {
   return (
     <div className="group relative">
@@ -64,7 +66,7 @@ const ServiceCard3D = ({
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }} />
-n          </div>
+          </div>
           
           {/* Icon */}
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
@@ -96,7 +98,7 @@ n          </div>
             href={link}
             className={`group/btn flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r ${gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all`}
           >
-            Learn More
+            {ctaLabel}
             <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -318,7 +320,7 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <ServiceCard3D key={index} {...service} />
+              <ServiceCard3D key={index} {...service} ctaLabel={locale === 'ar' ? 'اعرف المزيد' : 'Learn More'} />
             ))}
           </div>
         </div>

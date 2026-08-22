@@ -4,12 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { 
   ChevronDown, Search, ShieldCheck, Warehouse, Ship, FileCheck, Package,
   ArrowLeft, Phone, Sparkles, MessageCircle, Globe
 } from 'lucide-react';
 
 export default function Navigation() {
+  const t = useTranslations();
   const [isOpen, setIsOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,6 +19,7 @@ export default function Navigation() {
   const servicesRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'ar';
+  const targetLocale = locale === 'ar' ? 'en' : 'ar';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,19 +41,19 @@ export default function Navigation() {
   }, []);
 
   const serviceItems = [
-    { icon: Search, label: 'توريد المنتجات', desc: 'إيجاد أفضل المصانع الموثقة', href: '/services/sourcing' },
-    { icon: ShieldCheck, label: 'فحص الجودة', desc: 'فحص دقيق متعدد المراحل', href: '/services/inspection' },
-    { icon: Warehouse, label: 'التخزين والتجميع', desc: 'مستودعات ذكية في الصين', href: '/services/warehousing' },
-    { icon: Ship, label: 'الشحن الدولي', desc: 'بحري وجوي وبري وسريع', href: '/services/shipping' },
-    { icon: FileCheck, label: 'التخليص الجمركي', desc: 'إجراءات سلسة وامتثال كامل', href: '/services/customs' },
-    { icon: Package, label: 'توصيل DDP للباب', desc: 'تسليم شامل حتى بابك', href: '/services/logistics' },
+    { icon: Search, label: t('services.sourcing'), desc: t('services.sourcingDesc'), href: '/services/sourcing' },
+    { icon: ShieldCheck, label: t('services.inspection'), desc: t('services.inspectionDesc'), href: '/services/inspection' },
+    { icon: Warehouse, label: t('services.warehousing'), desc: t('services.warehousingDesc'), href: '/services/warehousing' },
+    { icon: Ship, label: t('services.shipping'), desc: t('services.shippingDesc'), href: '/services/shipping' },
+    { icon: FileCheck, label: t('services.customs'), desc: t('services.customsDesc'), href: '/services/customs' },
+    { icon: Package, label: t('services.logistics'), desc: t('services.logisticsDesc'), href: '/services/logistics' },
   ];
 
   const navItems = [
-    { label: 'الرئيسية', href: '/' },
-    { label: 'لماذا نحن', href: '/#features' },
-    { label: 'العمليات', href: '/#operations' },
-    { label: 'المدونة', href: '/blog' },
+    { label: t('nav.home'), href: '/' },
+    { label: t('nav.about'), href: '/about' },
+    { label: t('nav.track'), href: '/track' },
+    { label: t('nav.contact'), href: '/contact' },
   ];
 
   return (
@@ -62,19 +65,19 @@ export default function Navigation() {
       <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-indigo-500 via-purple-500 via-pink-500 to-indigo-500 transition-all duration-150 opacity-90 animate-gradient-shift bg-[length:200%_100%]" style={{ width: `${scrollProgress}%` }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-[100px]">
+        <div className="flex justify-between items-center h-[76px]">
 
-          <Link href={`/${locale}`} className="flex items-center gap-3 group pt-12">
-            <div className="relative h-32 w-auto">
+          <Link href={`/${locale}`} className="flex items-center gap-3 group">
+            <div className="relative h-16 w-16">
               <Image
                 src="/logo-dinoora.png"
                 alt="دينورا"
-                width={128}
-                height={128}
-                className="brightness-110 drop-shadow-2xl shadow-indigo-500/30 transition-all duration-300 group-hover:scale-110 group-hover:brightness-125"
+                width={64}
+                height={64}
+                className="h-16 w-16 object-contain brightness-110 drop-shadow-xl transition-all duration-300 group-hover:scale-105"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/30 to-purple-500/30 rounded-full blur-2xl opacity-60" />
+              <div className="absolute inset-2 rounded-full bg-cyan-300/10 blur-xl" />
             </div>
           </Link>
 
@@ -95,7 +98,7 @@ export default function Navigation() {
                 onClick={() => setShowServices(!showServices)}
                 className="flex items-center gap-1.5 px-4 py-2 rounded-lg font-semibold text-[13px] text-slate-400 hover:text-white transition-all duration-300"
               >
-                الخدمات
+                {t('nav.services')}
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showServices ? 'rotate-180' : ''}`} />
               </button>
 
@@ -120,7 +123,7 @@ export default function Navigation() {
                   ))}
                   <div className="col-span-2 mt-2 pt-3 border-t border-white/[0.08]">
                     <Link href={`/${locale}/#services`} onClick={() => setShowServices(false)} className="flex items-center justify-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 font-bold py-2 transition-colors group">
-                      عرض جميع الخدمات
+                      {t('services.viewAll')}
                       <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -131,11 +134,11 @@ export default function Navigation() {
             <div className="w-px h-6 bg-white/10 mx-3" />
 
             <Link
-              href={`/${locale === 'ar' ? 'en' : 'ar'}${pathname.replace(/^\/(ar|en)/, '')}`}
+              href={`/${targetLocale}${pathname.replace(/^\/(ar|en|zh)/, '')}`}
               className="flex items-center gap-2 text-slate-400 hover:text-indigo-400 transition-all duration-300 px-3 py-2 rounded-xl hover:bg-indigo-500/5"
             >
               <Globe className="w-4 h-4" />
-              <span className="text-xs font-bold hidden xl:inline">{locale === 'ar' ? 'English' : 'العربية'}</span>
+              <span className="text-xs font-bold hidden xl:inline">{targetLocale === 'en' ? 'English' : 'العربية'}</span>
             </Link>
 
             <Link
@@ -143,7 +146,7 @@ export default function Navigation() {
               className="mr-3 px-5 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-bold text-xs hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-1.5 animate-gradient-shift bg-[length:200%_200%]"
             >
               <Sparkles className="w-4 h-4" />
-              احصل على عرض سعر
+              {t('nav.getQuote')}
             </Link>
           </div>
 
