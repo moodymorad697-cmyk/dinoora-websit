@@ -68,7 +68,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-[76px]">
 
           <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="relative h-16 w-16">
+            <div className="brand-mark-frame relative h-[68px] w-[68px]">
               <Image
                 src="/logo-dinoora.png"
                 alt="دينورا"
