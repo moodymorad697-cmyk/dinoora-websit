@@ -54,7 +54,7 @@ export default function HomePage() {
     ["04", ar ? "نشحن ونتابع" : "Ship and follow through", ar ? "ننسق الناقل ونبقيك على اطلاع حتى التسليم." : "Coordinate the carrier and keep you updated to delivery."],
   ];
 
-  return <main className="site-palette bg-[#eaf2f4] text-[#102a43]">
+  return <main className="site-palette bg-[#f8fbfc] text-[#102a43]">
     <section className="relative isolate min-h-[680px] overflow-hidden bg-[#102a43] text-white">
       <div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=2000&q=85')" }} />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,22,38,0.96),rgba(9,39,62,0.78)_52%,rgba(9,39,62,0.5))]" />
