@@ -2,12 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { ArrowLeft, Send, Mail, MessageCircle } from "lucide-react";
 
 export default function QuotePage() {
-  const t = useTranslations('quote');
   const locale = useLocale();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -42,7 +40,7 @@ export default function QuotePage() {
             <h2 className="text-3xl font-bold text-white mb-4">{locale === 'ar' ? 'تم الإرسال بنجاح!' : 'Successfully Submitted!'}</h2>
             <p className="text-slate-400 mb-8">{locale === 'ar' ? 'سنتواصل معك قريباً' : 'We will contact you soon'}</p>
             <Link
-              href="/"
+              href={`/${locale}`}
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-full font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -60,7 +58,7 @@ export default function QuotePage() {
       <div className="bg-slate-900/50 backdrop-blur-sm border-b border-slate-800">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <Link
-            href="/"
+            href={`/${locale}`}
             className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />

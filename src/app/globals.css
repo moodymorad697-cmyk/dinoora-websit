@@ -65,9 +65,14 @@
     @apply font-bold tracking-tight;
   }
 
-  input, textarea, select {
+  [dir="rtl"] input, [dir="rtl"] textarea, [dir="rtl"] select {
     text-align: right;
     direction: rtl;
+  }
+
+  [dir="ltr"] input, [dir="ltr"] textarea, [dir="ltr"] select {
+    text-align: left;
+    direction: ltr;
   }
 }
 

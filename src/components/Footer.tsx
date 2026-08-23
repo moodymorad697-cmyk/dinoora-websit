@@ -10,6 +10,7 @@ export default function Footer() {
   const t = useTranslations();
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'ar';
+  const serviceLabel = (key: string, fallback: string) => locale === 'zh' ? t(`services.${key}.title`) : t(`footer.${key}`, { defaultValue: fallback });
 
   return (
     <footer className="relative overflow-hidden border-t border-white/10" style={{ background: 'linear-gradient(180deg, #102a43 0%, #07111f 100%)' }}>
@@ -24,7 +25,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-indigo-950/60 via-purple-900/50 to-indigo-950/60 rounded-2xl p-8 border border-indigo-500/20 backdrop-blur-sm">
             <div>
               <h3 className="text-xl font-extrabold text-white mb-1">{t('cta.title')}</h3>
-              <p className="text-sm text-slate-400">{t('cta.subtitle')}</p>
+              <p className="text-sm text-slate-400">{t('cta.subtitle', { defaultValue: locale === 'zh' ? '告诉我们您的需求，我们将处理其余事项。' : 'Tell us what you need. We will handle the rest.' })}</p>
             </div>
             <div className="flex gap-3">
               <a href={`https://wa.me/8615587237864`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-green-500/30 transition-all hover:-translate-y-0.5">
@@ -66,12 +67,12 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-4">{t('footer.services')}</h4>
             <ul className="space-y-2.5">
               {[
-                { label: t('footer.sourcing'), href: "/services/sourcing" },
-                { label: t('footer.inspection'), href: "/services/inspection" },
-                { label: t('footer.warehousing'), href: "/services/warehousing" },
-                { label: t('footer.shipping'), href: "/services/shipping" },
-                { label: t('services.customs'), href: "/services/customs" },
-                { label: t('services.logistics'), href: "/services/logistics" },
+                { label: serviceLabel('sourcing', 'Sourcing'), href: "/services/sourcing" },
+                { label: serviceLabel('inspection', 'Inspection'), href: "/services/inspection" },
+                { label: serviceLabel('warehousing', 'Warehousing'), href: "/services/warehousing" },
+                { label: serviceLabel('shipping', 'Shipping'), href: "/services/shipping" },
+                { label: locale === 'zh' ? t('services.customs.title') : t('services.customs', { defaultValue: 'Customs' }), href: "/services/customs" },
+                { label: locale === 'zh' ? t('services.logistics.title') : t('services.logistics', { defaultValue: 'Logistics' }), href: "/services/logistics" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
@@ -88,8 +89,8 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2.5">
               {[
-                { label: t('footer.home'), href: "/" },
-                { label: t('footer.about'), href: "/about" },
+                { label: t('footer.home', { defaultValue: locale === 'zh' ? '首页' : 'Home' }), href: "/" },
+                { label: t('footer.about', { defaultValue: locale === 'zh' ? '关于我们' : 'About' }), href: "/about" },
                 { label: t('nav.track'), href: "/track" },
                 { label: t('nav.contact'), href: "/contact" },
                 { label: t('footer.privacy'), href: "/privacy" },

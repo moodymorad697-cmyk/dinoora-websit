@@ -20,6 +20,7 @@ export default function Navigation() {
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'ar';
   const targetLocale = locale === 'ar' ? 'en' : 'ar';
+  const serviceText = (key: string, field: 'title' | 'description') => locale === 'zh' ? t(`services.${key}.${field}`) : t(`services.${key}${field === 'description' ? 'Desc' : ''}`);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,12 +42,12 @@ export default function Navigation() {
   }, []);
 
   const serviceItems = [
-    { icon: Search, label: t('services.sourcing'), desc: t('services.sourcingDesc'), href: '/services/sourcing' },
-    { icon: ShieldCheck, label: t('services.inspection'), desc: t('services.inspectionDesc'), href: '/services/inspection' },
-    { icon: Warehouse, label: t('services.warehousing'), desc: t('services.warehousingDesc'), href: '/services/warehousing' },
-    { icon: Ship, label: t('services.shipping'), desc: t('services.shippingDesc'), href: '/services/shipping' },
-    { icon: FileCheck, label: t('services.customs'), desc: t('services.customsDesc'), href: '/services/customs' },
-    { icon: Package, label: t('services.logistics'), desc: t('services.logisticsDesc'), href: '/services/logistics' },
+    { icon: Search, label: serviceText('sourcing', 'title'), desc: serviceText('sourcing', 'description'), href: '/services/sourcing' },
+    { icon: ShieldCheck, label: serviceText('inspection', 'title'), desc: serviceText('inspection', 'description'), href: '/services/inspection' },
+    { icon: Warehouse, label: serviceText('warehousing', 'title'), desc: serviceText('warehousing', 'description'), href: '/services/warehousing' },
+    { icon: Ship, label: serviceText('shipping', 'title'), desc: serviceText('shipping', 'description'), href: '/services/shipping' },
+    { icon: FileCheck, label: serviceText('customs', 'title'), desc: serviceText('customs', 'description'), href: '/services/customs' },
+    { icon: Package, label: serviceText('logistics', 'title'), desc: serviceText('logistics', 'description'), href: '/services/logistics' },
   ];
 
   const navItems = [

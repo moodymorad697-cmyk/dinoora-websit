@@ -4,7 +4,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
+    <html lang="ar" dir="rtl" className="scroll-smooth">
       <body>{children}</body>
     </html>
   );
