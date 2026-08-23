@@ -142,7 +142,7 @@ export default function Navigation() {
             </Link>
 
             <Link
-              href={`/${locale}#quote`}
+              href={`/${locale}/quote`}
               className="mr-3 px-5 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-bold text-xs hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-1.5 animate-gradient-shift bg-[length:200%_200%]"
             >
               <Sparkles className="w-4 h-4" />
@@ -190,7 +190,7 @@ export default function Navigation() {
               </div>
 
               <Link 
-                href={`/${locale}#quote`}
+                href={`/${locale}/quote`}
                 className="mx-5 mt-4 px-6 py-4 bg-gradient-to-l from-blue-600 to-cyan-500 text-white rounded-2xl font-bold text-center hover:shadow-lg transition-all flex items-center justify-center gap-2"
                 onClick={() => setIsOpen(false)}
               >

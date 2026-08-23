@@ -304,7 +304,7 @@ export default function ContactPage() {
                   <MessageCircle className="w-5 h-5" />
                   واتساب
                 </a>
-                <Link href="/#quote" className="flex-1 bg-amber-600 hover:bg-amber-700 text-slate-950 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors">
+                <Link href={`/${locale}/quote`} className="flex-1 bg-amber-600 hover:bg-amber-700 text-slate-950 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors">
                   <Send className="w-5 h-5" />
                   عرض سعر
                 </Link>

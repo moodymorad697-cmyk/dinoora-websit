@@ -31,7 +31,7 @@ export default function Footer() {
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp
               </a>
-              <Link href={`/${locale}#quote`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-indigo-500/30 transition-all hover:-translate-y-0.5 animate-gradient-shift bg-[length:200%_200%]">
+              <Link href={`/${locale}/quote`} className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-indigo-500/30 transition-all hover:-translate-y-0.5 animate-gradient-shift bg-[length:200%_200%]">
                 <Send className="w-4 h-4" />
                 {t('nav.getQuote')}
               </Link>

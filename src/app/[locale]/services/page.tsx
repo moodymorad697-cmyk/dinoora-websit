@@ -426,14 +426,14 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href={`/${locale}#quote`}
+              href={`/${locale}/quote`}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all"
             >
               {locale === 'ar' ? 'اطلب عرض سعر مجاني' : 'Get a Free Quote'}
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
-              href={`/${locale}#quote`}
+              href={`/${locale}/quote`}
               className="inline-flex items-center justify-center px-8 py-4 bg-slate-800 text-white border-2 border-slate-700 rounded-xl font-semibold hover:bg-slate-700 hover:border-slate-600 transition-all"
             >
               {locale === 'ar' ? 'تواصل معنا' : 'Contact Us'}

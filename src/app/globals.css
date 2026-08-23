@@ -663,6 +663,35 @@ main .bg-white:not(button):not(a) {
   background: #1b4a63;
 }
 
+.home-case-section {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(135deg, #071827 0%, #0d3048 52%, #082238 100%);
+  color: #f8fbfc;
+}
+
+.home-case-section::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(103, 232, 249, 0.16);
+  border-radius: 1.25rem;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.home-case-section .text-\[\#5d7180\],
+.home-case-section .text-\[\#385268\] {
+  color: #c1d6dd;
+}
+
+.home-case-section li {
+  border: 1px solid rgba(103, 232, 249, 0.14);
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.85rem 1rem;
+}
+
 main .rounded-2xl.border.bg-white,
 main .rounded-xl.border.bg-white {
   position: relative;
