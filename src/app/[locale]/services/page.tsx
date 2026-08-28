@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import { 
   Search, 
@@ -40,7 +40,7 @@ const ServiceCard3D = ({
   gradient, 
   bgImage,
   link,
-  ctaLabel
+  locale
 }: { 
   icon: any, 
   title: string, 
@@ -49,46 +49,56 @@ const ServiceCard3D = ({
   gradient: string,
   bgImage: string,
   link: string,
-  ctaLabel: string
+  locale: string
 }) => {
   return (
     <div className="group relative">
       {/* Background glow effect */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`} />
+      <div className={`absolute -inset-2 bg-gradient-to-br ${gradient} rounded-[2rem] opacity-0 group-hover:opacity-15 blur-2xl transition-all duration-700`} />
+      {/* Animated border */}
+      <div className={`absolute inset-0 rounded-3xl p-px bg-gradient-to-br from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500`}>
+        <div className="rounded-[1.45rem] w-full h-full bg-slate-900/40 backdrop-blur-sm" />
+      </div>
       
-      <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-700">
+      <div className="relative bg-slate-800/40 backdrop-blur-md rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-700/50 group-hover:border-slate-600">
         {/* Header with gradient */}
         <div className={`relative h-48 bg-gradient-to-br ${gradient} overflow-hidden`}>
           {/* Background pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0" style={{
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute inset-0 group-hover:scale-110 transition-transform duration-1000" style={{
               backgroundImage: `url('${bgImage}')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }} />
           </div>
+          {/* Animated shine */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/10" />
+          <div className="absolute -top-24 -right-24 w-48 h-48 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-all duration-700" />
           
           {/* Icon */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-            <div className="w-20 h-20 bg-slate-900 rounded-2xl shadow-xl flex items-center justify-center">
-              <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-500">
+            <div className="relative">
+              <div className={`absolute inset-0 bg-gradient-to-br ${gradient} rounded-2xl blur-xl opacity-60 animate-pulse`} />
+              <div className="relative w-20 h-20 bg-slate-900 rounded-2xl shadow-2xl flex items-center justify-center border border-slate-700/50">
+                <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
+              </div>
             </div>
           </div>
         </div>
         
         {/* Content */}
         <div className="pt-14 pb-8 px-8">
-          <h3 className="text-2xl font-bold text-white mb-3 text-center">{title}</h3>
+          <h3 className="text-2xl font-bold text-white mb-3 text-center group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-slate-200 group-hover:to-slate-400 group-hover:bg-clip-text group-hover:text-transparent transition-all">{title}</h3>
           <p className="text-slate-400 mb-6 text-center leading-relaxed">{description}</p>
           
           {/* Features */}
           <ul className="space-y-3 mb-8">
             {features.map((feature, idx) => (
-              <li key={idx} className="flex items-start gap-3">
-                <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+              <li key={idx} className="flex items-start gap-3 group/item">
+                <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform shadow-lg`}>
                   <CheckCircle2 className="w-4 h-4 text-white" />
                 </div>
-                <span className="text-slate-300 text-sm">{feature}</span>
+                <span className="text-slate-300 text-sm group-hover/item:text-white transition-colors">{feature}</span>
               </li>
             ))}
           </ul>
@@ -96,10 +106,11 @@ const ServiceCard3D = ({
           {/* CTA Button */}
           <Link 
             href={link}
-            className={`group/btn flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r ${gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all`}
+            className={`group/btn relative flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r ${gradient} text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all overflow-hidden`}
           >
-            {ctaLabel}
-            <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+            <span className="relative z-10">{locale === 'ar' ? 'اكتشف المزيد' : 'Learn More'}</span>
+            <ArrowRight className={`w-5 h-5 group-hover/btn:translate-x-1 transition-transform relative z-10 ${locale === 'ar' ? 'rotate-180' : ''}`} />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
           </Link>
         </div>
       </div>
@@ -320,7 +331,7 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <ServiceCard3D key={index} {...service} ctaLabel={locale === 'ar' ? 'اعرف المزيد' : 'Learn More'} />
+              <ServiceCard3D key={index} {...service} locale={locale} />
             ))}
           </div>
         </div>
@@ -426,14 +437,14 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href={`/${locale}/quote`}
+              href={`/${locale}#quote`}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all"
             >
               {locale === 'ar' ? 'اطلب عرض سعر مجاني' : 'Get a Free Quote'}
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
-              href={`/${locale}/quote`}
+              href={`/${locale}#quote`}
               className="inline-flex items-center justify-center px-8 py-4 bg-slate-800 text-white border-2 border-slate-700 rounded-xl font-semibold hover:bg-slate-700 hover:border-slate-600 transition-all"
             >
               {locale === 'ar' ? 'تواصل معنا' : 'Contact Us'}

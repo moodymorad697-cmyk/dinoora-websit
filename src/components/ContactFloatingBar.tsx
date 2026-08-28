@@ -42,14 +42,14 @@ export default function ContactFloatingBar() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Contact Info
-  const phone = "008615587237864";
-  const whatsapp = "8615587237864";
+  const phone = "008619589468539";
+  const whatsapp = "8619589468539";
   const email = "maomoody524@gmail.com";
   const address = "Room 201, 2nd Floor, Building 2, No. 37, Daoge Tang Village, Jiangdong Street, Yiwu City, Jinhua City, Zhejiang Province";
   const mapsLink = "https://maps.google.com/?q=Yiwu+City+Zhejiang+Province+China";
   const facebookLink = "https://www.facebook.com/share/17mLtvZn95/?mibextid=wwXIfr";
   const tiktokLink = "https://www.tiktok.com/@kingmorad0?is_from_webapp=1&sender_device=pc";
-  const instagramLink = "https://www.tiktok.com/@kingmorad0"; // Using TikTok as placeholder
+  const instagramLink = "https://instagram.com/dinoora_trade";
   const telegramLink = "https://t.me/DINOORACOMPANY";
 
   const contactItems = [

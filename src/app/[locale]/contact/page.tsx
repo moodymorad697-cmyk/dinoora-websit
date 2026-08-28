@@ -16,10 +16,31 @@ export default function ContactPage() {
     message: "",
   });
 
+  const WHATSAPP_NUMBER = "8619589468539";
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const subjectLabels: Record<string, string> = {
+      quote: 'طلب عرض سعر',
+      sourcing: 'توريد المنتجات',
+      shipping: 'استفسار شحن',
+      customs: 'التخليص الجمركي',
+      support: 'استفسار عام',
+      partnership: 'فرصة شراكة'
+    };
+    const subjectText = subjectLabels[formData.subject] || formData.subject;
+    const message = encodeURIComponent(
+      `🌐 *طلب تواصل جديد - موقع دينورا*\n\n` +
+      `👤 *الاسم:* ${formData.name}\n` +
+      `📧 *البريد:* ${formData.email}\n` +
+      `📱 *الهاتف:* ${formData.phone}\n` +
+      `🏢 *الشركة:* ${formData.company || 'غير محدد'}\n` +
+      `📋 *الموضوع:* ${subjectText}\n\n` +
+      `💬 *الرسالة:*\n${formData.message}`
+    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
     console.log("Form submitted:", formData);
-    alert(locale === 'ar' ? "شكراً لتواصلك معنا! سنرد عليك خلال 24 ساعة." : "Thank you for contacting us! We will respond within 24 hours.");
+    alert(locale === 'ar' ? "شكراً لتواصلك! سيتم فتح واتساب لإرسال رسالتك. سنرد عليك خلال 24 ساعة." : "Thank you for contacting us! WhatsApp will open to send your message. We will respond within 24 hours.");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -227,7 +248,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'رقم الهاتف' : 'Phone'}</h3>
                       <p className="text-slate-400">
-                        +86 155 8723 7864<br />
+                        +86 195 8946 8539<br />
                         {locale === 'ar' ? 'متاح على واتساب' : 'Available on WhatsApp'}
                       </p>
                     </div>
@@ -239,8 +260,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'واتساب' : 'WhatsApp'}</h3>
-                      <a href="https://wa.me/8615587237864" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors">
-                        +86 155 8723 7864
+                      <a href="https://wa.me/8619589468539" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors">
+                        +86 195 8946 8539
                       </a>
                     </div>
                   </div>
@@ -300,7 +321,7 @@ export default function ContactPage() {
 
               {/* Quick Actions */}
               <div className="flex gap-3">
-                <a href="https://wa.me/8615587237864" target="_blank" rel="noopener noreferrer" className="flex-1 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors">
+                <a href="https://wa.me/8619589468539" target="_blank" rel="noopener noreferrer" className="flex-1 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors">
                   <MessageCircle className="w-5 h-5" />
                   واتساب
                 </a>

@@ -6,6 +6,8 @@ import { getMessages } from 'next-intl/server';
 import "../globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import ContactFloatingBar from "@/components/ContactFloatingBar";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const cairo = Cairo({ subsets: ["arabic"], variable: '--font-cairo' });
@@ -36,12 +38,16 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <div dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.variable} ${cairo.variable} ${locale === 'ar' ? 'font-[family-name:var(--font-cairo)]' : 'font-[family-name:var(--font-inter)]'}`}>
-      <NextIntlClientProvider messages={messages}>
-        <Navigation />
-        {children}
-        <Footer />
-      </NextIntlClientProvider>
-    </div>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="scroll-smooth">
+      <body className={`${inter.variable} ${cairo.variable} ${locale === 'ar' ? 'font-[family-name:var(--font-cairo)]' : 'font-[family-name:var(--font-inter)]'} bg-slate-950`}>
+        <NextIntlClientProvider messages={messages}>
+          <Navigation />
+          {children}
+          <Footer />
+          <ContactFloatingBar />
+          <WhatsAppButton />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

@@ -16,6 +16,8 @@ export default function QuotePage() {
   });
   const [submitted, setSubmitted] = useState(false);
 
+  const WHATSAPP_NUMBER = "8619589468539";
+
   const services = [
     { id: "sourcing", icon: "🔍", title: locale === 'ar' ? "توريد المنتجات" : "Product Sourcing", desc: locale === 'ar' ? "البحث عن الموردين والمنتجات" : "Find suppliers & products" },
     { id: "inspection", icon: "✓", title: locale === 'ar' ? "فحص الجودة" : "Quality Check", desc: locale === 'ar' ? "فحص قبل الشحن" : "Inspect before shipping" },
@@ -26,6 +28,22 @@ export default function QuotePage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Quote requested:", formData);
+
+    const serviceLabels: Record<string, string> = {
+      sourcing: 'توريد المنتجات',
+      inspection: 'فحص الجودة',
+      shipping: 'شحن فقط',
+      complete: 'خدمة شاملة (من أ إلى ز)'
+    };
+    const contactLabel = formData.contactType === 'whatsapp' ? 'واتساب' : 'البريد الإلكتروني';
+    const message = encodeURIComponent(
+      `🧾 *طلب عرض سعر جديد - موقع دينورا*\n\n` +
+      `📋 *نوع الخدمة:* ${serviceLabels[formData.service] || formData.service}\n` +
+      `📞 *طريقة التواصل المفضلة:* ${contactLabel}\n` +
+      `💬 *معلومات التواصل:* ${formData.contact}\n\n` +
+      `📝 *تفاصيل الطلب:*\n${formData.details}`
+    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
     setSubmitted(true);
   };
 

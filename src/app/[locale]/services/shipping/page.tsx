@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Ship, Plane, TrainFront, Truck, Globe, Shield, Award, TrendingUp, Clock, Zap, CheckCircle2, ArrowRight, Train } from 'lucide-react';
+import { Ship, Plane, TrainFront as Train, Truck, Globe, Shield, Award, TrendingUp, Clock, Zap, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function ShippingPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,7 +63,7 @@ export default function ShippingPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="../../quote"
+                href="/#quote"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-amber-600 to-yellow-500 text-slate-950 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-amber-500/30 transition-all hover:scale-105 animate-gradient bg-[length:200%_200%]"
               >
                 <Zap className="w-5 h-5" />
@@ -236,7 +236,7 @@ export default function ShippingPage() {
               احصل على أسعار تنافسية وخدمة موثوقة
             </p>
             <Link 
-              href="../../quote"
+              href="/#quote"
               className="inline-flex items-center gap-2 px-12 py-5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-blue-500/30 transition-all hover:scale-105 animate-gradient bg-[length:200%_200%]"
             >
               <Zap className="w-5 h-5" />
