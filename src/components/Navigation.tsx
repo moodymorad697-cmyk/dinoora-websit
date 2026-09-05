@@ -69,16 +69,20 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-[76px]">
 
           <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="brand-mark-frame relative h-[68px] w-[68px]">
+            <div className="brand-mark-frame relative h-[72px] w-[72px]">
               <Image
                 src="/logo-dinoora.png"
                 alt="دينورا"
-                width={64}
-                height={64}
-                className="h-16 w-16 object-contain brightness-110 drop-shadow-xl transition-all duration-300 group-hover:scale-105"
+                width={72}
+                height={72}
+                className="h-[72px] w-[72px] object-contain brightness-110 drop-shadow-xl transition-all duration-300 group-hover:scale-105"
                 priority
               />
               <div className="absolute inset-2 rounded-full bg-cyan-300/10 blur-xl" />
+            </div>
+            <div className="hidden sm:block">
+              <span className="text-2xl font-black text-white tracking-tight group-hover:text-indigo-300 transition-colors">DINOORA</span>
+              <span className="block text-xs text-slate-400 font-medium tracking-wider">INTERNATIONAL TRADE</span>
             </div>
           </Link>
 
@@ -87,25 +91,25 @@ export default function Navigation() {
               <Link
                 key={i}
                 href={`/${locale}${item.href}`}
-                className="relative px-4 py-2 rounded-lg font-semibold text-[13px] text-slate-400 hover:text-white transition-all duration-300 group"
+                className="relative px-5 py-2.5 rounded-lg font-bold text-[15px] text-slate-300 hover:text-white transition-all duration-300 group"
               >
                 {item.label}
-                <span className="absolute bottom-0 right-1/2 translate-x-1/2 w-0 h-[2px] bg-gradient-to-l from-indigo-500 via-purple-500 to-pink-500 rounded-full group-hover:w-3/4 transition-all duration-300 animate-gradient-shift bg-[length:200%_100%]" />
+                <span className="absolute bottom-0 right-1/2 translate-x-1/2 w-0 h-[2px] bg-gradient-to-l from-indigo-500 via-purple-500 to-pink-500 rounded-full group-hover:w-full transition-all duration-300 animate-gradient-shift bg-[length:200%_100%]" />
               </Link>
             ))}
 
             <div ref={servicesRef} className="relative">
               <button
                 onClick={() => setShowServices(!showServices)}
-                className="flex items-center gap-1.5 px-4 py-2 rounded-lg font-semibold text-[13px] text-slate-400 hover:text-white transition-all duration-300"
+                className="flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-bold text-[15px] text-slate-300 hover:text-white transition-all duration-300"
               >
                 {t('nav.services')}
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showServices ? 'rotate-180' : ''}`} />
               </button>
 
               {showServices && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[560px] rounded-3xl shadow-2xl shadow-indigo-500/10 border border-indigo-500/20 p-6 grid grid-cols-2 gap-3 animate-scale-in" style={{ background: 'linear-gradient(135deg, rgba(15,23,42,0.98), rgba(3,7,18,0.99))', backdropFilter: 'blur(25px)' }}>
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 border-r border-b border-indigo-500/20" style={{ background: 'rgba(15,23,42,0.98)' }} />
+                <div className="absolute top-full right-0 mt-4 w-[560px] max-w-[calc(100vw-2rem)] rounded-3xl shadow-2xl shadow-indigo-500/10 border border-indigo-500/20 p-6 grid grid-cols-2 gap-3 animate-scale-in" style={{ background: 'linear-gradient(135deg, rgba(15,23,42,0.98), rgba(3,7,18,0.99))', backdropFilter: 'blur(25px)' }}>
+                  <div className="absolute -top-2 right-8 w-4 h-4 rotate-45 border-r border-b border-indigo-500/20" style={{ background: 'rgba(15,23,42,0.98)' }} />
                   {serviceItems.map((svc, i) => (
                     <Link
                       key={i}

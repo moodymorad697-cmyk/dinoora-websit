@@ -116,6 +116,24 @@ export default function Footer() {
                   <span className="text-sm leading-relaxed">إيوو، تشجيانغ، الصين</span>
                 </a>
               </li>
+              <li>
+                <a href="https://wa.me/8619589468539" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-slate-400 hover:text-green-400 transition-colors group">
+                  <MessageCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                  <span className="text-sm">+86 195 8946 8539</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@dinooratrade.com" className="flex items-center gap-2.5 text-slate-400 hover:text-amber-400 transition-colors group">
+                  <Mail className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                  <span className="text-sm">info@dinooratrade.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+8619589468539" className="flex items-center gap-2.5 text-slate-400 hover:text-blue-400 transition-colors group">
+                  <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                  <span className="text-sm">+86 195 8946 8539</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
