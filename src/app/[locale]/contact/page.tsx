@@ -101,6 +101,120 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-24 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+              {locale === 'ar' ? 'خدماتنا المتكاملة' : 'Our Integrated Services'}
+            </h2>
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              {locale === 'ar' ? 'حلول شاملة للتجارة مع الصين من البحث عن المنتج حتى وصوله إليك' : 'Comprehensive solutions for China trade from product sourcing to delivery'}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Shipping */}
+            <div className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-amber-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative p-8">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">{locale === 'ar' ? 'خدمات الشحن' : 'Shipping Services'}</h3>
+                <p className="text-slate-400 mb-4">
+                  {locale === 'ar' ? 'شحن بحري وجوي من الصين إلى جميع أنحاء العالم مع تتبع مستمر' : 'Sea and air freight from China worldwide with continuous tracking'}
+                </p>
+                <div className="text-amber-400 font-semibold text-sm">
+                  {locale === 'ar' ? 'سريع • آمن • موثوق' : 'Fast • Safe • Reliable'}
+                </div>
+              </div>
+            </div>
+
+            {/* Storage */}
+            <div className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-amber-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative p-8">
+                <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">{locale === 'ar' ? 'خدمات التخزين' : 'Storage Services'}</h3>
+                <p className="text-slate-400 mb-4">
+                  {locale === 'ar' ? 'مستودعات حديثة في الصين لتجميع وتخزين بضائعك بأمان' : 'Modern warehouses in China to consolidate and store your goods safely'}
+                </p>
+                <div className="text-amber-400 font-semibold text-sm">
+                  {locale === 'ar' ? 'آمن • مراقب • منظم' : 'Secure • Monitored • Organized'}
+                </div>
+              </div>
+            </div>
+
+            {/* Commercial Brokerage */}
+            <div className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-amber-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative p-8">
+                <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">{locale === 'ar' ? 'الوساطة التجارية' : 'Commercial Brokerage'}</h3>
+                <p className="text-slate-400 mb-4">
+                  {locale === 'ar' ? 'تفاوض مع المصانع وإبرام العقود التجارية بأفضل الأسعار' : 'Negotiate with factories and close commercial deals at best prices'}
+                </p>
+                <div className="text-amber-400 font-semibold text-sm">
+                  {locale === 'ar' ? 'احترافي • شفاف • فعال' : 'Professional • Transparent • Efficient'}
+                </div>
+              </div>
+            </div>
+
+            {/* Full Financing */}
+            <div className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-amber-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/10 md:col-span-2 lg:col-span-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative p-8">
+                <div className="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">{locale === 'ar' ? 'تمويل كامل' : 'Full Financing'}</h3>
+                <p className="text-slate-400 mb-4">
+                  {locale === 'ar' ? 'حلول تمويلية متكاملة من البحث عن المنتج حتى التخزين والشحن والتخليص الجمركي' : 'Integrated financing solutions from product sourcing to storage, shipping, and customs clearance'}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">{locale === 'ar' ? 'البحث عن المنتج' : 'Product Sourcing'}</span>
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">{locale === 'ar' ? 'التخزين' : 'Storage'}</span>
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">{locale === 'ar' ? 'الشحن' : 'Shipping'}</span>
+                  <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">{locale === 'ar' ? 'الجمارك' : 'Customs'}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Customs Clearance */}
+            <div className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-amber-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative p-8">
+                <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-8 h-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">{locale === 'ar' ? 'التخليص الجمركي' : 'Customs Clearance'}</h3>
+                <p className="text-slate-400 mb-4">
+                  {locale === 'ar' ? 'إجراءات جمركية سريعة وموثوقة في جميع الموانئ' : 'Fast and reliable customs procedures in all ports'}
+                </p>
+                <div className="text-amber-400 font-semibold text-sm">
+                  {locale === 'ar' ? 'سريع • قانوني • مضمون' : 'Fast • Legal • Guaranteed'}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-24 section-logistics">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
