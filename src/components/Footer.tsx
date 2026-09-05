@@ -111,19 +111,7 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-3">
               <li>
-                <a href="https://wa.me/8615587237864" className="flex items-center gap-2.5 text-slate-400 hover:text-white transition-colors group">
-                  <Phone className="w-4 h-4 text-green-400" />
-                  <span className="text-sm">+86 155 8723 7864</span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:maomoody524@gmail.com" className="flex items-center gap-2.5 text-slate-400 hover:text-white transition-colors group">
-                  <Mail className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm">maomoody524@gmail.com</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://maps.google.com/?q=Yiwu+City+Zhejiang+Province+China" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2.5 text-slate-400 hover:text-white transition-colors group">
+                <a href={`/${locale}/contact`} className="flex items-start gap-2.5 text-slate-400 hover:text-white transition-colors group">
                   <MapPin className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" />
                   <span className="text-sm leading-relaxed">إيوو، تشجيانغ، الصين</span>
                 </a>
