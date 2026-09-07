@@ -1,8 +1,11 @@
 "use client";
 
+import React, { useRef } from "react";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-import { ArrowRight, Check, Eye, Handshake, ShieldCheck, Target } from "lucide-react";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { ArrowRight, Check, Eye, Handshake, ShieldCheck, Target, Search, Key, Users, FileCheck } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutPage() {
   const locale = useLocale();
@@ -37,12 +40,85 @@ export default function AboutPage() {
     ["04", "Shipping and delivery", "Consolidate, clear, track, and coordinate the shipment through warehouse delivery."],
   ];
 
-  return <main className="about-page site-palette bg-[#dcecf0] text-[#102a43]">
+  const { scrollYProgress } = useScroll();
+  const lineLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  const MilestoneDot = () => (
+    <motion.div
+      className="w-3 h-3 rounded-full bg-cyan-400"
+      animate={{
+        scale: [1, 1.5, 1],
+        boxShadow: ['0 0 0 rgba(34, 211, 238, 0)', '0 0 20px rgba(34, 211, 238, 0.8)', '0 0 0 rgba(34, 211, 238, 0)'],
+      }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        repeatDelay: 3,
+      }}
+    />
+  );
+
+  return <main className="about-page site-palette bg-[#dcecf0] text-[#102a43] relative">
+    {/* Animated Connecting Line */}
+    <div className={`fixed top-0 bottom-0 w-1 z-10 hidden lg:block ${ar ? 'right-8' : 'left-8'}`}>
+      <svg className="w-full h-full" style={{ willChange: 'transform' }}>
+        <motion.path
+          d="M 0 0 L 0 100%"
+          stroke="url(#lineGradient)"
+          strokeWidth="2"
+          fill="none"
+          strokeDasharray="1000"
+          strokeDashoffset={useTransform(lineLength, [0, 1], [1000, 0])}
+          initial={{ pathLength: 0 }}
+          style={{ pathLength: lineLength }}
+        />
+        <defs>
+          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#0891b2" stopOpacity="0.3" />
+            <stop offset="50%" stopColor="#f59e0b" stopOpacity="0.5" />
+            <stop offset="100%" stopColor="#0891b2" stopOpacity="0.3" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
     <section className="relative isolate overflow-hidden bg-[#102a43] text-white"><div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=2000&q=85')" }} /><div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,22,38,0.96),rgba(9,39,62,0.72),rgba(9,39,62,0.45))]" /><div className="mx-auto flex min-h-[590px] max-w-7xl items-end px-5 pb-20 pt-40 sm:px-8 lg:px-12"><div className="max-w-3xl"><p className="mb-6 border-s-2 border-cyan-300 ps-4 text-sm font-bold uppercase tracking-[0.14em] text-cyan-200">{c.eyebrow}</p><h1 className="max-w-3xl text-5xl font-black leading-[1.04] sm:text-7xl">{c.title}</h1><p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">{c.intro}</p><Link href={`/${locale}/contact`} className="mt-9 inline-flex items-center gap-3 rounded-lg bg-cyan-300 px-6 py-4 font-bold text-[#082238] hover:bg-white">{c.contact}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link></div></div></section>
     <section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-12"><div><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-700">{c.storyLabel}</p><h2 className="mt-4 text-4xl font-black leading-tight sm:text-5xl">{c.storyTitle}</h2><p className="mt-7 text-lg leading-8 text-[#5d7180]">{c.story}</p><p className="mt-5 text-lg leading-8 text-[#5d7180]">{c.story2}</p></div><div className="rounded-2xl border border-[#dbe5eb] bg-white p-7 shadow-[0_16px_40px_rgba(16,42,67,0.06)]"><div className="flex items-center gap-3 border-b border-[#e4edf1] pb-5"><Handshake className="h-6 w-6 text-cyan-700" /><h3 className="text-xl font-bold">{c.modelTitle}</h3></div><ul className="mt-6 space-y-5">{c.model.map(item => <li key={item} className="flex gap-3 leading-7 text-[#4c6575]"><Check className="mt-1 h-5 w-5 shrink-0 text-emerald-600" />{item}</li>)}</ul></div></section>
+
+    {/* Split-screen Image Section */}
+    <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
+      <div className="grid md:grid-cols-2 gap-4 rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative h-64 md:h-80">
+          <Image
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=85"
+            alt={ar ? "مكتب في الصين" : "Office in China"}
+            fill
+            className="object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className={`absolute bottom-4 text-white ${ar ? 'right-4' : 'left-4'}`}>
+            <p className="font-bold">{ar ? "مكتبنا في الصين" : "Our Office in China"}</p>
+          </div>
+        </div>
+        <div className="relative h-64 md:h-80">
+          <Image
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=85"
+            alt={ar ? "السوق في الشرق الأوسط" : "Middle East Market"}
+            fill
+            className="object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className={`absolute bottom-4 text-white ${ar ? 'left-4' : 'right-4'}`}>
+            <p className="font-bold">{ar ? "سوق الشرق الأوسط" : "Middle East Market"}</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section className="bg-[#102a43] px-5 py-24 text-white sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-300">Dinoora / Proof points</p><h2 className="mt-4 text-4xl font-black sm:text-5xl">{ar ? "ما الذي يحصل عليه العميل؟" : "What the client gets"}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{ar ? "مزايا عملية تظهر في طريقة إدارة الطلب، لا في العبارات التسويقية فقط." : "Practical advantages reflected in how the request is managed, not just in marketing language."}</p></div><div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{trustCards.map(([title, body, image]) => <article key={title} className="group overflow-hidden rounded-2xl border border-white/15 bg-white/[0.07]"><div className="h-36 bg-cover bg-center transition duration-700 group-hover:scale-105" style={{ backgroundImage: `url('${image}')` }} /><div className="p-5"><h3 className="text-xl font-bold text-cyan-200">{title}</h3><p className="mt-3 text-sm leading-7 text-slate-300">{body}</p></div></article>)}</div></div></section>
-    <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-700">Dinoora / Process</p><h2 className="mt-4 text-4xl font-black sm:text-5xl">{ar ? "عملية من 4 خطوات محسّنة" : "A focused four-step process"}</h2><p className="mt-5 text-lg leading-8 text-[#5d7180]">{ar ? "من الاستشارة الأولى إلى التسليم، كل خطوة مصممة لأقصى كفاءة." : "From the first consultation to delivery, each step is designed for clarity and efficiency."}</p></div><div className="mt-12 grid gap-5 md:grid-cols-4">{processSteps.map(([number, title, body]) => <article key={number} className="relative border-t-4 border-cyan-700 bg-white p-6 shadow-[0_10px_30px_rgba(16,42,67,0.06)]"><span className="text-4xl font-black text-[#c5d9df]">{number}</span><h3 className="mt-6 text-xl font-bold">{title}</h3><p className="mt-3 leading-7 text-[#617684]">{body}</p></article>)}</div></section>
-    <section className="border-y border-[#dbe5eb] bg-[#eaf2f4] px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><div className="grid gap-5 md:grid-cols-2"><div className="rounded-2xl bg-[#102a43] p-8 text-white"><Target className="h-8 w-8 text-cyan-300" /><h2 className="mt-8 text-2xl font-black">{c.missionTitle}</h2><p className="mt-4 leading-8 text-slate-300">{c.mission}</p></div><div className="rounded-2xl border border-[#cadde3] bg-white p-8"><Eye className="h-8 w-8 text-cyan-700" /><h2 className="mt-8 text-2xl font-black">{c.visionTitle}</h2><p className="mt-4 leading-8 text-[#5d7180]">{c.vision}</p></div></div><h2 className="mt-20 text-3xl font-black">{c.valuesTitle}</h2><div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{c.values.map(([number, title, body]) => <div key={number} className="border-t-2 border-cyan-700 bg-white p-6"><span className="text-sm font-black text-cyan-700">{number}</span><h3 className="mt-6 text-xl font-bold">{title}</h3><p className="mt-3 leading-7 text-[#617684]">{body}</p></div>)}</div></div></section>
-    <section className="bg-[#102a43] px-5 py-20 text-center text-white sm:px-8"><ShieldCheck className="mx-auto h-9 w-9 text-cyan-300" /><h2 className="mx-auto mt-6 max-w-3xl text-3xl font-black sm:text-5xl">{c.finalTitle}</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">{c.finalBody}</p><Link href={`/${locale}/contact`} className="mt-9 inline-flex items-center gap-3 rounded-lg bg-cyan-300 px-7 py-4 font-bold text-[#082238] hover:bg-white">{c.finalCta}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link></section>
+    <section className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-700">Dinoora / Process</p><h2 className="mt-4 text-4xl font-black sm:text-5xl">{ar ? "عملية من 4 خطوات محسّنة" : "A focused four-step process"}</h2><p className="mt-5 text-lg leading-8 text-[#5d7180]">{ar ? "من الاستشارة الأولى إلى التسليم، كل خطوة مصممة لأقصى كفاءة." : "From the first consultation to delivery, each step is designed for clarity and efficiency."}</p></div><div className="mt-12 relative"><div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent hidden md:block" /><div className="grid gap-5 md:grid-cols-4">{processSteps.map(([number, title, body]) => <article key={number} className="relative border-t-4 border-cyan-700 bg-white p-6 shadow-[0_10px_30px_rgba(16,42,67,0.06)]"><span className="text-4xl font-black text-[#c5d9df]">{number}</span><h3 className="mt-6 text-xl font-bold">{title}</h3><p className="mt-3 leading-7 text-[#617684]">{body}</p></article>)}</div></div></section>
+    <section className="border-y border-[#dbe5eb] bg-[#eaf2f4] px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><div className="grid gap-5 md:grid-cols-2"><div className="rounded-2xl bg-[#102a43] p-8 text-white"><Target className="h-8 w-8 text-cyan-300" /><h2 className="mt-8 text-2xl font-black">{c.missionTitle}</h2><p className="mt-4 leading-8 text-slate-300">{c.mission}</p></div><div className="rounded-2xl border border-[#cadde3] bg-white p-8"><Eye className="h-8 w-8 text-cyan-700" /><h2 className="mt-8 text-2xl font-black">{c.visionTitle}</h2><p className="mt-4 leading-8 text-[#5d7180]">{c.vision}</p></div></div><h2 className="mt-20 text-3xl font-black">{c.valuesTitle}</h2><div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{c.values.map(([number, title, body], index) => {const icons = [Search, Key, FileCheck, Users];const Icon = icons[index];return <div key={number} className="border-t-2 border-cyan-700 bg-white p-6"><div className="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4"><Icon className="h-6 w-6 text-cyan-700" /></div><span className="text-sm font-black text-cyan-700">{number}</span><h3 className="mt-6 text-xl font-bold">{title}</h3><p className="mt-3 leading-7 text-[#617684]">{body}</p></div>;})}</div></div></section>
+    <section className="relative bg-[#102a43] px-5 py-20 text-center text-white sm:px-8 overflow-hidden"><div className="absolute inset-0 opacity-10"><Image src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=85" alt="" fill className="object-cover" loading="lazy" /></div><div className="relative z-10"><ShieldCheck className="mx-auto h-9 w-9 text-cyan-300" /><h2 className="mx-auto mt-6 max-w-3xl text-3xl font-black sm:text-5xl">{c.finalTitle}</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">{c.finalBody}</p><Link href={`/${locale}/contact`} className="mt-9 inline-flex items-center gap-3 rounded-lg bg-cyan-300 px-7 py-4 font-bold text-[#082238] hover:bg-white">{c.finalCta}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link></div></section>
   </main>;
 }

@@ -65,17 +65,17 @@ export default function Navigation() {
     }`}>
       <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-indigo-500 via-purple-500 via-pink-500 to-indigo-500 transition-all duration-150 opacity-90 animate-gradient-shift bg-[length:200%_100%]" style={{ width: `${scrollProgress}%` }} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex justify-between items-center h-[76px]">
 
-          <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="brand-mark-frame relative h-[72px] w-[72px]">
+          <Link href={`/${locale}`} className="flex items-center gap-4 group">
+            <div className="brand-mark-frame relative h-[72px] w-[120px]">
               <Image
                 src="/logo-dinoora.png"
                 alt="دينورا"
-                width={72}
+                width={120}
                 height={72}
-                className="h-[72px] w-[72px] object-contain brightness-110 drop-shadow-xl transition-all duration-300 group-hover:scale-105"
+                className="h-[72px] w-[120px] object-contain brightness-110 drop-shadow-xl transition-all duration-300 group-hover:scale-105"
                 priority
               />
               <div className="absolute inset-2 rounded-full bg-cyan-300/10 blur-xl" />
@@ -86,12 +86,12 @@ export default function Navigation() {
             </div>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2">
             {navItems.map((item, i) => (
               <Link
                 key={i}
                 href={`/${locale}${item.href}`}
-                className="relative px-5 py-2.5 rounded-lg font-bold text-[15px] text-slate-300 hover:text-white transition-all duration-300 group"
+                className="relative px-6 py-2.5 rounded-lg font-semibold text-[17px] text-white hover:text-cyan-300 transition-all duration-300 group tracking-wide"
               >
                 {item.label}
                 <span className="absolute bottom-0 right-1/2 translate-x-1/2 w-0 h-[2px] bg-gradient-to-l from-indigo-500 via-purple-500 to-pink-500 rounded-full group-hover:w-full transition-all duration-300 animate-gradient-shift bg-[length:200%_100%]" />
@@ -101,7 +101,7 @@ export default function Navigation() {
             <div ref={servicesRef} className="relative">
               <button
                 onClick={() => setShowServices(!showServices)}
-                className="flex items-center gap-1.5 px-5 py-2.5 rounded-lg font-bold text-[15px] text-slate-300 hover:text-white transition-all duration-300"
+                className="flex items-center gap-1.5 px-6 py-2.5 rounded-lg font-semibold text-[17px] text-white hover:text-cyan-300 transition-all duration-300 tracking-wide"
               >
                 {t('nav.services')}
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showServices ? 'rotate-180' : ''}`} />

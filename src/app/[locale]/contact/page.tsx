@@ -30,9 +30,9 @@ const TwitterIcon = () => (
   </svg>
 );
 
-const YoutubeIcon = () => (
+const TikTokIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
   </svg>
 );
 
@@ -358,11 +358,22 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</h3>
-                      <div className="text-slate-400 space-y-1">
-                        <a href="mailto:info@dinooratrade.com" className="hover:text-amber-400 transition-colors">info@dinooratrade.com</a><br />
-                        <a href="mailto:sales@dinooratrade.co" className="hover:text-amber-400 transition-colors">sales@dinooratrade.co</a><br />
-                        <a href="mailto:support@dinooratrade.com" className="hover:text-amber-400 transition-colors">support@dinooratrade.com</a><br />
-                        <a href="mailto:contact@dinooratrade.com" className="hover:text-amber-400 transition-colors">contact@dinooratrade.com</a>
+                      <div className="text-slate-400 space-y-2">
+                        <div>
+                          <a href="mailto:info@dinooratrade.com" className="hover:text-amber-400 transition-colors font-medium">info@dinooratrade.com</a>
+                          <span className="text-xs text-slate-500 ml-2">({locale === 'ar' ? 'استفسارات عامة' : 'Info'})</span>
+                          <div className="text-xs text-cyan-400 mt-1">{locale === 'ar' ? 'الرد خلال 24 ساعة' : 'Response within 24 hours'}</div>
+                        </div>
+                        <div>
+                          <a href="mailto:sales@dinooratrade.com" className="hover:text-amber-400 transition-colors font-medium">sales@dinooratrade.com</a>
+                          <span className="text-xs text-slate-500 ml-2">({locale === 'ar' ? 'مبيعات' : 'Sales'})</span>
+                          <div className="text-xs text-cyan-400 mt-1">{locale === 'ar' ? 'الرد خلال 12 ساعة' : 'Response within 12 hours'}</div>
+                        </div>
+                        <div>
+                          <a href="mailto:support@dinooratrade.com" className="hover:text-amber-400 transition-colors font-medium">support@dinooratrade.com</a>
+                          <span className="text-xs text-slate-500 ml-2">({locale === 'ar' ? 'دعم فني' : 'Support'})</span>
+                          <div className="text-xs text-cyan-400 mt-1">{locale === 'ar' ? 'الرد خلال 8 ساعات' : 'Response within 8 hours'}</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -376,6 +387,7 @@ export default function ContactPage() {
                       <a href="https://wa.me/8619589468539" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors">
                         +86 195 8946 8539
                       </a>
+                      <div className="text-xs text-cyan-400 mt-1">{locale === 'ar' ? 'رد فوري' : 'Instant response'}</div>
                     </div>
                   </div>
 
@@ -454,14 +466,8 @@ export default function ContactPage() {
                   <a href="https://instagram.com/dinoora_trade" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-700 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 rounded-xl flex items-center justify-center text-slate-400 hover:text-white transition-all">
                     <InstagramIcon />
                   </a>
-                  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-700 hover:bg-blue-700 rounded-xl flex items-center justify-center text-slate-400 hover:text-white transition-all">
-                    <LinkedinIcon />
-                  </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-700 hover:bg-sky-500 rounded-xl flex items-center justify-center text-slate-400 hover:text-white transition-all">
-                    <TwitterIcon />
-                  </a>
-                  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-700 hover:bg-red-600 rounded-xl flex items-center justify-center text-slate-400 hover:text-white transition-all">
-                    <YoutubeIcon />
+                  <a href="https://www.tiktok.com/@dinoora_trade" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-slate-700 hover:bg-black rounded-xl flex items-center justify-center text-slate-400 hover:text-white transition-all">
+                    <TikTokIcon />
                   </a>
                 </div>
               </div>
