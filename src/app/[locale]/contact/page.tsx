@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { Phone, Mail, MapPin, MessageCircle, Clock, Send, ArrowRight, Globe, QrCode } from 'lucide-react';
+import { WHATSAPP_LINK } from "@/config/contact";
 
 // Social Media Icons
 const FacebookIcon = () => (
@@ -81,7 +82,7 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto mb-8">
-              {locale === 'ar' ? 'فريقنا الخبير جاهز للإجابة على جميع استفساراتك حول التجارة مع الصين' : 'Our expert team is ready to answer all your inquiries about China trade'}
+              {locale === 'ar' ? 'جاهز لتحويل فكرة استيرادك إلى واقع؟ فريقنا متحمس لمساعدتك في كل خطوة من الطريق - من المصنع في الصين حتى باب مستودعك!' : 'Ready to turn your import idea into reality? Our team is excited to help you every step of the way - from the factory in China to your warehouse door!'}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="bg-slate-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-slate-700">
@@ -335,7 +336,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-8">
-                  {locale === 'ar' ? 'معلومات التواصل' : 'Contact Information'}
+                  {locale === 'ar' ? 'أماكن تواجدنا' : 'Our Locations'}
                 </h2>
 
                 <div className="space-y-6">
@@ -384,7 +385,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'واتساب' : 'WhatsApp'}</h3>
-                      <a href="https://wa.me/8619589468539" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors">
+                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors">
                         +86 195 8946 8539
                       </a>
                       <div className="text-xs text-cyan-400 mt-1">{locale === 'ar' ? 'رد فوري' : 'Instant response'}</div>
@@ -410,35 +411,35 @@ export default function ContactPage() {
               <div className="bg-gradient-to-br from-[#0C2340] to-[#1E3A5F] rounded-2xl p-8 border border-amber-500/20">
                 <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
                   <Globe className="w-6 h-6 text-amber-400" />
-                  مكاتبنا في الصين
+                  {locale === 'ar' ? 'أماكن تواجدنا في الصين' : 'Our Presence in China'}
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full" />
                     <div>
-                      <h4 className="font-semibold text-white">إيوو</h4>
-                      <p className="text-slate-400 text-sm">مقرنا الرئيسي</p>
+                      <h4 className="font-semibold text-white">{locale === 'ar' ? 'إيوو' : 'Yiwu'}</h4>
+                      <p className="text-slate-400 text-sm">{locale === 'ar' ? 'المقر الرئيسي' : 'Headquarters'}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full" />
                     <div>
-                      <h4 className="font-semibold text-white">شانغهاي</h4>
-                      <p className="text-slate-400 text-sm">ميناء الشحن</p>
+                      <h4 className="font-semibold text-white">{locale === 'ar' ? 'شانغهاي' : 'Shanghai'}</h4>
+                      <p className="text-slate-400 text-sm">{locale === 'ar' ? 'ميناء الشحن' : 'Shipping Port'}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full" />
                     <div>
-                      <h4 className="font-semibold text-white">شنتشن</h4>
-                      <p className="text-slate-400 text-sm">مركز الإلكترونيات</p>
+                      <h4 className="font-semibold text-white">{locale === 'ar' ? 'شنتشن' : 'Shenzhen'}</h4>
+                      <p className="text-slate-400 text-sm">{locale === 'ar' ? 'مركز الإلكترونيات' : 'Electronics Hub'}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-amber-400 rounded-full" />
                     <div>
-                      <h4 className="font-semibold text-white">قوانغتشو</h4>
-                      <p className="text-slate-400 text-sm">مركز التصنيع</p>
+                      <h4 className="font-semibold text-white">{locale === 'ar' ? 'قوانغتشو' : 'Guangzhou'}</h4>
+                      <p className="text-slate-400 text-sm">{locale === 'ar' ? 'مركز التصنيع' : 'Manufacturing Center'}</p>
                     </div>
                   </div>
                 </div>
@@ -446,7 +447,7 @@ export default function ContactPage() {
 
               {/* Quick Actions */}
               <div className="flex gap-3">
-                <a href="https://wa.me/8619589468539" target="_blank" rel="noopener noreferrer" className="flex-1 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors">
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors">
                   <MessageCircle className="w-5 h-5" />
                   واتساب
                 </a>

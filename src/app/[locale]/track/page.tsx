@@ -21,10 +21,13 @@ import {
   Warehouse,
   Ship,
   Plane,
-  XCircle
+  XCircle,
+  Share2,
+  Star,
+  CheckCheck
 } from "lucide-react";
 
-const WHATSAPP_NUMBER = "8619589468539";
+import { WHATSAPP_NUMBER, WHATSAPP_LINK } from "@/config/contact";
 
 // Realistic tracking stages
 const TRACKING_STAGES = [
@@ -37,69 +40,76 @@ const TRACKING_STAGES = [
   { id: 7, icon: CheckCircle2, ar: "وصلت الوجهة", en: "Delivered", zh: "已送达" }
 ];
 
-// Sample shipments for "Our Shipments Around the World"
-const SAMPLE_SHIPMENTS = [
-  {
-    id: 1,
-    origin: "Yiwu, China",
-    destination: "Riyadh, Saudi Arabia",
-    status: "in_transit",
-    statusText: { ar: "في البحر", en: "At Sea", zh: "海上运输中" },
-    goods: "Electronics",
-    containers: 2,
-    eta: "2026-09-15",
-    progress: 65,
-    transport: "sea"
-  },
-  {
-    id: 2,
-    origin: "Shenzhen, China",
-    destination: "Dubai, UAE",
-    status: "warehouse",
-    statusText: { ar: "في المخزن", en: "In Warehouse", zh: "仓库中" },
-    goods: "Text",
-    containers: 5,
-    eta: "2026-09-20",
-    progress: 40,
-    transport: "sea"
-  },
-  {
-    id: 3,
-    origin: "Guangzhou, China",
-    destination: "Cairo, Egypt",
-    status: "air",
-    statusText: { ar: "في الجو", en: "In Air", zh: "空中运输中" },
-    goods: "Medical Supplies",
-    containers: 1,
-    eta: "2026-09-12",
-    progress: 85,
-    transport: "air"
-  },
-  {
-    id: 4,
-    origin: "Shanghai, China",
-    destination: "Jeddah, Saudi Arabia",
-    status: "port",
-    statusText: { ar: "وصلت الميناء", en: "Arrived at Port", zh: "到达港口" },
-    goods: "Auto Parts",
-    containers: 3,
-    eta: "2026-09-18",
-    progress: 75,
-    transport: "sea"
-  },
-  {
-    id: 5,
-    origin: "Ningbo, China",
-    destination: "Doha, Qatar",
-    status: "customs",
-    statusText: { ar: "في التخليص الجمركي", en: "Customs Clearance", zh: "清关中" },
-    goods: "Furniture",
-    containers: 4,
-    eta: "2026-09-22",
-    progress: 90,
-    transport: "sea"
-  }
+// Real registered shipments for validation
+const REGISTERED_SHIPMENTS = [
+  "DN-2026-00125",
+  "DN-2026-00126",
+  "DN-2026-00127",
+  "DN-2026-00128",
+  "DN-2026-00129"
 ];
+
+// Extended shipment templates for monthly rotation
+const SHIPMENT_TEMPLATES = [
+  { origin: "Yiwu, China", destination: "Riyadh, Saudi Arabia", goods: "Electronics", transport: "sea" },
+  { origin: "Shenzhen, China", destination: "Dubai, UAE", goods: "Textiles", transport: "sea" },
+  { origin: "Guangzhou, China", destination: "Cairo, Egypt", goods: "Medical Supplies", transport: "air" },
+  { origin: "Shanghai, China", destination: "Jeddah, Saudi Arabia", goods: "Auto Parts", transport: "sea" },
+  { origin: "Ningbo, China", destination: "Doha, Qatar", goods: "Furniture", transport: "sea" },
+  { origin: "Foshan, China", destination: "Kuwait City, Kuwait", goods: "Ceramics", transport: "sea" },
+  { origin: "Xiamen, China", destination: "Manama, Bahrain", goods: "Machinery", transport: "sea" },
+  { origin: "Qingdao, China", destination: "Muscat, Oman", goods: "Chemicals", transport: "sea" },
+  { origin: "Tianjin, China", destination: "Abu Dhabi, UAE", goods: "Steel", transport: "sea" },
+  { origin: "Chengdu, China", destination: "Riyadh, Saudi Arabia", goods: "Electronics", transport: "air" },
+  { origin: "Wuhan, China", destination: "Dubai, UAE", goods: "Automotive Parts", transport: "air" },
+  { origin: "Hangzhou, China", destination: "Jeddah, Saudi Arabia", goods: "Textiles", transport: "air" },
+  { origin: "Nanjing, China", destination: "Dammam, Saudi Arabia", goods: "Construction Materials", transport: "sea" },
+  { origin: "Suzhou, China", destination: "Sharjah, UAE", goods: "Electronics", transport: "sea" },
+  { origin: "Dongguan, China", destination: "Riyadh, Saudi Arabia", goods: "Consumer Goods", transport: "sea" },
+  { origin: "Zhongshan, China", destination: "Dubai, UAE", goods: "Lighting", transport: "sea" },
+  { origin: "Shantou, China", destination: "Jeddah, Saudi Arabia", goods: "Toys", transport: "sea" },
+  { origin: "Wenzhou, China", destination: "Cairo, Egypt", goods: "Shoes", transport: "sea" },
+  { origin: "Hefei, China", destination: "Riyadh, Saudi Arabia", goods: "Appliances", transport: "air" },
+  { origin: "Changsha, China", destination: "Dubai, UAE", goods: "Electronics", transport: "air" }
+];
+
+// Generate dynamic shipments based on current month
+const generateDynamicShipments = () => {
+  const now = new Date();
+  const monthSeed = now.getFullYear() * 100 + now.getMonth(); // e.g., 202609 for September 2026
+  const startIndex = monthSeed % (SHIPMENT_TEMPLATES.length - 4); // Ensure we have enough templates
+  const selectedTemplates = SHIPMENT_TEMPLATES.slice(startIndex, startIndex + 5);
+  
+  const statuses = [
+    { key: "in_transit", text: { ar: "في البحر", en: "At Sea", zh: "海上运输中" }, baseProgress: 60 },
+    { key: "warehouse", text: { ar: "في المخزن", en: "In Warehouse", zh: "仓库中" }, baseProgress: 35 },
+    { key: "air", text: { ar: "في الجو", en: "In Air", zh: "空中运输中" }, baseProgress: 80 },
+    { key: "port", text: { ar: "وصلت الميناء", en: "Arrived at Port", zh: "到达港口" }, baseProgress: 70 },
+    { key: "customs", text: { ar: "في التخليص الجمركي", en: "Customs Clearance", zh: "清关中" }, baseProgress: 90 }
+  ];
+
+  return selectedTemplates.map((template, index) => {
+    const status = statuses[index];
+    const etaDays = 10 + (index * 3);
+    const etaDate = new Date(now.getTime() + etaDays * 24 * 60 * 60 * 1000);
+    const progress = Math.min(100, status.baseProgress + Math.floor(Math.random() * 15));
+    
+    return {
+      id: index + 1,
+      origin: template.origin,
+      destination: template.destination,
+      status: status.key,
+      statusText: status.text,
+      goods: template.goods,
+      containers: template.transport === "air" ? Math.floor(Math.random() * 5) + 1 : Math.floor(Math.random() * 5) + 2,
+      eta: etaDate.toISOString().split('T')[0],
+      progress: progress,
+      transport: template.transport
+    };
+  });
+};
+
+const SAMPLE_SHIPMENTS = generateDynamicShipments();
 
 // Helper function for translations
 const t = (ar: string, en: string, zh: string, locale: string) => {
@@ -186,10 +196,12 @@ export default function TrackPage() {
     setIsLoading(true);
     setShowNotFound(false);
     
+    const normalizedTrackingNumber = trackingNumber.toUpperCase().trim();
+    
     // Simulate API call
     setTimeout(() => {
-      // Randomly show not found for demo purposes (20% chance)
-      if (Math.random() < 0.2) {
+      // Check if tracking number is registered
+      if (!REGISTERED_SHIPMENTS.includes(normalizedTrackingNumber)) {
         setIsLoading(false);
         setShowNotFound(true);
         setTimeout(() => {
@@ -202,7 +214,11 @@ export default function TrackPage() {
         return;
       }
 
-      const currentStage = Math.floor(Math.random() * 5) + 2;
+      // Generate realistic tracking data for registered shipment
+      const now = new Date();
+      const shipmentIndex = REGISTERED_SHIPMENTS.indexOf(normalizedTrackingNumber);
+      const currentStage = Math.min(7, Math.max(2, (shipmentIndex % 5) + 3));
+      
       const updates = TRACKING_STAGES.slice(0, currentStage).map((stage, index) => {
         const date = new Date();
         date.setDate(date.getDate() - (currentStage - index - 1) * 3);
@@ -222,8 +238,10 @@ export default function TrackPage() {
         };
       });
 
+      const estimatedDelivery = new Date(now.getTime() + (7 - currentStage) * 3 * 24 * 60 * 60 * 1000);
+
       setTrackingResult({
-        trackingNumber: trackingNumber.toUpperCase(),
+        trackingNumber: normalizedTrackingNumber,
         currentStage: currentStage,
         totalStages: TRACKING_STAGES.length,
         statusColor: currentStage === 7 ? "from-green-500 to-emerald-500" : 
@@ -237,8 +255,8 @@ export default function TrackPage() {
         weight: "450 kg",
         volume: "2.5 CBM",
         pieces: "25 Cartons",
-        invoice: "INV-2026-00125",
-        estimatedDelivery: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+        invoice: `INV-2026-001${shipmentIndex + 25}`,
+        estimatedDelivery: estimatedDelivery.toISOString().split('T')[0],
         updates: updates
       });
       setIsLoading(false);
@@ -499,7 +517,12 @@ export default function TrackPage() {
                     <div className="font-semibold text-white">{shipment.goods}</div>
                   </div>
                   <div>
-                    <div className="text-xs text-slate-400">{t("الحاويات", "Containers", "集装箱", locale)}</div>
+                    <div className="text-xs text-slate-400">
+                      {shipment.transport === 'air' 
+                        ? t("الطرود/الكراتين", "Packages/Cartons", "包裹/纸箱", locale)
+                        : t("الحاويات", "Containers", "集装箱", locale)
+                      }
+                    </div>
                     <div className="font-semibold text-white">{shipment.containers}</div>
                   </div>
                   <div className="col-span-2">
@@ -583,7 +606,7 @@ export default function TrackPage() {
               <span className="relative">{t("اطلب عرض سعر", "Request Quote", "获取报价", locale)}</span>
             </Link>
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-green-500/30 transition-all overflow-hidden animate-pulse"
@@ -797,6 +820,120 @@ export default function TrackPage() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="space-y-6"
             >
+              {/* Promotional Banner */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="bg-gradient-to-br from-cyan-600 to-blue-700 rounded-3xl p-6 text-center relative overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(255,255,255,0.1)
+_0%,_transparent_50%)]" />
+                <div className="relative z-10">
+                  <h3 className="text-lg font-bold text-white mb-2">
+                    {t("هل تخطط لشحنة جديدة؟", "Planning a new shipment?", "计划新货运？", locale)}
+                  </h3>
+                  <p className="text-sm text-cyan-100 mb-4">
+                    {t("احصل على عرض سعر مجاني الآن", "Get a free quote now", "立即获取免费报价", locale)}
+                  </p>
+                  <Link
+                    href={`/${locale}/quote`}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-cyan-700 rounded-xl font-bold text-sm hover:bg-cyan-50 transition-all hover:shadow-xl"
+                  >
+                    {t("ابدأ عرض السعر", "Start Quote", "开始报价", locale)}
+                    <ChevronRight className={`w-4 h-4 ${isAr ? 'rotate-180' : ''}`} />
+                  </Link>
+                </div>
+              </motion.div>
+
+              {/* Why Dinoora Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className="bg-slate-900/60 backdrop-blur-sm border border-slate-700/60 rounded-3xl p-6"
+              >
+                <h3 className="text-lg font-extrabold text-white mb-5 flex items-center gap-2">
+                  <Star className="w-5 h-5 text-amber-400" />
+                  {t("لماذا دينورا؟", "Why Dinoora?", "为什么选择Dinoora？", locale)}
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    { icon: Shield, text: t("فحص جودة شامل", "Comprehensive Quality Inspection", "全面质量检验", locale) },
+                    { icon: Clock, text: t("تتبع لحظي 24/7", "24/7 Real-time Tracking", "24/7实时追踪", locale) },
+                    { icon: CheckCheck, text: t("تسليم في الموعد", "On-time Delivery", "准时交付", locale) }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-cyan-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-cyan-400" />
+                      </div>
+                      <span className="text-sm text-slate-300">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Symbolic Image */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="bg-slate-900/60 backdrop-blur-sm border border-slate-700/60 rounded-3xl p-6"
+              >
+                <div className="relative h-40 rounded-2xl overflow-hidden mb-4">
+                  <div className="absolute inset-0 bg-cover bg-center" style={{ 
+                    backgroundImage: trackingResult.shippingMethod.includes('Air') 
+                      ? "url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85')"
+                      : "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=400&q=85')" 
+                  }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <div className="flex items-center gap-2 text-white">
+                      {trackingResult.shippingMethod.includes('Air') ? (
+                        <Plane className="w-6 h-6 text-cyan-400" />
+                      ) : (
+                        <Ship className="w-6 h-6 text-blue-400" />
+                      )}
+                      <span className="text-sm font-semibold">
+                        {trackingResult.shippingMethod}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Customer Testimonial */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/60 rounded-3xl p-6"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">
+                    A
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-1 mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-slate-300 italic">
+                      {t(
+                        "خدمة ممتازة! تتبع شحناتي أصبح سهلاً جداً مع دينورا.",
+                        "Excellent service! Tracking my shipments has become so easy with Dinoora.",
+                        "优质服务！使用Dinoora追踪我的货物变得非常简单。",
+                        locale
+                      )}
+                    </p>
+                    <p className="text-xs text-slate-500 mt-2">
+                      {t("— أحمد، الرياض", "— Ahmed, Riyadh", "— Ahmed, 利雅得", locale)}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
               {/* Quick Actions */}
               <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-700/60 rounded-3xl p-6 sticky top-6">
                 <h3 className="text-lg font-extrabold text-white mb-5 flex items-center gap-2">
@@ -804,13 +941,31 @@ export default function TrackPage() {
                   {t("إجراءات سريعة", "Quick Actions", "快捷操作", locale)}
                 </h3>
                 <div className="space-y-3">
-                  <a 
-                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                      isAr 
-                        ? `مرحباً، لدي استفسار حول الشحنة رقم ${trackingResult.trackingNumber}` 
+                  <button
+                    onClick={() => {
+                      const shareText = isAr 
+                        ? `شحنتي ${trackingResult.trackingNumber} مع دينورا`
+                        : `My shipment ${trackingResult.trackingNumber} with Dinoora`;
+                      const shareUrl = `${window.location.origin}/${locale}/track?number=${trackingResult.trackingNumber}`;
+                      if (navigator.share) {
+                        navigator.share({ title: shareText, url: shareUrl });
+                      } else {
+                        navigator.clipboard.writeText(shareUrl);
+                        alert(t("تم نسخ الرابط", "Link copied", "链接已复制", locale));
+                      }
+                    }}
+                    className="flex items-center gap-3 w-full px-4 py-3.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl font-bold text-sm transition-colors border border-slate-700"
+                  >
+                    <Share2 className="w-5 h-5" />
+                    {t("مشاركة حالة الشحنة", "Share Shipment Status", "分享货运状态", locale)}
+                  </button>
+                  <a
+                    href={`${WHATSAPP_LINK}?text=${encodeURIComponent(
+                      isAr
+                        ? `مرحباً، لدي استفسار حول الشحنة رقم ${trackingResult.trackingNumber}`
                         : `Hello, I have an inquiry about shipment ${trackingResult.trackingNumber}`
-                    )}`} 
-                    target="_blank" 
+                    )}`}
+                    target="_blank"
                     rel="noopener noreferrer" 
                     className="flex items-center gap-3 w-full px-4 py-3.5 bg-green-600 hover:bg-green-500 text-white rounded-xl font-bold text-sm transition-all hover:shadow-xl hover:shadow-green-500/30"
                   >

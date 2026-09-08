@@ -44,12 +44,12 @@ export default function HomePage() {
   };
 
   const services = [
-    { icon: PackageSearch, title: ar ? "التوريد والتحقق" : "Sourcing & verification", body: ar ? "نبحث عن المورد المناسب ونراجع قدرته قبل أن تبدأ الالتزامات." : "Find the right supplier and review capability before you commit.", href: "/services/sourcing" },
-    { icon: ClipboardCheck, title: ar ? "فحص الجودة" : "Quality inspection", body: ar ? "قائمة فحص وصور وملاحظات عملية قبل خروج البضاعة من الصين." : "Practical checks, photos, and findings before cargo leaves China.", href: "/services/inspection" },
-    { icon: Warehouse, title: ar ? "التخزين والتجميع" : "Warehousing & consolidation", body: ar ? "نجمع طلبات الموردين ونجهزها للشحن بطريقة تقلل التعقيد والتكلفة." : "Consolidate supplier orders and prepare them for a simpler shipment.", href: "/services/warehousing" },
-    { icon: Container, title: ar ? "الشحن والتخليص" : "Shipping & customs", body: ar ? "مسار شحن مناسب مع مستندات مرتبة وتنسيق حتى الوجهة." : "A suitable shipping route with organized documents through destination.", href: "/services/shipping" },
-    { icon: Warehouse, title: ar ? "التخزين" : "Storage", body: ar ? "تخزين آمن بالصين لحين الجاهزية للشحن." : "Secure storage in China until ready for shipment.", href: "/services/warehousing" },
-    { icon: Truck, title: ar ? "الحلول اللوجستية" : "Logistics", body: ar ? "إدارة كاملة ومتابعة من البداية للنهاية." : "Full management and tracking from start to finish.", href: "/services/logistics" },
+    { icon: PackageSearch, title: ar ? "التوريد والتحقق" : "Sourcing & verification", body: ar ? "نبحث عن المورد المناسب ونراجع قدرته قبل أن تبدأ الالتزامات." : "Find the right supplier and review capability before you commit.", href: "/services/sourcing", borderColor: "border-green-500", iconBg: "bg-green-500/20", iconColor: "text-green-400", tags: ar ? "احترافي • شفاف • فعال" : "Professional • Transparent • Efficient" },
+    { icon: ClipboardCheck, title: ar ? "فحص الجودة" : "Quality inspection", body: ar ? "قائمة فحص وصور وملاحظات عملية قبل خروج البضاعة من الصين." : "Practical checks, photos, and findings before cargo leaves China.", href: "/services/inspection", borderColor: "border-purple-500", iconBg: "bg-purple-500/20", iconColor: "text-purple-400", tags: ar ? "دقيق • موثوق • شامل" : "Precise • Reliable • Comprehensive" },
+    { icon: Warehouse, title: ar ? "التخزين والتجميع" : "Warehousing & consolidation", body: ar ? "نجمع طلبات الموردين ونجهزها للشحن بطريقة تقلل التعقيد والتكلفة." : "Consolidate supplier orders and prepare them for a simpler shipment.", href: "/services/warehousing", borderColor: "border-blue-500", iconBg: "bg-blue-500/20", iconColor: "text-blue-400", tags: ar ? "آمن • منظم • اقتصادي" : "Secure • Organized • Economical" },
+    { icon: Container, title: ar ? "الشحن والتخليص" : "Shipping & customs", body: ar ? "مسار شحن مناسب مع مستندات مرتبة وتنسيق حتى الوجهة." : "A suitable shipping route with organized documents through destination.", href: "/services/shipping", borderColor: "border-cyan-500", iconBg: "bg-cyan-500/20", iconColor: "text-cyan-400", tags: ar ? "سريع • مرن • متابع" : "Fast • Flexible • Tracked" },
+    { icon: Warehouse, title: ar ? "التخزين" : "Storage", body: ar ? "تخزين آمن بالصين لحين الجاهزية للشحن." : "Secure storage in China until ready for shipment.", href: "/services/warehousing", borderColor: "border-amber-500", iconBg: "bg-amber-500/20", iconColor: "text-amber-400", tags: ar ? "محمي • طويل الأمد • مراقب" : "Protected • Long-term • Monitored" },
+    { icon: Truck, title: ar ? "الحلول اللوجستية" : "Logistics", body: ar ? "إدارة كاملة ومتابعة من البداية للنهاية." : "Full management and tracking from start to finish.", href: "/services/logistics", borderColor: "border-red-500", iconBg: "bg-red-500/20", iconColor: "text-red-400", tags: ar ? "شامل • متكامل • ذكي" : "Complete • Integrated • Smart" },
   ];
   const steps = [
     ["01", ar ? "نحدد المطلوب" : "Define the brief", ar ? "المنتج، الكمية، الجودة، والوجهة." : "Product, quantity, quality, and destination."],
@@ -77,72 +77,59 @@ export default function HomePage() {
 
     <section className="border-b border-cyan-500/20 bg-slate-900"><div className="mx-auto grid max-w-7xl gap-5 px-5 py-7 sm:grid-cols-3 sm:px-8 lg:px-12">{text.proof.map((item, index) => <motion.div key={item} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="flex items-center gap-3 text-sm font-semibold text-slate-300"><motion.span className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 2 }}>0{index + 1}</motion.span>{item}</motion.div>)}</div></section>
 
-    <section id="services" className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-700">Dinoora / Services</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">{text.serviceTitle}</h2><p className="mt-5 text-lg leading-8 text-[#5d7180]">{text.serviceIntro}</p></div><div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">{services.map((service, index) => <motion.div key={service.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }}><Link href={`/${locale}${service.href}`} className="group flex gap-5 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-800 to-slate-900 p-6 shadow-lg transition hover:-translate-y-2 hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-[1.02]"><span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-cyan-500/20 text-cyan-300"><service.icon className="h-6 w-6" /></span><span><span className="flex items-center gap-3 text-xl font-bold text-white">{service.title}<ArrowRight className="h-4 w-4 text-cyan-400 opacity-0 transition group-hover:opacity-100 rtl:rotate-180" /></span><span className="mt-2 block leading-7 text-slate-300">{service.body}</span></span></Link></motion.div>)}</div></section>
+    <section id="services" className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Services</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl text-white">{text.serviceTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.serviceIntro}</p></div><div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{services.map((service, index) => <motion.div key={service.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative"><div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">0{index + 1}</div><Link href={`/${locale}${service.href}`} className={`group relative flex flex-col gap-5 rounded-2xl border-2 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] ${service.borderColor}`}><div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${service.iconBg}`} /><span className={`relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconBg} ${service.iconColor} transition-all duration-300 group-hover:scale-110 group-hover:animate-pulse`}><service.icon className="h-7 w-7" /></span><span className="relative"><span className="flex items-center gap-3 text-xl font-bold text-white">{service.title}<ArrowRight className={`h-4 w-4 ${service.iconColor} opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1`} /></span><span className="mt-3 block leading-7 text-slate-300">{service.body}</span><div className="mt-4 flex flex-wrap gap-2"><span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{service.tags.split(' • ')[0]}</span><span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{service.tags.split(' • ')[1]}</span><span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{service.tags.split(' • ')[2]}</span></div></span></Link></motion.div>)}</div></section>
 
     {/* Brief About Us Section */}
     <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
-      <div className="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-700">Dinoora / About</p>
-          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">{ar ? "نبني الوضوح في التجارة العابرة للحدود" : "We build clarity into cross-border trade"}</h2>
-          <p className="mt-4 text-lg leading-8 text-[#5d7180]">{ar ? "دينورا فريق تشغيل يربط الشركات في الشرق الأوسط بالمصانع وسلاسل الإمداد في الصين. نحوّل التوريد والشحن من سلسلة اتصالات مبهمة إلى مسار واضح تديره جهة واحدة." : "Dinoora is an operations team connecting Middle East businesses with factories and supply chains in China. We turn sourcing and shipping from unclear conversations into one visible operating path."}</p>
-          <Link href={`/${locale}/about`} className="mt-6 inline-flex items-center gap-2 text-cyan-700 font-semibold hover:text-cyan-600 transition">
-            {ar ? "اعرف المزيد عنا" : "Learn more about us"}
-            <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-          </Link>
-        </div>
-        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=85')" }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-        </div>
-      </div>
-    </motion.section>
-
-    <section id="process" className="border-y border-cyan-500/20 bg-slate-900 px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Workflow</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl text-white">{text.processTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.processIntro}</p></div><div className="mt-14 relative"><div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent hidden md:block" /><div className="grid gap-4 md:grid-cols-4">{steps.map(([number, title, body], index) => <motion.div key={number} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative border-t-2 border-cyan-500 bg-slate-800 p-6 shadow-lg"><span className="text-sm font-black text-cyan-400">{number}</span><h3 className="mt-5 text-xl font-bold text-white">{title}</h3><p className="mt-3 leading-7 text-slate-300">{body}</p></motion.div>)}</div></div></div></section>
-
-
-    <section className="bg-[#102a43] px-5 py-20 text-center text-white sm:px-8"><h2 className="mx-auto max-w-3xl text-3xl font-black sm:text-5xl">{text.finalTitle}</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">{text.finalIntro}</p><Link href={`/${locale}/quote`} className="mt-9 inline-flex items-center gap-3 rounded-lg bg-cyan-300 px-7 py-4 font-bold text-[#082238] hover:bg-white">{text.quote}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link></section>
-
-    {/* Quick Tracking Section */}
-    <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
-      <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 border border-cyan-500/30">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-black text-white mb-2">{ar ? "تتبع شحنتك في ثوانٍ" : "Track your shipment in seconds"}</h2>
-          <p className="text-slate-400">{ar ? "أدخل رقم التتبع لمعرفة حالة شحنتك" : "Enter your tracking number to check shipment status"}</p>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
-          <input
-            type="text"
-            placeholder={ar ? "رقم التتبع" : "Tracking number"}
-            className="flex-1 px-6 py-4 rounded-xl bg-slate-900/50 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
-          />
-          <Link href={`/${locale}/track`} className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition flex items-center justify-center gap-2">
-            <Search className="h-5 w-5" />
-            {ar ? "انتقل لصفحة التتبع" : "Go to tracking page"}
-          </Link>
+      <div className="relative">
+        <div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">07</div>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / About</p>
+            <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl text-white">{ar ? "نبني الوضوح في التجارة العابرة للحدود" : "We build clarity into cross-border trade"}</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-300">{ar ? "دينورا فريق تشغيل يربط الشركات في الشرق الأوسط بالمصانع وسلاسل الإمداد في الصين. نحوّل التوريد والشحن من سلسلة اتصالات مبهمة إلى مسار واضح تديره جهة واحدة." : "Dinoora is an operations team connecting Middle East businesses with factories and supply chains in China. We turn sourcing and shipping from unclear conversations into one visible operating path."}</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{ar ? "موثوق" : "Trusted"}</span>
+              <span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{ar ? "شفاف" : "Transparent"}</span>
+              <span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{ar ? "فعال" : "Efficient"}</span>
+            </div>
+            <Link href={`/${locale}/about`} className="mt-6 inline-flex items-center gap-2 text-cyan-400 font-semibold hover:text-cyan-300 transition">
+              {ar ? "اعرف المزيد عنا" : "Learn more about us"}
+              <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+            </Link>
+          </div>
+          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden border-2 border-cyan-500/30">
+            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=85')" }} />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+          </div>
         </div>
       </div>
     </motion.section>
+
+    <section id="process" className="border-y border-cyan-500/20 bg-slate-900 px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><div className="max-w-2xl relative"><div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">08</div><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Workflow</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl text-white">{text.processTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.processIntro}</p></div><div className="mt-14 relative"><div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent hidden md:block" /><div className="grid gap-4 md:grid-cols-4">{steps.map(([number, title, body], index) => <motion.div key={number} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative border-t-2 border-cyan-500 bg-slate-800 p-6 shadow-lg hover:bg-slate-700 transition-all"><span className="text-sm font-black text-cyan-400">{number}</span><h3 className="mt-5 text-xl font-bold text-white">{title}</h3><p className="mt-3 leading-7 text-slate-300">{body}</p></motion.div>)}</div></div></div></section>
 
     {/* Trust Statistics Section */}
     <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
       <div className="grid md:grid-cols-4 gap-6">
         {[
-          { icon: Globe, value: "50+", label: ar ? "دولة مخدومة" : "Countries Served" },
-          { icon: Users, value: "500+", label: ar ? "شراكة مصنع" : "Factory Partnerships" },
-          { icon: Container, value: "10K+", label: ar ? "شحنة تم تسليمها" : "Shipments Delivered" },
-          { icon: Clock, value: "24/7", label: ar ? "دعم متاح" : "Support Available" },
+          { icon: Globe, value: "50+", label: ar ? "دولة مخدومة" : "Countries Served", borderColor: "border-green-500", iconBg: "bg-green-500/20", iconColor: "text-green-400" },
+          { icon: Users, value: "500+", label: ar ? "شراكة مصنع" : "Factory Partnerships", borderColor: "border-purple-500", iconBg: "bg-purple-500/20", iconColor: "text-purple-400" },
+          { icon: Container, value: "10K+", label: ar ? "شحنة تم تسليمها" : "Shipments Delivered", borderColor: "border-blue-500", iconBg: "bg-blue-500/20", iconColor: "text-blue-400" },
+          { icon: Clock, value: "24/7", label: ar ? "دعم متاح" : "Support Available", borderColor: "border-amber-500", iconBg: "bg-amber-500/20", iconColor: "text-amber-400" },
         ].map((stat, index) => (
           <motion.div
             key={stat.label}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-white rounded-2xl p-6 text-center shadow-lg"
+            className={`relative border-2 bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${stat.borderColor}`}
           >
-            <stat.icon className="h-8 w-8 text-cyan-600 mx-auto mb-3" />
-            <div className="text-3xl font-black text-[#102a43] mb-2">{stat.value}</div>
-            <div className="text-sm font-semibold text-[#5d7180]">{stat.label}</div>
+            <div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">0{index + 9}</div>
+            <div className={`relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl mx-auto mb-4 ${stat.iconBg} ${stat.iconColor}`}>
+              <stat.icon className="h-7 w-7" />
+            </div>
+            <div className="text-3xl font-black text-white mb-2">{stat.value}</div>
+            <div className="text-sm font-semibold text-slate-300">{stat.label}</div>
           </motion.div>
         ))}
       </div>
