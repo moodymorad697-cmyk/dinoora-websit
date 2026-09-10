@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import { ArrowRight, Check, Eye, Handshake, ShieldCheck, Target, Search, Key, Users, FileCheck, Globe, Award, TrendingUp, Zap, Factory, Ship, Plane, Building2, Users2, Star, Clock, MessageCircle } from "lucide-react";
+import { ArrowRight, Check, Eye, Handshake, ShieldCheck, Target, Search, Key, Users, FileCheck, Globe, Award, TrendingUp, Zap, Factory, Ship, Plane, Building2, Users2, Star, Clock, MessageCircle, Warehouse } from "lucide-react";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -341,37 +341,37 @@ export default function AboutPage() {
           {
             year: "2018",
             title: ar ? "البداية في سوق الفوتيات" : "Starting in Futian Market",
-            desc: ar ? "بدأنا في سوق الفوتيات في شنتشن، حيث نتخصص في الإلكترونيات والمنتجات التقنية. فريقنا يتواجد في غوانزو وغيرها من المناطق الصناعية الرئيسية." : "We started in Futian Market, Shenzhen, specializing in electronics and tech products. Our team operates in Guangzhou and other major industrial zones.",
+            desc: ar ? "بدأنا رحلتنا في سوق الفوتيات بشنتشن، حيث تخصصنا في الإلكترونيات والمنتجات التقنية. فريقنا يتواجد في غوانزو وغيرها من المناطق الصناعية الرئيسية، مما أتاح لنا فهم عميق للسوق الصيني." : "We started our journey in Futian Market, Shenzhen, specializing in electronics and tech products. Our team operates in Guangzhou and other major industrial zones, giving us deep understanding of the Chinese market.",
             image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=85",
           },
           {
             year: "2019",
-            title: ar ? "التخصص في الملابس" : "Clothing Specialization",
-            desc: ar ? "خلال هذه الفترة، ركزنا على الملابس بشكل حصري، حيث أصبحت هذه الخدمة من تخصصاتنا الأساسية." : "During this period, we focused exclusively on clothing, making it one of our core specializations.",
+            title: ar ? "تراكم الخبرة في الملابس" : "Clothing Expertise Accumulation",
+            desc: ar ? "ركزنا على الملابس بشكل حصري، مما سمح لنا ببناء علاقات قوية مع موردي الملابس وفهم تفاصيل هذه الصناعة. أصبحت هذه الخدمة من تخصصاتنا الأساسية." : "We focused exclusively on clothing, allowing us to build strong relationships with clothing suppliers and understand the industry's details. This became one of our core specializations.",
             image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=85",
           },
           {
             year: "2020",
-            title: ar ? "التوسع في الطاقات الشمسية" : "Solar Energy Expansion",
-            desc: ar ? "دخلنا في مجال الطاقات الشمسية والمنتجات ذات الصلة، مما أضاف أبعاداً جديدة لخدماتنا." : "We entered the solar energy sector and related products, adding new dimensions to our services.",
+            title: ar ? "التوسع في الطاقات الشمسية" : "Solar Energy Expertise",
+            desc: ar ? "دخلنا مجال الطاقات الشمسية والمنتجات ذات الصلة، مما أضاف أبعاداً جديدة لخدماتنا. تراكمت خبراتنا في المنتجات التقنية والطاقة البديلة." : "We entered the solar energy sector and related products, adding new dimensions to our services. Our expertise in tech products and alternative energy accumulated.",
             image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=85",
           },
           {
             year: "2021",
-            title: ar ? "بناء الخبرة اللوجستية" : "Building Logistics Expertise",
+            title: ar ? "بناء القدرات اللوجستية" : "Building Logistics Capabilities",
             desc: ar ? "من خلال توالينا في السوق الصيني، توفر لدينا خبرة قوية في الشحن. نمت الطلبات حتى أصبح لدينا مخازن لتجميع شحنات عملائنا، فصبح التخزين والشحن من خدماتنا الأساسية." : "Through our continued presence in the Chinese market, we built strong logistics expertise. Orders grew until we established warehouses to consolidate client shipments, making storage and shipping core services.",
             image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=85",
           },
           {
             year: "2022",
-            title: ar ? "التوسع في الأدوات والمعدات" : "Tools & Equipment Expansion",
-            desc: ar ? "توسعنا في الأدوات الكهربائية وأدوات البناء والمعدات وغيرها. أصبح لدينا خبرة واسعة في البحث عن أي منتجات والتواصل مع أكثر من مصنع لمنتج واحد." : "We expanded into electrical tools, construction equipment, and machinery. We gained extensive expertise in sourcing any products and communicating with multiple factories for a single product.",
+            title: ar ? "التوسع في الأدوات والمعدات" : "Tools & Equipment Expertise",
+            desc: ar ? "توسعنا في الأدوات الكهربائية وأدوات البناء والمعدات. أصبح لدينا خبرة واسعة في البحث عن أي منتجات والتواصل مع أكثر من مصنع لمنتج واحد لضمان أفضل الأسعار والجودة." : "We expanded into electrical tools, construction equipment, and machinery. We gained extensive expertise in sourcing any products and communicating with multiple factories for a single product to ensure best prices and quality.",
             image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=85",
           },
           {
             year: "2024",
-            title: ar ? "خدمات شاملة متكاملة" : "Comprehensive Integrated Services",
-            desc: ar ? "اليوم، نقدم خدمات متعددة ومتكاملة نتيجة سنوات من التراكم والخبرة. من التوريد إلى الشحن، من الفحص إلى التخزين، نحن شريكك الموثوق في التجارة مع الصين." : "Today, we offer multiple integrated services resulting from years of accumulation and expertise. From sourcing to shipping, from inspection to storage, we are your trusted partner in China trade.",
+            title: ar ? "خدمات متكاملة من تراكم الخبرات" : "Integrated Services from Expertise Accumulation",
+            desc: ar ? "اليوم، نقدم خدمات متعددة ومتكاملة نتيجة سنوات من التراكم والخبرة. كثرة تواجدنا وثقة عملائنا وقوة فريقنا جعلت الخدمات المتعددة تتبلور كخدمة واحدة شاملة." : "Today, we offer multiple integrated services resulting from years of expertise accumulation. Our extensive presence, client trust, and strong team have made multiple services crystallize into one comprehensive service.",
             image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=400&q=85",
           },
         ].map((milestone, index) => (
@@ -407,6 +407,120 @@ export default function AboutPage() {
             <div className="flex-1" />
           </motion.div>
         ))}
+      </div>
+    </motion.section>
+
+    {/* Integrated Services Summary Section */}
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-5 py-24 sm:px-8 lg:px-12"
+    >
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[128px]" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px]" />
+      </div>
+
+      <div className="mx-auto max-w-7xl relative">
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/50 rounded-full mb-6"
+          >
+            <Zap className="h-5 w-5 text-cyan-400" />
+            <span className="text-sm font-bold text-cyan-400">
+              {ar ? "خدمة واحدة متكاملة" : "One Integrated Service"}
+            </span>
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+            {ar ? "كل ما تحتاجه في مكان واحد" : "Everything You Need in One Place"}
+          </h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            {ar
+              ? "كثرة تواجدنا وثقة عملائنا وقوة فريقنا جعلت الخدمات المتعددة تتبلور كخدمة واحدة شاملة. أي خدمة تفكر بها أو تحتاجها، تجد دينورا توفرها بكل سهولة."
+              : "Our extensive presence, client trust, and strong team have made multiple services crystallize into one comprehensive service. Whatever service you think of or need, Dinoora provides it with ease."}
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              icon: Search,
+              title: ar ? "من البحث إلى الباب" : "From Search to Door",
+              desc: ar ? "سواء كان إنتاج كامل من البحث عن المنتج أو كتابة اسمه على الواتساب أو الإيميل، حتى يصل باب شركتك أو بيتك." : "Whether it's complete production from product search or just writing the name on WhatsApp or email, until it reaches your company or home door.",
+              color: "from-cyan-500 to-blue-500",
+            },
+            {
+              icon: ShieldCheck,
+              title: ar ? "درع حامي لتجارتك" : "Protective Shield for Your Trade",
+              desc: ar ? "نقف درع حامي للتجارتك أمام الشركات الصينية. نتولى مسؤولية حماية منتجك وضمان وصوله إليك حسب المواصفات العالية." : "We stand as a protective shield for your trade against Chinese companies. We take responsibility for protecting your product and ensuring it reaches you according to high specifications.",
+              color: "from-green-500 to-emerald-500",
+            },
+            {
+              icon: Warehouse,
+              title: ar ? "شحن وتخزين متكامل" : "Integrated Shipping & Storage",
+              desc: ar ? "خدمات الشحن والتخزين والبحث عن المنتج. التحويلات المالية تتم عن طريق شركتنا لنضيف مسؤولية على الشركة." : "Shipping, storage, and product search services. Financial transfers are done through our company to add responsibility to the company.",
+              color: "from-purple-500 to-pink-500",
+            },
+            {
+              icon: Award,
+              title: ar ? "احترافية في كل التفاصيل" : "Professionalism in Every Detail",
+              desc: ar ? "نتميز بالاحترافية في كل مراحل العمل. من التواصل إلى التنفيذ، نضمن لك خدمة عالية الجودة." : "We excel in professionalism at every stage of work. From communication to execution, we ensure high-quality service.",
+              color: "from-amber-500 to-orange-500",
+            },
+            {
+              icon: TrendingUp,
+              title: ar ? "سلاسل توريد واضحة" : "Clear Supply Chains",
+              desc: ar ? "مهمتنا جعل التعقيدات التجارية أسهل وجعل سلاسل التوريد أكثر وضوحاً وانضباطاً." : "Our mission is to make trade complexities easier and make supply chains clearer and more disciplined.",
+              color: "from-blue-500 to-indigo-500",
+            },
+            {
+              icon: Globe,
+              title: ar ? "شريكك الموثوق" : "Your Trusted Partner",
+              desc: ar ? "نحن شريكك الموثوق في التجارة مع الصين. خبرتنا الواسعة وشبكتنا القوية تضمن لك نجاح تجارتك." : "We are your trusted partner in China trade. Our extensive expertise and strong network ensure your trade success.",
+              color: "from-rose-500 to-red-500",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ y: -8 }}
+              className="relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border-2 border-slate-700 group-hover:border-cyan-500/50 transition-all duration-300" />
+              <div className="relative p-8 h-full">
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-6 shadow-lg`}
+                >
+                  <item.icon className="h-8 w-8 text-white" />
+                </motion.div>
+                <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+                <p className="text-slate-300 leading-relaxed">{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          className="mt-16 text-center"
+        >
+          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl">
+            <Check className="h-6 w-6 text-emerald-400" />
+            <span className="text-lg font-semibold text-white">
+              {ar
+                ? "خدمة واحدة متكاملة لكل احتياجاتك التجارية مع الصين"
+                : "One integrated service for all your China trade needs"}
+            </span>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
 
