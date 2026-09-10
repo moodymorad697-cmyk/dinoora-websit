@@ -287,63 +287,124 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* New: Testimonials Section */}
+      {/* New: Promotional/Advertisement Section */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
+        className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-5 py-24 sm:px-8 lg:px-12"
       >
-        <div className="text-center mb-16">
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400 mb-4">
-            Dinoora / {ar ? "آراء العملاء" : "Testimonials"}
-          </p>
-          <h2 className="text-4xl font-black tracking-tight text-white">
-            {ar ? "ماذا يقول عملاؤنا" : "What Our Clients Say"}
-          </h2>
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=85')" }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-900" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {[
-            {
-              quote: ar
-                ? "دينورا جعلت عملية الاستيراد من الصين سهلة وشفافة. الفريق محترف جداً والتواصل ممتاز."
-                : "Dinoora made importing from China easy and transparent. The team is very professional and communication is excellent.",
-              author: "Ahmed Al-Rashid",
-              company: ar ? "شركة التجارة الحديثة" : "Modern Trading Co.",
-              flag: "🇸🇦",
-            },
-            {
-              quote: ar
-                ? "خدمة فحص الجودة من دينورا وفرت علينا الكثير من المشاكل. نوصي بشدة بهم."
-                : "Dinoora's quality inspection service saved us many issues. We highly recommend them.",
-              author: "Sarah Johnson",
-              company: ar ? "شركة المنتجات الاستهلاكية" : "Consumer Products Ltd",
-              flag: "🇦🇪",
-            },
-          ].map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-              className="relative bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300"
-            >
-              <div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/20 select-none pointer-events-none">
-                "
+        <div className="mx-auto max-w-7xl relative">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="inline-block"
+              >
+                <span className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold rounded-full">
+                  {ar ? "عرض خاص" : "Special Offer"}
+                </span>
+              </motion.div>
+              
+              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                {ar
+                  ? "استورد من الصين بأسعار تنافسية"
+                  : "Import from China at Competitive Prices"}
+              </h2>
+              
+              <p className="text-xl text-slate-300 leading-relaxed">
+                {ar
+                  ? "احصل على استشارة مجانية وعرض سعر مخصص لمنتجاتك. نحن نضمن لك أفضل الأسعار من المصانع مباشرة."
+                  : "Get a free consultation and custom quote for your products. We guarantee you the best prices directly from factories."}
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href={`/${locale}/quote`}
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105"
+                >
+                  {ar ? "اطلب عرض سعر مجاني" : "Get Free Quote"}
+                  <ArrowRight className="h-5 w-5 rtl:rotate-180" />
+                </Link>
+                <Link
+                  href={`/${locale}/contact`}
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-300"
+                >
+                  {ar ? "تواصل معنا" : "Contact Us"}
+                </Link>
               </div>
-              <p className="text-lg text-slate-300 mb-6 leading-relaxed">"{testimonial.quote}"</p>
-              <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-2xl">
-                  {testimonial.flag}
+
+              <div className="flex items-center gap-6 pt-4">
+                <div className="flex items-center gap-2">
+                  <Check className="h-5 w-5 text-emerald-400" />
+                  <span className="text-slate-300">{ar ? "استشارة مجانية" : "Free Consultation"}</span>
                 </div>
-                <div>
-                  <div className="font-bold text-white">{testimonial.author}</div>
-                  <div className="text-sm text-slate-400">{testimonial.company}</div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-5 w-5 text-emerald-400" />
+                  <span className="text-slate-300">{ar ? "أسعار تنافسية" : "Competitive Prices"}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-5 w-5 text-emerald-400" />
+                  <span className="text-slate-300">{ar ? "توصيل آمن" : "Secure Delivery"}</span>
+                </div>
+              </div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              whileHover={{ scale: 1.02 }}
+              className="relative"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-3xl blur-2xl" />
+              <div className="relative bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-cyan-500/30 rounded-3xl p-8 shadow-2xl">
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="relative h-32 rounded-xl overflow-hidden group">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=85')" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                  </div>
+                  <div className="relative h-32 rounded-xl overflow-hidden group">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1565514020176-8d4b1ec9e0f8?w=400&q=85')" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                  </div>
+                  <div className="relative h-32 rounded-xl overflow-hidden group">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=85')" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                  </div>
+                  <div className="relative h-32 rounded-xl overflow-hidden group">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=85')" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
+                  </div>
+                </div>
+                <div className="text-center">
+                  <p className="text-sm font-semibold text-cyan-400 mb-2">
+                    {ar ? "نستورد جميع أنواع المنتجات" : "We Import All Types of Products"}
+                  </p>
+                  <p className="text-xs text-slate-400">
+                    {ar ? "من الإلكترونيات إلى المنسوجات" : "From Electronics to Textiles"}
+                  </p>
                 </div>
               </div>
             </motion.div>
-          ))}
+          </div>
         </div>
       </motion.section>
 
