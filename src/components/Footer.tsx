@@ -48,19 +48,34 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="relative h-16 w-16">
-                <Image
-                  src="/logo-dinoora.png"
-                  alt="دينورا"
-                  width={64}
-                  height={64}
-                  className="h-16 w-16 object-contain brightness-110 drop-shadow-xl"
-                />
-                <div className="absolute inset-2 rounded-full bg-cyan-300/10 blur-xl" />
+            <Link href="/" className="group block">
+              <div className="relative mb-6">
+                {/* Glowing background effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl group-hover:opacity-20 transition-all duration-500" />
+                
+                {/* Main logo box */}
+                <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-2 border-cyan-500/30 rounded-3xl p-8 shadow-2xl group-hover:shadow-cyan-500/20 group-hover:border-cyan-500/50 transition-all duration-500 group-hover:scale-105">
+                  <div className="relative h-32 w-full flex items-center justify-center">
+                    <Image
+                      src="/logo-dinoora.png"
+                      alt="دينورا"
+                      width={200}
+                      height={200}
+                      className="h-full w-full object-contain brightness-110 drop-shadow-2xl group-hover:brightness-125 transition-all duration-500"
+                    />
+                    {/* Animated glow ring */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">{t('footer.tagline')}</p>
+              <p className="text-slate-400 text-sm leading-relaxed mb-2 font-semibold group-hover:text-white transition-colors duration-300">
+                {locale === 'ar' ? 'خطك المباشر إلى الصين' : 'Your direct line to China'}
+              </p>
+              <p className="text-slate-500 text-xs leading-relaxed">
+                {locale === 'ar' ? 'نفاوض بأسعار أفضل، نضمن الجودة، ونوصل أسرع.' : 'We negotiate better prices, ensure quality, and deliver faster.'}
+              </p>
+            </Link>
           </div>
 
           {/* الخدمات */}

@@ -473,27 +473,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* QR Codes */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                  <QrCode className="w-6 h-6 text-amber-400" />
-                  {locale === 'ar' ? 'امسح للتواصل' : 'Scan to Connect'}
-                </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white rounded-xl p-4 flex flex-col items-center">
-                    <div className="w-32 h-32 bg-slate-200 rounded-lg mb-2 flex items-center justify-center">
-                      <QrCode className="w-20 h-20 text-slate-400" />
-                    </div>
-                    <span className="text-slate-800 text-sm font-semibold">WhatsApp</span>
-                  </div>
-                  <div className="bg-white rounded-xl p-4 flex flex-col items-center">
-                    <div className="w-32 h-32 bg-slate-200 rounded-lg mb-2 flex items-center justify-center">
-                      <QrCode className="w-20 h-20 text-slate-400" />
-                    </div>
-                    <span className="text-slate-800 text-sm font-semibold">WeChat</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

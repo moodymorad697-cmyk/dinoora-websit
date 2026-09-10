@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Check, ClipboardCheck, Container, FileCheck2, PackageSearch, ShieldCheck, Warehouse, Truck, BarChart3, Clock, Globe, Users, Search, Mail, Phone, MessageCircle } from "lucide-react";
+import { ArrowRight, Check, ClipboardCheck, Container, FileCheck2, PackageSearch, ShieldCheck, Warehouse, Truck, BarChart3, Clock, Globe, Users, Search, Mail, Phone, MessageCircle, Factory, Ship, Plane, Zap, Award, TrendingUp } from "lucide-react";
 
 export default function HomePage() {
   const locale = useLocale();
@@ -344,6 +344,276 @@ export default function HomePage() {
               </div>
             </motion.div>
           ))}
+        </div>
+      </motion.section>
+
+      {/* New: Industry Showcase Section with Images */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
+      >
+        <div className="text-center mb-16">
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400 mb-4">
+            Dinoora / {ar ? "الصناعات" : "Industries"}
+          </p>
+          <h2 className="text-4xl font-black tracking-tight text-white mb-6">
+            {ar ? "نخدم جميع الصناعات" : "We Serve All Industries"}
+          </h2>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            {ar
+              ? "من الإلكترونيات إلى المنسوجات، من المواد الخام إلى المنتجات النهائية - نحن نغطي جميع احتياجات الاستيراد."
+              : "From electronics to textiles, from raw materials to finished products - we cover all import needs."}
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=85",
+              title: ar ? "الإلكترونيات" : "Electronics",
+              desc: ar ? "أجهزة إلكترونية ومكونات" : "Electronic devices and components",
+              icon: Zap,
+            },
+            {
+              image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=85",
+              title: ar ? "الملابس والمنسوجات" : "Fashion & Textiles",
+              desc: ar ? "ملابس ومنسوجات متنوعة" : "Clothing and textiles",
+              icon: Award,
+            },
+            {
+              image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=85",
+              title: ar ? "الآلات والمعدات" : "Machinery & Equipment",
+              desc: ar ? "آلات صناعية ومعدات" : "Industrial machinery and equipment",
+              icon: Factory,
+            },
+            {
+              image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85",
+              title: ar ? "المنتجات المنزلية" : "Home Products",
+              desc: ar ? "أدوات منزلية ومستلزمات" : "Home goods and supplies",
+              icon: Warehouse,
+            },
+          ].map((industry, index) => (
+            <motion.div
+              key={industry.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="relative group overflow-hidden rounded-2xl border border-slate-700"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url('${industry.image}')` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+                <div className="absolute top-4 right-4">
+                  <div className="h-10 w-10 rounded-full bg-cyan-500/20 backdrop-blur-sm flex items-center justify-center border border-cyan-500/50">
+                    <industry.icon className="h-5 w-5 text-cyan-400" />
+                  </div>
+                </div>
+              </div>
+              <div className="relative bg-slate-900/90 backdrop-blur-sm p-6">
+                <h3 className="text-lg font-bold text-white mb-2">{industry.title}</h3>
+                <p className="text-sm text-slate-300">{industry.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* New: Shipping Methods Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-5 py-24 sm:px-8 lg:px-12"
+      >
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-500/10 rounded-full blur-[200px]" />
+        </div>
+
+        <div className="mx-auto max-w-7xl relative">
+          <div className="text-center mb-16">
+            <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400 mb-4">
+              Dinoora / {ar ? "طرق الشحن" : "Shipping Methods"}
+            </p>
+            <h2 className="text-4xl font-black tracking-tight text-white mb-6">
+              {ar ? "خيارات شحن مرنة" : "Flexible Shipping Options"}
+            </h2>
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              {ar
+                ? "اختر طريقة الشحن المناسبة لمتطلباتك وميزانيتك"
+                : "Choose the shipping method that fits your requirements and budget"}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Ship,
+                title: ar ? "الشحن البحري" : "Sea Freight",
+                desc: ar ? "حاويات كاملة واقتصادية للشحنات الكبيرة" : "Full containers and economical for large shipments",
+                image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=600&q=85",
+                color: "from-blue-500 to-cyan-500",
+                time: ar ? "30-45 يوم" : "30-45 days",
+              },
+              {
+                icon: Plane,
+                title: ar ? "الشحن الجوي" : "Air Freight",
+                desc: ar ? "سريع وموثوق للشحنات العاجلة" : "Fast and reliable for urgent shipments",
+                image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=85",
+                color: "from-purple-500 to-pink-500",
+                time: ar ? "5-10 أيام" : "5-10 days",
+              },
+              {
+                icon: Truck,
+                title: ar ? "الشحن البري" : "Land Freight",
+                desc: ar ? "شحن سريع عبر الحدود البرية" : "Fast cross-border shipping",
+                image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=85",
+                color: "from-emerald-500 to-teal-500",
+                time: ar ? "15-25 يوم" : "15-25 days",
+              },
+            ].map((method, index) => (
+              <motion.div
+                key={method.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+                className="relative group"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${method.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl blur-xl`} />
+                <div className="relative bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl overflow-hidden h-full">
+                  <div className="relative h-48 overflow-hidden">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                      style={{ backgroundImage: `url('${method.image}')` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+                    <div className="absolute top-4 left-4">
+                      <motion.div
+                        whileHover={{ rotate: 360, scale: 1.1 }}
+                        transition={{ duration: 0.6 }}
+                        className={`h-12 w-12 rounded-xl bg-gradient-to-br ${method.color} flex items-center justify-center shadow-lg`}
+                      >
+                        <method.icon className="h-6 w-6 text-white" />
+                      </motion.div>
+                    </div>
+                    <div className="absolute bottom-4 right-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full border border-cyan-500/30">
+                      <span className="text-xs font-bold text-cyan-400">{method.time}</span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-white mb-3">{method.title}</h3>
+                    <p className="text-slate-300">{method.desc}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* New: Why Choose Us Section with Visual Stats */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
+      >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400 mb-4">
+                Dinoora / {ar ? "لماذا نحن" : "Why Choose Us"}
+              </p>
+              <h2 className="text-4xl font-black tracking-tight text-white mb-6">
+                {ar ? "شريكك الموثوق في التجارة الدولية" : "Your Trusted Partner in International Trade"}
+              </h2>
+              <p className="text-lg text-slate-300 leading-relaxed">
+                {ar
+                  ? "نحن نجمع بين الخبرة العميقة في السوق الصيني والفهم الكامل لاحتياجات الأسواق العالمية، لنقدم لك تجربة استيراد سلسة وفعالة."
+                  : "We combine deep expertise in the Chinese market with a complete understanding of global market needs, to provide you with a seamless and efficient import experience."}
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                {
+                  icon: TrendingUp,
+                  title: ar ? "توفير التكاليف" : "Cost Savings",
+                  desc: ar ? "نفاوض أفضل الأسعار مع الموردين" : "We negotiate the best prices with suppliers",
+                },
+                {
+                  icon: ShieldCheck,
+                  title: ar ? "ضمان الجودة" : "Quality Assurance",
+                  desc: ar ? "فحص شامل قبل الشحن" : "Comprehensive inspection before shipping",
+                },
+                {
+                  icon: Clock,
+                  title: ar ? "تسليم في الوقت" : "On-Time Delivery",
+                  desc: ar ? "متابعة دقيقة للشحنات" : "Precise tracking of shipments",
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex gap-4 items-start"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className="h-12 w-12 rounded-xl bg-cyan-500/20 flex items-center justify-center flex-shrink-0 border border-cyan-500/30"
+                  >
+                    <item.icon className="h-6 w-6 text-cyan-400" />
+                  </motion.div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
+                    <p className="text-slate-300">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl" />
+            <div className="relative grid grid-cols-2 gap-4">
+              {[
+                { value: "95%", label: ar ? "رضا العملاء" : "Client Satisfaction", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=85" },
+                { value: "500+", label: ar ? "شريك مصنع" : "Factory Partners", image: "https://images.unsplash.com/photo-1565514020176-8d4b1ec9e0f8?w=400&q=85" },
+                { value: "50+", label: ar ? "دولة مخدومة" : "Countries Served", image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=400&q=85" },
+                { value: "24/7", label: ar ? "دعم متاح" : "Support Available", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=85" },
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="relative group overflow-hidden rounded-2xl border border-slate-700"
+                >
+                  <div className="relative h-40">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                      style={{ backgroundImage: `url('${stat.image}')` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+                      <div className="text-3xl font-black text-white mb-1">{stat.value}</div>
+                      <div className="text-xs font-semibold text-slate-300 text-center">{stat.label}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </motion.section>
   </main>;
