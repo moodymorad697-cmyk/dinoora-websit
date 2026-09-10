@@ -82,7 +82,7 @@ export default function AboutPage() {
       </svg>
     </div>
 
-    <section className="relative isolate overflow-hidden bg-[#102a43] text-white"><div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=2000&q=85')" }} /><div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,22,38,0.96),rgba(9,39,62,0.72),rgba(9,39,62,0.45))]" /><div className="mx-auto flex min-h-[590px] max-w-7xl items-end px-5 pb-20 pt-40 sm:px-8 lg:px-12"><div className="max-w-3xl"><p className="mb-6 border-s-2 border-cyan-300 ps-4 text-sm font-bold uppercase tracking-[0.14em] text-cyan-200">{c.eyebrow}</p><h1 className="max-w-3xl text-5xl font-black leading-[1.04] sm:text-7xl">{c.title}</h1><p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">{c.intro}</p><Link href={`/${locale}/contact`} className="mt-9 inline-flex items-center gap-3 rounded-lg bg-cyan-300 px-6 py-4 font-bold text-[#082238] hover:bg-white">{c.contact}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link></div></div></section>
+    <section className="relative isolate overflow-hidden bg-[#102a43] text-white"><div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=2000&q=85')" }} /><div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,22,38,0.96),rgba(9,39,62,0.72),rgba(9,39,62,0.45))]" /><div className="mx-auto flex min-h-[590px] max-w-7xl items-end px-5 pb-20 pt-40 sm:px-8 lg:px-12"><div className="max-w-3xl"><p className="mb-6 border-s-2 border-cyan-300 ps-4 text-sm font-bold uppercase tracking-[0.14em] text-cyan-200">{c.eyebrow}</p><h1 className="max-w-3xl text-5xl font-black leading-[1.04] sm:text-7xl">{c.title}</h1><p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">{c.intro}</p></div></div></section>
     <section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-12">
       <div>
         <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">{c.storyLabel}</p>
@@ -340,27 +340,39 @@ export default function AboutPage() {
         {[
           {
             year: "2018",
-            title: ar ? "التأسيس" : "Foundation",
-            desc: ar ? "بدأنا كفريق صغير في ييوو" : "Started as a small team in Yiwu",
-            image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=85",
+            title: ar ? "البداية في سوق الفوتيات" : "Starting in Futian Market",
+            desc: ar ? "بدأنا في سوق الفوتيات في شنتشن، حيث نتخصص في الإلكترونيات والمنتجات التقنية. فريقنا يتواجد في غوانزو وغيرها من المناطق الصناعية الرئيسية." : "We started in Futian Market, Shenzhen, specializing in electronics and tech products. Our team operates in Guangzhou and other major industrial zones.",
+            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=85",
+          },
+          {
+            year: "2019",
+            title: ar ? "التخصص في الملابس" : "Clothing Specialization",
+            desc: ar ? "خلال هذه الفترة، ركزنا على الملابس بشكل حصري، حيث أصبحت هذه الخدمة من تخصصاتنا الأساسية." : "During this period, we focused exclusively on clothing, making it one of our core specializations.",
+            image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=85",
           },
           {
             year: "2020",
-            title: ar ? "التوسع" : "Expansion",
-            desc: ar ? "فتحنا مكاتب في شنغهاي وشنتشن" : "Opened offices in Shanghai and Shenzhen",
-            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=85",
+            title: ar ? "التوسع في الطاقات الشمسية" : "Solar Energy Expansion",
+            desc: ar ? "دخلنا في مجال الطاقات الشمسية والمنتجات ذات الصلة، مما أضاف أبعاداً جديدة لخدماتنا." : "We entered the solar energy sector and related products, adding new dimensions to our services.",
+            image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=85",
+          },
+          {
+            year: "2021",
+            title: ar ? "بناء الخبرة اللوجستية" : "Building Logistics Expertise",
+            desc: ar ? "من خلال توالينا في السوق الصيني، توفر لدينا خبرة قوية في الشحن. نمت الطلبات حتى أصبح لدينا مخازن لتجميع شحنات عملائنا، فصبح التخزين والشحن من خدماتنا الأساسية." : "Through our continued presence in the Chinese market, we built strong logistics expertise. Orders grew until we established warehouses to consolidate client shipments, making storage and shipping core services.",
+            image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=85",
           },
           {
             year: "2022",
-            title: ar ? "النمو العالمي" : "Global Growth",
-            desc: ar ? "وصلنا إلى 50 دولة حول العالم" : "Reached 50 countries worldwide",
-            image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=85",
+            title: ar ? "التوسع في الأدوات والمعدات" : "Tools & Equipment Expansion",
+            desc: ar ? "توسعنا في الأدوات الكهربائية وأدوات البناء والمعدات وغيرها. أصبح لدينا خبرة واسعة في البحث عن أي منتجات والتواصل مع أكثر من مصنع لمنتج واحد." : "We expanded into electrical tools, construction equipment, and machinery. We gained extensive expertise in sourcing any products and communicating with multiple factories for a single product.",
+            image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=85",
           },
           {
             year: "2024",
-            title: ar ? "الريادة" : "Leadership",
-            desc: ar ? "أصبحنا من رواد التجارة مع الصين" : "Became leaders in China trade",
-            image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&q=85",
+            title: ar ? "خدمات شاملة متكاملة" : "Comprehensive Integrated Services",
+            desc: ar ? "اليوم، نقدم خدمات متعددة ومتكاملة نتيجة سنوات من التراكم والخبرة. من التوريد إلى الشحن، من الفحص إلى التخزين، نحن شريكك الموثوق في التجارة مع الصين." : "Today, we offer multiple integrated services resulting from years of accumulation and expertise. From sourcing to shipping, from inspection to storage, we are your trusted partner in China trade.",
+            image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=400&q=85",
           },
         ].map((milestone, index) => (
           <motion.div
