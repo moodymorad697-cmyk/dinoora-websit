@@ -130,6 +130,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="mailto:support@dinooratrade.com" className="flex items-center gap-2.5 text-slate-400 hover:text-emerald-400 transition-colors group">
+                  <Mail className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  <span className="text-sm">support@dinooratrade.com</span>
+                </a>
+              </li>
+              <li>
                 <a href="tel:+8619589468539" className="flex items-center gap-2.5 text-slate-400 hover:text-blue-400 transition-colors group">
                   <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
                   <span className="text-sm">+86 195 8946 8539</span>

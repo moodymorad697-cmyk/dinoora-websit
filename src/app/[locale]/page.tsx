@@ -61,7 +61,7 @@ export default function HomePage() {
   const { scrollY } = useScroll();
   const heroY = useTransform(scrollY, [0, 500], [0, 200]);
 
-  return <main className="home-page site-palette bg-[#dcecf0] text-[#102a43]">
+  return <main className="home-page site-palette bg-slate-950 text-white">
     <section className="relative isolate min-h-[680px] overflow-hidden bg-[#102a43] text-white">
       <motion.div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=2000&q=85')", y: heroY }} />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,22,38,0.96),rgba(9,39,62,0.78)_52%,rgba(9,39,62,0.5))]" />
@@ -152,6 +152,199 @@ export default function HomePage() {
         </div>
       </div>
     </motion.section>
-      <section className="home-case-section mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-12"><div className="relative min-h-[380px] overflow-hidden rounded-2xl bg-[#102a43]"><div className="absolute inset-0 bg-cover bg-center opacity-80" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=85')" }} /><div className="absolute inset-0 bg-gradient-to-t from-[#061827] via-transparent to-transparent" /><div className="absolute bottom-6 start-6 flex items-center gap-3 text-sm font-bold text-white"><ShieldCheck className="h-5 w-5 text-cyan-300" /> {ar ? "توثيق قبل القرار" : "Evidence before decisions"}</div></div><div className="self-center"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Case approach</p><h2 className="mt-4 text-4xl font-black tracking-tight text-white">{text.caseTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.caseIntro}</p><ul className="mt-8 grid gap-4 sm:grid-cols-2">{text.caseItems.map(item => <li key={item} className="flex gap-3 text-sm font-semibold text-slate-300"><Check className="h-5 w-5 shrink-0 text-emerald-400" />{item}</li>)}</ul></div></section>
+      {/* Enhanced Case Study Section with Visual Effects */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
+      >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="relative min-h-[400px] overflow-hidden rounded-2xl border-2 border-cyan-500/30 shadow-2xl"
+          >
+            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=85')" }} />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
+            <div className="absolute bottom-6 left-6 flex items-center gap-3">
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="h-12 w-12 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/50"
+              >
+                <ShieldCheck className="h-6 w-6 text-cyan-400" />
+              </motion.div>
+              <span className="text-sm font-bold text-white bg-slate-900/80 px-3 py-1 rounded-full">
+                {ar ? "توثيق قبل القرار" : "Evidence before decisions"}
+              </span>
+            </div>
+          </motion.div>
+
+          <div className="space-y-6">
+            <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">
+              Dinoora / {ar ? "دراسة حالة" : "Case Study"}
+            </p>
+            <h2 className="text-4xl font-black tracking-tight text-white">
+              {text.caseTitle}
+            </h2>
+            <p className="text-lg leading-8 text-slate-300">
+              {text.caseIntro}
+            </p>
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {text.caseItems.map((item, index) => (
+                <motion.li
+                  key={item}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex gap-3 text-sm font-semibold text-slate-300 items-start"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    className="h-6 w-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-0.5"
+                  >
+                    <Check className="h-4 w-4 text-emerald-400" />
+                  </motion.div>
+                  {item}
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* New: Global Network Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-5 py-24 sm:px-8 lg:px-12"
+      >
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[128px]" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px]" />
+        </div>
+
+        <div className="mx-auto max-w-7xl relative">
+          <div className="text-center mb-16">
+            <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400 mb-4">
+              Dinoora / {ar ? "شبكة عالمية" : "Global Network"}
+            </p>
+            <h2 className="text-4xl font-black tracking-tight text-white mb-6">
+              {ar ? "نربطك بالعالم" : "Connecting You to the World"}
+            </h2>
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              {ar
+                ? "شبكة قوية من المصانع والموردين في الصين، مع شراكات لوجستية في أكثر من 50 دولة حول العالم."
+                : "Strong network of factories and suppliers in China, with logistics partnerships in over 50 countries worldwide."}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Globe,
+                title: ar ? "تغطية عالمية" : "Global Coverage",
+                desc: ar ? "خدمات في 50+ دولة حول العالم" : "Services in 50+ countries worldwide",
+                color: "from-cyan-500 to-blue-500",
+              },
+              {
+                icon: Container,
+                title: ar ? "موانئ استراتيجية" : "Strategic Ports",
+                desc: ar ? "وصول إلى موانئ رئيسية في آسيا وأوروبا والشرق الأوسط" : "Access to major ports in Asia, Europe, and Middle East",
+                color: "from-purple-500 to-pink-500",
+              },
+              {
+                icon: Truck,
+                title: ar ? "شحن سريع" : "Fast Shipping",
+                desc: ar ? "مسارات شحن محسنة للوصول في أسرع وقت" : "Optimized shipping routes for fastest delivery",
+                color: "from-emerald-500 to-teal-500",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+                className="relative group"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl blur-xl`} />
+                <div className="relative bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 h-full">
+                  <motion.div
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-6`}
+                  >
+                    <item.icon className="h-8 w-8 text-white" />
+                  </motion.div>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-slate-300">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* New: Testimonials Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
+      >
+        <div className="text-center mb-16">
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400 mb-4">
+            Dinoora / {ar ? "آراء العملاء" : "Testimonials"}
+          </p>
+          <h2 className="text-4xl font-black tracking-tight text-white">
+            {ar ? "ماذا يقول عملاؤنا" : "What Our Clients Say"}
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {[
+            {
+              quote: ar
+                ? "دينورا جعلت عملية الاستيراد من الصين سهلة وشفافة. الفريق محترف جداً والتواصل ممتاز."
+                : "Dinoora made importing from China easy and transparent. The team is very professional and communication is excellent.",
+              author: "Ahmed Al-Rashid",
+              company: ar ? "شركة التجارة الحديثة" : "Modern Trading Co.",
+              flag: "🇸🇦",
+            },
+            {
+              quote: ar
+                ? "خدمة فحص الجودة من دينورا وفرت علينا الكثير من المشاكل. نوصي بشدة بهم."
+                : "Dinoora's quality inspection service saved us many issues. We highly recommend them.",
+              author: "Sarah Johnson",
+              company: ar ? "شركة المنتجات الاستهلاكية" : "Consumer Products Ltd",
+              flag: "🇦🇪",
+            },
+          ].map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
+              className="relative bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300"
+            >
+              <div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/20 select-none pointer-events-none">
+                "
+              </div>
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">"{testimonial.quote}"</p>
+              <div className="flex items-center gap-4">
+                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-2xl">
+                  {testimonial.flag}
+                </div>
+                <div>
+                  <div className="font-bold text-white">{testimonial.author}</div>
+                  <div className="text-sm text-slate-400">{testimonial.company}</div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
   </main>;
 }
