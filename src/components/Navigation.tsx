@@ -183,7 +183,7 @@ export default function Navigation() {
               ))}
               
               <div className="px-5 pt-4 pb-2">
-                <div className="text-xs text-blue-400 font-bold mb-3">الخدمات</div>
+                <div className="text-xs text-blue-400 font-bold mb-3">{t('nav.services')}</div>
                 <div className="grid grid-cols-2 gap-2">
                   {serviceItems.slice(0, 4).map((svc, i) => (
                     <Link key={i} href={`/${locale}${svc.href}`} onClick={() => setIsOpen(false)} className="flex items-center gap-2 p-3 rounded-xl bg-white/[0.03] border border-white/[0.05] hover:bg-white/[0.06] transition-all">
@@ -194,13 +194,22 @@ export default function Navigation() {
                 </div>
               </div>
 
-              <Link 
+              <Link
+                href={`/${targetLocale}${pathname.replace(/^\/(ar|en|zh)/, '')}`}
+                onClick={() => setIsOpen(false)}
+                className="mx-5 mt-4 flex items-center justify-center gap-2 px-6 py-4 bg-white/[0.03] border border-white/[0.05] rounded-2xl font-bold text-slate-300 hover:bg-white/[0.06] transition-all"
+              >
+                <Globe className="w-4 h-4" />
+                <span>{targetLocale === 'en' ? 'English' : 'العربية'}</span>
+              </Link>
+
+              <Link
                 href={`/${locale}/quote`}
                 className="mx-5 mt-4 px-6 py-4 bg-gradient-to-l from-blue-600 to-cyan-500 text-white rounded-2xl font-bold text-center hover:shadow-lg transition-all flex items-center justify-center gap-2"
                 onClick={() => setIsOpen(false)}
               >
                 <Sparkles className="w-4 h-4" />
-                احصل على عرض سعر
+                {t('nav.getQuote')}
               </Link>
             </div>
           </div>
