@@ -60,7 +60,7 @@ export default function Navigation() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled
-        ? 'bg-slate-900/95 backdrop-blur-2xl border-b border-indigo-500/20 shadow-2xl shadow-indigo-500/10'
+        ? 'bg-slate-900/95 backdrop-blur-xl lg:backdrop-blur-2xl border-b border-indigo-500/20 shadow-2xl shadow-indigo-500/10'
         : 'bg-gradient-to-b from-slate-900/90 to-transparent'
     }`}>
       <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-indigo-500 via-purple-500 via-pink-500 to-indigo-500 transition-all duration-150 opacity-90 animate-gradient-shift bg-[length:200%_100%]" style={{ width: `${scrollProgress}%` }} />

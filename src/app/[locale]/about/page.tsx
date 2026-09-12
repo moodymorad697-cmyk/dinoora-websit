@@ -339,44 +339,44 @@ export default function AboutPage() {
         
         {[
           {
-            year: "2018",
+            step: "01",
             title: ar ? "البداية في سوق الفوتيات" : "Starting in Futian Market",
             desc: ar ? "بدأنا رحلتنا في سوق الفوتيات بشنتشن، حيث تخصصنا في الإلكترونيات والمنتجات التقنية. فريقنا يتواجد في غوانزو وغيرها من المناطق الصناعية الرئيسية، مما أتاح لنا فهم عميق للسوق الصيني." : "We started our journey in Futian Market, Shenzhen, specializing in electronics and tech products. Our team operates in Guangzhou and other major industrial zones, giving us deep understanding of the Chinese market.",
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=85",
+            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&q=75",
           },
           {
-            year: "2019",
+            step: "02",
             title: ar ? "تراكم الخبرة في الملابس" : "Clothing Expertise Accumulation",
             desc: ar ? "ركزنا على الملابس بشكل حصري، مما سمح لنا ببناء علاقات قوية مع موردي الملابس وفهم تفاصيل هذه الصناعة. أصبحت هذه الخدمة من تخصصاتنا الأساسية." : "We focused exclusively on clothing, allowing us to build strong relationships with clothing suppliers and understand the industry's details. This became one of our core specializations.",
-            image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=85",
+            image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300&q=75",
           },
           {
-            year: "2020",
+            step: "03",
             title: ar ? "التوسع في الطاقات الشمسية" : "Solar Energy Expertise",
             desc: ar ? "دخلنا مجال الطاقات الشمسية والمنتجات ذات الصلة، مما أضاف أبعاداً جديدة لخدماتنا. تراكمت خبراتنا في المنتجات التقنية والطاقة البديلة." : "We entered the solar energy sector and related products, adding new dimensions to our services. Our expertise in tech products and alternative energy accumulated.",
-            image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=85",
+            image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=300&q=75",
           },
           {
-            year: "2021",
+            step: "04",
             title: ar ? "بناء القدرات اللوجستية" : "Building Logistics Capabilities",
             desc: ar ? "من خلال توالينا في السوق الصيني، توفر لدينا خبرة قوية في الشحن. نمت الطلبات حتى أصبح لدينا مخازن لتجميع شحنات عملائنا، فصبح التخزين والشحن من خدماتنا الأساسية." : "Through our continued presence in the Chinese market, we built strong logistics expertise. Orders grew until we established warehouses to consolidate client shipments, making storage and shipping core services.",
-            image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&q=85",
+            image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=300&q=75",
           },
           {
-            year: "2022",
+            step: "05",
             title: ar ? "التوسع في الأدوات والمعدات" : "Tools & Equipment Expertise",
             desc: ar ? "توسعنا في الأدوات الكهربائية وأدوات البناء والمعدات. أصبح لدينا خبرة واسعة في البحث عن أي منتجات والتواصل مع أكثر من مصنع لمنتج واحد لضمان أفضل الأسعار والجودة." : "We expanded into electrical tools, construction equipment, and machinery. We gained extensive expertise in sourcing any products and communicating with multiple factories for a single product to ensure best prices and quality.",
-            image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=85",
+            image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&q=75",
           },
           {
-            year: "2024",
+            step: "06",
             title: ar ? "خدمات متكاملة من تراكم الخبرات" : "Integrated Services from Expertise Accumulation",
             desc: ar ? "اليوم، نقدم خدمات متعددة ومتكاملة نتيجة سنوات من التراكم والخبرة. كثرة تواجدنا وثقة عملائنا وقوة فريقنا جعلت الخدمات المتعددة تتبلور كخدمة واحدة شاملة." : "Today, we offer multiple integrated services resulting from years of expertise accumulation. Our extensive presence, client trust, and strong team have made multiple services crystallize into one comprehensive service.",
-            image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=400&q=85",
+            image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=300&q=75",
           },
         ].map((milestone, index) => (
           <motion.div
-            key={milestone.year}
+            key={milestone.step}
             initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -395,7 +395,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
                 </div>
                 <div className="relative p-6">
-                  <div className="text-3xl font-black text-cyan-400 mb-2">{milestone.year}</div>
+                  <div className="text-3xl font-black text-cyan-400 mb-2">{milestone.step}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{milestone.title}</h3>
                   <p className="text-slate-300">{milestone.desc}</p>
                 </div>
