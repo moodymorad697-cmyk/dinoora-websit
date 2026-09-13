@@ -58,11 +58,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled
-        ? 'bg-slate-900/95 backdrop-blur-xl lg:backdrop-blur-2xl border-b border-indigo-500/20 shadow-2xl shadow-indigo-500/10'
-        : 'bg-gradient-to-b from-slate-900/90 to-transparent'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-slate-950 border-b border-indigo-500/20 shadow-2xl shadow-indigo-500/10`}>
       <div className="absolute bottom-0 right-0 h-[2px] bg-gradient-to-l from-indigo-500 via-purple-500 via-pink-500 to-indigo-500 transition-all duration-150 opacity-90 animate-gradient-shift bg-[length:200%_100%]" style={{ width: `${scrollProgress}%` }} />
 
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
@@ -155,16 +151,24 @@ export default function Navigation() {
             </Link>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-xl hover:bg-white/10 transition-colors"
-          >
-            <div className="relative w-5 h-4">
-              <span className={`absolute right-0 w-5 h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'top-[7px] rotate-45' : 'top-0'}`} />
-              <span className={`absolute right-0 top-[7px] w-5 h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'opacity-0 scale-0' : 'opacity-100'}`} />
-              <span className={`absolute right-0 w-5 h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'top-[7px] -rotate-45' : 'top-[14px]'}`} />
-            </div>
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <Link
+              href={`/${targetLocale}${pathname.replace(/^\/(ar|en|zh)/, '')}`}
+              className="flex items-center justify-center w-11 h-11 rounded-xl hover:bg-white/10 transition-colors text-slate-400 hover:text-indigo-400"
+            >
+              <Globe className="w-5 h-5" />
+            </Link>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="relative w-11 h-11 flex items-center justify-center rounded-xl hover:bg-white/10 transition-colors"
+            >
+              <div className="relative w-5 h-4">
+                <span className={`absolute right-0 w-5 h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'top-[7px] rotate-45' : 'top-0'}`} />
+                <span className={`absolute right-0 top-[7px] w-5 h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'opacity-0 scale-0' : 'opacity-100'}`} />
+                <span className={`absolute right-0 w-5 h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'top-[7px] -rotate-45' : 'top-[14px]'}`} />
+              </div>
+            </button>
+          </div>
         </div>
 
         <div className={`lg:hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[700px] opacity-100 pb-6' : 'max-h-0 opacity-0 overflow-hidden'}`}>
@@ -175,40 +179,31 @@ export default function Navigation() {
                   key={i}
                   href={`/${locale}${item.href}`}
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between font-bold py-3.5 px-5 rounded-2xl text-slate-300 hover:text-white hover:bg-white/[0.04] transition-all"
+                  className="flex items-center justify-between font-bold py-4 px-5 rounded-2xl text-slate-300 hover:text-white hover:bg-white/[0.06] transition-all text-lg"
                 >
                   {item.label}
-                  <ArrowLeft className="w-4 h-4 text-slate-600" />
+                  <ArrowLeft className="w-5 h-5 text-slate-600" />
                 </Link>
               ))}
-              
-              <div className="px-5 pt-4 pb-2">
-                <div className="text-xs text-blue-400 font-bold mb-3">{t('nav.services')}</div>
-                <div className="grid grid-cols-2 gap-2">
+
+              <div className="px-5 pt-5 pb-3">
+                <div className="text-sm text-blue-400 font-bold mb-3">{t('nav.services')}</div>
+                <div className="grid grid-cols-2 gap-3">
                   {serviceItems.slice(0, 4).map((svc, i) => (
-                    <Link key={i} href={`/${locale}${svc.href}`} onClick={() => setIsOpen(false)} className="flex items-center gap-2 p-3 rounded-xl bg-white/[0.03] border border-white/[0.05] hover:bg-white/[0.06] transition-all">
-                      <svc.icon className="w-4 h-4 text-blue-400" />
-                      <span className="text-xs font-bold text-slate-300">{svc.label}</span>
+                    <Link key={i} href={`/${locale}${svc.href}`} onClick={() => setIsOpen(false)} className="flex items-center gap-2 p-4 rounded-xl bg-white/[0.03] border border-white/[0.05] hover:bg-white/[0.08] transition-all">
+                      <svc.icon className="w-5 h-5 text-blue-400" />
+                      <span className="text-sm font-bold text-slate-300">{svc.label}</span>
                     </Link>
                   ))}
                 </div>
               </div>
 
               <Link
-                href={`/${targetLocale}${pathname.replace(/^\/(ar|en|zh)/, '')}`}
-                onClick={() => setIsOpen(false)}
-                className="mx-5 mt-4 flex items-center justify-center gap-2 px-6 py-4 bg-white/[0.03] border border-white/[0.05] rounded-2xl font-bold text-slate-300 hover:bg-white/[0.06] transition-all"
-              >
-                <Globe className="w-4 h-4" />
-                <span>{targetLocale === 'en' ? 'English' : 'العربية'}</span>
-              </Link>
-
-              <Link
                 href={`/${locale}/quote`}
-                className="mx-5 mt-4 px-6 py-4 bg-gradient-to-l from-blue-600 to-cyan-500 text-white rounded-2xl font-bold text-center hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                className="mx-5 mt-5 px-6 py-5 bg-gradient-to-l from-blue-600 to-cyan-500 text-white rounded-2xl font-bold text-center hover:shadow-lg transition-all flex items-center justify-center gap-2 text-lg"
                 onClick={() => setIsOpen(false)}
               >
-                <Sparkles className="w-4 h-4" />
+                <Sparkles className="w-5 h-5" />
                 {t('nav.getQuote')}
               </Link>
             </div>
