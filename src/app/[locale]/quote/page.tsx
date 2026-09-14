@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { ArrowLeft, Send, Mail, MessageCircle } from "lucide-react";
+import { WHATSAPP_LINK } from "@/config/contact";
 
 export default function QuotePage() {
   const locale = useLocale();
@@ -25,7 +26,25 @@ export default function QuotePage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Quote requested:", formData);
+    
+    // Create WhatsApp message
+    const serviceNames: Record<string, string> = {
+      sourcing: locale === 'ar' ? 'توريد المنتجات' : 'Product Sourcing',
+      inspection: locale === 'ar' ? 'فحص الجودة' : 'Quality Check',
+      shipping: locale === 'ar' ? 'شحن فقط' : 'Shipping Only',
+      complete: locale === 'ar' ? 'خدمة كاملة' : 'Complete Service',
+    };
+    
+    const message = locale === 'ar'
+      ? `*طلب عرض سعر جديد من موقع دينورا*\n\n*الخدمة:* ${serviceNames[formData.service]}\n*طريقة التواصل:* ${formData.contactType === 'whatsapp' ? 'واتساب' : 'البريد الإلكتروني'}\n*معلومات التواصل:* ${formData.contact}\n*التفاصيل:* ${formData.details}`
+      : `*New quote request from Dinoora website*\n\n*Service:* ${serviceNames[formData.service]}\n*Contact Method:* ${formData.contactType === 'whatsapp' ? 'WhatsApp' : 'Email'}\n*Contact Info:* ${formData.contact}\n*Details:* ${formData.details}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `${WHATSAPP_LINK}?text=${encodedMessage}`;
+    
+    // Open WhatsApp with the message
+    window.open(whatsappUrl, '_blank');
+    
     setSubmitted(true);
   };
 

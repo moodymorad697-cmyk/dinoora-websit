@@ -6,6 +6,7 @@ import { getMessages } from 'next-intl/server';
 import "../globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { generateSEOMetadata } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const cairo = Cairo({ subsets: ["arabic"], variable: '--font-cairo' });
@@ -16,11 +17,23 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-  title: "دينورا - حلول التجارة العالمية | Dinoora Global Trade",
-  description: "دينورا تقدم حلول تجارة متكاملة بين الصين والشرق الأوسط: توريد، فحص جودة، تخزين، شحن، تخليص جمركي، وخدمات لوجستية شاملة.",
-  keywords: ["دينورا", "Dinoora", "تجارة الصين", "استيراد", "تصدير", "شحن", "توريد", "تخليص جمركي", "السعودية", "الإمارات", "China trade"],
-};
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  
+  // Default metadata for homepage (path is empty)
+  const seoMetadata = generateSEOMetadata('', locale);
+  
+  return {
+    title: "دينورا - حلول التجارة العالمية | Dinoora Global Trade",
+    description: "دينورا تقدم حلول تجارة متكاملة بين الصين والشرق الأوسط: توريد، فحص جودة، تخزين، شحن، تخليص جمركي، وخدمات لوجستية شاملة.",
+    keywords: ["دينورا", "Dinoora", "تجارة الصين", "استيراد", "تصدير", "شحن", "توريد", "تخليص جمركي", "السعودية", "الإمارات", "China trade"],
+    ...seoMetadata,
+  };
+}
 
 export default async function LocaleLayout({
   children,

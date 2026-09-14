@@ -8,6 +8,7 @@ import {
   MapPin, Hash, Calendar, Clock, Shield, FileCheck,
   AlertCircle, Sparkles, ChevronRight, X, Check
 } from "lucide-react";
+import { WHATSAPP_LINK } from "@/config/contact";
 
 // Wizard Steps
 const steps = [
@@ -94,6 +95,40 @@ export default function SmartQueryWizard() {
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
+    
+    // Create WhatsApp message
+    const industryName = industries.find(i => i.id === formData.industry)?.name || formData.industry;
+    const shippingMethodName = shippingMethods.find(s => s.id === formData.shippingMethod)?.name || formData.shippingMethod;
+    const paymentTermName = paymentTerms.find(p => p.id === formData.paymentTerms)?.name || formData.paymentTerms;
+    
+    const message = `*طلب عرض سعر ذكي جديد من موقع دينورا*\n\n` +
+      `*معلومات الشركة*\n` +
+      `الشركة: ${formData.companyName}\n` +
+      `الجهة: ${formData.contactName}\n` +
+      `البريد: ${formData.email}\n` +
+      `الهاتف: ${formData.phone}\n` +
+      `الدولة: ${formData.country}\n` +
+      `الموقع: ${formData.website || 'غير محدد'}\n\n` +
+      `*تفاصيل المنتج*\n` +
+      `الصناعة: ${industryName}\n` +
+      `المنتج: ${formData.productName}\n` +
+      `الكمية: ${formData.quantity}\n` +
+      `السعر المستهدف: ${formData.targetPrice || 'غير محدد'}\n` +
+      `الوصف: ${formData.description}\n` +
+      `عينات: ${formData.samples === 'yes' ? 'نعم' : 'لا'}\n\n` +
+      `*الشحن والدفع*\n` +
+      `الوجهة: ${formData.destination}\n` +
+      `طريقة الشحن: ${shippingMethodName}\n` +
+      `شروط الدفع: ${paymentTermName}\n` +
+      `الجدول الزمني: ${formData.timeline || 'غير محدد'}\n` +
+      `ملاحظات: ${formData.additionalNotes || 'لا توجد'}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `${WHATSAPP_LINK}?text=${encodedMessage}`;
+    
+    // Open WhatsApp with the message
+    window.open(whatsappUrl, '_blank');
+    
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsComplete(true);

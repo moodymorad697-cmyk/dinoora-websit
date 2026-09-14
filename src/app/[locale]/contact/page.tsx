@@ -50,8 +50,27 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert(locale === 'ar' ? "شكراً لتواصلك معنا! سنرد عليك خلال 24 ساعة." : "Thank you for contacting us! We will respond within 24 hours.");
+    
+    // Create WhatsApp message
+    const message = locale === 'ar' 
+      ? `*رسالة جديدة من موقع دينورا*\n\n*الاسم:* ${formData.name}\n*البريد:* ${formData.email}\n*الهاتف:* ${formData.phone}\n*الشركة:* ${formData.company || 'غير محدد'}\n*الموضوع:* ${formData.subject}\n*الرسالة:* ${formData.message}`
+      : `*New message from Dinoora website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Company:* ${formData.company || 'Not specified'}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `${WHATSAPP_LINK}?text=${encodedMessage}`;
+    
+    // Open WhatsApp with the message
+    window.open(whatsappUrl, '_blank');
+    
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      subject: "",
+      message: "",
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
