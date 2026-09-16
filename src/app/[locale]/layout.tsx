@@ -6,6 +6,7 @@ import { getMessages } from 'next-intl/server';
 import "../globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 import { generateSEOMetadata } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
@@ -27,10 +28,21 @@ export async function generateMetadata({
   // Default metadata for homepage (path is empty)
   const seoMetadata = generateSEOMetadata('', locale);
   
+  // Arabic SEO metadata for homepage
+  if (locale === 'ar') {
+    return {
+      title: "أفضل شركة استيراد من الصين للسعودية | دينورا",
+      description: "دينورا هي أفضل شركة استيراد من الصين للسعودية بأسعار منافسة. نقدم خدمات توريد وشحن من الصين إلى دول الخليج، فحص جودة، تخزين، تخليص جمركي، وحلول لوجستية متكاملة.",
+      keywords: ["أفضل شركة استيراد من الصين للسعودية", "شركة توريد وشحن من الصين", "استيراد من الصين", "شحن بضائع من الصين", "خدمات تخليص جمركي", "فحص جودة البضائع", "تخزين بضائع في الصين", "شركة لوجستيات صينية", "استيراد للسعودية", "تجارة مع الصين"],
+      ...seoMetadata,
+    };
+  }
+  
+  // English SEO metadata for homepage
   return {
-    title: "دينورا - حلول التجارة العالمية | Dinoora Global Trade",
-    description: "دينورا تقدم حلول تجارة متكاملة بين الصين والشرق الأوسط: توريد، فحص جودة، تخزين، شحن، تخليص جمركي، وخدمات لوجستية شاملة.",
-    keywords: ["دينورا", "Dinoora", "تجارة الصين", "استيراد", "تصدير", "شحن", "توريد", "تخليص جمركي", "السعودية", "الإمارات", "China trade"],
+    title: "Best Import Company from China to Saudi Arabia | Dinoora",
+    description: "Dinoora is the best import company from China to Saudi Arabia with competitive prices. We offer sourcing and shipping services from China to Gulf countries, quality inspection, warehousing, customs clearance, and integrated logistics solutions.",
+    keywords: ["best import company from China to Saudi Arabia", "sourcing and shipping from China", "import from China", "shipping goods from China", "customs clearance services", "goods quality inspection", "warehousing in China", "Chinese logistics company", "import to Saudi Arabia", "trade with China"],
     ...seoMetadata,
   };
 }
@@ -50,6 +62,7 @@ export default async function LocaleLayout({
 
   return (
     <div dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${inter.variable} ${cairo.variable} ${locale === 'ar' ? 'font-[family-name:var(--font-cairo)]' : 'font-[family-name:var(--font-inter)]'}`}>
+      <StructuredData locale={locale} />
       <NextIntlClientProvider messages={messages}>
         <Navigation />
         {children}
