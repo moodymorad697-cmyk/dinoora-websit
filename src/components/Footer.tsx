@@ -43,8 +43,8 @@ export default function Footer() {
       </div>
 
       {/* Main Grid - Compact */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
 
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
@@ -115,25 +115,6 @@ export default function Footer() {
                 <li key={i}>
                   <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
                     <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-amber-400" />
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* الدول التي نخدمها */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-4">{locale === 'ar' ? 'الدول التي نخدمها' : 'Countries We Serve'}</h4>
-            <ul className="space-y-2.5">
-              {[
-                { label: locale === 'ar' ? 'العراق' : 'Iraq', href: "/countries/iraq" },
-                { label: locale === 'ar' ? 'اليمن' : 'Yemen', href: "/countries/yemen" },
-                { label: locale === 'ar' ? 'السودان' : 'Sudan', href: "/countries/sudan" },
-              ].map((item, i) => (
-                <li key={i}>
-                  <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
-                    <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-emerald-400" />
                     {item.label}
                   </Link>
                 </li>

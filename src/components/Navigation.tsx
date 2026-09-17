@@ -97,6 +97,8 @@ export default function Navigation() {
             <div ref={servicesRef} className="relative">
               <button
                 onClick={() => setShowServices(!showServices)}
+                aria-label={locale === 'ar' ? 'عرض قائمة الخدمات' : 'Show services menu'}
+                aria-expanded={showServices}
                 className="flex items-center gap-1.5 px-6 py-2.5 rounded-lg font-semibold text-[17px] text-white hover:text-cyan-300 transition-all duration-300 tracking-wide"
               >
                 {t('nav.services')}
@@ -154,12 +156,15 @@ export default function Navigation() {
           <div className="lg:hidden flex items-center gap-2">
             <Link
               href={`/${targetLocale}${pathname.replace(/^\/(ar|en|zh)/, '')}`}
+              aria-label={locale === 'ar' ? 'تغيير اللغة إلى الإنجليزية' : 'Switch language to Arabic'}
               className="flex items-center justify-center w-11 h-11 rounded-xl hover:bg-white/10 transition-colors text-slate-400 hover:text-indigo-400"
             >
               <Globe className="w-5 h-5" />
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? (locale === 'ar' ? 'إغلاق القائمة' : 'Close menu') : (locale === 'ar' ? 'فتح القائمة' : 'Open menu')}
+              aria-expanded={isOpen}
               className="relative w-11 h-11 flex items-center justify-center rounded-xl hover:bg-white/10 transition-colors"
             >
               <div className="relative w-5 h-4">

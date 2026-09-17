@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useLocale } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Check, ClipboardCheck, Container, FileCheck2, PackageSearch, ShieldCheck, Warehouse, Truck, BarChart3, Clock, Globe, Users, Search, Mail, Phone, MessageCircle, Factory, Ship, Plane, Zap, Award, TrendingUp } from "lucide-react";
@@ -63,7 +64,17 @@ export default function HomePage() {
 
   return <main className="home-page site-palette bg-slate-950 text-white">
     <section className="relative isolate min-h-[680px] overflow-hidden bg-[#102a43] text-white">
-      <motion.div className="absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1200&q=75')", y: heroY }} />
+      <motion.div className="absolute inset-0 -z-10" style={{ y: heroY }}>
+        <Image
+          src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80"
+          alt="Container ship at port - international shipping and logistics"
+          fill
+          priority
+          sizes="100vw"
+          quality={80}
+          className="object-cover"
+        />
+      </motion.div>
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,22,38,0.96),rgba(9,39,62,0.78)_52%,rgba(9,39,62,0.5))]" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_50%,rgba(34,211,238,0.1),transparent_50%)]" />
       <div className="mx-auto flex min-h-[680px] max-w-7xl items-end px-5 pb-20 pt-40 sm:px-8 lg:px-12">

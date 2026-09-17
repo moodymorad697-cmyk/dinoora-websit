@@ -14,6 +14,8 @@ export default function ContactFloatingBar() {
       {/* Mobile Toggle Button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
+        aria-label={isExpanded ? 'إغلاق خريطة الموقع' : 'فتح خريطة الموقع'}
+        aria-expanded={isExpanded}
         className="fixed bottom-6 left-6 z-50 lg:hidden w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full shadow-2xl flex items-center justify-center text-white"
       >
         <MapPin className="w-6 h-6" />
@@ -25,6 +27,7 @@ export default function ContactFloatingBar() {
           href="https://maps.google.com/?q=Yiwu+City+Zhejiang+Province+China"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="فتح خريطة موقع دينورا في ألبايا، الصين"
           className="group relative flex items-center justify-end"
         >
           <div className="absolute right-full mr-3 px-3 py-1.5 bg-slate-900/95 backdrop-blur-sm text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap border border-white/10 shadow-xl translate-x-2 group-hover:translate-x-0">
@@ -42,6 +45,7 @@ export default function ContactFloatingBar() {
         <div className="fixed inset-0 bg-slate-950/95 z-50 lg:hidden flex flex-col items-center justify-center p-6">
           <button
             onClick={() => setIsExpanded(false)}
+            aria-label="إغلاق"
             className="absolute top-6 right-6 w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-white"
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,6 +60,7 @@ export default function ContactFloatingBar() {
               href="https://maps.google.com/?q=Yiwu+City+Zhejiang+Province+China"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="فتح خريطة موقع دينورا في ألبايا، الصين"
               className="flex flex-col items-center gap-3 p-6 bg-slate-900 rounded-2xl border border-slate-800 hover:border-slate-600 transition-all"
             >
               <div className="w-14 h-14 bg-purple-500 rounded-full flex items-center justify-center text-white">
