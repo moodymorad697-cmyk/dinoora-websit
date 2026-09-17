@@ -54,6 +54,7 @@ export default function Navigation() {
     { label: t('nav.home'), href: '/' },
     { label: t('nav.about'), href: '/about' },
     { label: t('nav.track'), href: '/track' },
+    { label: locale === 'ar' ? 'المدونة' : 'Blog', href: '/blog' },
     { label: t('nav.contact'), href: '/contact' },
   ];
 

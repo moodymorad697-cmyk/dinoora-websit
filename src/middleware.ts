@@ -3,15 +3,17 @@ import { routing } from './i18n/routing';
 import { NextRequest } from 'next/server';
 
 export default function middleware(request: NextRequest) {
-  const response = createMiddleware(routing)(request);
-  
-  // Force Arabic as default when no locale is specified
+  const hostname = request.nextUrl.hostname;
   const pathname = request.nextUrl.pathname;
-  if (!pathname.startsWith('/ar') && !pathname.startsWith('/en') && !pathname.startsWith('/zh')) {
+  
+  // Force www redirect (308 permanent redirect)
+  if (hostname === 'dinooratrade.com') {
     const url = request.nextUrl.clone();
-    url.pathname = `/ar${pathname}`;
-    return Response.redirect(url);
+    url.hostname = 'www.dinooratrade.com';
+    return Response.redirect(url, 308);
   }
+  
+  const response = createMiddleware(routing)(request);
   
   return response;
 }

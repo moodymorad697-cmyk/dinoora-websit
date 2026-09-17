@@ -10,20 +10,21 @@ const locales = ['en', 'ar', 'zh'];
  * @returns Metadata alternates object with hreflang and canonical tags
  */
 export function generateSEOMetadata(pathname: string, locale: string): Pick<Metadata, 'alternates'> {
+  const languages: any = {
+    'en': `${baseUrl}/en${pathname}`,
+    'ar': `${baseUrl}/ar${pathname}`,
+    'zh': `${baseUrl}/zh${pathname}`,
+  };
+  
+  // Only add x-default for homepage
+  if (pathname === '') {
+    languages['x-default'] = `${baseUrl}/en`;
+  }
+  
   const alternates = {
     canonical: `${baseUrl}/${locale}${pathname}`,
-    languages: {
-      'en': `${baseUrl}/en${pathname}`,
-      'ar': `${baseUrl}/ar${pathname}`,
-      'zh': `${baseUrl}/zh${pathname}`,
-      'x-default': pathname === '' ? `${baseUrl}/en` : undefined,
-    },
+    languages,
   };
-
-  // Remove undefined x-default for non-homepage pages
-  if (pathname !== '') {
-    delete (alternates.languages as any)['x-default'];
-  }
 
   return { alternates };
 }
@@ -64,6 +65,18 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       title: "Integrated Logistics Company Between China and Middle East | Dinoora",
       description: "Dinoora is an integrated logistics company between China and the Middle East. We offer comprehensive import solutions from China to Saudi Arabia and Gulf countries with sourcing, quality inspection, shipping, and customs clearance.",
       keywords: ["integrated logistics company", "import from China to Saudi Arabia", "Chinese import company", "logistics services", "Chinese trading company", "import goods from China", "international shipping company"],
+    },
+  },
+  '/blog': {
+    ar: {
+      title: "مركز المعرفة - دليل الاستيراد من الصين | دينورا",
+      description: "مركز المعرفة لدينورا يوفر أدلة عملية شاملة عن الاستيراد من الصين، التوريد، فحص الجودة، الشحن، والتخليص الجمركي للمستوردين العرب.",
+      keywords: ["دليل الاستيراد من الصين", "كيفية الاستيراد من الصين", "نصائح الاستيراد from China", "استيراد البضائع", "التجارة مع الصين", "شركة استيراد صينية"],
+    },
+    en: {
+      title: "Knowledge Center - Import from China Guide | Dinoora",
+      description: "Dinoora Knowledge Center provides comprehensive practical guides on importing from China, sourcing, quality inspection, shipping, and customs clearance for Arab importers.",
+      keywords: ["import from China guide", "how to import from China", "import tips from China", "importing goods", "trading with China", "Chinese import company"],
     },
   },
   '/services/sourcing': {

@@ -135,19 +135,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   pages.forEach(page => {
     locales.forEach(locale => {
+      const alternates: any = {
+        languages: {
+          en: `${baseUrl}/en${page.path}`,
+          ar: `${baseUrl}/ar${page.path}`,
+          zh: `${baseUrl}/zh${page.path}`,
+        },
+      }
+      
+      // Only add x-default for homepage
+      if (page.path === '') {
+        alternates.languages['x-default'] = `${baseUrl}/en`
+      }
+      
       sitemap.push({
         url: `${baseUrl}/${locale}${page.path}`,
         lastModified: page.lastmod,
         changeFrequency: page.changefreq,
         priority: page.priority,
-        alternates: {
-          languages: {
-            en: `${baseUrl}/en${page.path}`,
-            ar: `${baseUrl}/ar${page.path}`,
-            zh: `${baseUrl}/zh${page.path}`,
-            'x-default': page.path === '' ? `${baseUrl}/en` : undefined,
-          },
-        },
+        alternates,
       })
     })
   })
