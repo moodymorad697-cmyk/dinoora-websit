@@ -1,7 +1,5 @@
 import { MetadataRoute } from 'next'
-
-const baseUrl = 'https://www.dinooratrade.com'
-const locales = ['en', 'ar', 'zh']
+import { BASE_URL, LOCALES, getHreflangUrls } from '@/lib/seo-config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString().split('T')[0]
@@ -134,26 +132,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = []
   
   pages.forEach(page => {
-    locales.forEach(locale => {
-      const alternates: any = {
-        languages: {
-          en: `${baseUrl}/en${page.path}`,
-          ar: `${baseUrl}/ar${page.path}`,
-          zh: `${baseUrl}/zh${page.path}`,
-        },
-      }
-      
-      // Only add x-default for homepage
-      if (page.path === '') {
-        alternates.languages['x-default'] = `${baseUrl}/en`
-      }
+    LOCALES.forEach(locale => {
+      const hreflangUrls = getHreflangUrls(page.path)
       
       sitemap.push({
-        url: `${baseUrl}/${locale}${page.path}`,
+        url: `${BASE_URL}/${locale}${page.path}`,
         lastModified: page.lastmod,
         changeFrequency: page.changefreq,
         priority: page.priority,
-        alternates,
+        alternates: {
+          languages: hreflangUrls,
+        },
       })
     })
   })

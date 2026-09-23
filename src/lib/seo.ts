@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-
-const baseUrl = "https://www.dinooratrade.com";
-const locales = ['en', 'ar', 'zh'];
+import { BASE_URL, LOCALES, getHreflangUrls, getCanonicalUrl, type Locale } from "./seo-config";
 
 /**
  * Generate hreflang and canonical tags for multilingual SEO
@@ -10,20 +8,12 @@ const locales = ['en', 'ar', 'zh'];
  * @returns Metadata alternates object with hreflang and canonical tags
  */
 export function generateSEOMetadata(pathname: string, locale: string): Pick<Metadata, 'alternates'> {
-  const languages: any = {
-    'en': `${baseUrl}/en${pathname}`,
-    'ar': `${baseUrl}/ar${pathname}`,
-    'zh': `${baseUrl}/zh${pathname}`,
-  };
-  
-  // Only add x-default for homepage
-  if (pathname === '') {
-    languages['x-default'] = `${baseUrl}/en`;
-  }
+  const hreflangUrls = getHreflangUrls(pathname);
+  const canonicalUrl = getCanonicalUrl(pathname, locale as Locale);
   
   const alternates = {
-    canonical: `${baseUrl}/${locale}${pathname}`,
-    languages,
+    canonical: canonicalUrl,
+    languages: hreflangUrls,
   };
 
   return { alternates };
