@@ -126,6 +126,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changefreq: 'weekly' as const,
       lastmod: currentDate
     },
+    {
+      path: '/products/medical-supplies',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/products/textiles-fabrics',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/services/cold-chain-shipping',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/services/vip-shipping',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/wholesale/beginners',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/wholesale/bulk-orders',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
   ]
 
   // Generate sitemap entries for all locales

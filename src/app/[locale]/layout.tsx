@@ -31,18 +31,18 @@ export async function generateMetadata({
   // Arabic SEO metadata for homepage
   if (locale === 'ar') {
     return {
-      title: "أفضل شركة استيراد من الصين للسعودية | دينورا",
-      description: "دينورا هي أفضل شركة استيراد من الصين للسعودية بأسعار منافسة. نقدم خدمات توريد وشحن من الصين إلى دول الخليج، فحص جودة، تخزين، تخليص جمركي، وحلول لوجستية متكاملة.",
-      keywords: ["أفضل شركة استيراد من الصين للسعودية", "شركة توريد وشحن من الصين", "استيراد من الصين", "شحن بضائع من الصين", "خدمات تخليص جمركي", "فحص جودة البضائع", "تخزين بضائع في الصين", "شركة لوجستيات صينية", "استيراد للسعودية", "تجارة مع الصين"],
+      title: "أفضل شركة استيراد من الصين للسعودية | دينورا للتجارة الدولية",
+      description: "دينورا للتجارة الدولية هي شركة عربية متخصصة في الاستيراد والتجارة الدولية من الصين إلى الدول العربية. نقدم خدمات التوريد، فحص الجودة، الشحن، والتخليص الجمركي بأسعار منافسة.",
+      keywords: ["أفضل شركة استيراد من الصين للسعودية", "شركة توريد وشحن من الصين", "استيراد من الصين", "شحن بضائع من الصين", "خدمات تخليص جمركي", "فحص جودة البضائع", "تخزين بضائع في الصين", "شركة لوجستيات صينية", "استيراد للسعودية", "تجارة مع الصين", "دينورا للتجارة الدولية"],
       ...seoMetadata,
     };
   }
   
   // English SEO metadata for homepage
   return {
-    title: "Best Import Company from China to Saudi Arabia | Dinoora",
-    description: "Dinoora is the best import company from China to Saudi Arabia with competitive prices. We offer sourcing and shipping services from China to Gulf countries, quality inspection, warehousing, customs clearance, and integrated logistics solutions.",
-    keywords: ["best import company from China to Saudi Arabia", "sourcing and shipping from China", "import from China", "shipping goods from China", "customs clearance services", "goods quality inspection", "warehousing in China", "Chinese logistics company", "import to Saudi Arabia", "trade with China"],
+    title: "Best Import Company from China to Saudi Arabia | Dinoora International Trade",
+    description: "Dinoora International Trade is an Arab company specializing in international trade and import from China to Arab countries. We offer sourcing, quality inspection, shipping, and customs clearance services with competitive prices.",
+    keywords: ["best import company from China to Saudi Arabia", "sourcing and shipping from China", "import from China", "shipping goods from China", "customs clearance services", "goods quality inspection", "warehousing in China", "Chinese logistics company", "import to Saudi Arabia", "trade with China", "Dinoora International Trade", "دينورا للتجارة الدولية"],
     ...seoMetadata,
   };
 }

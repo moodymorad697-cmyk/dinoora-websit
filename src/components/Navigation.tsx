@@ -48,6 +48,8 @@ export default function Navigation() {
     { icon: Ship, label: serviceText('shipping', 'title'), desc: serviceText('shipping', 'description'), href: '/services/shipping' },
     { icon: FileCheck, label: serviceText('customs', 'title'), desc: serviceText('customs', 'description'), href: '/services/customs' },
     { icon: Package, label: serviceText('logistics', 'title'), desc: serviceText('logistics', 'description'), href: '/services/logistics' },
+    { icon: Ship, label: locale === 'ar' ? 'الشحن المبرد' : 'Cold Chain', desc: locale === 'ar' ? 'شحن مبرد للمنتجات الحساسة' : 'Cold chain for sensitive products', href: '/services/cold-chain-shipping' },
+    { icon: Sparkles, label: locale === 'ar' ? 'الشحن VIP' : 'VIP Shipping', desc: locale === 'ar' ? 'خدمة شحن مميزة وسريعة' : 'Premium express shipping', href: '/services/vip-shipping' },
   ];
 
   const navItems = [

@@ -89,6 +89,8 @@ export default function Footer() {
                 { label: serviceLabel('shipping', 'Shipping'), href: "/services/shipping" },
                 { label: locale === 'zh' ? t('services.customs.title') : t('services.customs', { defaultValue: 'Customs' }), href: "/services/customs" },
                 { label: locale === 'zh' ? t('services.logistics.title') : t('services.logistics', { defaultValue: 'Logistics' }), href: "/services/logistics" },
+                { label: locale === 'ar' ? 'الشحن المبرد' : 'Cold Chain', href: "/services/cold-chain-shipping" },
+                { label: locale === 'ar' ? 'الشحن VIP' : 'VIP Shipping', href: "/services/vip-shipping" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
@@ -107,6 +109,8 @@ export default function Footer() {
               {[
                 { label: t('footer.home', { defaultValue: locale === 'zh' ? '首页' : 'Home' }), href: "/" },
                 { label: t('footer.about', { defaultValue: locale === 'zh' ? '关于我们' : 'About' }), href: "/about" },
+                { label: locale === 'ar' ? 'المنتجات' : 'Products', href: "/products/medical-supplies" },
+                { label: locale === 'ar' ? 'الجملة' : 'Wholesale', href: "/wholesale/beginners" },
                 { label: t('nav.track'), href: "/track" },
                 { label: t('nav.contact'), href: "/contact" },
                 { label: t('footer.privacy'), href: "/privacy" },

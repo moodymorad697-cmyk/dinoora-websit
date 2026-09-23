@@ -1,14 +1,14 @@
 export default function StructuredData({ locale }: { locale: string }) {
-  const schema = {
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Dinoora",
-    "alternateName": "دينورا للتجارة الدولية",
+    "name": "دينورا للتجارة الدولية",
+    "alternateName": ["Dinoora", "Dinoora International Trade", "دينورا"],
     "url": "https://www.dinooratrade.com",
     "logo": "https://www.dinooratrade.com/logo-dinoora.png",
     "description": locale === 'ar' 
-      ? "دينورا هي أفضل شركة استيراد من الصين للسعودية بأسعار منافسة. نقدم خدمات توريد وشحن من الصين إلى دول الخليج، فحص جودة، تخزين، تخليص جمركي، وحلول لوجستية متكاملة."
-      : "Dinoora is the best import company from China to Saudi Arabia with competitive prices. We offer sourcing and shipping services from China to Gulf countries, quality inspection, warehousing, customs clearance, and integrated logistics solutions.",
+      ? "دينورا هي شركة عربية متخصصة في الاستيراد والتجارة الدولية من الصين إلى الدول العربية، تقدم خدمات التوريد، فحص الجودة، الشحن، والتخليص الجمركي"
+      : "Dinoora is an Arab company specializing in international trade and import from China to Arab countries, offering sourcing, quality inspection, shipping, and customs clearance services",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Room 201, 2nd Floor, Building 2, No. 37, Daoge Tang Village, Jiangdong Street",
@@ -50,6 +50,18 @@ export default function StructuredData({ locale }: { locale: string }) {
       {
         "@type": "Country",
         "name": "Oman"
+      },
+      {
+        "@type": "Country",
+        "name": "Iraq"
+      },
+      {
+        "@type": "Country",
+        "name": "Sudan"
+      },
+      {
+        "@type": "Country",
+        "name": "Yemen"
       }
     ],
     "service": [
@@ -80,14 +92,52 @@ export default function StructuredData({ locale }: { locale: string }) {
         "description": locale === 'ar'
           ? "مسار شحن مناسب مع مستندات مرتبة وتنسيق حتى الوجهة"
           : "A suitable shipping route with organized documents through destination"
+      },
+      {
+        "@type": "Service",
+        "name": locale === 'ar' ? "الشحن المبرد" : "Cold Chain Shipping",
+        "description": locale === 'ar'
+          ? "شحن مبرد للمنتجات الحساسة للحرارة مع مراقبة درجة الحرارة"
+          : "Cold chain shipping for temperature-sensitive products with temperature monitoring"
+      },
+      {
+        "@type": "Service",
+        "name": locale === 'ar' ? "الشحن VIP" : "VIP Shipping",
+        "description": locale === 'ar'
+          ? "خدمة شحن مميزة بأولوية أعلى ومدير حساب مخصص"
+          : "Premium shipping service with higher priority and dedicated account manager"
       }
     ]
   };
 
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": locale === 'ar' ? "دينورا للتجارة الدولية" : "Dinoora International Trade",
+    "url": "https://www.dinooratrade.com",
+    "description": locale === 'ar'
+      ? "دينورا هي شركة عربية متخصصة في الاستيراد والتجارة الدولية من الصين إلى الدول العربية"
+      : "Dinoora is an Arab company specializing in international trade and import from China to Arab countries",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.dinooratrade.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
+    </>
   );
 }

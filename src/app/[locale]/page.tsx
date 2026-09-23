@@ -707,5 +707,179 @@ export default function HomePage() {
           </motion.div>
         </div>
       </motion.section>
+
+      {/* FAQ Section with Schema.org FAQPage */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
+      >
+        <div className="max-w-3xl mx-auto">
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400 mb-4">
+            Dinoora / {ar ? "الأسئلة الشائعة" : "FAQ"}
+          </p>
+          <h2 className="text-4xl font-black tracking-tight text-white mb-12">
+            {ar ? "الأسئلة الشائعة" : "Frequently Asked Questions"}
+          </h2>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: ar ? "كيف أعرف أن المصنع الصيني موثوق وليس نصباً؟" : "How do I know if a Chinese factory is reliable and not a scam?",
+                a: ar ? "نحن نتحقق من كل مورد قبل التعامل معه من خلال فحص سجله التجاري، تقييمات العملاء السابقين، وزيارته شخصياً عند الحاجة. يمكنك أيضاً طلب عينات قبل الطلب الكبير." : "We verify every supplier before working with them by checking their business license, previous customer reviews, and visiting them personally when needed. You can also request samples before placing a large order."
+              },
+              {
+                q: ar ? "ما أقل كمية يمكن استيرادها من الصين؟" : "What's the minimum quantity I can import from China?",
+                a: ar ? "الحد الأدنى يعتمد على المنتج والمورد. في دينورا، نساعدك في البدء بكميات صغيرة أو تجريبية لتجربة السوق قبل الاستثمار الكبير. تواصل معنا لمعرفة الحد الأدنى لمنتجك." : "The minimum quantity depends on the product and supplier. At Dinoora, we help you start with small or trial quantities to test the market before large investment. Contact us to know the minimum for your product."
+              },
+              {
+                q: ar ? "هل يمكنني البدء بالاستيراد من الصين برأس مال قليل؟" : "Can I start importing from China with little capital?",
+                a: ar ? "نعم، يمكنك البدء برأس مال محدود عن طريق استيراد كميات صغيرة أو تجريبية. نقدم استشارات مجانية لمساعدتك في اختيار المنتجات المناسبة لميزانيتك. اطلب عرض سعر الآن." : "Yes, you can start with limited capital by importing small or trial quantities. We offer free consultations to help you choose products suitable for your budget. Request a quote now."
+              },
+              {
+                q: ar ? "كم تستغرق الشحنة من الصين حتى تصل؟" : "How long does a shipment from China take to arrive?",
+                a: ar ? "الشحن الجوي يستغرق 3-7 أيام، بينما الشحن البحري يستغرق 20-45 يوم حسب الميناء المستهدف. نحن نقدم متابعة مستمرة وتحديثات واضحة في كل مرحلة." : "Air shipping takes 3-7 days, while sea shipping takes 20-45 days depending on the target port. We provide continuous follow-up and clear updates at every stage."
+              },
+              {
+                q: ar ? "ماذا أفعل إذا تأخرت شحنتي من الصين؟" : "What should I do if my shipment from China is delayed?",
+                a: ar ? "نحن نتابع الشحنات بشكل مستمر وإذا حدث تأخير، نتواصل مع شركة الشحن والمورد لحل المشكلة فوراً. فريقنا متاح 24/7 للإجابة على استفساراتك." : "We track shipments continuously and if a delay occurs, we contact the shipping company and supplier immediately to resolve the issue. Our team is available 24/7 to answer your inquiries."
+              },
+              {
+                q: ar ? "ما الفرق بين الشحن العادي وشحن VIP عندكم؟" : "What's the difference between regular shipping and VIP shipping?",
+                a: ar ? "الشحن VIP يتميز بمدير حساب مخصص، تحديثات لحظية، أولوية في التخليص الجمركي، ومعالجة أولوية في الموانئ. هذه الخدمة مثالية للشحنات العاجلة أو ذات القيمة العالية." : "VIP shipping features a dedicated account manager, real-time updates, priority in customs clearance, and priority processing at ports. This service is ideal for urgent or high-value shipments."
+              },
+              {
+                q: ar ? "هل تقدمون خدمة الشحن المبرد للمواد الحساسة؟" : "Do you offer cold chain shipping for sensitive materials?",
+                a: ar ? "نعم، نقدم خدمة الشحن المبرد (Cold Chain) للمنتجات الحساسة للحرارة مثل الأدوية والمواد الغذائية والمعدات الطبية مع مراقبة درجة الحرارة المستمرة." : "Yes, we offer cold chain shipping service for temperature-sensitive products such as pharmaceuticals, food products, and medical equipment with continuous temperature monitoring."
+              },
+              {
+                q: ar ? "كيف تضمنون جودة المنتجات قبل الشحن؟" : "How do you ensure product quality before shipping?",
+                a: ar ? "نقوم بفحص شامل للمنتجات قبل الشحن يشمل التحقق من المواصفات، الجودة، والكميات. نرسل صور وتقارير مفصلة للموافقة قبل الشحن." : "We conduct comprehensive inspection of products before shipping including verifying specifications, quality, and quantities. We send detailed photos and reports for approval before shipping."
+              },
+              {
+                q: ar ? "هل تقدمون خدمة التخليص الجمركي؟" : "Do you offer customs clearance service?",
+                a: ar ? "نعم، نقدم خدمة التخليص الجمركي الكاملة في جميع الدول المستهدفة. نتعامل مع جميع الوثائق والإجراءات الجمركية لضمان تسليم سلس." : "Yes, we offer full customs clearance service in all target countries. We handle all documents and customs procedures to ensure smooth delivery."
+              },
+              {
+                q: ar ? "كيف يمكنني طلب عرض سعر؟" : "How can I request a quote?",
+                a: ar ? "يمكنك طلب عرض سعر من خلال صفحة 'اطلب عرض سعر' على موقعنا أو التواصل معنا مباشرة. فريقنا سيرد عليك خلال 24 ساعة بتفاصيل الأسعار والخدمات." : "You can request a quote through the 'Request a Quote' page on our website or contact us directly. Our team will respond within 24 hours with price details and services."
+              }
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-white mb-3 flex items-start gap-3">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold text-sm">
+                      {index + 1}
+                    </span>
+                    {faq.q}
+                  </h3>
+                  <p className="text-slate-300 leading-relaxed pl-11">
+                    {faq.a}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Schema.org FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": ar ? "كيف أعرف أن المصنع الصيني موثوق وليس نصباً؟" : "How do I know if a Chinese factory is reliable and not a scam?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "نحن نتحقق من كل مورد قبل التعامل معه من خلال فحص سجله التجاري، تقييمات العملاء السابقين، وزيارته شخصياً عند الحاجة." : "We verify every supplier before working with them by checking their business license, previous customer reviews, and visiting them personally when needed."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": ar ? "ما أقل كمية يمكن استيرادها من الصين؟" : "What's the minimum quantity I can import from China?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "الحد الأدنى يعتمد على المنتج والمورد. في دينورا، نساعدك في البدء بكميات صغيرة أو تجريبية." : "The minimum quantity depends on the product and supplier. At Dinoora, we help you start with small or trial quantities."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": ar ? "هل يمكنني البدء بالاستيراد من الصين برأس مال قليل؟" : "Can I start importing from China with little capital?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "نعم، يمكنك البدء برأس مال محدود عن طريق استيراد كميات صغيرة أو تجريبية." : "Yes, you can start with limited capital by importing small or trial quantities."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": ar ? "كم تستغرق الشحنة من الصين حتى تصل؟" : "How long does a shipment from China take to arrive?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "الشحن الجوي يستغرق 3-7 أيام، بينما الشحن البحري يستغرق 20-45 يوم." : "Air shipping takes 3-7 days, while sea shipping takes 20-45 days."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": ar ? "ماذا أفعل إذا تأخرت شحنتي من الصين؟" : "What should I do if my shipment from China is delayed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "نحن نتابع الشحنات بشكل مستمر وإذا حدث تأخير، نتواصل مع شركة الشحن والمورد فوراً." : "We track shipments continuously and if a delay occurs, we contact the shipping company and supplier immediately."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": ar ? "ما الفرق بين الشحن العادي وشحن VIP عندكم؟" : "What's the difference between regular shipping and VIP shipping?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "الشحن VIP يتميز بمدير حساب مخصص، تحديثات لحظية، وأولوية في التخليص الجمركي." : "VIP shipping features a dedicated account manager, real-time updates, and priority in customs clearance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": ar ? "هل تقدمون خدمة الشحن المبرد للمواد الحساسة؟" : "Do you offer cold chain shipping for sensitive materials?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "نعم، نقدم خدمة الشحن المبرد للمنتجات الحساسة للحرارة مع مراقبة درجة الحرارة المستمرة." : "Yes, we offer cold chain shipping for temperature-sensitive products with continuous temperature monitoring."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": ar ? "كيف تضمنون جودة المنتجات قبل الشحن؟" : "How do you ensure product quality before shipping?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "نقوم بفحص شامل للمنتجات قبل الشحن يشمل التحقق من المواصفات والجودة." : "We conduct comprehensive inspection of products before shipping including verifying specifications and quality."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": ar ? "هل تقدمون خدمة التخليص الجمركي؟" : "Do you offer customs clearance service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "نعم، نقدم خدمة التخليص الجمركي الكاملة في جميع الدول المستهدفة." : "Yes, we offer full customs clearance service in all target countries."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": ar ? "كيف يمكنني طلب عرض سعر؟" : "How can I request a quote?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": ar ? "يمكنك طلب عرض سعر من خلال صفحة 'اطلب عرض سعر' على موقعنا أو التواصل معنا مباشرة." : "You can request a quote through the 'Request a Quote' page on our website or contact us directly."
+                }
+              }
+            ]
+          })
+        }}
+      />
   </main>;
 }
