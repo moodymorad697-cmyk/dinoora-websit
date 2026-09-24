@@ -13,6 +13,13 @@ export default function middleware(request: NextRequest) {
     return Response.redirect(url, 308);
   }
   
+  // Redirect root to Arabic locale
+  if (pathname === '/') {
+    const url = request.nextUrl.clone();
+    url.pathname = '/ar';
+    return Response.redirect(url, 307);
+  }
+  
   const response = createMiddleware(routing)(request);
   
   return response;

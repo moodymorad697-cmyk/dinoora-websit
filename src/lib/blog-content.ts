@@ -334,5 +334,520 @@ Our services include:
 
 Request a quote now and let us help you choose the best shipping method for your needs.`
     }
+  },
+  {
+    id: "quality-1",
+    type: "quality",
+    image: "/blog-images/IMG_8708.jpg",
+    ar: {
+      title: "ما الذي يجب أن يتضمنه فحص ما قبل الشحن؟",
+      description: "قائمة تفصيلية لفحص الجودة قبل الشحن تشمل المواصفات، الكمية، التغليف، الوثائق، والاختبارات العملية.",
+      content: `# ما الذي يجب أن يتضمنه فحص ما قبل الشحن؟
+
+فحص ما قبل الشحن هو خطوة حاسمة في عملية الاستيراد من الصين. في هذا الدليل، سنشرح بالتفصيل العناصر الأساسية التي يجب أن يتضمنها فحص الجودة قبل الشحن لضمان وصول منتجاتك بالمواصفات المطلوبة.
+
+## لماذا فحص ما قبل الشحن مهم؟
+
+فحص ما قبل الشحن يحمي استثمارك من:
+- استلام منتجات معيبة
+- خسارة المال بسبب الإرجاع
+- تأخير في التسليم
+- مشاكل في السوق المحلي
+
+## العناصر الأساسية لفحص ما قبل الشحن
+
+### 1. فحص المواصفات
+
+تحقق من:
+- الأبعاد الدقيقة للمنتج
+- المواد الخام المستخدمة
+- الألوان واللمسات النهائية
+- العلامات التجارية والشعارات
+- أي متطلبات خاصة بالتصميم
+
+### 2. فحص الكمية
+
+تأكد من:
+- عدد القطع المطلوبة
+- العبوات والصناديق
+- الوزن الإجمالي
+- الحجم الكلي
+
+### 3. فحص التغليف
+
+افحص:
+- جودة مواد التغليف
+- طريقة التغليف الصحيحة
+- وسائل الحماية الداخلية
+- العلامات والملصقات المطلوبة
+- متانة العبوات للشحن
+
+### 4. فحص الوثائق
+
+تأكد من وجود:
+- الفاتورة التجارية
+- قائمة التعبئة
+- شهادة المنشأ
+- شهادات الجودة المطلوبة
+- شهادات الاختبار
+
+### 5. الاختبارات العملية
+
+قم بإجراء:
+- اختبار الوظائف الأساسية
+- اختبار المتانة
+- اختبار السلامة
+- اختبار الأداء
+
+## أنواع فحوصات الجودة
+
+### فحص عشوائي
+- فحص نسبة مئوية من الشحنة
+- مناسب للمنتجات الموحدة
+- أقل تكلفة
+
+### فحص كامل
+- فحص كل قطعة في الشحنة
+- مناسب للمنتجات عالية القيمة
+- تكلفة أعلى
+
+### فحص أثناء الإنتاج
+- فحص أثناء التصنيع
+- يكتشف المشاكل مبكراً
+- يقلل من الهدر
+
+## لماذا دينورا؟
+
+في دينورا، نقدم خدمات فحص الجودة الشاملة قبل الشحن. فريقنا الخبير يفهم تماماً معايير الجودة المطلوبة للأسواق العربية.
+
+خدماتنا تشمل:
+- فحص المواصفات والكميات
+- فحص التغليف والوثائق
+- إجراء الاختبارات العملية
+- تقارير مفصلة مع صور
+
+اطلب عرض سعر الآن وضمن جودة منتجاتك قبل الشحن.`
+    },
+    en: {
+      title: "What Should a Pre-Shipment Inspection Cover?",
+      description: "A detailed checklist for pre-shipment quality inspection including specifications, quantity, packaging, documentation, and practical tests.",
+      content: `# What Should a Pre-Shipment Inspection Cover?
+
+Pre-shipment inspection is a critical step in the import process from China. In this guide, we'll explain in detail the essential elements that should be included in a pre-shipment quality inspection to ensure your products arrive with the required specifications.
+
+## Why Pre-Shipment Inspection Matters
+
+Pre-shipment inspection protects your investment from:
+- Receiving defective products
+- Financial loss due to returns
+- Delivery delays
+- Local market problems
+
+## Essential Elements of Pre-Shipment Inspection
+
+### 1. Specifications Check
+
+Verify:
+- Exact product dimensions
+- Raw materials used
+- Colors and finishes
+- Trademarks and logos
+- Any special design requirements
+
+### 2. Quantity Check
+
+Ensure:
+- Required number of pieces
+- Packages and cartons
+- Total weight
+- Total volume
+
+### 3. Packaging Inspection
+
+Inspect:
+- Packaging material quality
+- Correct packaging method
+- Internal protection measures
+- Required labels and stickers
+- Carton durability for shipping
+
+### 4. Documentation Check
+
+Ensure presence of:
+- Commercial invoice
+- Packing list
+- Certificate of origin
+- Required quality certificates
+- Test certificates
+
+### 5. Practical Tests
+
+Conduct:
+- Basic function tests
+- Durability tests
+- Safety tests
+- Performance tests
+
+## Types of Quality Inspections
+
+### Random Inspection
+- Inspect a percentage of the shipment
+- Suitable for uniform products
+- Lower cost
+
+### Full Inspection
+- Inspect every piece in the shipment
+- Suitable for high-value products
+- Higher cost
+
+### During Production Inspection
+- Inspect during manufacturing
+- Detects problems early
+- Reduces waste
+
+## Why Dinoora?
+
+At Dinoora, we provide comprehensive pre-shipment quality inspection services. Our expert team understands the quality standards required for Arab markets.
+
+Our services include:
+- Specifications and quantity inspection
+- Packaging and documentation inspection
+- Conducting practical tests
+- Detailed reports with photos
+
+Request a quote now and ensure your product quality before shipping.`
+    }
+  },
+  {
+    id: "customs-1",
+    type: "customs",
+    image: "/blog-images/IMG_8709.jpg",
+    ar: {
+      title: "المستندات التي تمنع التأخير في الجمارك",
+      description: "تعرف على المستندات الأساسية للتخليص الجمركي: الفاتورة التجارية، قائمة التعبئة، شهادة المنشأ، ورموز HS.",
+      content: `# المستندات التي تمنع التأخير في الجمارك
+
+التخليص الجمركي السلس يتطلب مستندات صحيحة ومكتملة. في هذا الدليل، سنشرح المستندات الأساسية التي يجب أن ت准备好 لتجنب التأخير في الجمارك عند الاستيراد من الصين.
+
+## المستندات الأساسية
+
+### 1. الفاتورة التجارية (Commercial Invoice)
+
+يجب أن تتضمن:
+- اسم وعنوان البائع والمشتري
+- وصف تفصيلي للبضائع
+- الكمية والوحدة والسعر
+- العملة المستخدمة
+- شروط الدفع (Incoterms)
+- توقيع البائع
+
+### 2. قائمة التعبئة (Packing List)
+
+يجب أن تتضمن:
+- عدد العبوات
+- وزن كل عبوة صافي وإجمالي
+- أبعاد كل عبوة
+- محتويات كل عبوة
+- العلامات والأرقام المرجعية
+
+### 3. شهادة المنشأ (Certificate of Origin)
+
+تثبت:
+- بلد تصنيع البضاعة
+- تؤهل للإعفاءات الجمركية
+- مطلوبة للعديد من المنتجات
+- يجب أن تكون موقعة ومصدقة
+
+### 4. بوليصة الشحن (Bill of Lading)
+
+تتضمن:
+- تفاصيل الناقل والسفينة
+- تفاصيل المرسل والمستلم
+- وصف البضائع
+- ميناء الشحن والوصول
+- تاريخ الشحن
+
+### 5. رموز HS (Harmonized System)
+
+أهمية رموز HS:
+- تحديد الرسوم الجمركية
+- تصنيف البضائع بدقة
+- مطلوبة في جميع الدول
+- اختيار الرمز الصحيح يوفر المال
+
+## نصائح لتجنب التأخير
+
+### 1. تحقق من المستندات مسبقاً
+- راجع جميع المستندات قبل الشحن
+- تأكد من صحة المعلومات
+- تحقق من التوافق بين المستندات
+
+### 2. استخدم محترفين
+- استعن بمخلص جمركي موثوق
+- تأكد من فهمه للمتطلبات المحلية
+- حافظ على التواصل المستمر
+
+### 3. خطط للوقت
+- احسب وقت التخليص مسبقاً
+- ضع وقتاً إضافياً للمفاجآت
+- تجنب الشحن في أوقات الذروة
+
+## لماذا دينورا؟
+
+في دينورا، نساعدك في إدارة جميع المستندات الجمركية المطلوبة. فريقنا الخبير يفهم تماماً متطلبات التخليص في الدول العربية.
+
+خدماتنا تشمل:
+- مراجعة المستندات قبل الشحن
+- التنسيق مع المخلصين الجمركيين
+- متابعة عملية التخليص
+- حل المشاكل الجمركية
+
+اطلب عرض سعر الآن ودعنا نساعدك في تجنب التأخير الجمركي.`
+    },
+    en: {
+      title: "The Documents That Prevent Customs Delays",
+      description: "Learn about essential customs clearance documents: commercial invoice, packing list, certificate of origin, and HS codes.",
+      content: `# The Documents That Prevent Customs Delays
+
+Smooth customs clearance requires correct and complete documentation. In this guide, we'll explain the essential documents you need to prepare to avoid customs delays when importing from China.
+
+## Essential Documents
+
+### 1. Commercial Invoice
+
+Must include:
+- Seller and buyer name and address
+- Detailed goods description
+- Quantity, unit, and price
+- Currency used
+- Payment terms (Incoterms)
+- Seller signature
+
+### 2. Packing List
+
+Must include:
+- Number of packages
+- Net and gross weight per package
+- Dimensions of each package
+- Contents of each package
+- Marks and reference numbers
+
+### 3. Certificate of Origin
+
+Proves:
+- Country of manufacture
+- Eligible for customs exemptions
+- Required for many products
+- Must be signed and certified
+
+### 4. Bill of Lading
+
+Includes:
+- Carrier and vessel details
+- Shipper and consignee details
+- Goods description
+- Port of loading and discharge
+- Shipping date
+
+### 5. HS Codes (Harmonized System)
+
+Importance of HS codes:
+- Determine customs duties
+- Classify goods accurately
+- Required in all countries
+- Choosing the correct code saves money
+
+## Tips to Avoid Delays
+
+### 1. Check Documents in Advance
+- Review all documents before shipping
+- Ensure information accuracy
+- Verify document consistency
+
+### 2. Use Professionals
+- Hire a reliable customs broker
+- Ensure they understand local requirements
+- Maintain regular communication
+
+### 3. Plan for Time
+- Calculate clearance time in advance
+- Add buffer time for surprises
+- Avoid shipping during peak times
+
+## Why Dinoora?
+
+At Dinoora, we help you manage all required customs documentation. Our expert team understands the clearance requirements in Arab countries.
+
+Our services include:
+- Document review before shipping
+- Coordination with customs brokers
+- Clearance process follow-up
+- Customs problem resolution
+
+Request a quote now and let us help you avoid customs delays.`
+    }
+  },
+  {
+    id: "warehousing-1",
+    type: "warehousing",
+    image: "/blog-images/IMG_8710.jpg",
+    ar: {
+      title: "متى يكون تجميع الموردين خياراً أفضل؟",
+      description: "تحليل تكلفة وفوائد تجميع الشحنات من موردين متعددين في الصين قبل الشحن إلى وجهتك.",
+      content: `# متى يكون تجميع الموردين خياراً أفضل؟
+
+تجميع الشحنات من موردين متعددين في الصين قبل الشحن إلى وجهتك يمكن أن يوفر لك الكثير من المال. في هذا الدليل، سنشرح متى يكون هذا الخيار مفيداً وكيفية تنفيذه بشكل صحيح.
+
+## ما هو تجميع الشحنات؟
+
+تجميع الشحنات يعني:
+- جمع شحنات من موردين متعددين
+- تخزينها في مستودع واحد
+- شحنها معاً كحاوية واحدة
+- تقليل تكاليف الشحن بشكل كبير
+
+## فوائد تجميع الشحنات
+
+### 1. توفير التكلفة
+- تقليل تكلفة الشحن بنسبة 30-50%
+- شحن حاوية كاملة بدلاً من شحنات صغيرة
+- تقليل رسوم الميناء
+
+### 2. تحسين الإدارة
+- شحنة واحدة بدلاً من شحنات متعددة
+- تتبع أسهل
+- تخليص جمركي أبسط
+
+### 3. تقليل المخاطر
+- حماية أفضل للبضائع
+- إدارة مخزون مركزية
+- تقليل احتمالية الفقدان
+
+## متى يكون التجميع مفيداً؟
+
+### عندما يكون لديك:
+- طلبات من 3 موردين أو أكثر
+- كميات صغيرة من كل مورد
+- نفس الوجهة النهائية
+- وقت كافٍ للتجميع
+
+### عندما يكون غير مفيد:
+- بضائع عاجلة جداً
+- بضائع حساسة للحرارة
+- موردين في مدن مختلفة جداً
+
+## كيفية تنفيذ التجميع
+
+### 1. التخطيط
+- حدد الموردين المشاركين
+- احسب الكميات الإجمالية
+- حدد جدول زمني للتجميع
+
+### 2. التنسيق
+- تواصل مع جميع الموردين
+- حدد مستودع التجميع
+- جهز المستندات المطلوبة
+
+### 3. الفحص
+- افحص كل شحنة عند الوصول
+- تأكد من المواصفات
+- أبلغ عن أي مشاكل فوراً
+
+### 4. الشحن
+- اختر شركة شحن موثوقة
+- احجز الحاوية المناسبة
+- تتبع الشحنة حتى الوصول
+
+## لماذا دينورا؟
+
+في دينورا، نقدم خدمات تجميع الشحنات الشاملة في الصين. فريقنا الخبير يدير عملية التجميع من البداية إلى النهاية.
+
+خدماتنا تشمل:
+- التنسيق مع الموردين
+- التخزين في مستودعاتنا
+- فحص الجودة قبل التجميع
+- الشحن والتخليص الجمركي
+
+اطلب عرض سعر الآن ووفر على تكاليف الشحن.`
+    },
+    en: {
+      title: "When Does Multi-Supplier Consolidation Make Sense?",
+      description: "Cost-benefit analysis of consolidating shipments from multiple suppliers in China before shipping to your destination.",
+      content: `# When Does Multi-Supplier Consolidation Make Sense?
+
+Consolidating shipments from multiple suppliers in China before shipping to your destination can save you significant money. In this guide, we'll explain when this option is beneficial and how to execute it correctly.
+
+## What is Shipment Consolidation?
+
+Shipment consolidation means:
+- Collecting shipments from multiple suppliers
+- Storing them in one warehouse
+- Shipping them together as one container
+- Significantly reducing shipping costs
+
+## Benefits of Shipment Consolidation
+
+### 1. Cost Savings
+- Reduce shipping costs by 30-50%
+- Ship full container instead of small shipments
+- Reduce port fees
+
+### 2. Improved Management
+- One shipment instead of multiple
+- Easier tracking
+- Simpler customs clearance
+
+### 3. Reduced Risk
+- Better cargo protection
+- Centralized inventory management
+- Lower chance of loss
+
+## When is Consolidation Beneficial?
+
+### When you have:
+- Orders from 3 or more suppliers
+- Small quantities from each supplier
+- Same final destination
+- Sufficient time for consolidation
+
+### When it's not beneficial:
+- Very urgent goods
+- Temperature-sensitive goods
+- Suppliers in very different cities
+
+## How to Execute Consolidation
+
+### 1. Planning
+- Identify participating suppliers
+- Calculate total quantities
+- Set consolidation timeline
+
+### 2. Coordination
+- Communicate with all suppliers
+- Designate consolidation warehouse
+- Prepare required documents
+
+### 3. Inspection
+- Inspect each shipment upon arrival
+- Verify specifications
+- Report any issues immediately
+
+### 4. Shipping
+- Choose reliable shipping company
+- Book appropriate container
+- Track shipment until arrival
+
+## Why Dinoora?
+
+At Dinoora, we provide comprehensive shipment consolidation services in China. Our expert team manages the consolidation process from start to finish.
+
+Our services include:
+- Supplier coordination
+- Storage in our warehouses
+- Pre-consolidation quality inspection
+- Shipping and customs clearance
+
+Request a quote now and save on shipping costs.`
+    }
   }
 ];

@@ -106,30 +106,12 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-green-400 mb-4">{locale === 'ar' ? 'الدول التي نخدمها' : 'Countries'}</h4>
             <ul className="space-y-2.5">
-              {[
-                { label: locale === 'ar' ? 'السعودية' : 'Saudi Arabia', href: "/countries/saudi" },
-                { label: locale === 'ar' ? 'الإمارات' : 'UAE', href: "/countries/uae" },
-                { label: locale === 'ar' ? 'الكويت' : 'Kuwait', href: "/countries/kuwait" },
-                { label: locale === 'ar' ? 'قطر' : 'Qatar', href: "/countries/qatar" },
-                { label: locale === 'ar' ? 'البحرين' : 'Bahrain', href: "/countries/bahrain" },
-                { label: locale === 'ar' ? 'عُمان' : 'Oman', href: "/countries/oman" },
-                { label: locale === 'ar' ? 'العراق' : 'Iraq', href: "/countries/iraq" },
-                { label: locale === 'ar' ? 'الأردن' : 'Jordan', href: "/countries/jordan" },
-                { label: locale === 'ar' ? 'المغرب' : 'Morocco', href: "/countries/morocco" },
-                { label: locale === 'ar' ? 'الجزائر' : 'Algeria', href: "/countries/algeria" },
-                { label: locale === 'ar' ? 'تونس' : 'Tunisia', href: "/countries/tunisia" },
-                { label: locale === 'ar' ? 'ليبيا' : 'Libya', href: "/countries/libya" },
-                { label: locale === 'ar' ? 'لبنان' : 'Lebanon', href: "/countries/lebanon" },
-                { label: locale === 'ar' ? 'السودان' : 'Sudan', href: "/countries/sudan" },
-                { label: locale === 'ar' ? 'اليمن' : 'Yemen', href: "/countries/yemen" },
-              ].map((item, i) => (
-                <li key={i}>
-                  <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
-                    <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-green-400" />
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href={`/${locale}/about#countries`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
+                  <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-green-400" />
+                  {locale === 'ar' ? 'عرض جميع الدول' : 'View All Countries'}
+                </Link>
+              </li>
             </ul>
           </div>
 

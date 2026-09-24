@@ -524,6 +524,65 @@ export default function AboutPage() {
       </div>
     </motion.section>
 
+    {/* Countries We Serve Section */}
+    <motion.section
+      id="countries"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className="relative bg-slate-900 px-5 py-24 sm:px-8"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-5xl font-black mb-6 text-white">
+            {ar ? "الدول التي نخدمها" : "Countries We Serve"}
+          </h2>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            {ar 
+              ? "نخدم الشركات في جميع أنحاء الدول العربية، مع فهم عميق لكل سوق محلي ومتطلباته الخاصة"
+              : "We serve businesses across Arab countries, with deep understanding of each local market and its specific requirements"}
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {[
+            { name: ar ? "السعودية" : "Saudi Arabia", href: "/countries/saudi" },
+            { name: ar ? "الإمارات" : "UAE", href: "/countries/uae" },
+            { name: ar ? "الكويت" : "Kuwait", href: "/countries/kuwait" },
+            { name: ar ? "قطر" : "Qatar", href: "/countries/qatar" },
+            { name: ar ? "البحرين" : "Bahrain", href: "/countries/bahrain" },
+            { name: ar ? "عُمان" : "Oman", href: "/countries/oman" },
+            { name: ar ? "العراق" : "Iraq", href: "/countries/iraq" },
+            { name: ar ? "الأردن" : "Jordan", href: "/countries/jordan" },
+            { name: ar ? "المغرب" : "Morocco", href: "/countries/morocco" },
+            { name: ar ? "الجزائر" : "Algeria", href: "/countries/algeria" },
+            { name: ar ? "تونس" : "Tunisia", href: "/countries/tunisia" },
+            { name: ar ? "ليبيا" : "Libya", href: "/countries/libya" },
+            { name: ar ? "لبنان" : "Lebanon", href: "/countries/lebanon" },
+            { name: ar ? "السودان" : "Sudan", href: "/countries/sudan" },
+            { name: ar ? "اليمن" : "Yemen", href: "/countries/yemen" },
+          ].map((country, index) => (
+            <motion.div
+              key={country.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
+              whileHover={{ y: -5 }}
+            >
+              <Link
+                href={`/${locale}${country.href}`}
+                className="block p-4 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-slate-700 rounded-xl hover:border-cyan-500/50 transition-all duration-300 text-center group"
+              >
+                <Globe className="h-6 w-6 text-cyan-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">
+                  {country.name}
+                </span>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </motion.section>
+
     {/* Final CTA Section */}
     <motion.section
       initial={{ opacity: 0, y: 30 }}
