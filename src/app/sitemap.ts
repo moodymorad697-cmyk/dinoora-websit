@@ -127,6 +127,72 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastmod: currentDate
     },
     {
+      path: '/countries/uae',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/kuwait',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/bahrain',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/oman',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/jordan',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/morocco',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/qatar',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/algeria',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/tunisia',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/libya',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/countries/lebanon',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
       path: '/products/medical-supplies',
       priority: 0.8,
       changefreq: 'weekly' as const,

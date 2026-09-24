@@ -44,7 +44,7 @@ export default function Footer() {
 
       {/* Main Grid - Compact */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
 
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
@@ -95,6 +95,37 @@ export default function Footer() {
                 <li key={i}>
                   <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
                     <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-indigo-400" />
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* الدول */}
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-green-400 mb-4">{locale === 'ar' ? 'الدول التي نخدمها' : 'Countries'}</h4>
+            <ul className="space-y-2.5">
+              {[
+                { label: locale === 'ar' ? 'السعودية' : 'Saudi Arabia', href: "/countries/saudi" },
+                { label: locale === 'ar' ? 'الإمارات' : 'UAE', href: "/countries/uae" },
+                { label: locale === 'ar' ? 'الكويت' : 'Kuwait', href: "/countries/kuwait" },
+                { label: locale === 'ar' ? 'قطر' : 'Qatar', href: "/countries/qatar" },
+                { label: locale === 'ar' ? 'البحرين' : 'Bahrain', href: "/countries/bahrain" },
+                { label: locale === 'ar' ? 'عُمان' : 'Oman', href: "/countries/oman" },
+                { label: locale === 'ar' ? 'العراق' : 'Iraq', href: "/countries/iraq" },
+                { label: locale === 'ar' ? 'الأردن' : 'Jordan', href: "/countries/jordan" },
+                { label: locale === 'ar' ? 'المغرب' : 'Morocco', href: "/countries/morocco" },
+                { label: locale === 'ar' ? 'الجزائر' : 'Algeria', href: "/countries/algeria" },
+                { label: locale === 'ar' ? 'تونس' : 'Tunisia', href: "/countries/tunisia" },
+                { label: locale === 'ar' ? 'ليبيا' : 'Libya', href: "/countries/libya" },
+                { label: locale === 'ar' ? 'لبنان' : 'Lebanon', href: "/countries/lebanon" },
+                { label: locale === 'ar' ? 'السودان' : 'Sudan', href: "/countries/sudan" },
+                { label: locale === 'ar' ? 'اليمن' : 'Yemen', href: "/countries/yemen" },
+              ].map((item, i) => (
+                <li key={i}>
+                  <Link href={`/${locale}${item.href}`} className="text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1.5 group">
+                    <ArrowLeft className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-green-400" />
                     {item.label}
                   </Link>
                 </li>
