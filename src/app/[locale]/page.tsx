@@ -145,8 +145,49 @@ export default function HomePage() {
     {/* Trust Statistics Section with Images */}
     <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
       <div className="grid md:grid-cols-4 gap-6">
+        {/* Countries Card - Modified */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0 }}
+          whileHover={{ y: -8 }}
+          className="relative border-2 border-green-500 bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <div className="relative h-24 overflow-hidden">
+            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=200&q=70')" }} />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent" />
+          </div>
+          <div className="relative p-6 -mt-8">
+            <div className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl mx-auto mb-4 border-2 border-white/20 bg-green-500/20 text-green-400">
+              <Globe className="h-7 w-7" />
+            </div>
+            <div className="text-lg font-black text-white mb-3 text-center">{ar ? "الدول التي نخدمها" : "Countries We Serve"}</div>
+            <div className="flex flex-wrap gap-1.5 justify-center">
+              {[
+                { flag: "🇸🇦", name: ar ? "السعودية" : "Saudi" },
+                { flag: "🇦🇪", name: ar ? "الإمارات" : "UAE" },
+                { flag: "🇰🇼", name: ar ? "الكويت" : "Kuwait" },
+                { flag: "🇶🇦", name: ar ? "قطر" : "Qatar" },
+                { flag: "🇧🇭", name: ar ? "البحرين" : "Bahrain" },
+              ].map((country) => (
+                <span key={country.name} className="inline-flex items-center gap-1 px-2 py-1 bg-slate-800/80 rounded-md text-xs font-medium text-slate-300 border border-slate-700/50">
+                  <span>{country.flag}</span>
+                  <span>{country.name}</span>
+                </span>
+              ))}
+              <Link 
+                href={`/${locale}/about#countries`}
+                className="inline-flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-md text-xs font-medium text-green-400 border border-green-500/30 hover:bg-green-500/30 transition-colors"
+              >
+                <span>{ar ? "والمزيد" : "& more"}</span>
+                <ArrowRight className={`h-3 w-3 ${ar ? 'rotate-180' : ''}`} />
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Other Stats Cards */}
         {[
-          { icon: Globe, value: "50+", label: ar ? "دولة مخدومة" : "Countries Served", borderColor: "border-green-500", iconBg: "bg-green-500/20", iconColor: "text-green-400", image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=200&q=70" },
           { icon: Users, value: "500+", label: ar ? "شراكة مصنع" : "Factory Partnerships", borderColor: "border-purple-500", iconBg: "bg-purple-500/20", iconColor: "text-purple-400", image: "https://images.unsplash.com/photo-1565514020176-8d4b1ec9e0f8?w=200&q=70" },
           { icon: Container, value: "10K+", label: ar ? "شحنة تم تسليمها" : "Shipments Delivered", borderColor: "border-blue-500", iconBg: "bg-blue-500/20", iconColor: "text-blue-400", image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=200&q=70" },
           { icon: Clock, value: "24/7", label: ar ? "دعم متاح" : "Support Available", borderColor: "border-amber-500", iconBg: "bg-amber-500/20", iconColor: "text-amber-400", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=200&q=70" },
@@ -155,7 +196,7 @@ export default function HomePage() {
             key={stat.label}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: (index + 1) * 0.1 }}
             whileHover={{ y: -8 }}
             className={`relative border-2 bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${stat.borderColor}`}
           >
