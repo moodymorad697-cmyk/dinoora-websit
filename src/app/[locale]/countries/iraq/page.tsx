@@ -12,38 +12,38 @@ export default function IraqPage() {
 
   const content = ar ? {
     title: "خدمات استيراد وشحن البضائع من الصين إلى العراق",
-    intro: "دينورا هي شركة عربية متخصصة في خدمات الاستيراد والشحن من الصين إلى العراق. نفهم تماماً تحديات السوق العراقي وخصوصيته، من متطلبات الترخيص المعقدة إلى الإجراءات الجمركية في ميناء أم قصر. بعكس شركات الشحن الصينية العامة التي تقدم محتوى مترجم آلياً لكل دول العالم بنفس القالب، نحن نقدم حلولاً مخصصة تفهم الواقع المحلي العراقي.\n\nنقدم شحن البضائع من الصين إلى العراق عبر ميناء أم قصر، وهو الميناء الرئيسي للعراق على الخليج العربي. خدماتنا تشمل الشحن البحري والجوي، التخليص الجمركي الكامل، التخزين المؤقت في الصين، التوريد من المصانع المباشرة، وفحص الجودة قبل الشحن. نتعامل مع جميع أنواع البضائع: الإلكترونيات، المنسوجات، المواد الخام، المواد الغذائية، والمعدات الصناعية.\n\nتتميز دينورا بفهم عميق للواقع العراقي. نحن ندرك أن العراق له مناطق إدارية متعددة ومتطلبات استيراد مختلفة، ونحن نتعامل مع هذه التعقيدات بمرونة وخبرة. فريقنا يتحدث العربية بطلاقة ويفهم الثقافة المحلية، مما يجعل التواصل سهلاً وفعالاً. نقدم دعماً كامل من المصنع في الصين حتى باب منزلك في العراق، مع متابعة مستمرة وتحديثات واضحة في كل مرحلة.",
+    intro: "دينورا هي شركة عربية متخصصة في خدمات الاستيراد والشحن من الصين إلى العراق. نفهم تحديات السوق العراقي وخصوصيته. بعكس شركات الشحن الصينية العامة التي تقدم محتوى مترجم آلياً لكل دول العالم بنفس القالب، نحن نقدم حلولاً مخصصة تفهم الواقع المحلي العراقي.\n\nنقدم خدماتنا من الصين إلى العراق عبر ميناء أم قصر. خدماتنا تشمل البحث عن الموردين، التفاوض مع الموردين، فحص الجودة قبل الشحن، التخزين في الصين، تجميع الشحنات، وتنسيق الشحن البحري والجوي. نتعامل مع جميع أنواع البضائع: الإلكترونيات، المنسوجات، المواد الخام، والمعدات الصناعية.\n\nتتميز دينورا بفهم للواقع العراقي. فريقنا يتحدث العربية بطلاقة ويفهم الثقافة المحلية، مما يجعل التواصل سهلاً وفعالاً. نقدم دعماً من البحث عن المنتج في الصين حتى وصول الشحنة، مع متابعة مستمرة وتحديثات واضحة في كل مرحلة.",
     whyTitle: "لماذا تختار دينورا للعراق؟",
     whyPoints: [
-      "خبرة محلية عميقة: نفهم متطلبات الترخيص والإجراءات الجمركية العراقية، ونتعامل مع حالات القوة القاهرة بمرونة.",
-      "خدمة شاملة موحدة: من التوريد والفحص في الصين حتى التسليم في العراق، كل شيء من مكان واحد.",
-      "دعم عربي متخصص: فريق عربي يتحدث لغتك ويفهم ثقافتك، بدون حواجز لغوية أو ثقافية."
+      "فريق عربي يتحدث لغتك: فريقنا يتحدث العربية بطلاقة ويفهم ثقافتك، بدون حواجز لغوية.",
+      "خدمة من البحث حتى الوصول: نبحث لك عن المورد المناسب في الصين ونتفاوض مع الموردين نيابةً عنك.",
+      "فحص وتوثيق قبل الشحن: نفحص البضائع قبل الشحن ونوثق حالتها."
     ],
     services: [
-      { icon: Ship, title: "الشحن البحري عبر ميناء أم قصر", desc: "شحن بضائع من الصين إلى ميناء أم قصر بأسعار تنافسية مع متابعة كاملة" },
-      { icon: Plane, title: "الشحن الجوي السريع", desc: "شحن جوي من الصين للعراق للبضائع العاجلة مع تتبع لحظي" },
-      { icon: ClipboardCheck, title: "التخليص الجمركي", desc: "إجراءات تخليص جمركي كاملة في ميناء أم قصر مع فهم متطلبات الاستيراد العراقية" },
-      { icon: Warehouse, title: "التخزين المؤقت", desc: "تخزين آمن في الصين لحين جاهزية الشحن مع تجميع الشحنات" },
-      { icon: Package, title: "التوريد المباشر", desc: "توريد من المصانع الصينية المباشرة بأسعار المصنع" },
-      { icon: ShieldCheck, title: "فحص الجودة", desc: "فحص شامل للبضائع قبل الشحن لضمان الجودة" }
+      { icon: Ship, title: "الشحن البحري عبر ميناء أم قصر", desc: "ننسق شحن البضائع من الصين إلى ميناء أم قصر" },
+      { icon: Plane, title: "الشحن الجوي السريع", desc: "ننسق الشحن الجوي من الصين للعراق للبضائع العاجلة" },
+      { icon: Warehouse, title: "التخزين في الصين", desc: "نخزن بضائعك في الصين لحين جاهزية الشحن مع تجميع الشحنات" },
+      { icon: Package, title: "البحث عن الموردين", desc: "نبحث لك عن المورد المناسب في الصين" },
+      { icon: ShieldCheck, title: "فحص الجودة", desc: "نفحص البضائع قبل الشحن ونوثق حالتها" },
+      { icon: ClipboardCheck, title: "التنسيق والتوثيق", desc: "ننسق مع الموردين ونجهز المستندات المطلوبة" }
     ],
     cta: "اطلب عرض سعر مجاني"
   } : {
     title: "Import and Shipping Services from China to Iraq",
-    intro: "Dinoora is an Arab company specializing in import and shipping services from China to Iraq. We fully understand the challenges and uniqueness of the Iraqi market, from complex licensing requirements to customs procedures at Umm Qasr Port. Unlike general Chinese shipping companies that offer auto-translated content for every country in the world using the same template, we provide customized solutions that understand the Iraqi local reality.\n\nWe offer shipping goods from China to Iraq via Umm Qasr Port, Iraq's main port on the Arabian Gulf. Our services include sea and air shipping, full customs clearance, temporary storage in China, direct sourcing from factories, and pre-shipment quality inspection. We handle all types of goods: electronics, textiles, raw materials, food products, and industrial equipment.\n\nDinoora stands out with deep understanding of the Iraqi reality. We recognize that Iraq has multiple administrative regions and different import requirements, and we handle these complexities with flexibility and expertise. Our team speaks Arabic fluently and understands the local culture, making communication easy and effective. We provide full support from the factory in China to your doorstep in Iraq, with continuous follow-up and clear updates at every stage.",
+    intro: "Dinoora is an Arab company specializing in import and shipping services from China to Iraq. We understand the challenges and uniqueness of the Iraqi market. Unlike general Chinese shipping companies that offer auto-translated content for every country in the world using the same template, we provide customized solutions that understand the Iraqi local reality.\n\nWe offer our services from China to Iraq via Umm Qasr Port. Our services include searching for suppliers, negotiating with suppliers, pre-shipment quality inspection, storage in China, shipment consolidation, and coordinating sea and air shipping. We handle all types of goods: electronics, textiles, raw materials, and industrial equipment.\n\nDinoora stands out with understanding of the Iraqi reality. Our team speaks Arabic fluently and understands the local culture, making communication easy and effective. We provide support from searching for the product in China until shipment arrival, with continuous follow-up and clear updates at every stage.",
     whyTitle: "Why Choose Dinoora for Iraq?",
     whyPoints: [
-      "Deep local expertise: We understand Iraqi licensing requirements and customs procedures, and handle force majeure situations with flexibility.",
-      "Unified comprehensive service: From sourcing and inspection in China to delivery in Iraq, everything from one place.",
-      "Specialized Arab support: An Arab team that speaks your language and understands your culture, without language or cultural barriers."
+      "Arabic-speaking team: Our team speaks Arabic fluently and understands your culture, without language barriers.",
+      "Service from search to arrival: We search for the right supplier in China and negotiate with suppliers on your behalf.",
+      "Inspection and documentation before shipment: We inspect goods before shipment and document their condition."
     ],
     services: [
-      { icon: Ship, title: "Sea Shipping via Umm Qasr Port", desc: "Shipping goods from China to Umm Qasr Port at competitive prices with full tracking" },
-      { icon: Plane, title: "Fast Air Shipping", desc: "Air shipping from China to Iraq for urgent goods with real-time tracking" },
-      { icon: ClipboardCheck, title: "Customs Clearance", desc: "Full customs clearance procedures at Umm Qasr Port with understanding of Iraqi import requirements" },
-      { icon: Warehouse, title: "Temporary Storage", desc: "Secure storage in China until ready for shipment with shipment consolidation" },
-      { icon: Package, title: "Direct Sourcing", desc: "Sourcing from direct Chinese factories at factory prices" },
-      { icon: ShieldCheck, title: "Quality Inspection", desc: "Comprehensive inspection of goods before shipment to ensure quality" }
+      { icon: Ship, title: "Sea Shipping via Umm Qasr Port", desc: "We coordinate shipping goods from China to Umm Qasr Port" },
+      { icon: Plane, title: "Fast Air Shipping", desc: "We coordinate air shipping from China to Iraq for urgent goods" },
+      { icon: Warehouse, title: "Storage in China", desc: "We store your goods in China until ready for shipment with consolidation" },
+      { icon: Package, title: "Supplier Search", desc: "We search for the right supplier in China for you" },
+      { icon: ShieldCheck, title: "Quality Inspection", desc: "We inspect goods before shipment and document their condition" },
+      { icon: ClipboardCheck, title: "Coordination and Documentation", desc: "We coordinate with suppliers and prepare required documents" }
     ],
     cta: "Get a Free Quote"
   };

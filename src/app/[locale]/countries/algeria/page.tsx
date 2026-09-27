@@ -12,38 +12,38 @@ export default function AlgeriaPage() {
 
   const content = ar ? {
     title: "خدمات استيراد وشحن البضائع من الصين إلى الجزائر",
-    intro: "دينورا هي شركة عربية متخصصة في خدمات الاستيراد والشحن من الصين إلى الجزائر. نفهم تماماً تحديات السوق الجزائري وخصوصيته، من متطلبات الترخيص المعقدة إلى الإجراءات الجمركية في موانئ الجزائر ووهران. بعكس شركات الشحن الصينية العامة التي تقدم محتوى مترجم آلياً لكل دول العالم بنفس القالب، نحن نقدم حلولاً مخصصة تفهم الواقع المحلي الجزائري.\n\nنقدم شحن البضائع من الصين إلى الجزائر عبر موانئ الجزائر ووهران، وهما الموانئ الرئيسية للجزائر على البحر المتوسط. خدماتنا تشمل الشحن البحري والجوي، التخليص الجمركي الكامل، التخزين المؤقت في الصين، التوريد من المصانع المباشرة، وفحص الجودة قبل الشحن. نتعامل مع جميع أنواع البضائع: الإلكترونيات، المنسوجات، المواد الخام، المواد الغذائية، والمعدات الصناعية.\n\nتتميز دينورا بفهم عميق للواقع الجزائري. نحن ندرك أن الجزائر لها متطلبات استيراد خاصة وإجراءات تنظيمية محددة، ونحن نتعامل مع هذه التعقيدات بمرونة وخبرة. فريقنا يتحدث العربية بطلاقة ويفهم الثقافة المحلية، مما يجعل التواصل سهلاً وفعالاً. نقدم دعماً كامل من المصنع في الصين حتى باب منزلك في الجزائر، مع متابعة مستمرة وتحديثات واضحة في كل مرحلة.",
+    intro: "دينورا هي شركة عربية متخصصة في خدمات الاستيراد والشحن من الصين إلى الجزائر. نفهم تحديات السوق الجزائري وخصوصيته. بعكس شركات الشحن الصينية العامة التي تقدم محتوى مترجم آلياً لكل دول العالم بنفس القالب، نحن نقدم حلولاً مخصصة تفهم الواقع المحلي الجزائري.\n\nنقدم خدماتنا من الصين إلى الجزائر عبر موانئ الجزائر ووهران. خدماتنا تشمل البحث عن الموردين، التفاوض مع الموردين، فحص الجودة قبل الشحن، التخزين في الصين، تجميع الشحنات، وتنسيق الشحن البحري والجوي. نتعامل مع جميع أنواع البضائع: الإلكترونيات، المنسوجات، المواد الخام، والمعدات الصناعية.\n\nتتميز دينورا بفهم للواقع الجزائري. فريقنا يتحدث العربية بطلاقة ويفهم الثقافة المحلية، مما يجعل التواصل سهلاً وفعالاً. نقدم دعماً من البحث عن المنتج في الصين حتى وصول الشحنة، مع متابعة مستمرة وتحديثات واضحة في كل مرحلة.",
     whyTitle: "لماذا تختار دينورا للجزائر؟",
     whyPoints: [
-      "خبرة محلية عميقة: نفهم متطلبات الترخيص والإجراءات الجمركية الجزائرية، ونتعامل مع حالات القوة القاهرة بمرونة.",
-      "خدمة شاملة موحدة: من التوريد والفحص في الصين حتى التسليم في الجزائر، كل شيء من مكان واحد.",
-      "دعم عربي متخصص: فريق عربي يتحدث لغتك ويفهم ثقافتك، بدون حواجز لغوية أو ثقافية."
+      "فريق عربي يتحدث لغتك: فريقنا يتحدث العربية بطلاقة ويفهم ثقافتك، بدون حواجز لغوية.",
+      "خدمة من البحث حتى الوصول: نبحث لك عن المورد المناسب في الصين ونتفاوض مع الموردين نيابةً عنك.",
+      "فحص وتوثيق قبل الشحن: نفحص البضائع قبل الشحن ونوثق حالتها."
     ],
     services: [
-      { icon: Ship, title: "الشحن البحري عبر موانئ الجزائر ووهران", desc: "شحن بضائع من الصين إلى موانئ الجزائر ووهران بأسعار تنافسية مع متابعة كاملة" },
-      { icon: Plane, title: "الشحن الجوي السريع", desc: "شحن جوي من الصين للجزائر للبضائع العاجلة مع تتبع لحظي" },
-      { icon: ClipboardCheck, title: "التخليص الجمركي", desc: "إجراءات تخليص جمركي كاملة في موانئ الجزائر ووهران مع فهم متطلبات الاستيراد الجزائرية" },
-      { icon: Warehouse, title: "التخزين المؤقت", desc: "تخزين آمن في الصين لحين جاهزية الشحن مع تجميع الشحنات" },
-      { icon: Package, title: "التوريد المباشر", desc: "توريد من المصانع الصينية المباشرة بأسعار المصنع" },
-      { icon: ShieldCheck, title: "فحص الجودة", desc: "فحص شامل للبضائع قبل الشحن لضمان الجودة" }
+      { icon: Ship, title: "الشحن البحري عبر موانئ الجزائر ووهران", desc: "ننسق شحن البضائع من الصين إلى موانئ الجزائر ووهران" },
+      { icon: Plane, title: "الشحن الجوي السريع", desc: "ننسق الشحن الجوي من الصين للجزائر للبضائع العاجلة" },
+      { icon: Warehouse, title: "التخزين في الصين", desc: "نخزن بضائعك في الصين لحين جاهزية الشحن مع تجميع الشحنات" },
+      { icon: Package, title: "البحث عن الموردين", desc: "نبحث لك عن المورد المناسب في الصين" },
+      { icon: ShieldCheck, title: "فحص الجودة", desc: "نفحص البضائع قبل الشحن ونوثق حالتها" },
+      { icon: ClipboardCheck, title: "التنسيق والتوثيق", desc: "ننسق مع الموردين ونجهز المستندات المطلوبة" }
     ],
     cta: "اطلب عرض سعر مجاني"
   } : {
     title: "Import and Shipping Services from China to Algeria",
-    intro: "Dinoora is an Arab company specializing in import and shipping services from China to Algeria. We fully understand the challenges and uniqueness of the Algerian market, from complex licensing requirements to customs procedures at Algiers and Oran ports. Unlike general Chinese shipping companies that offer auto-translated content for every country in the world using the same template, we provide customized solutions that understand the Algerian local reality.\n\nWe offer shipping goods from China to Algeria via Algiers and Oran ports, Algeria's main ports on the Mediterranean Sea. Our services include sea and air shipping, full customs clearance, temporary storage in China, direct sourcing from factories, and pre-shipment quality inspection. We handle all types of goods: electronics, textiles, raw materials, food products, and industrial equipment.\n\nDinoora stands out with deep understanding of the Algerian reality. We recognize that Algeria has specific import requirements and regulatory procedures, and we handle these complexities with flexibility and expertise. Our team speaks Arabic fluently and understands the local culture, making communication easy and effective. We provide full support from the factory in China to your doorstep in Algeria, with continuous follow-up and clear updates at every stage.",
+    intro: "Dinoora is an Arab company specializing in import and shipping services from China to Algeria. We understand the challenges and uniqueness of the Algerian market. Unlike general Chinese shipping companies that offer auto-translated content for every country in the world using the same template, we provide customized solutions that understand the Algerian local reality.\n\nWe offer our services from China to Algeria via Algiers and Oran ports. Our services include searching for suppliers, negotiating with suppliers, pre-shipment quality inspection, storage in China, shipment consolidation, and coordinating sea and air shipping. We handle all types of goods: electronics, textiles, raw materials, and industrial equipment.\n\nDinoora stands out with understanding of the Algerian reality. Our team speaks Arabic fluently and understands the local culture, making communication easy and effective. We provide support from searching for the product in China until shipment arrival, with continuous follow-up and clear updates at every stage.",
     whyTitle: "Why Choose Dinoora for Algeria?",
     whyPoints: [
-      "Deep local expertise: We understand Algerian licensing requirements and customs procedures, and handle force majeure situations with flexibility.",
-      "Unified comprehensive service: From sourcing and inspection in China to delivery in Algeria, everything from one place.",
-      "Specialized Arab support: An Arab team that speaks your language and understands your culture, without language or cultural barriers."
+      "Arabic-speaking team: Our team speaks Arabic fluently and understands your culture, without language barriers.",
+      "Service from search to arrival: We search for the right supplier in China and negotiate with suppliers on your behalf.",
+      "Inspection and documentation before shipment: We inspect goods before shipment and document their condition."
     ],
     services: [
-      { icon: Ship, title: "Sea Shipping via Algiers and Oran Ports", desc: "Shipping goods from China to Algiers and Oran ports at competitive prices with full tracking" },
-      { icon: Plane, title: "Fast Air Shipping", desc: "Air shipping from China to Algeria for urgent goods with real-time tracking" },
-      { icon: ClipboardCheck, title: "Customs Clearance", desc: "Full customs clearance procedures at Algiers and Oran ports with understanding of Algerian import requirements" },
-      { icon: Warehouse, title: "Temporary Storage", desc: "Secure storage in China until ready for shipment with shipment consolidation" },
-      { icon: Package, title: "Direct Sourcing", desc: "Sourcing from direct Chinese factories at factory prices" },
-      { icon: ShieldCheck, title: "Quality Inspection", desc: "Comprehensive inspection of goods before shipment to ensure quality" }
+      { icon: Ship, title: "Sea Shipping via Algiers and Oran Ports", desc: "We coordinate shipping goods from China to Algiers and Oran ports" },
+      { icon: Plane, title: "Fast Air Shipping", desc: "We coordinate air shipping from China to Algeria for urgent goods" },
+      { icon: Warehouse, title: "Storage in China", desc: "We store your goods in China until ready for shipment with consolidation" },
+      { icon: Package, title: "Supplier Search", desc: "We search for the right supplier in China for you" },
+      { icon: ShieldCheck, title: "Quality Inspection", desc: "We inspect goods before shipment and document their condition" },
+      { icon: ClipboardCheck, title: "Coordination and Documentation", desc: "We coordinate with suppliers and prepare required documents" }
     ],
     cta: "Get a Free Quote"
   };

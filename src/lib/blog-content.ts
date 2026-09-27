@@ -848,6 +848,2035 @@ Our services include:
 - Shipping and customs clearance
 
 Request a quote now and save on shipping costs.`
-    }
-  }
+    },
+  },
+  {
+    id: "import-from-china",
+    type: "sourcing",
+    image: "/blog-images/Dinoora_Ad_1.png",
+    ar: {
+      title: "استيراد من الصين: دليلك الشامل للتجارة الناجحة",
+      description: "تعلم كيفية الاستيراد من الصين بسهولة وثقة، من اختيار الموردين إلى استلام البضائع في بلدك.",
+      content: `# استيراد من الصين: دليلك الشامل للتجارة الناجحة
+
+الاستيراد من الصين فرصة عظيمة للأعمال التجارية، لكنه يتطلب تخطيطاً دقيقاً ومعرفة بالسوق. في هذا الدليل، سنشرح لك كل ما تحتاج معرفته للاستيراد من الصين بنجاح.
+
+## لماذا الاستيراد من الصين؟
+
+الصين تُعد أكبر مصنع في العالم، حيث تقدم:
+- أسعار تنافسية جداً
+- تنوع هائل في المنتجات
+- جودة متفاوتة تناسب جميع الميزانيات
+- بنية تحتية لوجستية متطورة
+
+## خطوات الاستيراد من الصين
+
+### 1. البحث عن المنتج المناسب
+
+ابدأ بتحديد المنتج الذي تريد استيراده. ادرس:
+- الطلب في سوقك المحلي
+- المنافسة والأسعار
+- المتطلبات القانونية والتنظيمية
+
+### 2. البحث عن الموردين
+
+استخدم منصات مثل:
+- Alibaba
+- Made-in-China
+- Global Sources
+- معارض كانتون
+
+### 3. التحقق من المورد
+
+قبل التعاقد، تأكد من:
+- ترخيص الشركة
+- سجل التصدير
+- تقييمات العملاء السابقين
+- عينات المنتج
+
+### 4. التفاوض على السعر
+
+فاوض على:
+- سعر الوحدة
+- خصومات الكميات الكبيرة
+- شروط الدفع
+- مواعيد التسليم
+
+### 5. فحص الجودة
+
+لا تستلم البضاعة دون فحص:
+- قبل الشحن من المصنع
+- عند الوصول للميناء
+- قبل الدفع النهائي
+
+### 6. الشحن والتخليص
+
+اختر طريقة الشحن المناسبة:
+- الشحن البحري للكميات الكبيرة
+- الشحن الجوي للطلبات العاجلة
+- تأكد من المستندات المطلوبة
+
+## نصائح مهمة
+
+- ابدأ بكميات صغيرة للتجربة
+- استخدم شركات وسيطة موثوقة
+- احتفظ بسجلات لجميع المعاملات
+- تعلم عن الجمارك والرسوم
+
+## لماذا دينورا؟
+
+دينورا تساعدك في كل خطوة من رحلة الاستيراد من الصين، من البحث عن الموردين إلى استلام البضائع في بلدك.`,
+    },
+    en: {
+      title: "Importing from China: Your Comprehensive Guide to Successful Trade",
+      description: "Learn how to import from China with ease and confidence, from choosing suppliers to receiving goods in your country.",
+      content: `# Importing from China: Your Comprehensive Guide to Successful Trade
+
+Importing from China is a great opportunity for businesses, but it requires careful planning and market knowledge. In this guide, we'll explain everything you need to know to successfully import from China.
+
+## Why Import from China?
+
+China is the world's largest manufacturer, offering:
+- Highly competitive prices
+- Huge product variety
+- Quality levels to suit all budgets
+- Advanced logistics infrastructure
+
+## Steps to Import from China
+
+### 1. Find the Right Product
+
+Start by identifying the product you want to import. Study:
+- Demand in your local market
+- Competition and pricing
+- Legal and regulatory requirements
+
+### 2. Find Suppliers
+
+Use platforms like:
+- Alibaba
+- Made-in-China
+- Global Sources
+- Canton Fair
+
+### 3. Verify the Supplier
+
+Before contracting, ensure:
+- Company license
+- Export record
+- Previous customer reviews
+- Product samples
+
+### 4. Negotiate Price
+
+Negotiate on:
+- Unit price
+- Bulk quantity discounts
+- Payment terms
+- Delivery schedules
+
+### 5. Quality Inspection
+
+Never accept goods without inspection:
+- Before shipping from factory
+- Upon arrival at port
+- Before final payment
+
+### 6. Shipping and Customs
+
+Choose the right shipping method:
+- Sea freight for large quantities
+- Air freight for urgent orders
+- Ensure required documentation
+
+## Important Tips
+
+- Start with small quantities for testing
+- Use reliable intermediary companies
+- Keep records of all transactions
+- Learn about customs and duties
+
+## Why Dinoora?
+
+Dinoora helps you at every step of your import journey from China, from finding suppliers to receiving goods in your country.`,
+    },
+  },
+  {
+    id: "shipping-goods",
+    type: "shipping",
+    image: "/blog-images/Dinoora_Ad_2.png",
+    ar: {
+      title: "شحن البضائع من الصين: كل ما تحتاج معرفته",
+      description: "دليل شامل لشحن البضائع من الصين، اختيار طريقة الشحن المناسبة، وتجنب المشاكل الشائعة.",
+      content: `# شحن البضائع من الصين: كل ما تحتاج معرفته
+
+شحن البضائع من الصين جزء أساسي من عملية الاستيراد. اختيار طريقة الشحن المناسبة يمكن أن يوفر لك الكثير من المال والوقت.
+
+## طرق الشحن الرئيسية
+
+### 1. الشحن البحري
+
+**المميزات:**
+- تكلفة منخفضة للكميات الكبيرة
+- مناسب للبضائع الثقيلة والكبيرة
+- خيارات متعددة (FCL, LCL)
+
+**العيوب:**
+- وقت طويل (20-45 يوم)
+- مخاطر أعلى للتأخير
+- يتطلب تخطيطاً مسبقاً
+
+**متى تستخدمه:**
+- كميات كبيرة (أكثر من 500 كجم)
+- بضائع ليست عاجلة
+- تريد تقليل التكلفة
+
+### 2. الشحن الجوي
+
+**المميزات:**
+- سريع جداً (3-7 أيام)
+- آمن للبضائع الحساسة
+- تتبع دقيق
+
+**العيوب:**
+- تكلفة عالية
+- محدودية الوزن والحجم
+- قيود على بعض المواد
+
+**متى تستخدمه:**
+- بضائع عاجلة
+- قيمة عالية للوحدة
+- كميات صغيرة
+
+### 3. الشحن البري
+
+**المميزات:**
+- أسرع من البحري
+- أرخص من الجوي
+- مناسب للدول المجاورة
+
+**العيوب:**
+- محدود بجغرافيا معينة
+- قد يواجه عقبات حدودية
+
+## المستندات المطلوبة
+
+- بوليصة الشحن
+- الفاتورة التجارية
+- قائمة التعبئة
+- شهادة المنشأ
+- شهادات التأمين
+
+## نصائح لتوفير تكاليف الشحن
+
+- تجميع الشحنات من موردين متعددين
+- التخطيط المبكر للشحن
+- مقارنة الأسعار بين شركات الشحن
+- اختيار التغليف المناسب لتقليل الحجم
+
+## لماذا دينورا؟
+
+دينورا تقدم خدمات شحن متكاملة من الصين، مع تنسيق كامل مع الموردين ومتابعة الشحنة حتى التسليم.`,
+    },
+    en: {
+      title: "Shipping Goods from China: Everything You Need to Know",
+      description: "A comprehensive guide to shipping goods from China, choosing the right shipping method, and avoiding common problems.",
+      content: `# Shipping Goods from China: Everything You Need to Know
+
+Shipping goods from China is an essential part of the import process. Choosing the right shipping method can save you a lot of money and time.
+
+## Main Shipping Methods
+
+### 1. Sea Freight
+
+**Advantages:**
+- Low cost for large quantities
+- Suitable for heavy and large goods
+- Multiple options (FCL, LCL)
+
+**Disadvantages:**
+- Long time (20-45 days)
+- Higher risk of delays
+- Requires advance planning
+
+**When to use:**
+- Large quantities (over 500 kg)
+- Non-urgent goods
+- Want to reduce cost
+
+### 2. Air Freight
+
+**Advantages:**
+- Very fast (3-7 days)
+- Safe for sensitive goods
+- Precise tracking
+
+**Disadvantages:**
+- High cost
+- Weight and size limitations
+- Restrictions on some materials
+
+**When to use:**
+- Urgent goods
+- High unit value
+- Small quantities
+
+### 3. Land Freight
+
+**Advantages:**
+- Faster than sea
+- Cheaper than air
+- Suitable for neighboring countries
+
+**Disadvantages:**
+- Limited by geography
+- May face border obstacles
+
+## Required Documents
+
+- Bill of lading
+- Commercial invoice
+- Packing list
+- Certificate of origin
+- Insurance certificates
+
+## Tips to Save Shipping Costs
+
+- Consolidate shipments from multiple suppliers
+- Plan shipping in advance
+- Compare prices between shipping companies
+- Choose appropriate packaging to reduce volume
+
+## Why Dinoora?
+
+Dinoora offers integrated shipping services from China, with full coordination with suppliers and tracking shipments until delivery.`,
+    },
+  },
+  {
+    id: "quality-inspection",
+    type: "quality",
+    image: "/blog-images/Dinoora_Ad_3.png",
+    ar: {
+      title: "فحص الجودة قبل الشحن: كيف تضمن جودة منتجاتك",
+      description: "تعلم أهمية فحص الجودة قبل الشحن من الصين وكيفية إجراء فحص فعال.",
+      content: `# فحص الجودة قبل الشحن: كيف تضمن جودة منتجاتك
+
+فحص الجودة قبل الشحن خطوة حاسمة في عملية الاستيراد من الصين. بدون فحص مناسب، قد تستلم بضائع معيبة تسبب خسائر كبيرة.
+
+## لماذا فحص الجودة مهم؟
+
+- تجنب استلام منتجات معيبة
+- حماية سمعة علامتك التجارية
+- تقليل تكاليف الإرجاع
+- ضمان مطابقة المواصفات
+- بناء الثقة مع الموردين
+
+## أنواع فحص الجودة
+
+### 1. فحص العينات
+
+يتم قبل الإنتاج الكامل للتأكد من:
+- مطابقة المواصفات
+- جودة المواد
+- دقة التصنيع
+
+### 2. فحص أثناء الإنتاج
+
+يتم خلال الإنتاج للتأكد من:
+- التزام بالمعايير
+- اكتشاف المشاكل مبكراً
+- تصحيح الأخطاء فوراً
+
+### 3. فحص قبل الشحن
+
+أهم فحص يتم قبل إرسال البضاعة:
+- التحقق من الكمية
+- فحص الجودة النهائية
+- التأكد من التغليف
+- التحقق من المستندات
+
+### 4. فحص عند الوصول
+
+يتم عند وصول البضاعة للميناء:
+- التأكد من عدم التلف
+- التحقق من الكمية
+- فحص العينات عشوائياً
+
+## عناصر فحص الجودة
+
+### 1. الفحص البصري
+
+- التحقق من المظهر العام
+- فحص اللون والنهاية
+- التأكد من عدم وجود عيوب
+
+### 2. الفحص الوظيفي
+
+- اختبار الأداء
+- التحقق من الوظائف
+- اختبار المتانة
+
+### 3. الفحص القياسي
+
+- قياس الأبعاد
+- التحقق من الوزن
+- اختبار المواد
+
+### 4. فحص التغليف
+
+- التأكد من التغليف المناسب
+- فحص العلامات
+- التحقق من وسائل الحماية
+
+## كيفية إجراء فحص فعال
+
+### 1. تحديد معايير الفحص
+
+حدد بوضوح:
+- معايير القبول
+- نسبة العيوب المسموح بها
+- طرق الاختبار
+
+### 2. اختيار المفتش المناسب
+
+ابحث عن:
+- خبرة في المجال
+- شهادات معتمدة
+- سمعة جيدة
+
+### 3. التواصل الواضح
+
+- شارك المواصفات مع المفتش
+- حدد توقيت الفحص
+- اطلب تقريراً مفصلاً
+
+### 4. مراجعة التقرير
+
+- راجع النتائج بعناية
+- اطلب توضيحات عند الحاجة
+- اتخذ قراراً بناءً على النتائج
+
+## لماذا دينورا؟
+
+دينورا تقدم خدمات فحص جودة شاملة في الصين، مع فريق من المفتشين المحترفين وتقارير مفصلة.`,
+    },
+    en: {
+      title: "Pre-Shipment Quality Inspection: How to Ensure Your Product Quality",
+      description: "Learn the importance of pre-shipment quality inspection from China and how to conduct an effective inspection.",
+      content: `# Pre-Shipment Quality Inspection: How to Ensure Your Product Quality
+
+Pre-shipment quality inspection is a critical step in the import process from China. Without proper inspection, you may receive defective goods causing significant losses.
+
+## Why Quality Inspection is Important?
+
+- Avoid receiving defective products
+- Protect your brand reputation
+- Reduce return costs
+- Ensure specification compliance
+- Build trust with suppliers
+
+## Types of Quality Inspection
+
+### 1. Sample Inspection
+
+Done before full production to ensure:
+- Specification compliance
+- Material quality
+- Manufacturing accuracy
+
+### 2. During Production Inspection
+
+Done during production to ensure:
+- Compliance with standards
+- Early problem detection
+- Immediate correction of errors
+
+### 3. Pre-Shipment Inspection
+
+Most important inspection before shipment:
+- Verify quantity
+- Final quality check
+- Ensure packaging
+- Verify documentation
+
+### 4. Arrival Inspection
+
+Done upon arrival at port:
+- Ensure no damage
+- Verify quantity
+- Random sample inspection
+
+## Quality Inspection Elements
+
+### 1. Visual Inspection
+
+- Check overall appearance
+- Inspect color and finish
+- Ensure no defects
+
+### 2. Functional Inspection
+
+- Test performance
+- Verify functions
+- Test durability
+
+### 3. Measurement Inspection
+
+- Measure dimensions
+- Verify weight
+- Test materials
+
+### 4. Packaging Inspection
+
+- Ensure appropriate packaging
+- Check labels
+- Verify protection measures
+
+## How to Conduct Effective Inspection
+
+### 1. Define Inspection Criteria
+
+Clearly specify:
+- Acceptance criteria
+- Allowed defect rate
+- Testing methods
+
+### 2. Choose the Right Inspector
+
+Look for:
+- Industry experience
+- Certified credentials
+- Good reputation
+
+### 3. Clear Communication
+
+- Share specifications with inspector
+- Define inspection timing
+- Request detailed report
+
+### 4. Review the Report
+
+- Review results carefully
+- Request clarifications when needed
+- Make decision based on results
+
+## Why Dinoora?
+
+Dinoora offers comprehensive quality inspection services in China, with a team of professional inspectors and detailed reports.`,
+    },
+  },
+  {
+    id: "warehousing",
+    type: "warehousing",
+    image: "/blog-images/Dinoora_Ad_4.png",
+    ar: {
+      title: "التخزين في الصين: حلول آمنة وفعالة لبضائعك",
+      description: "تعرف على خيارات التخزين في الصين وكيفية اختيار المستودع المناسب لبضائعك.",
+      content: `# التخزين في الصين: حلول آمنة وفعالة لبضائعك
+
+التخزين في الصين جزء مهم من سلسلة التوريد، خاصة عند التعامل مع موردين متعددين أو عند انتظار تجميع الشحنات.
+
+## لماذا تحتاج تخزين في الصين؟
+
+- تجميع الشحنات من موردين متعددين
+- الانتظار حتى اكتمال الكميات
+- تخزين مؤقت قبل الشحن
+- إدارة المخزون
+- تقليل تكاليف الشحن
+
+## أنواع المستودعات في الصين
+
+### 1. المستودعات العامة
+
+- مناسبة لمعظم البضائع
+- تكلفة معقولة
+- خدمات أساسية
+
+### 2. المستودعات المبردة
+
+- للبضائع الحساسة لدرجة الحرارة
+- منتجات غذائية
+- أدوية ومستحضرات طبية
+
+### 3. المستودعات المخصصة
+
+- للبضائع ذات المتطلبات الخاصة
+- مواد خطرة
+- معدات ثقيلة
+
+### 4. المستودعات الجمركية
+
+- داخل المناطق الجمركية
+- تسهيلات التخليص
+- تخزين طويل الأمد
+
+## خدمات التخزين المتاحة
+
+### 1. التخزين الأساسي
+
+- استقبال البضائع
+- تخزين آمن
+- إدارة المخزون
+
+### 2. خدمات إضافية
+
+- تجميع الشحنات
+- إعادة التغليف
+- وضع العلامات
+- فحص الجودة
+
+### 3. الخدمات اللوجستية
+
+- إدارة الطلبات
+- التوزيع المحلي
+- التتبع والإبلاغ
+
+## اختيار المستودع المناسب
+
+### 1. الموقع
+
+- قرب الموردين
+- قرب الموانئ
+- سهولة الوصول
+
+### 2. السعة
+
+- حجم البضائع
+- قابلية التوسع
+- أنواع البضائع
+
+### 3. الأمان
+
+- أنظمة الأمان
+- التأمين
+- المراقبة
+
+### 4. التكلفة
+
+- رسوم التخزين
+- رسوم الخدمات
+- الشروط والأحكام
+
+## نصائح للتخزين الفعال
+
+- استخدم نظام إدارة المخزون
+- ضع علامات واضحة
+- راجع المخزون بانتظام
+- اختر مستودع موثوق
+
+## لماذا دينورا؟
+
+دينورا تقدم خدمات تخزين شاملة في الصين، مع مستودعات آمنة وإدارة احترافية للمخزون.`,
+    },
+    en: {
+      title: "Warehousing in China: Safe and Efficient Solutions for Your Goods",
+      description: "Learn about warehousing options in China and how to choose the right warehouse for your goods.",
+      content: `# Warehousing in China: Safe and Efficient Solutions for Your Goods
+
+Warehousing in China is an important part of the supply chain, especially when dealing with multiple suppliers or waiting to consolidate shipments.
+
+## Why Do You Need Warehousing in China?
+
+- Consolidate shipments from multiple suppliers
+- Wait until quantities are complete
+- Temporary storage before shipping
+- Inventory management
+- Reduce shipping costs
+
+## Types of Warehouses in China
+
+### 1. General Warehouses
+
+- Suitable for most goods
+- Reasonable cost
+- Basic services
+
+### 2. Cold Storage Warehouses
+
+- For temperature-sensitive goods
+- Food products
+- Pharmaceuticals
+
+### 3. Specialized Warehouses
+
+- For goods with special requirements
+- Hazardous materials
+- Heavy equipment
+
+### 4. Bonded Warehouses
+
+- Within customs zones
+- Clearance facilities
+- Long-term storage
+
+## Available Warehousing Services
+
+### 1. Basic Storage
+
+- Receiving goods
+- Secure storage
+- Inventory management
+
+### 2. Additional Services
+
+- Shipment consolidation
+- Repackaging
+- Labeling
+- Quality inspection
+
+### 3. Logistics Services
+
+- Order management
+- Local distribution
+- Tracking and reporting
+
+## Choosing the Right Warehouse
+
+### 1. Location
+
+- Close to suppliers
+- Close to ports
+- Easy access
+
+### 2. Capacity
+
+- Goods volume
+- Scalability
+- Types of goods
+
+### 3. Security
+
+- Security systems
+- Insurance
+- Surveillance
+
+### 4. Cost
+
+- Storage fees
+- Service fees
+- Terms and conditions
+
+## Tips for Effective Warehousing
+
+- Use inventory management system
+- Clear labeling
+- Regular inventory review
+- Choose reliable warehouse
+
+## Why Dinoora?
+
+Dinoora offers comprehensive warehousing services in China, with secure warehouses and professional inventory management.`,
+    },
+  },
+  {
+    id: "customs-clearance",
+    type: "customs",
+    image: "/blog-images/Dinoora_Ad_5.png",
+    ar: {
+      title: "التخليص الجمركي: دليلك لتجنب التأخير والمشاكل",
+      description: "تعرف على إجراءات التخليص الجمركي والمستندات المطلوبة لتجنب المشاكل عند الاستيراد.",
+      content: `# التخليص الجمركي: دليلك لتجنب التأخير والمشاكل
+
+التخليص الجمركي خطوة حاسمة في عملية الاستيراد. سوء التخطيط أو المستندات غير الصحيحة يمكن أن يسبب تأخيرات كبيرة وتكاليف إضافية.
+
+## ما هو التخليص الجمركي؟
+
+التخليص الجمركي هو العملية التي يتم فيها تقديم المستندات المطلوبة للسلطات الجمركية ودفع الرسوم والضرائب للسماح بدخول البضائع إلى البلد.
+
+## المستندات المطلوبة
+
+### 1. المستندات الأساسية
+
+- **بوليصة الشحن (Bill of Lading):** تثبت ملكية البضاعة
+- **الفاتورة التجارية (Commercial Invoice):** تفاصيل البضاعة والقيمة
+- **قائمة التعبئة (Packing List):** تفاصيل التغليف والوزن
+- **شهادة المنشأ (Certificate of Origin):** تثبت بلد المنشأ
+
+### 2. المستندات الإضافية
+
+- **رخصة الاستيراد:** إذا كانت مطلوبة
+- **شهادات التأمين:** تأمين الشحن
+- **شهادات الجودة:** لبعض المنتجات
+- **تصاريح خاصة:** للمواد الخاضعة للرقابة
+
+## رموز HS النظام المنسق
+
+رموز HS هي رموز دولية لتصنيف البضائع وتحديد الرسوم الجمركية. معرفة الرمز الصحيح لمنتجك مهم جداً لأنه يحدد:
+- الرسوم الجمركية
+- المتطلبات التنظيمية
+- القيود والتراخيص
+
+## خطوات التخليص الجمركي
+
+### 1. التحضير المسبق
+
+- تأكد من جميع المستندات
+- تحقق من رموز HS
+- استعد للرسوم والضرائب
+
+### 2. تقديم المستندات
+
+- قدم المستندات للوسيط الجمركي
+- تأكد من دقة المعلومات
+- احتفظ بنسخ احتياطية
+
+### 3. الفحص الجمركي
+
+- قد يتم فحص البضاعة
+- كن مستعداً للإجابة على الأسئلة
+- تعاون مع موظفي الجمارك
+
+### 4. دفع الرسوم
+
+- ادفع الرسوم والضرائب
+- احصل على إيصال الدفع
+- تأكد من اكتمال الإجراءات
+
+### 5. استلام البضاعة
+
+- استلم إشعار التخليص
+- جهز النقل المحلي
+- تأكد من سلامة البضاعة
+
+## مشاكل شائعة وكيفية تجنبها
+
+### 1. مستندات غير صحيحة
+
+- الحل: راجع جميع المستندات بعناية
+- استخدم وسيطاً جمركياً محترفاً
+
+### 2. رموز HS خاطئة
+
+- الحل: استشر خبيراً في التصنيف
+- تحقق من الرموز مسبقاً
+
+### 3. رسوم غير متوقعة
+
+- الحل: احسب الرسوم مسبقاً
+- استفسر عن أي رسوم إضافية
+
+### 4. تأخير في الفحص
+
+- الحل: استعد جيداً
+- تعاون مع الجمارك
+
+## نصائح مهمة
+
+- استخدم وسيطاً جمركياً موثوقاً
+- احتفظ بسجلات دقيقة
+- تعلم عن القوانين الجمركية
+- خطط مسبقاً للوقت
+
+## لماذا دينورا؟
+
+دينورا تقدم خدمات تخليص جمركي شاملة، مع فريق من الخبراء على دراية كاملة بالإجراءات والقوانين.`,
+    },
+    en: {
+      title: "Customs Clearance: Your Guide to Avoiding Delays and Problems",
+      description: "Learn about customs clearance procedures and required documents to avoid problems when importing.",
+      content: `# Customs Clearance: Your Guide to Avoiding Delays and Problems
+
+Customs clearance is a critical step in the import process. Poor planning or incorrect documents can cause significant delays and additional costs.
+
+## What is Customs Clearance?
+
+Customs clearance is the process of submitting required documents to customs authorities and paying duties and taxes to allow goods to enter the country.
+
+## Required Documents
+
+### 1. Basic Documents
+
+- **Bill of Lading:** Proves ownership of goods
+- **Commercial Invoice:** Details of goods and value
+- **Packing List:** Packaging and weight details
+- **Certificate of Origin:** Proves country of origin
+
+### 2. Additional Documents
+
+- **Import License:** If required
+- **Insurance Certificates:** Shipping insurance
+- **Quality Certificates:** For some products
+- **Special Permits:** For controlled materials
+
+## HS Harmonized System Codes
+
+HS codes are international codes for classifying goods and determining customs duties. Knowing the correct code for your product is very important as it determines:
+- Customs duties
+- Regulatory requirements
+- Restrictions and licenses
+
+## Customs Clearance Steps
+
+### 1. Advance Preparation
+
+- Ensure all documents
+- Check HS codes
+- Prepare for duties and taxes
+
+### 2. Document Submission
+
+- Submit documents to customs broker
+- Ensure information accuracy
+- Keep backup copies
+
+### 3. Customs Inspection
+
+- Goods may be inspected
+- Be prepared to answer questions
+- Cooperate with customs officers
+
+### 4. Payment of Duties
+
+- Pay duties and taxes
+- Get payment receipt
+- Ensure procedures complete
+
+### 5. Receive Goods
+
+- Receive clearance notice
+- Arrange local transport
+- Ensure goods safety
+
+## Common Problems and How to Avoid Them
+
+### 1. Incorrect Documents
+
+- Solution: Review all documents carefully
+- Use professional customs broker
+
+### 2. Wrong HS Codes
+
+- Solution: Consult classification expert
+- Verify codes in advance
+
+### 3. Unexpected Fees
+
+- Solution: Calculate fees in advance
+- Inquire about additional fees
+
+### 4. Inspection Delays
+
+- Solution: Prepare well
+- Cooperate with customs
+
+## Important Tips
+
+- Use reliable customs broker
+- Keep accurate records
+- Learn about customs laws
+- Plan time in advance
+
+## Why Dinoora?
+
+Dinoora offers comprehensive customs clearance services, with a team of experts fully knowledgeable about procedures and laws.`,
+    },
+  },
+  {
+    id: "sourcing",
+    type: "sourcing",
+    image: "/blog-images/Dinoora_Ad_6.png",
+    ar: {
+      title: "التوريد من الصين: كيف تجد المورد المناسب",
+      description: "دليل عملي للبحث عن الموردين في الصين وتقييمهم واختيار الأفضل لعملك.",
+      content: `# التوريد من الصين: كيف تجد المورد المناسب
+
+التوريد من الصين يتطلب مهارة في البحث والتقييم. اختيار المورد الخاطئ يمكن أن يكلفك الكثير من المال والوقت.
+
+## مصادر البحث عن الموردين
+
+### 1. منصات التجارة الإلكترونية
+
+- **Alibaba:** أكبر منصة للموردين الصينيين
+- **Made-in-China:** منصة موثوقة للمصانع
+- **Global Sources:** للمنتجات عالية الجودة
+- **DHgate:** للتجارة بالجملة
+
+### 2. المعارض التجارية
+
+- **معرض كانتون:** أكبر معرض في الصين
+- **معرض هونغ كونغ:** للإلكترونيات
+- **معارض متخصصة:** حسب الصناعة
+
+### 3. شركات التوريد
+
+- شركات وسيطة محترفة
+- مكاتب تمثيل في الصين
+- شركات استيراد متخصصة
+
+## تقييم الموردين
+
+### 1. التحقق من التراخيص
+
+- رقم تسجيل الشركة
+- رخصة التصدير
+- سجل الأعمال
+
+### 2. مراجعة السمعة
+
+- تقييمات العملاء
+- مراجعات مستقلة
+- سجل الشكاوى
+
+### 3. فحص القدرة الإنتاجية
+
+- حجم المصنع
+- المعدات المتاحة
+- عدد الموظفين
+- سعة الإنتاج
+
+### 4. طلب عينات
+
+- جودة العينة
+- دقة المواصفات
+- وقت التسليم
+- التغليف
+
+### 5. زيارة المصنع
+
+- إذا أمكن، زر المصنع شخصياً
+- راجع ظروف العمل
+- تحقق من الجودة
+- قيّم الإدارة
+
+## علامات المورد الجيد
+
+### 1. التواصل الفعال
+
+- يرد بسرعة
+- يتحدث بوضوح
+- يجيب عن الأسئلة
+
+### 2. الشفافية
+
+- يشارك المعلومات بوضوح
+- يوضح القيود
+- صادق في التعامل
+
+### 3. المرونة
+
+- يتفاوض بشكل معقول
+- يقبل التعديلات
+- يبحث عن حلول
+
+### 4. الخبرة
+
+- يعرف الصناعة جيداً
+- يفهم المتطلبات
+- يقدم نصائح مفيدة
+
+## علامات المورد السيء
+
+### 1. الأسعار غير الواقعية
+
+- أسعار منخفضة جداً
+- لا تبرر التكاليف
+- قد تشير لجودة رديئة
+
+### 2. رفض العينات
+
+- يرفض إرسال عينات
+- يطلب دفع مسبق كبير
+- لا يسمح بالفحص
+
+### 3. ضغط للتعاقد السريع
+
+- يضغط للتعاقد فوراً
+- لا يعطي وقتاً للتفكير
+- يقدم عروض محدودة الوقت
+
+### 4. معلومات غير كاملة
+
+- يرفض مشاركة التفاصيل
+- معلومات غامضة
+- لا يوفر مراجع
+
+## نصائح مهمة
+
+- ابدأ بكميات صغيرة
+- استخدم عقود واضحة
+- احتفظ بسجلات الاتصال
+- لا تدفع كاملاً مسبقاً
+
+## لماذا دينورا؟
+
+دينورا تساعدك في العثور على الموردين الموثوقين في الصين، مع فريق من الخبراء على دراية كاملة بالسوق الصيني.`,
+    },
+    en: {
+      title: "Sourcing from China: How to Find the Right Supplier",
+      description: "A practical guide to finding suppliers in China, evaluating them, and choosing the best for your business.",
+      content: `# Sourcing from China: How to Find the Right Supplier
+
+Sourcing from China requires skill in searching and evaluation. Choosing the wrong supplier can cost you a lot of money and time.
+
+## Sources for Finding Suppliers
+
+### 1. E-commerce Platforms
+
+- **Alibaba:** Largest platform for Chinese suppliers
+- **Made-in-China:** Reliable platform for factories
+- **Global Sources:** For high-quality products
+- **DHgate:** For wholesale trade
+
+### 2. Trade Shows
+
+- **Canton Fair:** Largest fair in China
+- **Hong Kong Fair:** For electronics
+- **Specialized Fairs:** By industry
+
+### 3. Sourcing Companies
+
+- Professional intermediary companies
+- Representative offices in China
+- Specialized import companies
+
+## Evaluating Suppliers
+
+### 1. License Verification
+
+- Company registration number
+- Export license
+- Business record
+
+### 2. Reputation Review
+
+- Customer ratings
+- Independent reviews
+- Complaint record
+
+### 3. Production Capacity Check
+
+- Factory size
+- Available equipment
+- Number of employees
+- Production capacity
+
+### 4. Request Samples
+
+- Sample quality
+- Specification accuracy
+- Delivery time
+- Packaging
+
+### 5. Factory Visit
+
+- If possible, visit the factory personally
+- Review working conditions
+- Check quality
+- Evaluate management
+
+## Signs of a Good Supplier
+
+### 1. Effective Communication
+
+- Responds quickly
+- Speaks clearly
+- Answers questions
+
+### 2. Transparency
+
+- Shares information clearly
+- Explains limitations
+- Honest in dealings
+
+### 3. Flexibility
+
+- Negotiates reasonably
+- Accepts modifications
+- Seeks solutions
+
+### 4. Experience
+
+- Knows the industry well
+- Understands requirements
+- Provides helpful advice
+
+## Signs of a Bad Supplier
+
+### 1. Unrealistic Prices
+
+- Very low prices
+- Doesn't justify costs
+- May indicate poor quality
+
+### 2. Refusing Samples
+
+- Refuses to send samples
+- Requests large advance payment
+- Doesn't allow inspection
+
+### 3. Pressure for Quick Contract
+
+- Pressures to contract immediately
+- Doesn't give time to think
+- Offers limited-time deals
+
+### 4. Incomplete Information
+
+- Refuses to share details
+- Vague information
+- Doesn't provide references
+
+## Important Tips
+
+- Start with small quantities
+- Use clear contracts
+- Keep communication records
+- Don't pay fully in advance
+
+## Why Dinoora?
+
+Dinoora helps you find reliable suppliers in China, with a team of experts fully knowledgeable about the Chinese market.`,
+    },
+  },
+  {
+    id: "air-freight",
+    type: "shipping",
+    image: "/blog-images/Dinoora_Ad_7.png",
+    ar: {
+      title: "الشحن الجوي من الصين: متى تستخدمه وكيف توفر التكلفة",
+      description: "دليل شامل للشحن الجوي من الصين، متى يكون الخيار الأفضل، وكيفية تقليل التكاليف.",
+      content: `# الشحن الجوي من الصين: متى تستخدمه وكيف توفر التكلفة
+
+الشحن الجوي من الصين خيار ممتاز للبضائع العاجلة أو عالية القيمة، لكنه يأتي بتكلفة أعلى. معرفة متى وكيفية استخدامه يمكن أن يوفر لك المال والوقت.
+
+## متى تستخدم الشحن الجوي؟
+
+### 1. البضائع العاجلة
+
+- منتجات موسمية
+- عروض محدودة الوقت
+- إعادة التوريد السريع
+- احتياجات إنتاج عاجلة
+
+### 2. البضائع عالية القيمة
+
+- إلكترونيات
+- مجوهرات
+- منتجات فاخرة
+- معدات طبية
+
+### 3. الكميات الصغيرة
+
+- عينات المنتج
+- طلبات تجريبية
+- كميات محدودة
+- شحنات شخصية
+
+### 4. البضائع الحساسة
+
+- منتجات قابلة للتلف
+- أدوية
+- مواد كيميائية
+- معدات دقيقة
+
+## مميزات الشحن الجوي
+
+### 1. السرعة
+
+- 3-7 أيام للوصول
+- تتبع دقيق
+- جداول زمنية ثابتة
+
+### 2. الأمان
+
+- مخاطر أقل للتلف
+- أمان أفضل للبضائع الحساسة
+- تتبع مستمر
+
+### 3. الموثوقية
+
+- جداول رحلات منتظمة
+- تأخيرات أقل
+- خدمة عملاء أفضل
+
+## عيوب الشحن الجوي
+
+### 1. التكلفة العالية
+
+- أغلى بكثير من الشحن البحري
+- رسوم إضافية متعددة
+- تكلفة أعلى للكيلو
+
+### 2. القيود
+
+- قيود على الوزن والحجم
+- قيود على بعض المواد
+- قيود على البضائع الخطرة
+
+### 3. التأثير البيئي
+
+- انبعاثات كربون أعلى
+- تأثير بيئي أكبر
+
+## كيفية تقليل تكاليف الشحن الجوي
+
+### 1. تحسين التغليف
+
+- استخدم تغليف خفيف
+- قلل الحجم غير الضروري
+- اختر مواد خفيفة
+
+### 2. تجميع الشحنات
+
+- اجمع طلبات متعددة
+- شحن دفعة واحدة
+- تفاوض على أسعار الكميات
+
+### 3. التخطيط المسبق
+
+- تجنب الشحن العاجل
+- خطط مسبقاً للطلبات
+- استفد من الأسعار الأقل
+
+### 4. مقارنة الأسعار
+
+- احصل على عروض متعددة
+- قارن بين شركات الشحن
+- ابحث عن عروض خاصة
+
+## المستندات المطلوبة
+
+- بوليصة الشحن الجوي
+- الفاتورة التجارية
+- قائمة التعبئة
+- شهادات خاصة لبعض المواد
+
+## نصائح مهمة
+
+- احسب التكلفة الكاملة
+- قارن مع الشحن البحري
+- ضع في الاعتبار قيمة الوقت
+- استخدم وسيطاً موثوقاً
+
+## لماذا دينورا؟
+
+دينورا تقدم خدمات شحن جوي متكاملة من الصين، مع أسعار تنافسية ومتابعة دقيقة للشحنات.`,
+    },
+    en: {
+      title: "Air Freight from China: When to Use It and How to Save Costs",
+      description: "A comprehensive guide to air freight from China, when it's the best option, and how to reduce costs.",
+      content: `# Air Freight from China: When to Use It and How to Save Costs
+
+Air freight from China is an excellent option for urgent or high-value goods, but it comes at a higher cost. Knowing when and how to use it can save you money and time.
+
+## When to Use Air Freight?
+
+### 1. Urgent Goods
+
+- Seasonal products
+- Limited-time offers
+- Quick restocking
+- Urgent production needs
+
+### 2. High-Value Goods
+
+- Electronics
+- Jewelry
+- Luxury products
+- Medical equipment
+
+### 3. Small Quantities
+
+- Product samples
+- Trial orders
+- Limited quantities
+- Personal shipments
+
+### 4. Sensitive Goods
+
+- Perishable products
+- Pharmaceuticals
+- Chemicals
+- Precision equipment
+
+## Advantages of Air Freight
+
+### 1. Speed
+
+- 3-7 days for arrival
+- Precise tracking
+- Consistent schedules
+
+### 2. Security
+
+- Lower risk of damage
+- Better security for sensitive goods
+- Continuous tracking
+
+### 3. Reliability
+
+- Regular flight schedules
+- Fewer delays
+- Better customer service
+
+## Disadvantages of Air Freight
+
+### 1. High Cost
+
+- Much more expensive than sea freight
+- Multiple additional fees
+- Higher cost per kilogram
+
+### 2. Limitations
+
+- Weight and size restrictions
+- Restrictions on some materials
+- Restrictions on dangerous goods
+
+### 3. Environmental Impact
+
+- Higher carbon emissions
+- Greater environmental impact
+
+## How to Reduce Air Freight Costs
+
+### 1. Optimize Packaging
+
+- Use lightweight packaging
+- Reduce unnecessary volume
+- Choose light materials
+
+### 2. Consolidate Shipments
+
+- Combine multiple orders
+- Ship in one batch
+- Negotiate volume prices
+
+### 3. Advance Planning
+
+- Avoid urgent shipping
+- Plan orders in advance
+- Take advantage of lower prices
+
+### 4. Compare Prices
+
+- Get multiple quotes
+- Compare shipping companies
+- Look for special offers
+
+## Required Documents
+
+- Air waybill
+- Commercial invoice
+- Packing list
+- Special certificates for some materials
+
+## Important Tips
+
+- Calculate total cost
+- Compare with sea freight
+- Consider time value
+- Use reliable broker
+
+## Why Dinoora?
+
+Dinoora offers integrated air freight services from China, with competitive prices and precise shipment tracking.`,
+    },
+  },
+  {
+    id: "sea-freight",
+    type: "shipping",
+    image: "/blog-images/Dinoora_Ad_8.png",
+    ar: {
+      title: "الشحن البحري من الصين: دليلك للشحن الاقتصادي",
+      description: "تعرف على الشحن البحري من الصين، أنواعه، ومتى يكون الخيار الأفضل لشحنتك.",
+      content: `# الشحن البحري من الصين: دليلك للشحن الاقتصادي
+
+الشحن البحري من الصين هو الخيار الأكثر اقتصادية للكميات الكبيرة، لكنه يتطلب تخطيطاً جيداً وفهماً للعمليات.
+
+## أنواع الشحن البحري
+
+### 1. الحاوية الكاملة (FCL - Full Container Load)
+
+- حاوية كاملة لبضائعك فقط
+- مناسب للكميات الكبيرة
+- أمان أعلى للبضائع
+- تكلفة أقل للوحدة
+
+**متى تستخدمه:**
+- كميات تملأ حاوية كاملة
+- بضائع قيمة أو حساسة
+- تريد التحكم الكامل
+
+### 2. الشحن الجزئي (LCL - Less than Container Load)
+
+- شحن جزئي في حاوية مشتركة
+- مناسب للكميات المتوسطة
+- تكلفة أعلى للوحدة
+- وقت أطول للتجميع
+
+**متى تستخدمه:**
+- كميات لا تملأ حاوية كاملة
+- تريد توفير التكلفة
+- الوقت ليس عاجلاً
+
+## أحجام الحاويات
+
+### 1. حاوية 20 قدم
+
+- الطول: 6 متر
+- السعة: 33 متر مكعب
+- الحمولة: 21 طن تقريباً
+- مناسبة للبضائع الثقيلة
+
+### 2. حاوية 40 قدم
+
+- الطول: 12 متر
+- السعة: 67 متر مكعب
+- الحمولة: 26 طن تقريباً
+- مناسبة للبضائع الخفيفة والكبيرة
+
+### 3. حاوية 40 قدم عالية (High Cube)
+
+- الطول: 12 متر
+- السعة: 76 متر مكعب
+- الحمولة: 26 طن تقريباً
+- مناسبة للبضائع الخفيفة جداً
+
+## مميزات الشحن البحري
+
+### 1. التكلفة المنخفضة
+
+- أرخص بكثير من الشحن الجوي
+- مناسب للكميات الكبيرة
+- توفير كبير على التكلفة
+
+### 2. السعة الكبيرة
+
+- يمكن شحن كميات هائلة
+- مناسب للبضائع الكبيرة والثقيلة
+- مرونة في الأحجام
+
+### 3. التنوع
+
+- أنواع متعددة من الحاويات
+- خيارات للتبريد والتدفئة
+- حاويات مفتوحة
+
+## عيوب الشحن البحري
+
+### 1. الوقت الطويل
+
+- 20-45 يوم للوصول
+- تأخيرات محتملة
+- يحتاج تخطيطاً مسبقاً
+
+### 2. المخاطر
+
+- مخاطر أعلى للتلف
+- احتمال فقدان البضائع
+- تأثير الظروف الجوية
+
+### 3. التعقيد
+
+- مستندات أكثر
+- إجراءات معقدة
+- يحتاج خبرة
+
+## خطوات الشحن البحري
+
+### 1. الحجز
+
+- احجز الحاوية
+- حدد موعد الشحن
+- تأكد من الأسعار
+
+### 2. التجهيز
+
+- جهز البضائع
+- أغلق الحاوية
+- أغلقها بإحكام
+
+### 3. المستندات
+
+- بوليصة الشحن
+- الفاتورة التجارية
+- قائمة التعبئة
+
+### 4. التتبع
+
+- تتبع الحاوية
+- راجع الحالة
+- استعد للوصول
+
+### 5. الاستلام
+
+- استلم الحاوية
+- فحص البضائع
+- أتم الإجراءات
+
+## نصائح مهمة
+
+- اختر حجم الحاوية المناسب
+- استخدم تغليف جيد
+- تأمين البضائع
+- خطط للوقت
+
+## لماذا دينورا؟
+
+دينورا تقدم خدمات شحن بحري شاملة من الصين، مع إدارة كاملة من الحجز حتى التسليم.`,
+    },
+    en: {
+      title: "Sea Freight from China: Your Guide to Economical Shipping",
+      description: "Learn about sea freight from China, its types, and when it's the best option for your shipment.",
+      content: `# Sea Freight from China: Your Guide to Economical Shipping
+
+Sea freight from China is the most economical option for large quantities, but it requires good planning and understanding of operations.
+
+## Types of Sea Freight
+
+### 1. Full Container Load (FCL)
+
+- Full container for your goods only
+- Suitable for large quantities
+- Higher security for goods
+- Lower cost per unit
+
+**When to use:**
+- Quantities that fill a full container
+- Valuable or sensitive goods
+- Want full control
+
+### 2. Less than Container Load (LCL)
+
+- Partial shipment in shared container
+- Suitable for medium quantities
+- Higher cost per unit
+- Longer time for consolidation
+
+**When to use:**
+- Quantities that don't fill a full container
+- Want to save cost
+- Time is not urgent
+
+## Container Sizes
+
+### 1. 20-foot Container
+
+- Length: 6 meters
+- Capacity: 33 cubic meters
+- Load: approximately 21 tons
+- Suitable for heavy goods
+
+### 2. 40-foot Container
+
+- Length: 12 meters
+- Capacity: 67 cubic meters
+- Load: approximately 26 tons
+- Suitable for light and large goods
+
+### 3. 40-foot High Cube Container
+
+- Length: 12 meters
+- Capacity: 76 cubic meters
+- Load: approximately 26 tons
+- Suitable for very light goods
+
+## Advantages of Sea Freight
+
+### 1. Low Cost
+
+- Much cheaper than air freight
+- Suitable for large quantities
+- Significant cost savings
+
+### 2. Large Capacity
+
+- Can ship huge quantities
+- Suitable for large and heavy goods
+- Flexibility in sizes
+
+### 3. Variety
+
+- Multiple container types
+- Options for cooling and heating
+- Open containers
+
+## Disadvantages of Sea Freight
+
+### 1. Long Time
+
+- 20-45 days for arrival
+- Possible delays
+- Requires advance planning
+
+### 2. Risks
+
+- Higher risk of damage
+- Possibility of losing goods
+- Weather impact
+
+### 3. Complexity
+
+- More documents
+- Complex procedures
+- Requires expertise
+
+## Sea Freight Steps
+
+### 1. Booking
+
+- Book container
+- Set shipping date
+- Confirm prices
+
+### 2. Preparation
+
+- Prepare goods
+- Close container
+- Seal securely
+
+### 3. Documentation
+
+- Bill of lading
+- Commercial invoice
+- Packing list
+
+### 4. Tracking
+
+- Track container
+- Review status
+- Prepare for arrival
+
+### 5. Receipt
+
+- Receive container
+- Inspect goods
+- Complete procedures
+
+## Important Tips
+
+- Choose appropriate container size
+- Use good packaging
+- Secure goods
+- Plan for time
+
+## Why Dinoora?
+
+Dinoora offers comprehensive sea freight services from China, with full management from booking to delivery.`,
+    },
+  },
+  {
+    id: "logistics-services",
+    type: "shipping",
+    image: "/blog-images/Dinoora_Ad_9.png",
+    ar: {
+      title: "الخدمات اللوجستية: كيف تدير سلسلة التوريد بكفاءة",
+      description: "تعرف على الخدمات اللوجستية وأهميتها في إدارة سلسلة التوريد من الصين.",
+      content: `# الخدمات اللوجستية: كيف تدير سلسلة التوريد بكفاءة
+
+الخدمات اللوجستية هي العمود الفقري لأي عملية استيراد ناجحة. إدارة سلسلة التوريد بكفاءة يمكن أن يوفر الوقت والمال ويحسن جودة الخدمة.
+
+## ما هي الخدمات اللوجستية؟
+
+الخدمات اللوجستية تشمل جميع العمليات المتعلقة بنقل البضائع من المصنع إلى العميل النهائي، بما في ذلك:
+- النقل والتخزين
+- إدارة المخزون
+- التغليف والتعبئة
+- التتبع والإبلاغ
+- التخليص الجمركي
+- التوزيع
+
+## أهمية الخدمات اللوجستية
+
+### 1. توفير الوقت
+
+- تنسيق فعال للعمليات
+- تقليل التأخيرات
+- تحسين سرعة التسليم
+
+### 2. تقليل التكاليف
+
+- تحسين استخدام الموارد
+- تقليل الهدر
+- تحسين الكفاءة
+
+### 3. تحسين الجودة
+
+- حماية البضائع
+- تقليل التلف
+- تحسين تجربة العميل
+
+### 4. زيادة المرونة
+
+- التكيف مع التغيرات
+- التعامل مع الطوارئ
+- تحسين الاستجابة
+
+## مكونات سلسلة التوريد
+
+### 1. التوريد
+
+- البحث عن الموردين
+- التفاوض على الأسعار
+- إدارة العقود
+- مراقبة الجودة
+
+### 2. النقل
+
+- اختيار طريقة الشحن
+- حجز النقل
+- تتبع الشحنات
+- إدارة التأخيرات
+
+### 3. التخزين
+
+- اختيار المستودعات
+- إدارة المخزون
+- تجميع الشحنات
+- إعادة التعبئة
+
+### 4. التوزيع
+
+- التخطيط للمسارات
+- إدارة الطلبات
+- التسليم للعملاء
+- خدمة ما بعد البيع
+
+## استراتيجيات لوجستية فعالة
+
+### 1. التخطيط المسبق
+
+- تحليل الطلب
+- التنبؤ بالاحتياجات
+- إعداد خطط بديلة
+- تقييم المخاطر
+
+### 2. استخدام التكنولوجيا
+
+- أنظمة التتبع
+- إدارة المخزون الرقمية
+- الأتمتة
+- التحليلات
+
+### 3. بناء الشراكات
+
+- العمل مع موردين موثوقين
+- علاقات طويلة الأمد
+- اتفاقيات واضحة
+- تواصل مستمر
+
+### 4. التحسين المستمر
+
+- مراجعة الأداء
+- تحديد المشاكل
+- تنفيذ الحلول
+- قياس النتائج
+
+## تحديات لوجستية شائعة
+
+### 1. تأخير الشحن
+
+- الحل: التخطيط المسبق
+- الحل: استخدام شركات موثوقة
+- الحل: وجود خطط بديلة
+
+### 2. تلف البضائع
+
+- الحل: تغليف مناسب
+- الحل: تأمين شامل
+- الحل: فحص دوري
+
+### 3. تكاليف غير متوقعة
+
+- الحل: ميزانية واضحة
+- الحل: مراقبة مستمرة
+- الحل: تفاوض فعال
+
+### 4. مشاكل التواصل
+
+- الحل: قنوات واضحة
+- الحل: تحديثات منتظمة
+- الحل: لغة مشتركة
+
+## مؤشرات الأداء اللوجستي
+
+### 1. وقت التسليم
+
+- متوسط وقت التسليم
+- نسبة التسليم في الموعد
+- وقت الاستجابة
+
+### 2. التكلفة
+
+- تكلفة الوحدة
+- تكلفة التخزين
+- تكلفة النقل
+
+### 3. الجودة
+
+- نسبة التلف
+- نسبة العيوب
+- رضا العملاء
+
+### 4. الكفاءة
+
+- استخدام السعة
+- دوران المخزون
+- إنتاجية الموظفين
+
+## لماذا دينورا؟
+
+دينورا تقدم خدمات لوجستية متكاملة من الصين، مع فريق من الخبراء وإدارة شاملة لسلسلة التوريد.`,
+    },
+    en: {
+      title: "Logistics Services: How to Manage Your Supply Chain Efficiently",
+      description: "Learn about logistics services and their importance in managing the supply chain from China.",
+      content: `# Logistics Services: How to Manage Your Supply Chain Efficiently
+
+Logistics services are the backbone of any successful import operation. Efficient supply chain management can save time and money and improve service quality.
+
+## What are Logistics Services?
+
+Logistics services include all operations related to moving goods from the factory to the end customer, including:
+- Transportation and storage
+- Inventory management
+- Packaging and packing
+- Tracking and reporting
+- Customs clearance
+- Distribution
+
+## Importance of Logistics Services
+
+### 1. Saving Time
+
+- Effective operations coordination
+- Reducing delays
+- Improving delivery speed
+
+### 2. Reducing Costs
+
+- Improving resource use
+- Reducing waste
+- Improving efficiency
+
+### 3. Improving Quality
+
+- Protecting goods
+- Reducing damage
+- Improving customer experience
+
+### 4. Increasing Flexibility
+
+- Adapting to changes
+- Handling emergencies
+- Improving response
+
+## Supply Chain Components
+
+### 1. Sourcing
+
+- Finding suppliers
+- Negotiating prices
+- Managing contracts
+- Quality monitoring
+
+### 2. Transportation
+
+- Choosing shipping method
+- Booking transport
+- Tracking shipments
+- Managing delays
+
+### 3. Warehousing
+
+- Choosing warehouses
+- Inventory management
+- Consolidating shipments
+- Repackaging
+
+### 4. Distribution
+
+- Route planning
+- Order management
+- Customer delivery
+- After-sales service
+
+## Effective Logistics Strategies
+
+### 1. Advance Planning
+
+- Analyze demand
+- Forecast needs
+- Prepare backup plans
+- Assess risks
+
+### 2. Using Technology
+
+- Tracking systems
+- Digital inventory management
+- Automation
+- Analytics
+
+### 3. Building Partnerships
+
+- Work with reliable suppliers
+- Long-term relationships
+- Clear agreements
+- Continuous communication
+
+### 4. Continuous Improvement
+
+- Review performance
+- Identify problems
+- Implement solutions
+- Measure results
+
+## Common Logistics Challenges
+
+### 1. Shipping Delays
+
+- Solution: Advance planning
+- Solution: Use reliable companies
+- Solution: Have backup plans
+
+### 2. Goods Damage
+
+- Solution: Appropriate packaging
+- Solution: Comprehensive insurance
+- Solution: Regular inspection
+
+### 3. Unexpected Costs
+
+- Solution: Clear budget
+- Solution: Continuous monitoring
+- Solution: Effective negotiation
+
+### 4. Communication Problems
+
+- Solution: Clear channels
+- Solution: Regular updates
+- Solution: Common language
+
+## Logistics Performance Indicators
+
+### 1. Delivery Time
+
+- Average delivery time
+- On-time delivery rate
+- Response time
+
+### 2. Cost
+
+- Unit cost
+- Storage cost
+- Transport cost
+
+### 3. Quality
+
+- Damage rate
+- Defect rate
+- Customer satisfaction
+
+### 4. Efficiency
+
+- Capacity utilization
+- Inventory turnover
+- Employee productivity
+
+## Why Dinoora?
+
+Dinoora offers integrated logistics services from China, with a team of experts and comprehensive supply chain management.`,
+    },
+  },
 ];

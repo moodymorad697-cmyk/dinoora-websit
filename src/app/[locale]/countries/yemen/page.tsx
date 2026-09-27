@@ -12,40 +12,40 @@ export default function YemenPage() {
 
   const content = ar ? {
     title: "خدمات استيراد وشحن البضائع من الصين إلى اليمن",
-    intro: "دينورا هي شركة عربية متخصصة في خدمات الاستيراد والشحن من الصين إلى اليمن. نفهم تماماً تحديات السوق اليمني وخصوصيته، من الظروف الاستثنائية إلى متطلبات الاستيراد في موانئ الحديدة وعدن. بعكس شركات الشحن الصينية العامة التي تقدم محتوى مترجم آلياً لكل دول العالم بنفس القالب، نحن نقدم حلولاً مخصصة تفهم الواقع المحلي اليمني.\n\nنقدم شحن البضائع من الصين إلى اليمن عبر ميناء الحديدة وميناء عدن، وهما الموانئ الرئيسية لليمن على البحر الأحمر والبحر العربي. خدماتنا تشمل الشحن البحري والجوي، التخليص الجمركي الكامل، التخزين المؤقت في الصين، التوريد من المصانع المباشرة، وفحص الجودة قبل الشحن. نتعامل مع جميع أنواع البضائع: الإلكترونيات، المنسوجات، المواد الغذائية، الأدوية، والمعدات الصناعية.\n\nتتميز دينورا بفهم عميق للواقع اليمني. نحن ندرك أن اليمن يمر بظروف استثنائية، ونحن نتعامل مع هذه التحديات بمرونة وخبرة. فريقنا يتحدث العربية بطلاقة ويفهم الثقافة المحلية، مما يجعل التواصل سهلاً وفعالاً. نقدم دعماً كامل من المصنع في الصين حتى باب منزلك في اليمن، مع متابعة مستمرة وتحديثات واضحة في كل مرحلة.",
+    intro: "دينورا هي شركة عربية متخصصة في خدمات الاستيراد والشحن من الصين إلى اليمن. نفهم تحديات السوق اليمني وخصوصيته. بعكس شركات الشحن الصينية العامة التي تقدم محتوى مترجم آلياً لكل دول العالم بنفس القالب، نحن نقدم حلولاً مخصصة تفهم الواقع المحلي اليمني.\n\nنقدم خدماتنا من الصين إلى اليمن عبر ميناء الحديدة وميناء عدن. خدماتنا تشمل البحث عن الموردين، التفاوض مع الموردين، فحص الجودة قبل الشحن، التخزين في الصين، تجميع الشحنات، وتنسيق الشحن البحري والجوي. نتعامل مع جميع أنواع البضائع: الإلكترونيات، المنسوجات، المواد الغذائية، الأدوية، والمعدات الصناعية.\n\nتتميز دينورا بفهم للواقع اليمني. فريقنا يتحدث العربية بطلاقة ويفهم الثقافة المحلية، مما يجعل التواصل سهلاً وفعالاً. نقدم دعماً من البحث عن المنتج في الصين حتى وصول الشحنة، مع متابعة مستمرة وتحديثات واضحة في كل مرحلة.",
     whyTitle: "لماذا تختار دينورا لليمن؟",
     whyPoints: [
-      "خبرة محلية عميقة: نفهم متطلبات الاستيراد والإجراءات الجمركية اليمنية، ونتعامل مع الظروف الاستثنائية بمرونة.",
-      "خدمة شاملة موحدة: من التوريد والفحص في الصين حتى التسليم في اليمن، كل شيء من مكان واحد.",
-      "دعم عربي متخصص: فريق عربي يتحدث لغتك ويفهم ثقافتك، بدون حواجز لغوية أو ثقافية."
+      "فريق عربي يتحدث لغتك: فريقنا يتحدث العربية بطلاقة ويفهم ثقافتك، بدون حواجز لغوية.",
+      "خدمة من البحث حتى الوصول: نبحث لك عن المورد المناسب في الصين ونتفاوض مع الموردين نيابةً عنك.",
+      "فحص وتوثيق قبل الشحن: نفحص البضائع قبل الشحن ونوثق حالتها."
     ],
     services: [
-      { icon: Ship, title: "الشحن البحري عبر ميناء الحديدة وعدن", desc: "شحن بضائع من الصين إلى موانئ الحديدة وعدن بأسعار تنافسية مع متابعة كاملة" },
-      { icon: Plane, title: "الشحن الجوي السريع", desc: "شحن جوي من الصين لليمن للبضائع العاجلة مع تتبع لحظي" },
-      { icon: ClipboardCheck, title: "التخليص الجمركي", desc: "إجراءات تخليص جمركي كاملة في موانئ الحديدة وعدن مع فهم متطلبات الاستيراد اليمنية" },
-      { icon: Warehouse, title: "التخزين المؤقت", desc: "تخزين آمن في الصين لحين جاهزية الشحن مع تجميع الشحنات" },
-      { icon: Package, title: "التوريد المباشر", desc: "توريد من المصانع الصينية المباشرة بأسعار المصنع" },
-      { icon: ShieldCheck, title: "فحص الجودة", desc: "فحص شامل للبضائع قبل الشحن لضمان الجودة" }
+      { icon: Ship, title: "الشحن البحري عبر ميناء الحديدة وعدن", desc: "ننسق شحن البضائع من الصين إلى موانئ الحديدة وعدن" },
+      { icon: Plane, title: "الشحن الجوي السريع", desc: "ننسق الشحن الجوي من الصين لليمن للبضائع العاجلة" },
+      { icon: Warehouse, title: "التخزين في الصين", desc: "نخزن بضائعك في الصين لحين جاهزية الشحن مع تجميع الشحنات" },
+      { icon: Package, title: "البحث عن الموردين", desc: "نبحث لك عن المورد المناسب في الصين" },
+      { icon: ShieldCheck, title: "فحص الجودة", desc: "نفحص البضائع قبل الشحن ونوثق حالتها" },
+      { icon: ClipboardCheck, title: "التنسيق والتوثيق", desc: "ننسق مع الموردين ونجهز المستندات المطلوبة" }
     ],
-    cta: "اطلب عرض سعر مجاني"
+    cta: "اطلب عرض تجارة وشحن"
   } : {
     title: "Import and Shipping Services from China to Yemen",
-    intro: "Dinoora is an Arab company specializing in import and shipping services from China to Yemen. We fully understand the challenges and uniqueness of the Yemeni market, from exceptional conditions to import requirements at Hodeidah and Aden ports. Unlike general Chinese shipping companies that offer auto-translated content for every country in the world using the same template, we provide customized solutions that understand the Yemeni local reality.\n\nWe offer shipping goods from China to Yemen via Hodeidah Port and Aden Port, Yemen's main ports on the Red Sea and Arabian Sea. Our services include sea and air shipping, full customs clearance, temporary storage in China, direct sourcing from factories, and pre-shipment quality inspection. We handle all types of goods: electronics, textiles, food products, medicines, and industrial equipment.\n\nDinoora stands out with deep understanding of the Yemeni reality. We recognize that Yemen is going through exceptional conditions, and we handle these challenges with flexibility and expertise. Our team speaks Arabic fluently and understands the local culture, making communication easy and effective. We provide full support from the factory in China to your doorstep in Yemen, with continuous follow-up and clear updates at every stage.",
+    intro: "Dinoora is an Arab company specializing in import and shipping services from China to Yemen. We understand the challenges and uniqueness of the Yemeni market. Unlike general Chinese shipping companies that offer auto-translated content for every country in the world using the same template, we provide customized solutions that understand the Yemeni local reality.\n\nWe offer our services from China to Yemen via Hodeidah Port and Aden Port. Our services include searching for suppliers, negotiating with suppliers, pre-shipment quality inspection, storage in China, shipment consolidation, and coordinating sea and air shipping. We handle all types of goods: electronics, textiles, food products, medicines, and industrial equipment.\n\nDinoora stands out with understanding of the Yemeni reality. Our team speaks Arabic fluently and understands the local culture, making communication easy and effective. We provide support from searching for the product in China until shipment arrival, with continuous follow-up and clear updates at every stage.",
     whyTitle: "Why Choose Dinoora for Yemen?",
     whyPoints: [
-      "Deep local expertise: We understand Yemeni import requirements and customs procedures, and handle exceptional conditions with flexibility.",
-      "Unified comprehensive service: From sourcing and inspection in China to delivery in Yemen, everything from one place.",
-      "Specialized Arab support: An Arab team that speaks your language and understands your culture, without language or cultural barriers."
+      "Arabic-speaking team: Our team speaks Arabic fluently and understands your culture, without language barriers.",
+      "Service from search to arrival: We search for the right supplier in China and negotiate with suppliers on your behalf.",
+      "Inspection and documentation before shipment: We inspect goods before shipment and document their condition."
     ],
     services: [
-      { icon: Ship, title: "Sea Shipping via Hodeidah and Aden Ports", desc: "Shipping goods from China to Hodeidah and Aden ports at competitive prices with full tracking" },
-      { icon: Plane, title: "Fast Air Shipping", desc: "Air shipping from China to Yemen for urgent goods with real-time tracking" },
-      { icon: ClipboardCheck, title: "Customs Clearance", desc: "Full customs clearance procedures at Hodeidah and Aden ports with understanding of Yemeni import requirements" },
-      { icon: Warehouse, title: "Temporary Storage", desc: "Secure storage in China until ready for shipment with shipment consolidation" },
-      { icon: Package, title: "Direct Sourcing", desc: "Sourcing from direct Chinese factories at factory prices" },
-      { icon: ShieldCheck, title: "Quality Inspection", desc: "Comprehensive inspection of goods before shipment to ensure quality" }
+      { icon: Ship, title: "Sea Shipping via Hodeidah and Aden Ports", desc: "We coordinate shipping goods from China to Hodeidah and Aden ports" },
+      { icon: Plane, title: "Fast Air Shipping", desc: "We coordinate air shipping from China to Yemen for urgent goods" },
+      { icon: Warehouse, title: "Storage in China", desc: "We store your goods in China until ready for shipment with consolidation" },
+      { icon: Package, title: "Supplier Search", desc: "We search for the right supplier in China for you" },
+      { icon: ShieldCheck, title: "Quality Inspection", desc: "We inspect goods before shipment and document their condition" },
+      { icon: ClipboardCheck, title: "Coordination and Documentation", desc: "We coordinate with suppliers and prepare required documents" }
     ],
-    cta: "Get a Free Quote"
+    cta: "Request Trade and Shipping Quote"
   };
 
   const schema = {
@@ -65,7 +65,6 @@ export default function YemenPage() {
     "serviceType": [
       "Sea Shipping",
       "Air Shipping",
-      "Customs Clearance",
       "Warehousing",
       "Quality Inspection",
       "Product Sourcing"
