@@ -265,59 +265,6 @@ export default function AboutPage() {
         </div>
       </div>
     </motion.section>
-    {/* New: Achievements & Milestones Section */}
-    <motion.section
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-5 py-24 sm:px-8 lg:px-12"
-    >
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[128px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px]" />
-      </div>
-
-      <div className="mx-auto max-w-7xl relative">
-        <div className="text-center mb-16">
-          <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400 mb-4">
-            Dinoora / {ar ? "الإنجازات" : "Achievements"}
-          </p>
-          <h2 className="text-4xl font-black tracking-tight text-white mb-6">
-            {ar ? "رحلة نجاح مستمرة" : "A Journey of Success"}
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-4 gap-6">
-          {[
-            { value: "10K+", label: ar ? "شحنة منجزة" : "Shipments Delivered", icon: Ship },
-            { value: "500+", label: ar ? "شريك مصنع" : "Factory Partners", icon: Factory },
-            { value: "50+", label: ar ? "دولة مخدومة" : "Countries Served", icon: Globe },
-            { value: "95%", label: ar ? "رضا العملاء" : "Client Satisfaction", icon: Star },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -8 }}
-              className="relative group"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
-              <div className="relative bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-700 rounded-2xl p-8 text-center hover:border-cyan-500/50 transition-all duration-300">
-                <motion.div
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                  className="h-16 w-16 rounded-2xl bg-cyan-500/20 flex items-center justify-center mx-auto mb-4"
-                >
-                  <stat.icon className="h-8 w-8 text-cyan-400" />
-                </motion.div>
-                <div className="text-4xl font-black text-white mb-2">{stat.value}</div>
-                <div className="text-sm font-semibold text-slate-300">{stat.label}</div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </motion.section>
 
     {/* New: Timeline Section */}
     <motion.section
