@@ -13,6 +13,12 @@ export default function QuotePage() {
     contact: "",
     contactType: "whatsapp",
     service: "",
+    product: "",
+    quantity: "",
+    country: "",
+    port: "",
+    shippingMethod: "",
+    services: [] as string[],
     details: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -35,9 +41,18 @@ export default function QuotePage() {
       complete: locale === 'ar' ? 'خدمة كاملة' : 'Complete Service',
     };
     
+    const serviceLabels: Record<string, string> = {
+      sourcing: locale === 'ar' ? 'البحث عن الموردين' : 'Supplier Search',
+      inspection: locale === 'ar' ? 'فحص الجودة' : 'Quality Inspection',
+      storage: locale === 'ar' ? 'التخزين في الصين' : 'Storage in China',
+      shipping: locale === 'ar' ? 'تنسيق الشحن' : 'Shipping Coordination',
+    };
+    
+    const selectedServices = formData.services.map(s => serviceLabels[s]).join(', ');
+    
     const message = locale === 'ar'
-      ? `*طلب عرض سعر جديد من موقع دينورا*\n\n*الخدمة:* ${serviceNames[formData.service]}\n*طريقة التواصل:* ${formData.contactType === 'whatsapp' ? 'واتساب' : 'البريد الإلكتروني'}\n*معلومات التواصل:* ${formData.contact}\n*التفاصيل:* ${formData.details}`
-      : `*New quote request from Dinoora website*\n\n*Service:* ${serviceNames[formData.service]}\n*Contact Method:* ${formData.contactType === 'whatsapp' ? 'WhatsApp' : 'Email'}\n*Contact Info:* ${formData.contact}\n*Details:* ${formData.details}`;
+      ? `*طلب عرض تجارة وشحن جديد من موقع دينورا*\n\n*الخدمة:* ${serviceNames[formData.service]}\n*المنتج:* ${formData.product}\n*الكمية:* ${formData.quantity}\n*البلد:* ${formData.country}\n*ميناء الوصول:* ${formData.port}\n*طريقة الشحن:* ${formData.shippingMethod}\n*الخدمات المطلوبة:* ${selectedServices}\n*طريقة التواصل:* ${formData.contactType === 'whatsapp' ? 'واتساب' : 'البريد الإلكتروني'}\n*معلومات التواصل:* ${formData.contact}\n*التفاصيل:* ${formData.details}`
+      : `*New trade and shipping quote request from Dinoora website*\n\n*Service:* ${serviceNames[formData.service]}\n*Product:* ${formData.product}\n*Quantity:* ${formData.quantity}\n*Country:* ${formData.country}\n*Port of Arrival:* ${formData.port}\n*Shipping Method:* ${formData.shippingMethod}\n*Required Services:* ${selectedServices}\n*Contact Method:* ${formData.contactType === 'whatsapp' ? 'WhatsApp' : 'Email'}\n*Contact Info:* ${formData.contact}\n*Details:* ${formData.details}`;
     
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `${WHATSAPP_LINK}?text=${encodedMessage}`;
@@ -88,20 +103,20 @@ export default function QuotePage() {
 
       <div className="max-w-2xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">{locale === 'ar' ? 'اطلب عرض سعر' : 'Get a Quote'}</h1>
+          <h1 className="text-4xl font-bold text-white mb-4">{locale === 'ar' ? 'اطلب عرض تجارة وشحن' : 'Request Trade and Shipping Quote'}</h1>
           <p className="text-slate-400">{locale === 'ar' ? 'املأ النموذج أدناه للحصول على عرض سعر مخصص' : 'Fill out the form below to get a custom quote'}</p>
         </div>
 
         {/* Progress Steps */}
         <div className="flex items-center justify-center gap-4 mb-12">
-          {[1, 2, 3].map((s) => (
+          {[1, 2, 3, 4, 5].map((s) => (
             <div key={s} className="flex items-center gap-4">
               <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${
                 step >= s ? 'bg-gradient-to-r from-indigo-600 to-purple-500 text-white' : 'bg-slate-800 text-slate-500'
               }`}>
                 {s}
               </div>
-              {s < 3 && <div className={`w-16 h-1 rounded ${step > s ? 'bg-gradient-to-r from-indigo-600 to-purple-500' : 'bg-slate-800'}`} />}
+              {s < 5 && <div className={`w-16 h-1 rounded ${step > s ? 'bg-gradient-to-r from-indigo-600 to-purple-500' : 'bg-slate-800'}`} />}
             </div>
           ))}
         </div>
@@ -137,8 +152,214 @@ export default function QuotePage() {
             </div>
           )}
 
-          {/* Step 2: Contact Info */}
+          {/* Step 2: Product Details */}
           {step === 2 && (
+            <div className="space-y-6">
+              <h2 className="text-xl font-bold text-white">{locale === 'ar' ? 'تفاصيل المنتج' : 'Product Details'}</h2>
+              <p className="text-slate-400">{locale === 'ar' ? 'أخبرنا عن المنتج الذي تريد استيراده' : 'Tell us about the product you want to import'}</p>
+
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-slate-300 mb-2">
+                  {locale === 'ar' ? 'المنتج' : 'Product'} *
+                </label>
+                <input
+                  type="text"
+                  name="product"
+                  required
+                  value={formData.product}
+                  onChange={(e) => setFormData({ ...formData, product: e.target.value })}
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-500"
+                  placeholder={locale === 'ar' ? 'مثال: إلكترونيات، ملابس، معدات...' : 'e.g., Electronics, Clothing, Equipment...'}
+                />
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-slate-300 mb-2">
+                  {locale === 'ar' ? 'الكمية' : 'Quantity'} *
+                </label>
+                <input
+                  type="text"
+                  name="quantity"
+                  required
+                  value={formData.quantity}
+                  onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-500"
+                  placeholder={locale === 'ar' ? 'مثال: 100 قطعة، 500 كجم...' : 'e.g., 100 pieces, 500 kg...'}
+                />
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-slate-300 mb-2">
+                  {locale === 'ar' ? 'البلد' : 'Country'} *
+                </label>
+                <input
+                  type="text"
+                  name="country"
+                  required
+                  value={formData.country}
+                  onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-500"
+                  placeholder={locale === 'ar' ? 'السعودية، الإمارات، مصر...' : 'Saudi Arabia, UAE, Egypt...'}
+                />
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-slate-300 mb-2">
+                  {locale === 'ar' ? 'ميناء الوصول' : 'Port of Arrival'} *
+                </label>
+                <input
+                  type="text"
+                  name="port"
+                  required
+                  value={formData.port}
+                  onChange={(e) => setFormData({ ...formData, port: e.target.value })}
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-500"
+                  placeholder={locale === 'ar' ? 'مثال: جدة، دبي، الإسكندرية...' : 'e.g., Jeddah, Dubai, Alexandria...'}
+                />
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-slate-300 mb-2">
+                  {locale === 'ar' ? 'طريقة الشحن' : 'Shipping Method'} *
+                </label>
+                <select
+                  name="shippingMethod"
+                  required
+                  value={formData.shippingMethod}
+                  onChange={(e) => setFormData({ ...formData, shippingMethod: e.target.value })}
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white"
+                >
+                  <option value="">{locale === 'ar' ? 'اختر طريقة الشحن' : 'Select Shipping Method'}</option>
+                  <option value="sea">{locale === 'ar' ? 'شحن بحري' : 'Sea Freight'}</option>
+                  <option value="air">{locale === 'ar' ? 'شحن جوي' : 'Air Freight'}</option>
+                  <option value="land">{locale === 'ar' ? 'شحن بري' : 'Land Freight'}</option>
+                </select>
+              </div>
+
+              <div className="flex gap-4">
+                <button
+                  type="button"
+                  onClick={() => setStep(1)}
+                  className="flex-1 py-3 px-6 bg-slate-800 text-slate-300 rounded-lg font-semibold hover:bg-slate-700 transition-all"
+                >
+                  {locale === 'ar' ? 'السابق' : 'Previous'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setStep(3)}
+                  className="flex-1 py-3 px-6 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all"
+                >
+                  {locale === 'ar' ? 'التالي' : 'Next'}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Step 3: Service Selection */}
+          {step === 3 && (
+            <div className="space-y-6">
+              <h2 className="text-xl font-bold text-white">{locale === 'ar' ? 'الخدمات المطلوبة' : 'Required Services'}</h2>
+              <p className="text-slate-400">{locale === 'ar' ? 'اختر الخدمات التي تحتاجها' : 'Select the services you need'}</p>
+
+              <div className="space-y-4">
+                <label className="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-700 rounded-lg cursor-pointer hover:border-indigo-500 transition-all">
+                  <input
+                    type="checkbox"
+                    checked={formData.services.includes('sourcing')}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFormData({ ...formData, services: [...formData.services, 'sourcing'] });
+                      } else {
+                        setFormData({ ...formData, services: formData.services.filter(s => s !== 'sourcing') });
+                      }
+                    }}
+                    className="w-5 h-5 rounded border-slate-600 text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <div>
+                    <div className="font-semibold text-white">{locale === 'ar' ? 'البحث عن الموردين' : 'Supplier Search'}</div>
+                    <div className="text-sm text-slate-400">{locale === 'ar' ? 'نبحث لك عن المورد المناسب في الصين' : 'We search for the right supplier in China'}</div>
+                  </div>
+                </label>
+
+                <label className="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-700 rounded-lg cursor-pointer hover:border-indigo-500 transition-all">
+                  <input
+                    type="checkbox"
+                    checked={formData.services.includes('inspection')}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFormData({ ...formData, services: [...formData.services, 'inspection'] });
+                      } else {
+                        setFormData({ ...formData, services: formData.services.filter(s => s !== 'inspection') });
+                      }
+                    }}
+                    className="w-5 h-5 rounded border-slate-600 text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <div>
+                    <div className="font-semibold text-white">{locale === 'ar' ? 'فحص الجودة' : 'Quality Inspection'}</div>
+                    <div className="text-sm text-slate-400">{locale === 'ar' ? 'فحص وتوثيق قبل الشحن' : 'Inspection and documentation before shipping'}</div>
+                  </div>
+                </label>
+
+                <label className="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-700 rounded-lg cursor-pointer hover:border-indigo-500 transition-all">
+                  <input
+                    type="checkbox"
+                    checked={formData.services.includes('storage')}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFormData({ ...formData, services: [...formData.services, 'storage'] });
+                      } else {
+                        setFormData({ ...formData, services: formData.services.filter(s => s !== 'storage') });
+                      }
+                    }}
+                    className="w-5 h-5 rounded border-slate-600 text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <div>
+                    <div className="font-semibold text-white">{locale === 'ar' ? 'التخزين في الصين' : 'Storage in China'}</div>
+                    <div className="text-sm text-slate-400">{locale === 'ar' ? 'تجميع وتخزين شحناتك في الصين' : 'Consolidate and store your shipments in China'}</div>
+                  </div>
+                </label>
+
+                <label className="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-700 rounded-lg cursor-pointer hover:border-indigo-500 transition-all">
+                  <input
+                    type="checkbox"
+                    checked={formData.services.includes('shipping')}
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        setFormData({ ...formData, services: [...formData.services, 'shipping'] });
+                      } else {
+                        setFormData({ ...formData, services: formData.services.filter(s => s !== 'shipping') });
+                      }
+                    }}
+                    className="w-5 h-5 rounded border-slate-600 text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <div>
+                    <div className="font-semibold text-white">{locale === 'ar' ? 'تنسيق الشحن' : 'Shipping Coordination'}</div>
+                    <div className="text-sm text-slate-400">{locale === 'ar' ? 'تنسيق الشحن من الصين إلى بلدك' : 'Coordinate shipping from China to your country'}</div>
+                  </div>
+                </label>
+              </div>
+
+              <div className="flex gap-4">
+                <button
+                  type="button"
+                  onClick={() => setStep(2)}
+                  className="flex-1 py-3 px-6 bg-slate-800 text-slate-300 rounded-lg font-semibold hover:bg-slate-700 transition-all"
+                >
+                  {locale === 'ar' ? 'السابق' : 'Previous'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setStep(4)}
+                  className="flex-1 py-3 px-6 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all"
+                >
+                  {locale === 'ar' ? 'التالي' : 'Next'}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Step 4: Contact Info */}
+          {step === 4 && (
             <div className="space-y-6">
               <h2 className="text-xl font-bold text-white">{locale === 'ar' ? 'معلومات الاتصال' : 'Contact Information'}</h2>
               <p className="text-slate-400">{locale === 'ar' ? 'اختر طريقة التواصل المفضلة' : 'Choose your preferred contact method'}</p>
@@ -188,14 +409,14 @@ export default function QuotePage() {
               <div className="flex gap-4">
                 <button
                   type="button"
-                  onClick={() => setStep(1)}
+                  onClick={() => setStep(3)}
                   className="flex-1 py-3 px-6 bg-slate-800 text-slate-300 rounded-lg font-semibold hover:bg-slate-700 transition-all"
                 >
                   {locale === 'ar' ? 'السابق' : 'Previous'}
                 </button>
                 <button
                   type="button"
-                  onClick={() => setStep(3)}
+                  onClick={() => setStep(5)}
                   className="flex-1 py-3 px-6 bg-gradient-to-r from-indigo-600 to-purple-500 text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-indigo-500/30 transition-all"
                 >
                   {locale === 'ar' ? 'التالي' : 'Next'}
@@ -204,8 +425,8 @@ export default function QuotePage() {
             </div>
           )}
 
-          {/* Step 3: Details */}
-          {step === 3 && (
+          {/* Step 5: Details */}
+          {step === 5 && (
             <div className="space-y-6">
               <h2 className="text-xl font-bold text-white">{locale === 'ar' ? 'تفاصيل إضافية' : 'Additional Details'}</h2>
               <p className="text-slate-400">{locale === 'ar' ? 'أخبرنا المزيد عن احتياجاتك' : 'Tell us more about your needs'}</p>
@@ -228,7 +449,7 @@ export default function QuotePage() {
               <div className="flex gap-4">
                 <button
                   type="button"
-                  onClick={() => setStep(2)}
+                  onClick={() => setStep(4)}
                   className="flex-1 py-3 px-6 bg-slate-800 text-slate-300 rounded-lg font-semibold hover:bg-slate-700 transition-all"
                 >
                   {locale === 'ar' ? 'السابق' : 'Previous'}

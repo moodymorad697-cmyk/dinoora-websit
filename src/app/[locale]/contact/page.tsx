@@ -208,29 +208,10 @@ export default function ContactPage() {
                   <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">{locale === 'ar' ? 'البحث عن المنتج' : 'Product Sourcing'}</span>
                   <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">{locale === 'ar' ? 'التخزين' : 'Storage'}</span>
                   <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">{locale === 'ar' ? 'الشحن' : 'Shipping'}</span>
-                  <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">{locale === 'ar' ? 'الجمارك' : 'Customs'}</span>
                 </div>
               </div>
             </div>
 
-            {/* Customs Clearance */}
-            <div className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-amber-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative p-8">
-                <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-3">{locale === 'ar' ? 'التخليص الجمركي' : 'Customs Clearance'}</h3>
-                <p className="text-slate-400 mb-4">
-                  {locale === 'ar' ? 'إجراءات جمركية سريعة وموثوقة في جميع الموانئ' : 'Fast and reliable customs procedures in all ports'}
-                </p>
-                <div className="text-amber-400 font-semibold text-sm">
-                  {locale === 'ar' ? 'سريع • قانوني • مضمون' : 'Fast • Legal • Guaranteed'}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -317,10 +298,9 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white"
                   >
                     <option value="">{locale === 'ar' ? 'اختر الموضوع' : 'Select Subject'}</option>
-                    <option value="quote">{locale === 'ar' ? 'طلب عرض سعر' : 'Request Quote'}</option>
+                    <option value="quote">{locale === 'ar' ? 'طلب عرض تجارة وشحن' : 'Request Trade and Shipping Quote'}</option>
                     <option value="sourcing">{locale === 'ar' ? 'توريد المنتجات' : 'Product Sourcing'}</option>
                     <option value="shipping">{locale === 'ar' ? 'استفسار شحن' : 'Shipping Inquiry'}</option>
-                    <option value="customs">{locale === 'ar' ? 'التخليص الجمركي' : 'Customs Clearance'}</option>
                     <option value="support">{locale === 'ar' ? 'استفسار عام' : 'General Inquiry'}</option>
                     <option value="partnership">{locale === 'ar' ? 'فرصة شراكة' : 'Partnership Opportunity'}</option>
                   </select>
