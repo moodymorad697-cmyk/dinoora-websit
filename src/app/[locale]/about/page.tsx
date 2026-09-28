@@ -116,8 +116,8 @@ export default function AboutPage() {
         </h2>
         <p className="text-xl text-slate-300 max-w-2xl mx-auto">
           {ar
-            ? "نمتلك شبكة واسعة من الموردين والمصانع والأسواق في الصين، مع شراكات لوجستية في أكثر من 50 دولة"
-            : "We have an extensive network of suppliers, factories, and markets in China, with logistics partnerships in over 50 countries"}
+            ? "نمتلك شبكة واسعة من الموردين والمصانع والأسواق في الصين، مع شراكات لوجستية في الشرق الأوسط"
+            : "We have an extensive network of suppliers, factories, and markets in China, with logistics partnerships in the Middle East"}
         </p>
       </div>
 
@@ -127,19 +127,16 @@ export default function AboutPage() {
             image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=85",
             title: ar ? "مصانع في ييوو" : "Factories in Yiwu",
             desc: ar ? "مركز تجاري عالمي للبضائع الصغيرة" : "Global trading hub for small commodities",
-            count: "500+",
           },
           {
             image: "https://images.unsplash.com/photo-1565514020176-8d4b1ec9e0f8?w=600&q=85",
             title: ar ? "موانئ شنغهاي" : "Shanghai Ports",
             desc: ar ? "أكبر ميناء في العالم" : "World's largest port",
-            count: "24/7",
           },
           {
             image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=600&q=85",
             title: ar ? "أسواق شنتشن" : "Shenzhen Markets",
             desc: ar ? "مركز الإلكترونيات والتكنولوجيا" : "Electronics and technology hub",
-            count: "1000+",
           },
         ].map((location, index) => (
           <motion.div
@@ -156,9 +153,6 @@ export default function AboutPage() {
                 style={{ backgroundImage: `url('${location.image}')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
-              <div className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full border border-cyan-500/30">
-                <span className="text-sm font-bold text-cyan-400">{location.count}</span>
-              </div>
             </div>
             <div className="relative bg-slate-900/90 backdrop-blur-sm p-6">
               <h3 className="text-lg font-bold text-white mb-2">{location.title}</h3>

@@ -239,8 +239,8 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               {ar
-                ? "شبكة قوية من المصانع والموردين في الصين، مع شراكات لوجستية في أكثر من 50 دولة حول العالم."
-                : "Strong network of factories and suppliers in China, with logistics partnerships in over 50 countries worldwide."}
+                ? "شبكة قوية من المصانع والموردين في الصين، مع شراكات لوجستية في الشرق الأوسط."
+                : "Strong network of factories and suppliers in China, with logistics partnerships in the Middle East."}
             </p>
           </div>
 
@@ -248,14 +248,14 @@ export default function HomePage() {
             {[
               {
                 icon: Globe,
-                title: ar ? "تغطية عالمية" : "Global Coverage",
-                desc: ar ? "خدمات في 50+ دولة حول العالم" : "Services in 50+ countries worldwide",
+                title: ar ? "تغطية الشرق الأوسط" : "Middle East Coverage",
+                desc: ar ? "خدمات في السعودية والإمارات والكويت وقطر والبحرين وعمان" : "Services in Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, and Oman",
                 color: "from-cyan-500 to-blue-500",
               },
               {
                 icon: Container,
                 title: ar ? "موانئ استراتيجية" : "Strategic Ports",
-                desc: ar ? "وصول إلى موانئ رئيسية في آسيا وأوروبا والشرق الأوسط" : "Access to major ports in Asia, Europe, and Middle East",
+                desc: ar ? "وصول إلى موانئ رئيسية في آسيا والشرق الأوسط" : "Access to major ports in Asia and Middle East",
                 color: "from-purple-500 to-pink-500",
               },
               {
@@ -323,8 +323,8 @@ export default function HomePage() {
               
               <p className="text-xl text-slate-300 leading-relaxed">
                 {ar
-                  ? "احصل على استشارة مجانية وعرض سعر مخصص لمنتجاتك. نحن نضمن لك أفضل الأسعار من المصانع مباشرة."
-                  : "Get a free consultation and custom quote for your products. We guarantee you the best prices directly from factories."}
+                  ? "احصل على استشارة مجانية وعرض سعر مخصص لمنتجاتك. نساعدك في البحث عن الموردين والتفاوض على الأسعار."
+                  : "Get a free consultation and custom quote for your products. We help you search for suppliers and negotiate prices."}
               </p>
 
               <div className="flex flex-wrap gap-4">

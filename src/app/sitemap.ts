@@ -109,6 +109,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastmod: currentDate
     },
     {
+      path: '/countries/saudi-arabia',
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
       path: '/countries/iraq',
       priority: 0.8,
       changefreq: 'weekly' as const,
@@ -128,7 +134,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       path: '/countries/uae',
-      priority: 0.8,
+      priority: 0.9,
       changefreq: 'weekly' as const,
       lastmod: currentDate
     },

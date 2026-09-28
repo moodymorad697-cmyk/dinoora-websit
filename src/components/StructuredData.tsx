@@ -128,6 +128,93 @@ export default function StructuredData({ locale }: { locale: string }) {
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": locale === 'ar' ? "الرئيسية" : "Home",
+        "item": "https://www.dinooratrade.com"
+      }
+    ]
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "دينورا للتجارة الدولية",
+    "image": "https://www.dinooratrade.com/logo-dinoora.png",
+    "telephone": "+8619589468539",
+    "email": "info@dinooratrade.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Room 201, 2nd Floor, Building 2, No. 37, Daoge Tang Village, Jiangdong Street",
+      "addressLocality": "Yiwu City",
+      "addressRegion": "Zhejiang Province",
+      "postalCode": "322000",
+      "addressCountry": "CN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "29.3069",
+      "longitude": "120.0735"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "priceRange": "$$"
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": locale === 'ar' ? "كيف أستورد من الصين؟" : "How to import from China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": locale === 'ar'
+            ? "يمكنك الاستيراد من الصين من خلال دينورا التي تقدم خدمات التوريد، فحص الجودة، الشحن، والتخليص الجمركي بشكل متكامل."
+            : "You can import from China through Dinoora which offers integrated services for sourcing, quality inspection, shipping, and customs clearance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": locale === 'ar' ? "ما هي خدمات دينورا؟" : "What are Dinoora's services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": locale === 'ar'
+            ? "دينورا تقدم خدمات التوريد من الصين، فحص الجودة، التخزين والتجميع، الشحن، والتخليص الجمركي."
+            : "Dinoora offers sourcing from China, quality inspection, warehousing and consolidation, shipping, and customs clearance services."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": locale === 'ar' ? "كم تكلفة الاستيراد من الصين؟" : "How much does it cost to import from China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": locale === 'ar'
+            ? "تكلفة الاستيراد تعتمد على نوع المنتج، الكمية، وطريقة الشحن. يمكنك طلب عرض سعر مجاني من دينورا."
+            : "Import costs depend on product type, quantity, and shipping method. You can request a free quote from Dinoora."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -137,6 +224,18 @@ export default function StructuredData({ locale }: { locale: string }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </>
   );
