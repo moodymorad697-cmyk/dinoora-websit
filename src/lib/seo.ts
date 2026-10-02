@@ -239,6 +239,90 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
   },
+  '/products/electronics-import': {
+    ar: {
+      title: "استيراد الإلكترونيات من الصين للسعودية | دينورا",
+      description: "خدمات متكاملة لاستيراد الهواتف، الحواسيب، الأجهزة المنزلية من الصين للسعودية ودول الخليج. توريد، فحص جودة، شحن، وتخليص جمركي.",
+      keywords: [
+        "استيراد الإلكترونيات من الصين", "استيراد الهواتف من الصين", "استيراد الحواسيب من الصين", "استيراد الأجهزة المنزلية من الصين",
+        "استيراد الإلكترونيات للسعودية", "استيراد الإلكترونيات للإمارات", "استيراد الإلكترونيات للكويت", "استيراد الإلكترونيات لقطر",
+        "شركة استيراد إلكترونيات", "توريد الإلكترونيات من الصين", "شحن الإلكترونيات من الصين", "فحص جودة الإلكترونيات",
+        "استيراد الهواتف الذكية من الصين", "استيراد التابلت من الصين", "استيراد اللابتوب من الصين", "استيراد السماعات من الصين",
+        "استيراد الشواحن من الصين", "استيراد الكابلات من الصين", "استيراد الكاميرات من الصين", "استيراد الأجهزة الصوتية من الصين",
+        "استيراد الإلكترونيات بالجملة", "استيراد الإلكترونيات للمتاجر", "استيراد الإلكترونيات للتجارة الإلكترونية",
+        "أفضل شركات استيراد الإلكترونيات", "شركة استيراد إلكترونيات موثوقة", "استيراد إلكترونيات أونلاين",
+      ],
+    },
+    en: {
+      title: "Import Electronics from China to Saudi Arabia | Dinoora",
+      description: "Integrated services for importing phones, computers, home appliances from China to Saudi Arabia and Gulf countries. Sourcing, quality inspection, shipping, customs clearance.",
+      keywords: [
+        "import electronics from China", "import phones from China", "import computers from China", "import home appliances from China",
+        "import electronics to Saudi Arabia", "import electronics to UAE", "import electronics to Kuwait", "import electronics to Qatar",
+        "electronics import company", "sourcing electronics from China", "shipping electronics from China", "quality inspection electronics",
+        "import smartphones from China", "import tablets from China", "import laptops from China", "import headphones from China",
+        "import chargers from China", "import cables from China", "import cameras from China", "import audio equipment from China",
+        "wholesale electronics import", "import electronics for stores", "import electronics for e-commerce",
+        "best electronics import companies", "trusted electronics import company", "online electronics import",
+      ],
+    },
+  },
+  '/products/clothing-import': {
+    ar: {
+      title: "استيراد الملابس من الصين للسعودية | دينورا",
+      description: "خدمات متكاملة لاستيراد الملابس الجاهزة، الأقمشة، والإكسسوارات من الصين للسعودية ودول الخليج بالجملة.",
+      keywords: [
+        "استيراد الملابس من الصين", "استيراد الملابس الجاهزة من الصين", "استيراد الأقمشة من الصين", "استيراد الإكسسوارات من الصين",
+        "استيراد الملابس للسعودية", "استيراد الملابس للإمارات", "استيراد الملابس للكويت", "استيراد الملابس لقطر",
+        "شركة استيراد ملابس", "توريد الملابس من الصين", "شحن الملابس من الصين", "فحص جودة الملابس",
+        "استيراد الملابس الرجالية من الصين", "استيراد الملابس النسائية من الصين", "استيراد ملابس الأطفال من الصين", "استيراد الملابس الرياضية من الصين",
+        "استيراد الأحذية من الصين", "استيراد الحقائب من الصين", "استيراد الأحزمة من الصين", "استيراد الملابس الداخلية من الصين",
+        "استيراد الملابس بالجملة", "استيراد الملابس للمتاجر", "استيراد الملابس للتجارة الإلكترونية",
+        "أفضل شركات استيراد الملابس", "شركة استيراد ملابس موثوقة", "استيراد ملابس أونلاين",
+      ],
+    },
+    en: {
+      title: "Import Clothing from China to Saudi Arabia | Dinoora",
+      description: "Integrated services for importing ready-made clothing, fabrics, and accessories from China to Saudi Arabia and Gulf countries wholesale.",
+      keywords: [
+        "import clothing from China", "import ready-made clothing from China", "import fabrics from China", "import accessories from China",
+        "import clothing to Saudi Arabia", "import clothing to UAE", "import clothing to Kuwait", "import clothing to Qatar",
+        "clothing import company", "sourcing clothing from China", "shipping clothing from China", "quality inspection clothing",
+        "import men's clothing from China", "import women's clothing from China", "import children's clothing from China", "import sports clothing from China",
+        "import shoes from China", "import bags from China", "import belts from China", "import underwear from China",
+        "wholesale clothing import", "import clothing for stores", "import clothing for e-commerce",
+        "best clothing import companies", "trusted clothing import company", "online clothing import",
+      ],
+    },
+  },
+  '/products/solar-energy-import': {
+    ar: {
+      title: "استيراد الطاقة الشمسية من الصين للسعودية | دينورا",
+      description: "خدمات متكاملة لاستيراد الألواح الشمسية، الإنفرترات، البطاريات من الصين للسعودية ودول الخليج.",
+      keywords: [
+        "استيراد الطاقة الشمسية من الصين", "استيراد الألواح الشمسية من الصين", "استيراد الإنفرترات من الصين", "استيراد البطاريات الشمسية من الصين",
+        "استيراد الطاقة الشمسية للسعودية", "استيراد الطاقة الشمسية للإمارات", "استيراد الطاقة الشمسية للكويت", "استيراد الطاقة الشمسية لقطر",
+        "شركة استيراد طاقة شمسية", "توريد الطاقة الشمسية من الصين", "شحن الطاقة الشمسية من الصين", "فحص جودة الطاقة الشمسية",
+        "استيراد الألواح الشمسية بالجملة", "استيراد الإنفرترات الشمسية", "استيراد بطاريات الليثيوم من الصين", "استيراد أنظمة الطاقة الشمسية",
+        "استيراد مضخات الطاقة الشمسية", "استيراد الإضاءة الشمسية", "استيراد كابلات الطاقة الشمسية", "استيراد هياكل الطاقة الشمسية",
+        "استيراد الطاقة المتجددة من الصين", "استيراد معدات الطاقة الشمسية", "استيراد أنظمة الطاقة الشمسية للمشاريع",
+        "أفضل شركات استيراد الطاقة الشمسية", "شركة استيراد طاقة شمسية موثوقة", "استيراد طاقة شمسية أونلاين",
+      ],
+    },
+    en: {
+      title: "Import Solar Energy from China to Saudi Arabia | Dinoora",
+      description: "Integrated services for importing solar panels, inverters, batteries from China to Saudi Arabia and Gulf countries.",
+      keywords: [
+        "import solar energy from China", "import solar panels from China", "import inverters from China", "import solar batteries from China",
+        "import solar energy to Saudi Arabia", "import solar energy to UAE", "import solar energy to Kuwait", "import solar energy to Qatar",
+        "solar energy import company", "sourcing solar energy from China", "shipping solar energy from China", "quality inspection solar energy",
+        "wholesale solar panels import", "import solar inverters", "import lithium batteries from China", "import solar energy systems",
+        "import solar pumps from China", "import solar lighting", "import solar cables", "import solar structures",
+        "import renewable energy from China", "import solar energy equipment", "import solar energy systems for projects",
+        "best solar energy import companies", "trusted solar energy import company", "online solar energy import",
+      ],
+    },
+  },
   '/services/sourcing': {
     ar: {
       title: "كيف أجد مورد موثوق في الصين لاستيراد المنتجات | دينورا",

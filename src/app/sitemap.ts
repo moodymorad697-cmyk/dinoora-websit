@@ -97,6 +97,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastmod: currentDate
     },
     {
+      path: '/products/electronics-import',
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/products/clothing-import',
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/products/solar-energy-import',
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
       path: '/micro-services',
       priority: 0.5,
       changefreq: 'monthly' as const,
