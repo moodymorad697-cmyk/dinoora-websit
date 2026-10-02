@@ -85,6 +85,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastmod: currentDate
     },
     {
+      path: '/faq',
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/guide/how-to-import-from-china',
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
       path: '/micro-services',
       priority: 0.5,
       changefreq: 'monthly' as const,
