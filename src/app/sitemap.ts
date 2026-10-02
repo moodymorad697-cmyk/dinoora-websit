@@ -115,6 +115,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastmod: currentDate
     },
     {
+      path: '/countries/saudi-arabia',
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
       path: '/micro-services',
       priority: 0.5,
       changefreq: 'monthly' as const,

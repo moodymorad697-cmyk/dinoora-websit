@@ -323,6 +323,38 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
   },
+  '/countries/saudi-arabia': {
+    ar: {
+      title: "استيراد من الصين للسعودية | دينورا - التخليص الجمركي في جدة والدمام والرياض",
+      description: "خدمات متكاملة للاستيراد من الصين للسعودية مع التخليص الجمركي في جدة، الدمام، والرياض. توريد، فحص جودة، شحن، وتخليص جمركي.",
+      keywords: [
+        "استيراد من الصين للسعودية", "التخليص الجمركي في جدة", "التخليص الجمركي في الدمام", "التخليص الجمركي في الرياض",
+        "شركات استيراد من الصين للسعودية", "شركة استيراد من الصين موثوقة", "استيراد من الصين للرياض", "استيراد من الصين لجدة",
+        "استيراد من الصين للدمام", "استيراد من الصين لمكة", "استيراد من الصين للمدينة", "استيراد من الصين للقصيم",
+        "شركات الشحن من الصين للسعودية", "شحن من الصين لجدة", "شحن من الصين للدمام", "شحن من الصين للرياض",
+        "الجمارك السعودية الاستيراد من الصين", "منصة فسح الجمركية السعودية", "رسوم الجمارك السعودية", "ضريبة القيمة المضافة السعودية",
+        "شركات التخليص الجمركي في السعودية", "شركة تخليص جمركي في جدة", "شركة تخليص جمركي في الدمام", "شركة تخليص جمركي في الرياض",
+        "استيراد من الصين بدون وسيط للسعودية", "استيراد من الصين بالجملة للسعودية", "استيراد من الصين للمشاريع الصغيرة في السعودية",
+        "شركات استيراد من الصين بالرياض", "شركات استيراد من الصين في جدة", "شركات استيراد من الصين في الدمام",
+        "استيراد الإلكترونيات من الصين للسعودية", "استيراد الملابس من الصين للسعودية", "استيراد الأثاث من الصين للسعودية",
+      ],
+    },
+    en: {
+      title: "Import from China to Saudi Arabia | Dinoora - Customs Clearance in Jeddah, Dammam, Riyadh",
+      description: "Integrated services for importing from China to Saudi Arabia with customs clearance in Jeddah, Dammam, and Riyadh. Sourcing, quality inspection, shipping, customs clearance.",
+      keywords: [
+        "import from China to Saudi Arabia", "customs clearance in Jeddah", "customs clearance in Dammam", "customs clearance in Riyadh",
+        "import companies from China to Saudi Arabia", "trusted import company from China", "import from China to Riyadh", "import from China to Jeddah",
+        "import from China to Dammam", "import from China to Mecca", "import from China to Medina", "import from China to Qassim",
+        "shipping companies from China to Saudi Arabia", "shipping from China to Jeddah", "shipping from China to Dammam", "shipping from China to Riyadh",
+        "Saudi customs import from China", "Saudi customs clearance platform", "Saudi customs fees", "Saudi VAT",
+        "customs clearance companies in Saudi Arabia", "customs clearance company in Jeddah", "customs clearance company in Dammam", "customs clearance company in Riyadh",
+        "import from China without intermediary to Saudi Arabia", "wholesale import from China to Saudi Arabia", "import from China for small businesses in Saudi Arabia",
+        "import companies from China in Riyadh", "import companies from China in Jeddah", "import companies from China in Dammam",
+        "import electronics from China to Saudi Arabia", "import clothing from China to Saudi Arabia", "import furniture from China to Saudi Arabia",
+      ],
+    },
+  },
   '/services/sourcing': {
     ar: {
       title: "كيف أجد مورد موثوق في الصين لاستيراد المنتجات | دينورا",
@@ -655,18 +687,6 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
         "sourcing and shipping services", "comprehensive import solutions", "full import services", "import process management",
         "reliable import company", "professional sourcing company", "international shipping company", "logistics company",
       ],
-    },
-  },
-  '/countries/saudi-arabia': {
-    ar: {
-      title: "استيراد من الصين إلى السعودية | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى السعودية مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للسعودية.",
-      keywords: ["استيراد من الصين إلى السعودية", "شركة استيراد للسعودية", "شحن من الصين للسعودية", "توريد من الصين للسعودية", "استيرار للرياض", "استيرار لجدة", "استيرار للدمام"],
-    },
-    en: {
-      title: "Import from China to Saudi Arabia | Dinoora International Trade",
-      description: "Comprehensive import services from China to Saudi Arabia with sourcing, quality inspection, shipping, and customs clearance. Best import company for Saudi Arabia.",
-      keywords: ["import from China to Saudi Arabia", "import company for Saudi Arabia", "shipping from China to Saudi Arabia", "sourcing from China to Saudi Arabia", "import to Riyadh", "import to Jeddah", "import to Dammam"],
     },
   },
   '/countries/uae': {
