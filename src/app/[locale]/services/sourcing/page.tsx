@@ -12,8 +12,59 @@ export default function SourcingPage() {
     setIsVisible(true);
   }, []);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "كيف تجدون الموردين في الصين؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "لدينا قاعدة بيانات شاملة تضم أكثر من 500 مصنع موثق في 30 مقاطعة صينية. نقوم بالتحقق من كل مورد وتقييم قدرته الإنتاجية وجودة منتجاته قبل التعامل معه."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل تتفاوضون على الأسعار؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، لدينا فريق تفاوض محترف يستخدم علاقاتنا الواسعة للحصول على أفضل الأسعار لك. نحقق عادة توفير 35% من تكاليف الشراء المباشرة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف تضمنون جودة المنتجات؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نقوم بفحص شامل للعينات قبل الإنتاج الضخم، وفحص الجودة أثناء الإنتاج، وفحص نهائي قبل الشحن. لدينا مفتشو جودة محترفون في الصين."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كم تستغرق عملية التوريد؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نستجيب خلال 48 ساعة لكل طلب. عملية البحث عن المورد تستغرق عادة 3-5 أيام عمل، والتفاوض 2-3 أيام، وفحص العينات 5-7 أيام."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي الصناعات التي تخدمونها؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نخدم جميع الصناعات بما في ذلك الإلكترونيات، المنسوجات، الآلات، المواد الكيميائية، الأغذية والمشروبات، السيارات، البناء، الطبية، السلع الاستهلاكية، الصناعية، التكنولوجيا، والأزياء."
+        }
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section - Enhanced with Visuals */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

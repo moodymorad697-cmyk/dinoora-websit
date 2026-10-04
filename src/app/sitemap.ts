@@ -121,6 +121,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastmod: currentDate
     },
     {
+      path: '/comparison/china-vs-sourcing',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
       path: '/micro-services',
       priority: 0.5,
       changefreq: 'monthly' as const,

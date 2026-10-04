@@ -12,8 +12,59 @@ export default function CustomsPage() {
     setIsVisible(true);
   }, []);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ما هي خدمات التخليص الجمركي التي تقدمونها؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نقدم خدمات التخليص الجمركي الشاملة في جميع الموانئ والمطارات. نتعامل مع جميع المستندات المطلوبة، ندفع الرسوم الجمركية، وننسق مع السلطات الجمركية لضمان إفراج سريع للبضائع."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كم تستغرق عملية التخليص الجمركي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "عادة تستغرق عملية التخليص الجمركي 1-3 أيام عمل إذا كانت جميع المستندات كاملة. يمكن أن تستغرق وقتاً أطول إذا كانت هناك حاجة لمستندات إضافية أو فحص خاص."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي المستندات المطلوبة للتخليص الجمركي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "المستندات الأساسية تشمل: فاتورة تجارية، بوليصة شحن، قائمة تغليف، شهادة منشأ، وترخيص استيراد. بعض المنتجات قد تتطلب مستندات إضافية مثل شهادات الجودة أو الموافقات الخاصة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل تساعدون في الحصول على تراخيص الاستيراد؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نساعدك في الحصول على جميع التراخيص والموافقات المطلوبة لاستيراد منتجاتك. نحن على دراية بجميع المتطلبات التنظيمية ونساعدك في الامتثال لها."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي الرسوم الجمركية المتوقعة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الرسوم الجمركية تعتمد على نوع المنتج والبلد المستورد. نقدم تقديرات دقيقة للرسوم بناءً على المنتجات المحددة. في السعودية، تتراوح الرسوم عادة بين 5-15% بالإضافة إلى ضريبة القيمة المضافة 15%."
+        }
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section - Dark Theme with Enhanced Visuals */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

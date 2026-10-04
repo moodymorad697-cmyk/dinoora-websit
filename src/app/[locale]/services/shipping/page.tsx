@@ -12,8 +12,59 @@ export default function ShippingPage() {
     setIsVisible(true);
   }, []);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ما هي طرق الشحن المتاحة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نوفر ثلاث طرق رئيسية للشحن: الشحن البحري للحاويات الكاملة والجزئية، الشحن الجوي للبضائع العاجلة، والشحن البري للدول المجاورة. نختار الطريقة الأنسبى بناءً على حجم الشحنة والميزانية والوقت المتاح."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كم يستغرق الشحن من الصين؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الشحن الجوي يستغرق 3-7 أيام، الشحن البحري 15-45 يوماً حسب الميناء، والشحن البري 10-20 يوماً. نقدم تقديرات دقيقة للوقت عند كل طلب."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل توفرون تأمين على البضائع؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نوفر تأميناً شاملاً على جميع الشحنات يغطي التلف والفقدان. التأمين اختياري وننصح به للشحنات عالية القيمة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف يمكنني تتبع شحنتي؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نوفر نظام تتبع مباشر يتيح لك متابعة شحنتك في كل مرحلة من مراحل الشحن. ستحصل على تحديثات دورية عبر البريد الإلكتروني ويمكنك التحقق من الحالة عبر منصتنا."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي المستندات المطلوبة للشحن؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نحن نتعامل مع جميع المستندات المطلوبة بما في ذلك فاتورة تجارية، بوليصة شحن، قائمة تغليف، شهادة منشأ، وأي مستندات خاصة بالمنتج. نساعدك في تجهيز كل ما تحتاجه."
+        }
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section - Enhanced with Visuals */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

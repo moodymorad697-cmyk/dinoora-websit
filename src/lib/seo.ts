@@ -355,6 +355,32 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
   },
+  '/comparison/china-vs-sourcing': {
+    ar: {
+      title: "مقارنة الاستيراد من الصين مقابل خيارات التوريد الأخرى | دينورا",
+      description: "مقارنة شاملة بين الاستيراد من الصين وخيارات التوريد الأخرى مثل التوريد المحلي، التوريد من أوروبا، والتوريد من جنوب شرق آسيا.",
+      keywords: [
+        "مقارنة الاستيراد من الصين", "الاستيراد من الصين مقابل التوريد المحلي", "الاستيراد من الصين مقابل أوروبا", "الاستيراد من الصين مقابل جنوب شرق آسيا",
+        "أفضل خيار للاستيراد", "مقارنة أسعار الاستيراد", "مقارنة جودة الاستيراد", "مقارنة طرق التوريد",
+        "لماذا أستورد من الصين", "مزايا الاستيراد من الصين", "عيوب الاستيراد من الصين", "بديل الاستيراد من الصين",
+        "التوريد من الصين مقابل الهند", "التوريد من الصين مقابل فيتنام", "التوريد من الصين مقابل تايلاند", "التوريد من الصين مقابل تركيا",
+        "تكلفة الاستيراد من الصين مقابل المحلي", "جودة المنتجات الصينية مقابل الأوروبية", "شحن من الصين مقابل الشحن المحلي",
+        "مقارنة شركات الاستيراد", "اختيار مصدر التوريد المناسب", "تحليل خيارات الاستيراد", "دليل مقارنة الاستيراد",
+      ],
+    },
+    en: {
+      title: "Import from China vs Other Sourcing Options Comparison | Dinoora",
+      description: "Comprehensive comparison between importing from China and other sourcing options like local sourcing, European sourcing, and Southeast Asia sourcing.",
+      keywords: [
+        "import from China comparison", "import from China vs local sourcing", "import from China vs Europe", "import from China vs Southeast Asia",
+        "best import option", "import price comparison", "import quality comparison", "sourcing methods comparison",
+        "why import from China", "advantages of importing from China", "disadvantages of importing from China", "alternatives to importing from China",
+        "sourcing from China vs India", "sourcing from China vs Vietnam", "sourcing from China vs Thailand", "sourcing from China vs Turkey",
+        "cost of importing from China vs local", "Chinese products quality vs European", "shipping from China vs local shipping",
+        "import companies comparison", "choosing the right sourcing option", "import options analysis", "import comparison guide",
+      ],
+    },
+  },
   '/services/sourcing': {
     ar: {
       title: "كيف أجد مورد موثوق في الصين لاستيراد المنتجات | دينورا",
