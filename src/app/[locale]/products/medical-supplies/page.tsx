@@ -48,19 +48,33 @@ export default function MedicalSuppliesPage() {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": content.title,
     "description": content.description,
-    "brand": {
+    "provider": {
       "@type": "Organization",
-      "name": "دينورا للتجارة الدولية"
+      "name": "دينورا للتجارة الدولية",
+      "url": "https://www.dinooratrade.com"
     },
-    "category": "Medical Supplies",
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "USD"
-    }
+    "serviceType": "Medical Supplies Import",
+    "areaServed": [
+      "Saudi Arabia",
+      "UAE",
+      "Kuwait",
+      "Qatar",
+      "Bahrain",
+      "Oman",
+      "Jordan",
+      "Iraq",
+      "Algeria",
+      "Morocco",
+      "Tunisia",
+      "Egypt",
+      "Lebanon",
+      "Libya",
+      "Sudan",
+      "Yemen"
+    ]
   };
 
   return (

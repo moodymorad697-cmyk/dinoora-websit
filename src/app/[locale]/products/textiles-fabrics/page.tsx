@@ -48,19 +48,33 @@ export default function TextilesFabricsPage() {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": content.title,
     "description": content.description,
-    "brand": {
+    "provider": {
       "@type": "Organization",
-      "name": "دينورا للتجارة الدولية"
+      "name": "دينورا للتجارة الدولية",
+      "url": "https://www.dinooratrade.com"
     },
-    "category": "Textiles and Fabrics",
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "USD"
-    }
+    "serviceType": "Textiles and Fabrics Import",
+    "areaServed": [
+      "Saudi Arabia",
+      "UAE",
+      "Kuwait",
+      "Qatar",
+      "Bahrain",
+      "Oman",
+      "Jordan",
+      "Iraq",
+      "Algeria",
+      "Morocco",
+      "Tunisia",
+      "Egypt",
+      "Lebanon",
+      "Libya",
+      "Sudan",
+      "Yemen"
+    ]
   };
 
   return (
