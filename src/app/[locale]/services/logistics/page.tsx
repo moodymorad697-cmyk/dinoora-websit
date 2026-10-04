@@ -12,8 +12,59 @@ export default function LogisticsPage() {
     setIsVisible(true);
   }, []);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ما هي الخدمات اللوجستية التي تقدمونها؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نقدم خدمات لوجستية شاملة تشمل إدارة سلسلة التوريد، تخطيط المسارات، تنسيق النقل، إدارة المخزون، والتتبع المباشر. نستخدم تكنولوجيا متقدمة لتحسين الكفاءة وتقليل التكاليف."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف تضمنون سرعة التسليم؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نستخدم شبكة واسعة من شركاء النقل الموثوقين، ونخطط المسارات المثلى، ونراقب الشحنات في الوقت الفعلي. لدينا خطط بديلة جاهزة للتعامل مع أي تأخيرات غير متوقعة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل توفرون حلول لوجستية مخصصة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نصمم حلول لوجستية مخصصة حسب احتياجاتك. نأخذ في الاعتبار نوع المنتج، الميزانية، الوقت المتاح، والوجهة لإنشاء خطة مثالية لشحنتك."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف تتابعون الشحنات؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نستخدم نظام تتبع متقدم يوفر تحديثات في الوقت الفعلي. يمكنك متابعة شحنتك عبر منصتنا أو تلقي تحديثات دورية عبر البريد الإلكتروني."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي المناطق التي تغطونها؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نغطي جميع الدول العربية من الصين. لدينا خبرة واسعة في الشحن إلى السعودية، الإمارات، الكويت، قطر، البحرين، عمان، الأردن، العراق، الجزائر، المغرب، تونس، ومصر."
+        }
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section - Dark Theme with Enhanced Visuals */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

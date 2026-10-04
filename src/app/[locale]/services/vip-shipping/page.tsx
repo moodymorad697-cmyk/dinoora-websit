@@ -10,6 +10,53 @@ export default function VIPShippingPage() {
   const locale = useLocale();
   const ar = locale === "ar";
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ما هي خدمة الشحن VIP؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "خدمة الشحن VIP هي خدمة مميزة توفر أولوية عالية في جميع مراحل الشحن، مدير حساب مخصص، تحديثات لحظية، معالجة أولوية في الموانئ والمطارات، ودعم 24/7. هذه الخدمة مثالية للشحنات العاجلة أو عالية القيمة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي المزايا الرئيسية لخدمة VIP؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "المزايا تشمل مدير حساب مخصص، تحديثات لحظية على حالة الشحنة، أولوية في التخليص الجمركي، معالجة أولوية في الموانئ، تأمين شامل، ودعم على مدار الساعة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "من يحتاج خدمة الشحن VIP؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "خدمة VIP مناسبة للشحنات العاجلة، المنتجات ذات القيمة العالية، الشحنات الحساسة، والعملاء الذين يريدون راحة البال والضمان الكامل."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كم تستغرق الشحنات VIP؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الشحنات VIP أسرع بنسبة 30-50% من الشحنات العادية بسبب الأولوية في جميع المراحل. الوقت الفعلي يعتمد على الوجهة ونوع الشحن (جوي أو بحري)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل يمكنني ترقية شحنتي إلى VIP؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، يمكنك طلب خدمة VIP في أي مرحلة من مراحل الشحن. سنقوم بترقية الشحنة وتوفير جميع مزايا VIP المتاحة حسب المرحلة الحالية."
+        }
+      }
+    ]
+  };
+
   const content = ar ? {
     title: "خدمة الشحن VIP (المميز/السريع) - دينورا للتجارة الدولية",
     description: "خدمة شحن مميزة بأولوية أعلى وسرعة أكبر ومتابعة مباشرة شخصية للشحنة",
@@ -60,6 +107,10 @@ export default function VIPShippingPage() {
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

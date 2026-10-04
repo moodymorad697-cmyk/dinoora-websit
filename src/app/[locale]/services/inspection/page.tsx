@@ -12,8 +12,59 @@ export default function InspectionPage() {
     setIsVisible(true);
   }, []);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ما هي أنواع فحص الجودة التي تقدمونها؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نقدم فحص الجودة قبل الإنتاج، فحص أثناء الإنتاج، وفحص قبل الشحن. كما نقدم فحص العينات، فحص التحميل، وفحص المستودع. كل فحص يتضمن تقرير مفصل مع صور."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كم يستغرق فحص الجودة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "فحص العينات يستغرق 1-2 يوم، فحص قبل الإنتاج 2-3 أيام، وفحص قبل الشحن 1-2 يوم. نقدم تقارير سريعة خلال 24 ساعة من اكتمال الفحص."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل توفرون فحص المنتجات الخاصة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نقدم فحص مخصص حسب مواصفاتك ومتطلباتك. نعمل معك لتحديد نقاط الفحص المهمة ومعايير القبول قبل البدء."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي الشهادات التي تتحققون منها؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نتحقق من شهادات CE, FDA, ISO, وغيرها حسب نوع المنتج والسوق المستهدف. نتحقق من صحة الشهادات ومطابقة المنتجات للمواصفات."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف تتواصلون مع الموردين أثناء الفحص؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "فريقنا في الصين يتواصل مباشرة مع الموردين باللغة الصينية. ننسق الزيارات، نطلب المستندات، ونبلغ عن المشاكل فور اكتشافها."
+        }
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section - Dark Theme with Enhanced Visuals */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

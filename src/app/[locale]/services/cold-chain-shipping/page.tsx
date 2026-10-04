@@ -10,6 +10,53 @@ export default function ColdChainShippingPage() {
   const locale = useLocale();
   const ar = locale === "ar";
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "ما هي المنتجات التي تتطلب شحن مبرد؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "المنتجات التي تتطلب شحن مبرد تشمل الأدوية، اللقاحات، المواد الغذائية الطازجة، المنتجات الغذائية المجمدة، المواد الكيميائية الحساسة للحرارة، والمعدات الطبية الحساسة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف تضمنون استقرار درجة الحرارة أثناء الشحن؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نستخدم حاويات مبردة متطورة مع أنظمة مراقبة درجة الحرارة في الوقت الفعلي. نوفر سجلات مفصلة لدرجات الحرارة طوال الرحلة ونقوم بالإبلاغ الفوري عن أي انحرافات."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل تتعاملون مع الشحنات غير القياسية؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، لدينا خبرة واسعة في شحن المعدات كبيرة الحجم والشحنات غير القياسية. نتعامل مع المعدات الصناعية الكبيرة، الآلات الثقيلة، والمشاريع الخاصة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي المستندات المطلوبة للشحن المبرد؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "المستندات تشمل شهادات الجودة، شهادات المطابقة، شهادات درجة الحرارة، وشهادات التصدير الخاصة بالمنتجات الحساسة. نساعدك في تجهيز جميع المستندات المطلوبة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل توفرون تأمين للشحنات المبردة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نوفر تأميناً شاملاً للشحنات المبردة يغطي التلف بسبب انحرافات درجة الحرارة أو تأخير الشحن. التأمين اختياري وننصح به للمنتجات عالية القيمة."
+        }
+      }
+    ]
+  };
+
   const content = ar ? {
     title: "الشحن المبرد والمتخصص - دينورا للتجارة الدولية",
     description: "خدمة الشحن المبرد للمنتجات الحساسة للحرارة والشحن المتخصص للمعدات كبيرة الحجم",
@@ -60,6 +107,10 @@ export default function ColdChainShippingPage() {
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

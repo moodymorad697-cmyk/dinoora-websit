@@ -12,8 +12,59 @@ export default function WarehousingPage() {
     setIsVisible(true);
   }, []);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "أين تقع مستودعاتكم في الصين؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "لدينا مستودعات في مواقع استراتيجية في شنغهاي، شِنزن، غوانزو، نينغبو، وتيانجين. هذه المواقع قريبة من الموانئ الرئيسية والمصانع لتقليل أوقات الشحن."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي خدمات التخزين التي تقدمونها؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نقدم تخزين قصير وطويل الأمد، تجميع الشحنات، إدارة المخزون، فحص الجودة عند الاستلام، وتجهيز الشحنات. نقدم أيضاً خدمات التغليف وإعادة التغليف."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف تضمنون أمان البضائع المخزنة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "مستودعاتنا مجهزة بأنظمة أمان متقدمة تشمل كاميرات مراقبة 24/7، أنظمة إنذار، ومراقبة درجة الحرارة والرطوبة. نوفر أيضاً تأميناً على البضائع المخزنة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل توفرون خدمة تجميع الشحنات؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، نقدم خدمة تجميع الشحنات من موردين متعددين في حاوية واحدة لتقليل تكاليف الشحن. ننسق مع جميع الموردين ونجهز المستندات الموحدة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي تكلفة التخزين؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تكلفة التخزين تعتمد على حجم البضائع، المدة، ونوع الخدمة المطلوبة. نقدم أسعار تنافسية مع خطط مرنة. يمكننا تقديم عرض سعر مفصل بناءً على احتياجاتك."
+        }
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section - Enhanced with Visuals */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

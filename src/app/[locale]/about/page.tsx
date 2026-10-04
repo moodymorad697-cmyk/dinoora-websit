@@ -10,6 +10,48 @@ import Image from "next/image";
 export default function AboutPage() {
   const locale = useLocale();
   const ar = locale === "ar";
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "دينورا للتجارة الدولية",
+    "alternateName": "Dinoora International Trade",
+    "url": "https://www.dinooratrade.com",
+    "logo": "https://www.dinooratrade.com/logo-dinoora.png",
+    "description": ar ? "دينورا للتجارة الدولية هي شركة عربية متخصصة في الاستيراد والتجارة الدولية من الصين إلى الدول العربية. نقدم خدمات التوريد، فحص الجودة، الشحن، والتخليص الجمركي." : "Dinoora International Trade is an Arab company specializing in import and international trade from China to Arab countries. We provide sourcing, quality inspection, shipping, and customs clearance services.",
+    "foundingDate": "2020",
+    "areaServed": [
+      "Saudi Arabia",
+      "UAE",
+      "Kuwait",
+      "Qatar",
+      "Bahrain",
+      "Oman",
+      "Jordan",
+      "Iraq",
+      "Algeria",
+      "Morocco",
+      "Tunisia",
+      "Egypt",
+      "Lebanon",
+      "Libya",
+      "Sudan",
+      "Yemen"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "areaServed": "SA",
+      "availableLanguage": ["Arabic", "English", "Chinese"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/dinooratrade",
+      "https://www.instagram.com/dinooratrade",
+      "https://www.linkedin.com/company/dinooratrade",
+      "https://twitter.com/dinooratrade"
+    ]
+  };
+
   const c = ar ? {
     eyebrow: "عن دينورا", title: "نبني الوضوح في تجارة عابرة للحدود.", intro: "دينورا للتجارة الدولية هي شركة عربية متخصصة في الاستيراد والتجارة الدولية من الصين إلى الدول العربية. نحن نقدم خدمات التوريد، فحص الجودة، الشحن، والتخليص الجمركي. دورنا ليس تمرير الطلب؛ بل جعل كل قرار قابلاً للفهم والمتابعة.", contact: "تحدث مع فريقنا", storyLabel: "القصة وراء النموذج", storyTitle: "حين تكون المسافة هي المشكلة، نكون حاضرين في الطرفين.", story: "بدأت دينورا من ملاحظة عملية: كثير من مشاكل الاستيراد لا تبدأ في الميناء، بل قبل ذلك بكثير؛ مورد غير واضح، مواصفات غير مكتملة، أو شحنة بلا مالك يتابعها. لذلك صممنا نموذجاً يجمع التوريد والتحقق والفحص والتجميع والشحن ضمن مسار واحد.", story2: "من خلال علاقتنا مع شبكة الموردين والأسواق في الصين، نملك القدرة على السؤال والتحقق والتدخل مبكراً. وفي جهة العميل، نتحدث بلغة الأعمال والموعد والتكلفة، لا بلغة الإجراءات فقط.", modelTitle: "كيف نعمل كشريك تشغيل", model: ["نفهم الهدف التجاري قبل البحث عن المنتج.", "نوثق المعلومات التي تحتاج قراراً، لا صوراً دعائية.", "ننسق بين المورد والمستودع والناقل بمالك واضح.", "نبلغ عن المخاطر مبكراً ونقترح مساراً عملياً."], missionTitle: "مهمتنا", mission: "تبسيط التجارة مع الصين للشركات التي تحتاج نتيجة يمكن التخطيط لها.", visionTitle: "رؤيتنا", vision: "أن تصبح سلسلة الإمداد بين الصين والدول العربية أكثر وضوحاً وانضباطاً واستناداً إلى البيانات.", valuesTitle: "مبادئنا التشغيلية", values: [["01", "الوضوح", "نوضح ما هو معروف وما يحتاج إلى التحقق."], ["02", "المسؤولية", "كل مرحلة لها مالك وتحديث يمكن الرجوع إليه."], ["03", "التحقق", "لا نعتمد على الأوصاف وحدها؛ نطلب الأدلة ذات الصلة."], ["04", "الشراكة", "نقيس النجاح بالثقة في تكرار العملية."]], finalTitle: "دعنا نفهم الاحتياج أولاً.", finalBody: "أرسل تفاصيل المنتج والوجهة، وسيعود إليك فريقنا بالخطوة التالية والتقدير الأولي.", finalCta: "تواصل معنا"
   } : {
@@ -59,6 +101,10 @@ export default function AboutPage() {
   );
 
   return <main className="about-page site-palette bg-slate-950 text-white relative">
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+    />
     {/* Animated Connecting Line */}
     <div className={`fixed top-0 bottom-0 w-1 z-10 hidden lg:block ${ar ? 'right-8' : 'left-8'}`}>
       <svg className="w-full h-full" style={{ willChange: 'transform' }}>
