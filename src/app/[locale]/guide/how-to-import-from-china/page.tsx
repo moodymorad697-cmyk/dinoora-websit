@@ -1,6 +1,31 @@
 import Link from 'next/link'
 
 export default function HowToImportFromChina() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": "https://www.dinooratrade.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "الأدلة",
+        "item": "https://www.dinooratrade.com/guide"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "كيفية الاستيراد من الصين",
+        "item": "https://www.dinooratrade.com/guide/how-to-import-from-china"
+      }
+    ]
+  };
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -117,6 +142,10 @@ export default function HowToImportFromChina() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
       <div className="max-w-5xl mx-auto">

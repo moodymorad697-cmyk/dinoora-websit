@@ -5,6 +5,25 @@ import Link from 'next/link'
 export default function FAQPage() {
   const t = useTranslations('faq')
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": "https://www.dinooratrade.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "الأسئلة الشائعة",
+        "item": "https://www.dinooratrade.com/faq"
+      }
+    ]
+  };
+
   const faqData = [
     {
       question: "كيف أستورد من الصين للمبتدئين؟",
@@ -86,6 +105,10 @@ export default function FAQPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
       <div className="max-w-4xl mx-auto">

@@ -1,6 +1,31 @@
 import Link from 'next/link'
 
 export default function ElectronicsImportPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": "https://www.dinooratrade.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "المنتجات",
+        "item": "https://www.dinooratrade.com/products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "استيراد الإلكترونيات",
+        "item": "https://www.dinooratrade.com/products/electronics-import"
+      }
+    ]
+  };
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -26,6 +51,10 @@ export default function ElectronicsImportPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
       <div className="max-w-6xl mx-auto">

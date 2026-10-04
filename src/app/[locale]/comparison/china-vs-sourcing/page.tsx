@@ -1,6 +1,31 @@
 import Link from 'next/link'
 
 export default function ComparisonPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": "https://www.dinooratrade.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "المقارنات",
+        "item": "https://www.dinooratrade.com/comparison"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "الصين مقابل خيارات التوريد",
+        "item": "https://www.dinooratrade.com/comparison/china-vs-sourcing"
+      }
+    ]
+  };
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -27,6 +52,10 @@ export default function ComparisonPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
       <div className="max-w-6xl mx-auto">
