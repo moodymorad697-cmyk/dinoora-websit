@@ -21,6 +21,8 @@ export default function ImportCalculatorPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const content = ar ? {
     title: "احسب قيمة منتجك مجاناً مع دينورا",
@@ -110,31 +112,34 @@ export default function ImportCalculatorPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
 
-    // Prepare email content
-    const emailSubject = ar 
-      ? `طلب حساب تكلفة منتج - ${formData.productCategory}` 
-      : `Product Cost Calculation Request - ${formData.productCategory}`;
+    try {
+      const response = await fetch('/api/send-calculator-request', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          destination: selectedDestination?.label || formData.destination,
+          locale
+        }),
+      });
 
-    const emailBody = `
-${ar ? "تفاصيل طلب حساب تكلفة المنتج" : "Product Cost Calculation Request Details"}
+      const data = await response.json();
 
-${ar ? "فئة المنتج" : "Product Category"}: ${formData.productCategory}
-${ar ? "تفاصيل المنتج" : "Product Details"}: ${formData.productDetails}
-${ar ? "الكمية" : "Quantity"}: ${formData.quantity}
-${ar ? "الوجهة" : "Destination"}: ${selectedDestination?.label || formData.destination}
-${ar ? "الميناء" : "Port"}: ${formData.port || selectedDestination?.port || "Not specified"}
-${ar ? "طريقة الشحن" : "Shipping Method"}: ${formData.shippingMethod}
-${ar ? "الوزن" : "Weight"}: ${formData.weight} kg
-${ar ? "رقم الواتساب" : "WhatsApp Number"}: ${formData.whatsapp}
-
-${ar ? "اللغة المفضلة" : "Preferred Language"}: ${locale === 'ar' ? 'العربية' : 'English'}
-    `.trim();
-
-    // Open email client
-    window.location.href = `mailto:info@dinooratrade.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-
-    setSubmitted(true);
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError(ar ? "فشل إرسال الطلب. يرجى المحاولة مرة أخرى." : "Failed to send request. Please try again.");
+      }
+    } catch (err) {
+      setError(ar ? "حدث خطأ. يرجى المحاولة مرة أخرى." : "An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -304,12 +309,28 @@ ${ar ? "اللغة المفضلة" : "Preferred Language"}: ${locale === 'ar' ? 
                   />
                 </div>
 
+                {error && (
+                  <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-xl text-red-400 text-center">
+                    {error}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
+                  disabled={loading}
+                  className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  {content.submit}
-                  <Send className="h-5 w-5" />
+                  {loading ? (
+                    <>
+                      {ar ? "جاري الإرسال..." : "Sending..."}
+                      <Send className="h-5 w-5 animate-pulse" />
+                    </>
+                  ) : (
+                    <>
+                      {content.submit}
+                      <Send className="h-5 w-5" />
+                    </>
+                  )}
                 </button>
               </form>
             </div>
