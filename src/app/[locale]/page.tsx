@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLocale } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Check, ClipboardCheck, Container, FileCheck2, PackageSearch, ShieldCheck, Warehouse, Truck, BarChart3, Clock, Globe, Users, Search, Mail, Phone, MessageCircle, Factory, Ship, Plane, Zap, Award, TrendingUp, Calculator } from "lucide-react";
+import { ArrowRight, Check, ClipboardCheck, Container, FileCheck2, PackageSearch, ShieldCheck, Warehouse, Truck, BarChart3, Clock, Globe, Users, Search, Mail, Phone, MessageCircle, Factory, Ship, Plane, Zap, Award, TrendingUp } from "lucide-react";
 
 export default function HomePage() {
   const locale = useLocale();
@@ -87,7 +87,7 @@ export default function HomePage() {
             <p className="mb-6 border-s-2 border-cyan-300 ps-4 text-sm font-bold uppercase tracking-[0.14em] text-cyan-200">{text.eyebrow}</p>
             <h1 className="max-w-3xl whitespace-pre-line text-5xl font-black leading-[1.02] tracking-tight sm:text-7xl">{text.title}</h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">{text.intro}</p>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row"><Link href={`/${locale}/quote`} className="inline-flex items-center justify-center gap-3 rounded-lg bg-cyan-300 px-6 py-4 font-bold text-[#082238] transition hover:bg-white hover:scale-105 duration-300">{text.quote}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link><Link href={`/${locale}/calculator`} className="inline-flex items-center justify-center gap-3 rounded-lg border-2 border-cyan-500 px-6 py-4 font-bold text-cyan-300 transition hover:bg-cyan-500/10 hover:scale-105 duration-300">{ar ? "احسب تكلفة الاستيراد" : "Calculate Import Cost"}<Calculator className="h-5 w-5" /></Link><a href="#services" className="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-4 font-bold transition hover:bg-white/10 hover:scale-105 duration-300">{text.services}</a></div>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row"><Link href={`/${locale}/quote`} className="inline-flex items-center justify-center gap-3 rounded-lg bg-cyan-300 px-6 py-4 font-bold text-[#082238] transition hover:bg-white hover:scale-105 duration-300">{text.quote}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link><a href="#services" className="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-4 font-bold transition hover:bg-white/10 hover:scale-105 duration-300">{text.services}</a></div>
           </motion.div>
         </div>
       </div>

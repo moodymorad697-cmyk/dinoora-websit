@@ -271,12 +271,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastmod: currentDate
     },
     {
-      path: '/calculator',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
       path: '/free-consultation',
       priority: 0.9,
       changefreq: 'weekly' as const,
