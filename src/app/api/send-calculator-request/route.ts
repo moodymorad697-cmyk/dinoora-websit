@@ -1,4 +1,7 @@
 import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -41,21 +44,21 @@ ${ar ? "اللغة المفضلة" : "Preferred Language"}: ${locale === 'ar' ? 
 ${ar ? "تاريخ الطلب" : "Request Date"}: ${new Date().toLocaleString()}
     `.trim();
 
-    // In production, you would use a service like SendGrid, Nodemailer, or Resend
-    // For now, we'll log the email and return success
-    console.log('Email to be sent to info@dinooratrade.com:');
-    console.log('Subject:', emailSubject);
-    console.log('Body:', emailBody);
+    // Send email using Resend
+    const { data, error } = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || 'noreply@dinooratrade.com',
+      to: 'info@dinooratrade.com',
+      subject: emailSubject,
+      text: emailBody,
+    });
 
-    // TODO: Integrate with email service (SendGrid, Resend, etc.)
-    // Example with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send({
-    //   from: 'noreply@dinooratrade.com',
-    //   to: 'info@dinooratrade.com',
-    //   subject: emailSubject,
-    //   text: emailBody
-    // });
+    if (error) {
+      console.error('Resend error:', error);
+      return NextResponse.json(
+        { success: false, message: 'Failed to send email' },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ 
       success: true, 
