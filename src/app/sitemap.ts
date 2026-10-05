@@ -276,6 +276,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changefreq: 'weekly' as const,
       lastmod: currentDate
     },
+    {
+      path: '/free-consultation',
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/blog/how-to-avoid-common-import-mistakes',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
+      path: '/referral-program',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
   ]
 
   // Generate sitemap entries for all locales

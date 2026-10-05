@@ -3,101 +3,138 @@
 import React, { useState } from "react";
 import { useLocale } from "next-intl";
 import { motion } from "framer-motion";
-import { Calculator, ArrowRight, Package, Truck, FileText, CheckCircle2 } from "lucide-react";
+import { Calculator, ArrowRight, Package, CheckCircle2, Send } from "lucide-react";
 
 export default function ImportCalculatorPage() {
   const locale = useLocale();
   const ar = locale === "ar";
 
   const [formData, setFormData] = useState({
-    productType: "",
+    productCategory: "",
+    productDetails: "",
     quantity: "",
-    unit: "pcs",
-    origin: "china",
     destination: "",
-    shippingMethod: "sea",
-    value: ""
+    port: "",
+    shippingMethod: "",
+    weight: "",
+    whatsapp: ""
   });
 
-  const [result, setResult] = useState<any>(null);
+  const [submitted, setSubmitted] = useState(false);
 
   const content = ar ? {
-    title: "حاسبة تكلفة الاستيراد من الصين",
-    description: "احسب تكلفة استيراد منتجاتك من الصين بدقة",
-    intro: "استخدم حاسبة تكلفة الاستيراد المجانية للحصول على تقدير دقيق لتكلفة استيراد منتجاتك من الصين. أدخل تفاصيل منتجك وستحصل على تقدير يشمل تكلفة المنتج، الشحن، الجمارك، والرسوم الإضافية.",
-    productType: "نوع المنتج",
+    title: "احسب قيمة منتجك مجاناً مع دينورا",
+    description: "احصل على تقدير دقيق لتكلفة استيراد منتجاتك من الصين",
+    intro: "أدخل تفاصيل منتجك وسيقوم فريقنا بحساب التكلفة الكاملة وإرسالها إليك عبر الواتساب. خدمة مجانية من دينورا.",
+    productCategory: "فئة المنتج",
+    productDetails: "تفاصيل المنتج",
     quantity: "الكمية",
-    unit: "الوحدة",
-    origin: "مصدر المنتج",
     destination: "الوجهة",
+    port: "الميناء",
     shippingMethod: "طريقة الشحن",
-    value: "قيمة المنتج (USD)",
-    calculate: "احسب التكلفة",
-    resultTitle: "تقدير التكلفة",
-    productCost: "تكلفة المنتج",
-    shippingCost: "تكلفة الشحن",
-    customsCost: "تكلفة الجمارك",
-    additionalFees: "رسوم إضافية",
-    totalCost: "التكلفة الإجمالية",
-    getQuote: "احصل على عرض سعر دقيق",
-    note: "ملاحظة: هذه تقديرات تقريبية. للحصول على عرض سعر دقيق، تواصل معنا.",
-    productTypes: ["إلكترونيات", "ملابس", "أدوات طبية", "أقمشة", "طاقة شمسية", "أخرى"],
-    destinations: ["السعودية", "الإمارات", "الكويت", "قطر", "البحرين", "عمان", "الأردن", "العراق", "الجزائر", "المغرب", "تونس", "مصر"],
-    shippingMethods: ["بحري (Sea)", "جوي (Air)"]
+    weight: "الوزن (كيلو)",
+    whatsapp: "رقم الواتساب",
+    submit: "إرسال الطلب",
+    successTitle: "تم إرسال طلبك بنجاح!",
+    successMessage: "سوف يصلك السعر الكامل لمنتجك على الواتساب خلال 24 ساعة. شكراً لتواصلك معنا.",
+    productCategories: ["إلكترونيات", "ملابس", "أدوات طبية", "أقمشة", "طاقة شمسية", "أجهزة منزلية", "أخرى"],
+    destinations: [
+      { value: "saudi", label: "السعودية", port: "جدة، الدمام، الرياض" },
+      { value: "uae", label: "الإمارات", port: "دبي، أبوظبي، الشارقة" },
+      { value: "kuwait", label: "الكويت", port: "الكويت، الشعيبة" },
+      { value: "qatar", label: "قطر", port: "الدوحة" },
+      { value: "bahrain", label: "البحرين", port: "المنامة" },
+      { value: "oman", label: "عمان", port: "صلالة، مسقط" },
+      { value: "jordan", label: "الأردن", port: "عمان، العقبة" },
+      { value: "iraq", label: "العراق", port: "البصرة، بغداد" },
+      { value: "algeria", label: "الجزائر", port: "الجزائر، وهران" },
+      { value: "morocco", label: "المغرب", port: "الدار البيضاء، طنجة" },
+      { value: "tunisia", label: "تونس", port: "تونس، صفاقس" },
+      { value: "egypt", label: "مصر", port: "الإسكندرية، بورسعيد" },
+      { value: "lebanon", label: "لبنان", port: "بيروت" },
+      { value: "libya", label: "ليبيا", port: "طرابلس، بنغازي" },
+      { value: "sudan", label: "السودان", port: "الخرطوم، بورتسودان" },
+      { value: "yemen", label: "اليمن", port: "عدن، الحديدة" }
+    ],
+    shippingMethods: ["بحري", "جوي"],
+    placeholders: {
+      productDetails: "مثال: هواتف سامسونج، كاميرات، أجهزة لابتوب...",
+      quantity: "مثال: 50 هاتف، 100 قطعة...",
+      weight: "مثال: 500 كيلو، 1000 كيلو...",
+      whatsapp: "مثال: +966500000000"
+    }
   } : {
-    title: "Import Cost Calculator from China",
-    description: "Calculate the cost of importing your products from China accurately",
-    intro: "Use our free import cost calculator to get an accurate estimate of the cost of importing your products from China. Enter your product details and you'll get an estimate including product cost, shipping, customs, and additional fees.",
-    productType: "Product Type",
+    title: "Calculate Your Product Value for Free with Dinoora",
+    description: "Get an accurate estimate of the cost of importing your products from China",
+    intro: "Enter your product details and our team will calculate the full cost and send it to you via WhatsApp. Free service from Dinoora.",
+    productCategory: "Product Category",
+    productDetails: "Product Details",
     quantity: "Quantity",
-    unit: "Unit",
-    origin: "Product Origin",
     destination: "Destination",
+    port: "Port",
     shippingMethod: "Shipping Method",
-    value: "Product Value (USD)",
-    calculate: "Calculate Cost",
-    resultTitle: "Cost Estimate",
-    productCost: "Product Cost",
-    shippingCost: "Shipping Cost",
-    customsCost: "Customs Cost",
-    additionalFees: "Additional Fees",
-    totalCost: "Total Cost",
-    getQuote: "Get Accurate Quote",
-    note: "Note: These are approximate estimates. For an accurate quote, contact us.",
-    productTypes: ["Electronics", "Clothing", "Medical Supplies", "Textiles", "Solar Energy", "Other"],
-    destinations: ["Saudi Arabia", "UAE", "Kuwait", "Qatar", "Bahrain", "Oman", "Jordan", "Iraq", "Algeria", "Morocco", "Tunisia", "Egypt"],
-    shippingMethods: ["Sea Freight", "Air Freight"]
+    weight: "Weight (kg)",
+    whatsapp: "WhatsApp Number",
+    submit: "Submit Request",
+    successTitle: "Your Request Has Been Sent Successfully!",
+    successMessage: "The full price of your product will be sent to you via WhatsApp within 24 hours. Thank you for contacting us.",
+    productCategories: ["Electronics", "Clothing", "Medical Supplies", "Textiles", "Solar Energy", "Home Appliances", "Other"],
+    destinations: [
+      { value: "saudi", label: "Saudi Arabia", port: "Jeddah, Dammam, Riyadh" },
+      { value: "uae", label: "UAE", port: "Dubai, Abu Dhabi, Sharjah" },
+      { value: "kuwait", label: "Kuwait", port: "Kuwait, Shuaiba" },
+      { value: "qatar", label: "Qatar", port: "Doha" },
+      { value: "bahrain", label: "Bahrain", port: "Manama" },
+      { value: "oman", label: "Oman", port: "Salalah, Muscat" },
+      { value: "jordan", label: "Jordan", port: "Amman, Aqaba" },
+      { value: "iraq", label: "Iraq", port: "Basra, Baghdad" },
+      { value: "algeria", label: "Algeria", port: "Algiers, Oran" },
+      { value: "morocco", label: "Morocco", port: "Casablanca, Tangier" },
+      { value: "tunisia", label: "Tunisia", port: "Tunis, Sfax" },
+      { value: "egypt", label: "Egypt", port: "Alexandria, Port Said" },
+      { value: "lebanon", label: "Lebanon", port: "Beirut" },
+      { value: "libya", label: "Libya", port: "Tripoli, Benghazi" },
+      { value: "sudan", label: "Sudan", port: "Khartoum, Port Sudan" },
+      { value: "yemen", label: "Yemen", port: "Aden, Hodeidah" }
+    ],
+    shippingMethods: ["Sea Freight", "Air Freight"],
+    placeholders: {
+      productDetails: "e.g., Samsung phones, cameras, laptops...",
+      quantity: "e.g., 50 phones, 100 pieces...",
+      weight: "e.g., 500 kg, 1000 kg...",
+      whatsapp: "e.g., +966500000000"
+    }
   };
 
-  const calculateCost = () => {
-    const productValue = parseFloat(formData.value) || 0;
-    const quantity = parseFloat(formData.quantity) || 0;
-    const totalProductValue = productValue * quantity;
+  const selectedDestination = content.destinations.find(d => d.value === formData.destination);
 
-    // Shipping cost estimation (simplified)
-    let shippingCost = 0;
-    if (formData.shippingMethod === "sea") {
-      shippingCost = quantity * 2; // $2 per unit for sea freight
-    } else {
-      shippingCost = quantity * 8; // $8 per unit for air freight
-    }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-    // Customs cost estimation (5-15% based on destination)
-    const customsRate = 0.1; // 10% average
-    const customsCost = (totalProductValue + shippingCost) * customsRate;
+    // Prepare email content
+    const emailSubject = ar 
+      ? `طلب حساب تكلفة منتج - ${formData.productCategory}` 
+      : `Product Cost Calculation Request - ${formData.productCategory}`;
 
-    // Additional fees (handling, documentation, etc.)
-    const additionalFees = (totalProductValue + shippingCost) * 0.05; // 5%
+    const emailBody = `
+${ar ? "تفاصيل طلب حساب تكلفة المنتج" : "Product Cost Calculation Request Details"}
 
-    const totalCost = totalProductValue + shippingCost + customsCost + additionalFees;
+${ar ? "فئة المنتج" : "Product Category"}: ${formData.productCategory}
+${ar ? "تفاصيل المنتج" : "Product Details"}: ${formData.productDetails}
+${ar ? "الكمية" : "Quantity"}: ${formData.quantity}
+${ar ? "الوجهة" : "Destination"}: ${selectedDestination?.label || formData.destination}
+${ar ? "الميناء" : "Port"}: ${formData.port || selectedDestination?.port || "Not specified"}
+${ar ? "طريقة الشحن" : "Shipping Method"}: ${formData.shippingMethod}
+${ar ? "الوزن" : "Weight"}: ${formData.weight} kg
+${ar ? "رقم الواتساب" : "WhatsApp Number"}: ${formData.whatsapp}
 
-    setResult({
-      productCost: totalProductValue,
-      shippingCost,
-      customsCost,
-      additionalFees,
-      totalCost
-    });
+${ar ? "اللغة المفضلة" : "Preferred Language"}: ${locale === 'ar' ? 'العربية' : 'English'}
+    `.trim();
+
+    // Open email client
+    window.location.href = `mailto:info@dinooratrade.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    setSubmitted(true);
   };
 
   return (
@@ -128,151 +165,167 @@ export default function ImportCalculatorPage() {
         </div>
       </section>
 
-      {/* Calculator Section */}
+      {/* Calculator Form Section */}
       <section className="py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {/* Product Type */}
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-slate-300">
-                  {content.productType}
-                </label>
-                <select
-                  value={formData.productType}
-                  onChange={(e) => setFormData({ ...formData, productType: e.target.value })}
-                  className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
-                >
-                  <option value="">{ar ? "اختر نوع المنتج" : "Select Product Type"}</option>
-                  {content.productTypes.map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Quantity */}
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-slate-300">
-                  {content.quantity}
-                </label>
-                <input
-                  type="number"
-                  value={formData.quantity}
-                  onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                  placeholder={ar ? "أدخل الكمية" : "Enter Quantity"}
-                  className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
-                />
-              </div>
-
-              {/* Destination */}
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-slate-300">
-                  {content.destination}
-                </label>
-                <select
-                  value={formData.destination}
-                  onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                  className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
-                >
-                  <option value="">{ar ? "اختر الوجهة" : "Select Destination"}</option>
-                  {content.destinations.map((dest) => (
-                    <option key={dest} value={dest}>{dest}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Shipping Method */}
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-slate-300">
-                  {content.shippingMethod}
-                </label>
-                <select
-                  value={formData.shippingMethod}
-                  onChange={(e) => setFormData({ ...formData, shippingMethod: e.target.value })}
-                  className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
-                >
-                  {content.shippingMethods.map((method) => (
-                    <option key={method} value={method.includes("Sea") ? "sea" : "air"}>{method}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Product Value */}
-              <div className="md:col-span-2">
-                <label className="block text-sm font-semibold mb-2 text-slate-300">
-                  {content.value}
-                </label>
-                <input
-                  type="number"
-                  value={formData.value}
-                  onChange={(e) => setFormData({ ...formData, value: e.target.value })}
-                  placeholder={ar ? "أدخل قيمة المنتج بالدولار" : "Enter product value in USD"}
-                  className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
-                />
-              </div>
-            </div>
-
-            <button
-              onClick={calculateCost}
-              className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
-            >
-              {content.calculate}
-              <Calculator className="h-5 w-5" />
-            </button>
-
-            {/* Result */}
-            {result && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-8 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl"
-              >
-                <h3 className="text-2xl font-bold mb-6 text-cyan-400">{content.resultTitle}</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-2 border-b border-slate-700">
-                    <span className="flex items-center gap-2 text-slate-300">
-                      <Package className="h-4 w-4" />
-                      {content.productCost}
-                    </span>
-                    <span className="font-bold">${result.productCost.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-slate-700">
-                    <span className="flex items-center gap-2 text-slate-300">
-                      <Truck className="h-4 w-4" />
-                      {content.shippingCost}
-                    </span>
-                    <span className="font-bold">${result.shippingCost.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-slate-700">
-                    <span className="flex items-center gap-2 text-slate-300">
-                      <FileText className="h-4 w-4" />
-                      {content.customsCost}
-                    </span>
-                    <span className="font-bold">${result.customsCost.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-slate-700">
-                    <span className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle2 className="h-4 w-4" />
-                      {content.additionalFees}
-                    </span>
-                    <span className="font-bold">${result.additionalFees.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between items-center py-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl px-4">
-                    <span className="text-xl font-bold">{content.totalCost}</span>
-                    <span className="text-2xl font-black text-cyan-400">${result.totalCost.toFixed(2)}</span>
-                  </div>
+          {!submitted ? (
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-8 md:p-12">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Product Category */}
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-slate-300">
+                    {content.productCategory}
+                  </label>
+                  <select
+                    value={formData.productCategory}
+                    onChange={(e) => setFormData({ ...formData, productCategory: e.target.value })}
+                    required
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
+                  >
+                    <option value="">{ar ? "اختر فئة المنتج" : "Select Product Category"}</option>
+                    {content.productCategories.map((category) => (
+                      <option key={category} value={category}>{category}</option>
+                    ))}
+                  </select>
                 </div>
-                <p className="mt-6 text-sm text-slate-400 text-center">{content.note}</p>
-                <a
-                  href={`/${locale}/quote`}
-                  className="mt-6 block w-full py-4 bg-white text-cyan-600 font-bold rounded-xl hover:bg-slate-100 transition text-center"
+
+                {/* Product Details */}
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-slate-300">
+                    {content.productDetails}
+                  </label>
+                  <textarea
+                    value={formData.productDetails}
+                    onChange={(e) => setFormData({ ...formData, productDetails: e.target.value })}
+                    required
+                    rows={3}
+                    placeholder={content.placeholders.productDetails}
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none resize-none"
+                  />
+                </div>
+
+                {/* Quantity */}
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-slate-300">
+                    {content.quantity}
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.quantity}
+                    onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
+                    required
+                    placeholder={content.placeholders.quantity}
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
+                  />
+                </div>
+
+                {/* Destination */}
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-slate-300">
+                    {content.destination}
+                  </label>
+                  <select
+                    value={formData.destination}
+                    onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
+                    required
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
+                  >
+                    <option value="">{ar ? "اختر الوجهة" : "Select Destination"}</option>
+                    {content.destinations.map((dest) => (
+                      <option key={dest.value} value={dest.value}>{dest.label}</option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Port */}
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-slate-300">
+                    {content.port}
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.port}
+                    onChange={(e) => setFormData({ ...formData, port: e.target.value })}
+                    placeholder={selectedDestination?.port || ar ? "أدخل الميناء" : "Enter Port"}
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
+                  />
+                  {selectedDestination && !formData.port && (
+                    <p className="mt-2 text-sm text-slate-400">
+                      {ar ? "المواني المتاحة:" : "Available Ports:"} {selectedDestination.port}
+                    </p>
+                  )}
+                </div>
+
+                {/* Shipping Method */}
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-slate-300">
+                    {content.shippingMethod}
+                  </label>
+                  <select
+                    value={formData.shippingMethod}
+                    onChange={(e) => setFormData({ ...formData, shippingMethod: e.target.value })}
+                    required
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
+                  >
+                    <option value="">{ar ? "اختر طريقة الشحن" : "Select Shipping Method"}</option>
+                    {content.shippingMethods.map((method) => (
+                      <option key={method} value={method}>{method}</option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Weight */}
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-slate-300">
+                    {content.weight}
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.weight}
+                    onChange={(e) => setFormData({ ...formData, weight: e.target.value })}
+                    required
+                    placeholder={content.placeholders.weight}
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
+                  />
+                </div>
+
+                {/* WhatsApp */}
+                <div>
+                  <label className="block text-sm font-semibold mb-2 text-slate-300">
+                    {content.whatsapp}
+                  </label>
+                  <input
+                    type="tel"
+                    value={formData.whatsapp}
+                    onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                    required
+                    placeholder={content.placeholders.whatsapp}
+                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white focus:border-cyan-500 focus:outline-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
                 >
-                  {content.getQuote}
-                  <ArrowRight className={`inline h-5 w-5 ${ar ? "mr-2 rotate-180" : "ml-2"}`} />
-                </a>
-              </motion.div>
-            )}
-          </div>
+                  {content.submit}
+                  <Send className="h-5 w-5" />
+                </button>
+              </form>
+            </div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-gradient-to-br from-green-500/10 to-cyan-500/10 border border-green-500/30 rounded-3xl p-8 md:p-12 text-center"
+            >
+              <div className="h-20 w-20 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-6">
+                <CheckCircle2 className="h-10 w-10 text-green-400" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-green-400">{content.successTitle}</h3>
+              <p className="text-slate-300 leading-relaxed">{content.successMessage}</p>
+            </motion.div>
+          )}
         </div>
       </section>
     </main>
