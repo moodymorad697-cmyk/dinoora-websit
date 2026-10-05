@@ -46,7 +46,7 @@ ${ar ? "تاريخ الطلب" : "Request Date"}: ${new Date().toLocaleString()}
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || 'noreply@dinooratrade.com',
+      from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
       to: 'info@dinooratrade.com',
       subject: emailSubject,
       text: emailBody,
