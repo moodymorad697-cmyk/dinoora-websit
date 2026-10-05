@@ -270,6 +270,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changefreq: 'weekly' as const,
       lastmod: currentDate
     },
+    {
+      path: '/calculator',
+      priority: 0.9,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
   ]
 
   // Generate sitemap entries for all locales

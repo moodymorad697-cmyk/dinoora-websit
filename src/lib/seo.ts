@@ -883,6 +883,46 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       keywords: ["import from China to Lebanon", "import company for Lebanon", "shipping from China to Lebanon", "sourcing from China to Lebanon", "import to Beirut"],
     },
   },
+  '/calculator': {
+    ar: {
+      title: "حاسبة تكلفة الاستيراد من الصين مجانية | دينورا",
+      description: "احسب تكلفة استيراد منتجاتك من الصين بدقة باستخدام حاسبة التكلفة المجانية. احصل على تقدير يشمل تكلفة المنتج، الشحن، الجمارك، والرسوم الإضافية.",
+      keywords: [
+        "حاسبة تكلفة الاستيراد", "حساب تكلفة الاستيراد من الصين", "تقدير تكلفة الاستيراد", "حاسبة شحن من الصين", "حساب تكلفة الشحن",
+        "تكلفة الاستيراد من الصين", "كم تكلفة الاستيراد من الصين", "حساب تكلفة الجمارك", "تقدير تكلفة الشحن البحري",
+        "حاسبة تكلفة الاستيراد للسعودية", "حاسبة تكلفة الاستيراد للإمارات", "حاسبة تكلفة الاستيراد للكويت",
+        "حساب تكلفة الاستيراد للسعودية", "حساب تكلفة الاستيراد للإمارات", "حساب تكلفة الاستيراد للكويت",
+        "تقدير تكلفة الاستيراد للسعودية", "تقدير تكلفة الاستيراد للإمارات", "تقدير تكلفة الاستيراد للكويت",
+        "حاسبة تكلفة الشحن البحري", "حاسبة تكلفة الشحن الجوي", "حساب تكلفة الشحن البحري", "حساب تكلفة الشحن الجوي",
+        "تكلفة الجمارك من الصين", "حساب الجمارك من الصين", "تقدير الجمارك من الصين",
+        "استيراد من الصين تكلفة", "كم يكلف الاستيراد من الصين", "تكلفة الاستيراد بالجملة",
+        "حاسبة استيراد مجانية", "أداة حساب تكلفة الاستيراد", "برنامج حساب تكلفة الاستيراد",
+        "تقدير تكلفة المنتجات من الصين", "حساب تكلفة المنتجات من الصين", "تكلفة المنتجات من الصين",
+        "شحن من الصين تكلفة", "كم تكلفة الشحن من الصين", "تقدير تكلفة الشحن من الصين",
+        "استيراد إلكترونيات من الصين تكلفة", "استيراد ملابس من الصين تكلفة", "استيراد أدوات من الصين تكلفة",
+        "حاسبة استيراد للتجارة", "حاسبة استيراد للشركات", "حاسبة استيراد للأفراد",
+      ],
+    },
+    en: {
+      title: "Free Import Cost Calculator from China | Dinoora",
+      description: "Calculate the cost of importing your products from China accurately using our free cost calculator. Get an estimate including product cost, shipping, customs, and additional fees.",
+      keywords: [
+        "import cost calculator", "calculate import cost from China", "estimate import cost", "shipping cost calculator", "calculate shipping cost",
+        "cost of importing from China", "how much does it cost to import from China", "calculate customs cost", "estimate sea freight cost",
+        "import cost calculator for Saudi Arabia", "import cost calculator for UAE", "import cost calculator for Kuwait",
+        "calculate import cost for Saudi Arabia", "calculate import cost for UAE", "calculate import cost for Kuwait",
+        "estimate import cost for Saudi Arabia", "estimate import cost for UAE", "estimate import cost for Kuwait",
+        "sea freight cost calculator", "air freight cost calculator", "calculate sea freight cost", "calculate air freight cost",
+        "customs cost from China", "calculate customs from China", "estimate customs from China",
+        "import from China cost", "how much to import from China", "wholesale import cost",
+        "free import calculator", "import cost calculation tool", "import cost calculation software",
+        "estimate product cost from China", "calculate product cost from China", "product cost from China",
+        "shipping from China cost", "how much is shipping from China", "estimate shipping cost from China",
+        "import electronics from China cost", "import clothing from China cost", "import tools from China cost",
+        "business import calculator", "company import calculator", "individual import calculator",
+      ],
+    },
+  },
 };
 
 /**
