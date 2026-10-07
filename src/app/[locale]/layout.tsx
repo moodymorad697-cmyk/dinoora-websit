@@ -38,11 +38,22 @@ export async function generateMetadata({
   // Default metadata for homepage (path is empty)
   const seoMetadata = generateSEOMetadata('', locale);
   
+  // Canonical URL
+  const canonicalUrl = `https://www.dinooratrade.com/${locale}`;
+  
   // Arabic SEO metadata for homepage
   if (locale === 'ar') {
     return {
       title: "أفضل شركة استيراد من الصين للسعودية | دينورا للتجارة الدولية",
       description: "دينورا للتجارة الدولية هي شركة عربية متخصصة في الاستيراد والتجارة الدولية من الصين إلى الدول العربية. نقدم خدمات التوريد، فحص الجودة، الشحن، والتخليص الجمركي بأسعار منافسة.",
+      alternates: {
+        canonical: canonicalUrl,
+        languages: {
+          'ar': 'https://www.dinooratrade.com/ar',
+          'en': 'https://www.dinooratrade.com/en',
+          'zh': 'https://www.dinooratrade.com/zh',
+        },
+      },
       keywords: [
         "أفضل شركة استيراد من الصين للسعودية", "شركة توريد وشحن من الصين", "استيراد من الصين", "شحن بضائع من الصين", "خدمات تخليص جمركي", "فحص جودة البضائع", "تخزين بضائع في الصين", "شركة لوجستيات صينية", "استيراد للسعودية", "تجارة مع الصين", "دينورا للتجارة الدولية",
         "كم تكلفة شحن منتج من الصين", "كيف ابحث عن قطع غيار سيارات من الصين", "استيراد الطاقة الشمسية من الصين", "شحن الطاقة الشمسية من الصين", "استيراد الألواح الشمسية من الصين", "شحن الألواح الشمسية من الصين", "استيراد إنفرترات من الصين", "شحن إنفرترات من الصين", "استيراد بطاريات شمسية من الصين", "شحن بطاريات شمسية من الصين",
@@ -176,6 +187,14 @@ export async function generateMetadata({
   return {
     title: "Best Import Company from China to Saudi Arabia | Dinoora International Trade",
     description: "Dinoora International Trade is an Arab company specializing in international trade and import from China to Arab countries. We offer sourcing, quality inspection, shipping, and customs clearance services with competitive prices.",
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'ar': 'https://www.dinooratrade.com/ar',
+        'en': 'https://www.dinooratrade.com/en',
+        'zh': 'https://www.dinooratrade.com/zh',
+      },
+    },
     keywords: [
       "best import company from China to Saudi Arabia", "sourcing and shipping from China", "import from China", "shipping goods from China", "customs clearance services", "goods quality inspection", "warehousing in China", "Chinese logistics company", "import to Saudi Arabia", "trade with China", "Dinoora International Trade", "دينورا للتجارة الدولية",
       "how much does it cost to ship a product from China", "how to search for car spare parts from China", "import solar energy from China", "ship solar energy from China", "import solar panels from China", "ship solar panels from China", "import inverters from China", "ship inverters from China", "import solar batteries from China", "ship solar batteries from China",
