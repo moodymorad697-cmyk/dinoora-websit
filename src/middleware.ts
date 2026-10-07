@@ -5,6 +5,14 @@ import { NextRequest } from 'next/server';
 export default function middleware(request: NextRequest) {
   const hostname = request.nextUrl.hostname;
   const pathname = request.nextUrl.pathname;
+  const protocol = request.nextUrl.protocol;
+  
+  // Force HTTPS redirect (308 permanent redirect)
+  if (protocol === 'http:') {
+    const url = request.nextUrl.clone();
+    url.protocol = 'https:';
+    return Response.redirect(url, 308);
+  }
   
   // Force www redirect (308 permanent redirect)
   if (hostname === 'dinooratrade.com') {

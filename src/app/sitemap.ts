@@ -235,6 +235,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastmod: currentDate
     },
     {
+      path: '/countries',
+      priority: 0.8,
+      changefreq: 'weekly' as const,
+      lastmod: currentDate
+    },
+    {
       path: '/products/medical-supplies',
       priority: 0.8,
       changefreq: 'weekly' as const,
