@@ -30,6 +30,9 @@ export default function middleware(request: NextRequest) {
   
   const response = createMiddleware(routing)(request);
   
+  // Add x-pathname header for canonical URL generation
+  response.headers.set('x-pathname', pathname);
+  
   return response;
 }
 

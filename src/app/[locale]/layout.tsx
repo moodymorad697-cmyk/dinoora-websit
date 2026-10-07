@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Cairo } from "next/font/google";
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import "../globals.css";
@@ -311,10 +312,16 @@ export default async function LocaleLayout({
   if (!locales.includes(locale as any)) notFound();
 
   const messages = await getMessages();
+  const headersList = await headers();
+  const pathname = headersList.get('x-pathname') || '';
+  const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '';
+  const canonicalUrl = `https://www.dinooratrade.com/${locale}${pathWithoutLocale}`;
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
+        {/* Canonical URL */}
+        <link rel="canonical" href={canonicalUrl} />
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
