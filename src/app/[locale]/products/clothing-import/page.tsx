@@ -28,22 +28,33 @@ export default function ClothingImportPage() {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "استيراد الملابس من الصين",
     "description": "خدمات متكاملة لاستيراد الملابس من الصين للسعودية ودول الخليج. توريد، فحص جودة، شحن، وتخليص جمركي.",
-    "brand": {
-      "@type": "Brand",
-      "name": "دينورا للتجارة الدولية"
+    "provider": {
+      "@type": "Organization",
+      "name": "دينورا للتجارة الدولية",
+      "url": "https://www.dinooratrade.com"
     },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "SAR",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "name": "دينورا للتجارة الدولية"
-      }
-    }
+    "serviceType": "Clothing Import Service",
+    "areaServed": [
+      "Saudi Arabia",
+      "UAE",
+      "Kuwait",
+      "Qatar",
+      "Bahrain",
+      "Oman",
+      "Jordan",
+      "Iraq",
+      "Algeria",
+      "Morocco",
+      "Tunisia",
+      "Egypt",
+      "Lebanon",
+      "Libya",
+      "Sudan",
+      "Yemen"
+    ]
   }
 
   return (
