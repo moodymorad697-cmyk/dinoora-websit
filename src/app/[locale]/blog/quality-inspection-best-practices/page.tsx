@@ -42,7 +42,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default function QualityInspectionPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function QualityInspectionPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const isArabic = locale === 'ar';
 
   return (
