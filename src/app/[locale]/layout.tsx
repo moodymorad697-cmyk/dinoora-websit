@@ -45,8 +45,8 @@ export async function generateMetadata({
   // Arabic SEO metadata for homepage
   if (locale === 'ar') {
     return {
-      title: "أفضل شركة استيراد من الصين للسعودية | دينورا للتجارة الدولية",
-      description: "دينورا للتجارة الدولية هي شركة عربية متخصصة في الاستيراد والتجارة الدولية من الصين إلى الدول العربية. نقدم خدمات التوريد، فحص الجودة، الشحن، والتخليص الجمركي بأسعار منافسة.",
+      title: "استيراد من الصين بسهولة | دينورا - شركة استيراد موثوقة للسعودية والدول العربية",
+      description: "استورد من الصين بأسعار تنافسية وخدمات متكاملة. توريد، فحص جودة، شحن، وتخليص جمركي. احصل على استشارة مجانية الآن!",
       alternates: {
         canonical: canonicalUrl,
         languages: {
@@ -57,6 +57,10 @@ export async function generateMetadata({
       },
       keywords: [
         "أفضل شركة استيراد من الصين للسعودية", "شركة توريد وشحن من الصين", "استيراد من الصين", "شحن بضائع من الصين", "خدمات تخليص جمركي", "فحص جودة البضائع", "تخزين بضائع في الصين", "شركة لوجستيات صينية", "استيراد للسعودية", "تجارة مع الصين", "دينورا للتجارة الدولية",
+        "استيراد من الصين للسعودية", "استيراد من الصين للإمارات", "استيراد من الصين للكويت", "استيراد من الصين لقطر", "استيراد من الصين للبحرين", "استيراد من الصين لعمان", "استيراد من الصين للأردن", "استيراد من الصين للعراق", "استيراد من الصين للمغرب", "استيراد من الصين للجزائر", "استيراد من الصين لتونس", "استيراد من الصين لمصر", "استيراد من الصين للسودان", "استيراد من الصين لليمن", "استيراد من الصين لليبيا", "استيراد من الصين للبنان",
+        "شركة استيراد من الصين جدة", "شركة استيراد من الصين الرياض", "شركة استيراد من الصين الدمام", "شركة استيراد من الصين مكة", "شركة استيراد من الصين المدينة", "شركة استيراد من الصين جازان", "شركة استيراد من الصين أبها",
+        "شركة استيراد من الصين دبي", "شركة استيراد من الصين أبوظبي", "شركة استيراد من الصين الشارقة", "شركة استيراد من الصين عجمان", "شركة استيراد من الصين رأس الخيمة", "شركة استيراد من الصين الفجيرة", "شركة استيراد من الصين أم القيوين",
+        "شركة استيراد من الصين الكويت", "شركة استيراد من الصين الدوحة", "شركة استيراد من الصين المنامة", "شركة استيراد من الصين مسقط", "شركة استيراد من الصين عمّان", "شركة استيراد من الصين بغداد", "شركة استيراد من الصين الرباط", "شركة استيراد من الصين الدار البيضاء", "شركة استيراد من الصين الجزائر", "شركة استيراد من الصين تونس", "شركة استيراد من الصين القاهرة", "شركة استيراد من الصين الخرطوم", "شركة استيراد من الصين صنعاء", "شركة استيراد من الصين طرابلس", "شركة استيراد من الصين بيروت",
         "كم تكلفة شحن منتج من الصين", "كيف ابحث عن قطع غيار سيارات من الصين", "استيراد الطاقة الشمسية من الصين", "شحن الطاقة الشمسية من الصين", "استيراد الألواح الشمسية من الصين", "شحن الألواح الشمسية من الصين", "استيراد إنفرترات من الصين", "شحن إنفرترات من الصين", "استيراد بطاريات شمسية من الصين", "شحن بطاريات شمسية من الصين",
         "استيراد قطع غيار سيارات من الصين", "شحن قطع غيار سيارات من الصين", "استيراد قطع غيار من الصين", "شحن قطع غيار من الصين", "استيراد قطع غيار شاحنات من الصين", "شحن قطع غيار شاحنات من الصين", "استيرار قطع غيار سيارات صينية", "شحن قطع غيار سيارات صينية",
         "استيراد الملابس من الصين", "شحن الملابس من الصين", "استيرار الملابس الجاهزة من الصين", "شحن الملابس الجاهزة من الصين", "استيراد الملابس بالجملة من الصين", "شحن الملابس بالجملة من الصين", "استيراد الأقمشة من الصين", "شحن الأقمشة من الصين",
@@ -65,6 +69,19 @@ export async function generateMetadata({
         "استيراد الأثاث من الصين", "شحن الأثاث من الصين", "استيراد الأثاث المنزلي من الصين", "شحن الأثاث المنزلي من الصين", "استيرار الأثاث المكتبي من الصين", "شحن الأثاث المكتبي من الصين",
         "استيراد المواد الغذائية من الصين", "شحن المواد الغذائية من الصين", "استيرار المواد الخام من الصين", "شحن المواد الخام من الصين", "استيرار المواد الكيميائية من الصين", "شحن المواد الكيميائية من الصين",
         "استيرار اللعب من الصين", "شحن اللعب من الصين", "استيرار المستحضرات التجميلية من الصين", "شحن المستحضرات التجميلية من الصين", "استيرار الأدوات الطبية من الصين", "شحن الأدوات الطبية من الصين",
+        "استيراد من الصين 1688", "استيراد من الصين علي بابا", "استيراد من الصين تاوباو", "استيراد من الصين تي مال", "استيراد من الصين جي دي", "استيراد من الصين مينغشن",
+        "شحن من الصين جدة", "شحن من الصين الرياض", "شحن من الصين الدمام", "شحن من الصين مكة", "شحن من الصين المدينة", "شحن من الصين جازان", "شحن من الصين أبها",
+        "شحن من الصين دبي", "شحن من الصين أبوظبي", "شحن من الصين الشارقة", "شحن من الصين عجمان", "شحن من الصين رأس الخيمة", "شحن من الصين الفjيرة", "شحن من الصين أم القيوين",
+        "شحن من الصين الكويت", "شحن من الصين الدوحة", "شحن من الصين المنامة", "شحن من الصين مسقط", "شحن من الصين عمّان", "شحن من الصين بغداد", "شحن من الصين الرباط", "شحن من الصين الدار البيضاء", "شحن من الصين الجزائر", "شحن من الصين تونس", "شحن من الصين القاهرة", "شحن من الصين الخرطوم", "شحن من الصين صنعاء", "شحن من الصين طرابلس", "شحن من الصين بيروت",
+        "شحن بحري من الصين", "شحن جوي من الصين", "شحن بري من الصين", "شحن سريع من الصين", "شحن اقتصادي من الصين", "شحن express من الصين",
+        "تخليص جمركي من الصين", "تخليص جمركي في السعودية", "تخليص جمركي في الإمارات", "تخليص جمركي في الكويت", "تخليص جمركي في قطر", "تخليص جمركي في البحرين", "تخليص جمركي في عمان", "تخليص جمركي في الأردن", "تخليص جمركي في العراق", "تخليص جمركي في المغرب", "تخليص جمركي في الجزائر", "تخليص جمركي في تونس", "تخليص جمركي في مصر", "تخليص جمركي في السودان", "تخليص جمركي في اليمن", "تخليص جمركي في ليبيا", "تخليص جمركي في لبنان",
+        "فحص جودة من الصين", "فحص جودة في المصانع الصينية", "فحص جودة قبل الشحن", "فحص جودة أثناء الإنتاج", "فحص جودة بعد الإنتاج", "فحص جودة في الميناء",
+        "تخزين في الصين", "مستودعات في الصين", "تجميع الشحنات في الصين", "consolidation في الصين", "warehousing في الصين",
+        "توريد من الصين", "sourcing من الصين", "البحث عن موردين في الصين", "اختيار الموردين في الصين", "التفاوض مع الموردين في الصين", "إدارة العينات من الصين",
+        "استيراد بالجملة من الصين", "استيراد قطعة واحدة من الصين", "استيراد تجاري من الصين", "استيراد شخصي من الصين",
+        "شركة استيراد موثوقة", "شركة استيراد احترافية", "شركة استيراد رخيصة", "شركة استيراد سريعة", "شركة استيراد آمنة",
+        "استيراد من الصين للمتاجر الإلكترونية", "استيراد من الصين للأونلاين", "استيراد من الصين لـ Amazon", "استيراد من الصين لـ Noon", "استيراد من الصين لـ Souq", "استيراد من الصين لـ Haraj", "استيراد من الصين لـ OpenSooq",
+        "استيراد من الصين للمصانع", "استيراد من الصين للمشاريع", "استيراد من الصين للشركات", "استيراد من الصين للمؤسسات",
         "شحن بحري من الصين", "شحن جوي من الصين", "شحن بري من الصين", "شحن الحاويات من الصين", "شحن الـ LCL من الصين", "شحن الـ FCL من الصين", "شحن سريع من الصين", "شحن اقتصادي من الصين",
         "استيرار بدون وسيط", "استيرار مباشر من الصين", "توريد من المصنع", "شراء من المصنع", "استيرار بالجملة", "تجارة الجملة", "سوق الجملة الصيني", "سوق ييوو", "سوق شنتشن", "سوق غوانزو",
         "شركة استيراد للسعودية", "شركة استيرار للإمارات", "شركة استيرار للكويت", "شركة استيرار لقطر", "شركة استيرار للبحرين", "شركة استيرار لعمان", "شركة استيرار للعراق", "شركة استيرار للسودان", "شركة استيرار لليمن", "شركة استيرار للمغرب", "شركة استيرار للجزائر", "شركة استيرار لتونس", "شركة استيرار ليبيا", "شركة استيرار للأردن", "شركة استيرار للبنان",
@@ -186,8 +203,8 @@ export async function generateMetadata({
   
   // English SEO metadata for homepage
   return {
-    title: "Best Import Company from China to Saudi Arabia | Dinoora International Trade",
-    description: "Dinoora International Trade is an Arab company specializing in international trade and import from China to Arab countries. We offer sourcing, quality inspection, shipping, and customs clearance services with competitive prices.",
+    title: "Import from China Made Easy | Dinoora - Trusted Import Company for Saudi Arabia & Arab Countries",
+    description: "Import from China at competitive prices with comprehensive services. Sourcing, quality inspection, shipping, and customs clearance. Get a free consultation now!",
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -198,6 +215,10 @@ export async function generateMetadata({
     },
     keywords: [
       "best import company from China to Saudi Arabia", "sourcing and shipping from China", "import from China", "shipping goods from China", "customs clearance services", "goods quality inspection", "warehousing in China", "Chinese logistics company", "import to Saudi Arabia", "trade with China", "Dinoora International Trade", "دينورا للتجارة الدولية",
+      "import from China to Saudi Arabia", "import from China to UAE", "import from China to Kuwait", "import from China to Qatar", "import from China to Bahrain", "import from China to Oman", "import from China to Jordan", "import from China to Iraq", "import from China to Morocco", "import from China to Algeria", "import from China to Tunisia", "import from China to Egypt", "import from China to Sudan", "import from China to Yemen", "import from China to Libya", "import from China to Lebanon",
+      "import company from China Jeddah", "import company from China Riyadh", "import company from China Dammam", "import company from China Makkah", "import company from China Madinah", "import company from China Jazan", "import company from China Abha",
+      "import company from China Dubai", "import company from China Abu Dhabi", "import company from China Sharjah", "import company from China Ajman", "import company from China Ras Al Khaimah", "import company from China Fujairah", "import company from China Umm Al Quwain",
+      "import company from China Kuwait", "import company from China Doha", "import company from China Manama", "import company from China Muscat", "import company from China Amman", "import company from China Baghdad", "import company from China Rabat", "import company from China Casablanca", "import company from China Algiers", "import company from China Tunis", "import company from China Cairo", "import company from China Khartoum", "import company from China Sanaa", "import company from China Tripoli", "import company from China Beirut",
       "how much does it cost to ship a product from China", "how to search for car spare parts from China", "import solar energy from China", "ship solar energy from China", "import solar panels from China", "ship solar panels from China", "import inverters from China", "ship inverters from China", "import solar batteries from China", "ship solar batteries from China",
       "import car spare parts from China", "ship car spare parts from China", "import spare parts from China", "ship spare parts from China", "import truck spare parts from China", "ship truck spare parts from China", "import Chinese car spare parts", "ship Chinese car spare parts",
       "import clothing from China", "ship clothing from China", "import ready-made clothing from China", "ship ready-made clothing from China", "import wholesale clothing from China", "ship wholesale clothing from China", "import fabrics from China", "ship fabrics from China",
@@ -206,7 +227,20 @@ export async function generateMetadata({
       "import furniture from China", "ship furniture from China", "import home furniture from China", "ship home furniture from China", "import office furniture from China", "ship office furniture from China",
       "import food products from China", "ship food products from China", "import raw materials from China", "ship raw materials from China", "import chemical materials from China", "ship chemical materials from China",
       "import toys from China", "ship toys from China", "import cosmetics from China", "ship cosmetics from China", "import medical tools from China", "ship medical tools from China",
+      "import from China 1688", "import from China Alibaba", "import from China Taobao", "import from China Tmall", "import from China JD", "import from China Made-in-China",
+      "ship from China Jeddah", "ship from China Riyadh", "ship from China Dammam", "ship from China Makkah", "ship from China Madinah", "ship from China Jazan", "ship from China Abha",
+      "ship from China Dubai", "ship from China Abu Dhabi", "ship from China Sharjah", "ship from China Ajman", "ship from China Ras Al Khaimah", "ship from China Fujairah", "ship from China Umm Al Quwain",
+      "ship from China Kuwait", "ship from China Doha", "ship from China Manama", "ship from China Muscat", "ship from China Amman", "ship from China Baghdad", "ship from China Rabat", "ship from China Casablanca", "ship from China Algiers", "ship from China Tunis", "ship from China Cairo", "ship from China Khartoum", "ship from China Sanaa", "ship from China Tripoli", "ship from China Beirut",
       "sea shipping from China", "air shipping from China", "land shipping from China", "container shipping from China", "LCL shipping from China", "FCL shipping from China", "express shipping from China", "economic shipping from China",
+      "customs clearance from China", "customs clearance in Saudi Arabia", "customs clearance in UAE", "customs clearance in Kuwait", "customs clearance in Qatar", "customs clearance in Bahrain", "customs clearance in Oman", "customs clearance in Jordan", "customs clearance in Iraq", "customs clearance in Morocco", "customs clearance in Algeria", "customs clearance in Tunisia", "customs clearance in Egypt", "customs clearance in Sudan", "customs clearance in Yemen", "customs clearance in Libya", "customs clearance in Lebanon",
+      "quality inspection from China", "quality inspection in Chinese factories", "pre-shipment inspection", "during production inspection", "post-production inspection", "port inspection",
+      "storage in China", "warehouses in China", "consolidation in China", "warehousing in China",
+      "sourcing from China", "searching for suppliers in China", "selecting suppliers in China", "negotiating with suppliers in China", "managing samples from China",
+      "wholesale import from China", "single piece import from China", "commercial import from China", "personal import from China",
+      "reliable import company", "professional import company", "cheap import company", "fast import company", "secure import company",
+      "import from China for e-commerce", "import from China for online", "import from China for Amazon", "import from China for Noon", "import from China for Souq", "import from China for Haraj", "import from China for OpenSooq",
+      "import from China for factories", "import from China for projects", "import from China for companies", "import from China for institutions",
+      "sea freight from China", "air freight from China", "land freight from China", "container freight from China", "LCL freight from China", "FCL freight from China", "express freight from China", "economic freight from China",
       "import without intermediary", "direct import from China", "sourcing from factory", "buy from factory", "wholesale import", "wholesale trade", "Chinese wholesale market", "Yiwu market", "Shenzhen market", "Guangzhou market",
       "import company for Saudi Arabia", "import company for UAE", "import company for Kuwait", "import company for Qatar", "import company for Bahrain", "import company for Oman", "import company for Iraq", "import company for Sudan", "import company for Yemen", "import company for Morocco", "import company for Algeria", "import company for Tunisia", "import company for Libya", "import company for Jordan", "import company for Lebanon",
       "sourcing company for Saudi Arabia", "sourcing company for UAE", "sourcing company for Kuwait", "sourcing company for Qatar", "sourcing company for Bahrain", "sourcing company for Oman", "sourcing company for Iraq", "sourcing company for Sudan", "sourcing company for Yemen", "sourcing company for Morocco", "sourcing company for Algeria", "sourcing company for Tunisia", "sourcing company for Libya", "sourcing company for Jordan", "sourcing company for Lebanon",
@@ -220,6 +254,12 @@ export async function generateMetadata({
       "wholesale import from China", "installment import from China", "COD import from China", "financed import from China",
       "international trading company", "import export company", "commercial brokerage company", "commercial broker company",
       "Dinoora", "Dinoora International Trade", "دينورا للتجارة الدولية", "Dinoora Trade", "Dinoora Company",
+      "China import guide", "how to import from China", "import from China step by step", "import from China for beginners", "import from China tips", "import from China tricks",
+      "China sourcing guide", "how to source from China", "sourcing from China step by step", "sourcing from China for beginners", "sourcing from China tips", "sourcing from China tricks",
+      "China shipping guide", "how to ship from China", "shipping from China step by step", "shipping from China for beginners", "shipping from China tips", "shipping from China tricks",
+      "China customs clearance guide", "how to clear customs from China", "customs clearance from China step by step", "customs clearance from China for beginners", "customs clearance from China tips", "customs clearance from China tricks",
+      "China quality inspection guide", "how to inspect quality from China", "quality inspection from China step by step", "quality inspection from China for beginners", "quality inspection from China tips", "quality inspection from China tricks",
+      "China warehousing guide", "how to warehouse in China", "warehousing in China step by step", "warehousing in China for beginners", "warehousing in China tips", "warehousing in China tricks",
       "import from China for small companies", "import from China for medium companies", "import from China for individuals", "import from China for beginners",
       "import guide from China", "how to import from China", "steps to import from China", "conditions for import from China", "procedures for import from China",
       "cost of import from China", "shipping prices from China", "customs duties from China", "import taxes from China",

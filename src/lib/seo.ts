@@ -47,8 +47,8 @@ interface PageSEOConfig {
 const pageSEOConfigs: Record<string, PageSEOConfig> = {
   '/about': {
     ar: {
-      title: "شركة لوجستيات متكاملة بين الصين والشرق الأوسط | دينورا",
-      description: "دينورا هي شركة لوجستيات متكاملة بين الصين والشرق الأوسط. نقدم حلول استيراد شاملة من الصين للسعودية ودول الخليج مع توريد، فحص جودة، شحن، وتخليص جمركي.",
+      title: "من نحن | دينورا - فريق عربي صيني لاستيراد آمن من الصين",
+      description: "تعرف على دينورا - فريق عربي صيني متخصص في الاستيراد من الصين. 10+ سنوات خبرة، 500+ عميل سعيد، خدمات متكاملة من التوريد حتى التسليم.",
       keywords: [
         "شركة لوجستيات متكاملة", "استيراد من الصين للسعودية", "شركة استيراد صينية", "خدمات لوجستية", "شركة تجارة صينية", "استيراد بضائع من الصين", "شركة شحن دولية",
         "من نحن دينورا", "عن دينورا", "تاريخ دينورا", "فريق دينورا", "خبرة دينورا", "خدمات دينورا", "مهمة دينورا", "رؤية دينورا", "قيم دينورا",
@@ -107,8 +107,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Integrated Logistics Company Between China and Middle East | Dinoora",
-      description: "Dinoora is an integrated logistics company between China and the Middle East. We offer comprehensive import solutions from China to Saudi Arabia and Gulf countries with sourcing, quality inspection, shipping, and customs clearance.",
+      title: "About Us | Dinoora - Arabic Chinese Team for Safe Import from China",
+      description: "Learn about Dinoora - an Arabic Chinese team specializing in importing from China. 10+ years experience, 500+ happy clients, comprehensive services from sourcing to delivery.",
       keywords: [
         "integrated logistics company", "import from China to Saudi Arabia", "Chinese import company", "logistics services", "Chinese trading company", "import goods from China", "international shipping company",
         "about Dinoora", "who we are Dinoora", "Dinoora history", "Dinoora team", "Dinoora experience", "Dinoora services", "Dinoora mission", "Dinoora vision", "Dinoora values",
@@ -169,20 +169,20 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/blog': {
     ar: {
-      title: "مركز المعرفة - دليل الاستيراد من الصين | دينورا",
-      description: "مركز المعرفة لدينورا يوفر أدلة عملية شاملة عن الاستيراد من الصين، التوريد، فحص الجودة، الشحن، والتخليص الجمركي للمستوردين العرب.",
+      title: "المدونة | أدلة ومقالات الاستيراد من الصين - دينورا",
+      description: "اكتشف أدلة ومقالات مفيدة عن الاستيراد من الصين. نصائح عملية، استراتيجيات ناجحة، وأخبار السوق. كل ما تحتاج معرفته للاستيراد بنجاح.",
       keywords: ["دليل الاستيراد من الصين", "كيفية الاستيراد من الصين", "نصائح الاستيراد from China", "استيراد البضائع", "التجارة مع الصين", "شركة استيراد صينية"],
     },
     en: {
-      title: "Knowledge Center - Import from China Guide | Dinoora",
-      description: "Dinoora Knowledge Center provides comprehensive practical guides on importing from China, sourcing, quality inspection, shipping, and customs clearance for Arab importers.",
+      title: "Blog | Import from China Guides & Articles - Dinoora",
+      description: "Discover helpful guides and articles about importing from China. Practical tips, successful strategies, and market news. Everything you need to import successfully.",
       keywords: ["import from China guide", "how to import from China", "import tips from China", "importing goods", "trading with China", "Chinese import company"],
     },
   },
   '/faq': {
     ar: {
-      title: "الأسئلة الشائعة عن الاستيراد من الصين | دينورا",
-      description: "إجابات شاملة على أهم الأسئلة حول الاستيراد من الصين، التكاليف، الشحن، الجمارك، وكيفية البدء في مشروع الاستيراد. دليلك الكامل للاستيراد من الصين.",
+      title: "الأسئلة الشائعة | إجابات لكل استفساراتك عن الاستيراد من الصين",
+      description: "هل لديك أسئلة عن الاستيراد من الصين؟ إجابات شاملة على التكاليف، الشحن، الجمارك، وكيفية البدء. احصل على إجابات واضحة ومباشرة.",
       keywords: [
         "الأسئلة الشائعة الاستيراد من الصين", "كيف أستورد من الصين", "تكلفة الاستيراد من الصين", "شروط الاستيراد من الصين للسعودية", "كم تكلفة شحن من الصين",
         "أفضل طرق الشحن من الصين", "كيف أجد موردين في الصين", "الجمارك السعودية الاستيراد من الصين", "استيراد من الصين للمبتدئين", "خدمات الاستيراد من الصين",
@@ -193,8 +193,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "FAQ - Import from China Questions | Dinoora",
-      description: "Comprehensive answers to the most important questions about importing from China, costs, shipping, customs, and how to start an import business. Your complete guide to importing from China.",
+      title: "FAQ | Answers to All Your Import from China Questions",
+      description: "Have questions about importing from China? Comprehensive answers on costs, shipping, customs, and how to start. Get clear and direct answers.",
       keywords: [
         "FAQ import from China", "how to import from China", "cost of importing from China", "requirements for importing from China to Saudi Arabia", "shipping cost from China",
         "best shipping methods from China", "how to find suppliers in China", "Saudi customs import from China", "import from China for beginners", "import services from China",
@@ -207,8 +207,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/guide/how-to-import-from-china': {
     ar: {
-      title: "دليل شامل: كيفية الاستيراد من الصين خطوة بخطوة | دينورا",
-      description: "دليل تفصيلي للاستيراد من الصين للمبتدئين. تعلم خطوات الاستيراد من البحث عن الموردين إلى التخليص الجمركي مع نصائح عملية وأدوات مجانية.",
+      title: "كيف تستورد من الصين؟ دليل شامل خطوة بخطوة للمبتدئين",
+      description: "دليل عملي للاستيراد من الصين من الصفر. تعلم كل الخطوات من اختيار المورد حتى استلام البضائع. نصائح من الخبراء وأدوات مجانية.",
       keywords: [
         "كيفية الاستيراد من الصين خطوة بخطوة", "دليل الاستيراد من الصين للمبتدئين", "تعلم الاستيراد من الصين", "خطوات الاستيراد من الصين", "طريقة الاستيراد من الصين",
         "استيراد من الصين بالتفصيل", "دليل شامل للاستيراد من الصين", "كيف أبدأ الاستيراد من الصين", "تعليمات الاستيراد من الصين", "إرشادات الاستيراد من الصين",
@@ -223,8 +223,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Complete Guide: How to Import from China Step by Step | Dinoora",
-      description: "Detailed guide for beginners on importing from China. Learn import steps from finding suppliers to customs clearance with practical tips and free tools.",
+      title: "How to Import from China? Complete Step-by-Step Guide for Beginners",
+      description: "Practical guide to import from China from scratch. Learn all steps from selecting supplier to receiving goods. Expert tips and free tools.",
       keywords: [
         "how to import from China step by step", "import from China guide for beginners", "learn importing from China", "import steps from China", "method of importing from China",
         "import from China in detail", "comprehensive guide to import from China", "how to start importing from China", "import instructions from China", "import guidelines from China",
@@ -241,8 +241,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/products/electronics-import': {
     ar: {
-      title: "استيراد الإلكترونيات من الصين للسعودية | دينورا",
-      description: "خدمات متكاملة لاستيراد الهواتف، الحواسيب، الأجهزة المنزلية من الصين للسعودية ودول الخليج. توريد، فحص جودة، شحن، وتخليص جمركي.",
+      title: "استيراد الإلكترونيات من الصين | توفير يصل إلى 60% - دينورا",
+      description: "استورد الهواتف، الحواسيب، والأجهزة المنزلية من الصين بأسعار منخفضة. خدمات متكاملة من التوريد حتى التسليم. احصل على عرض سعر مجاني.",
       keywords: [
         "استيراد الإلكترونيات من الصين", "استيراد الهواتف من الصين", "استيراد الحواسيب من الصين", "استيراد الأجهزة المنزلية من الصين",
         "استيراد الإلكترونيات للسعودية", "استيراد الإلكترونيات للإمارات", "استيراد الإلكترونيات للكويت", "استيراد الإلكترونيات لقطر",
@@ -254,8 +254,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Import Electronics from China to Saudi Arabia | Dinoora",
-      description: "Integrated services for importing phones, computers, home appliances from China to Saudi Arabia and Gulf countries. Sourcing, quality inspection, shipping, customs clearance.",
+      title: "Import Electronics from China | Up to 60% Savings - Dinoora",
+      description: "Import phones, computers, and home appliances from China at low prices. Comprehensive services from sourcing to delivery. Get a free quote.",
       keywords: [
         "import electronics from China", "import phones from China", "import computers from China", "import home appliances from China",
         "import electronics to Saudi Arabia", "import electronics to UAE", "import electronics to Kuwait", "import electronics to Qatar",
@@ -269,8 +269,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/products/clothing-import': {
     ar: {
-      title: "استيراد الملابس من الصين للسعودية | دينورا",
-      description: "خدمات متكاملة لاستيراد الملابس الجاهزة، الأقمشة، والإكسسوارات من الصين للسعودية ودول الخليج بالجملة.",
+      title: "استيراد الملابس من الصين | توفير يصل إلى 70% - دينورا",
+      description: "استورد الملابس الجاهزة والأقمشة من الصين بأسعار منخفضة. خدمات متكاملة من التوريد حتى التسليم. احصل على عرض سعر مجاني.",
       keywords: [
         "استيراد الملابس من الصين", "استيراد الملابس الجاهزة من الصين", "استيراد الأقمشة من الصين", "استيراد الإكسسوارات من الصين",
         "استيراد الملابس للسعودية", "استيراد الملابس للإمارات", "استيراد الملابس للكويت", "استيراد الملابس لقطر",
@@ -282,8 +282,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Import Clothing from China to Saudi Arabia | Dinoora",
-      description: "Integrated services for importing ready-made clothing, fabrics, and accessories from China to Saudi Arabia and Gulf countries wholesale.",
+      title: "Import Clothing from China | Up to 70% Savings - Dinoora",
+      description: "Import ready-made clothing and fabrics from China at low prices. Comprehensive services from sourcing to delivery. Get a free quote.",
       keywords: [
         "import clothing from China", "import ready-made clothing from China", "import fabrics from China", "import accessories from China",
         "import clothing to Saudi Arabia", "import clothing to UAE", "import clothing to Kuwait", "import clothing to Qatar",
@@ -297,8 +297,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/products/solar-energy-import': {
     ar: {
-      title: "استيراد الطاقة الشمسية من الصين للسعودية | دينورا",
-      description: "خدمات متكاملة لاستيراد الألواح الشمسية، الإنفرترات، البطاريات من الصين للسعودية ودول الخليج.",
+      title: "استيراد الطاقة الشمسية من الصين | ألواح وإنفرترات بأسعار منافسة",
+      description: "استورد الألواح الشمسية والإنفرترات والبطاريات من الصين بأسعار منخفضة. خدمات متكاملة مع ضمان الجودة. احصل على عرض سعر.",
       keywords: [
         "استيراد الطاقة الشمسية من الصين", "استيراد الألواح الشمسية من الصين", "استيراد الإنفرترات من الصين", "استيراد البطاريات الشمسية من الصين",
         "استيراد الطاقة الشمسية للسعودية", "استيراد الطاقة الشمسية للإمارات", "استيراد الطاقة الشمسية للكويت", "استيراد الطاقة الشمسية لقطر",
@@ -310,8 +310,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Import Solar Energy from China to Saudi Arabia | Dinoora",
-      description: "Integrated services for importing solar panels, inverters, batteries from China to Saudi Arabia and Gulf countries.",
+      title: "Import Solar Energy from China | Panels & Inverters at Competitive Prices",
+      description: "Import solar panels, inverters, and batteries from China at low prices. Comprehensive services with quality guarantee. Get a quote.",
       keywords: [
         "import solar energy from China", "import solar panels from China", "import inverters from China", "import solar batteries from China",
         "import solar energy to Saudi Arabia", "import solar energy to UAE", "import solar energy to Kuwait", "import solar energy to Qatar",
@@ -325,8 +325,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/countries/saudi-arabia': {
     ar: {
-      title: "استيراد من الصين للسعودية | دينورا - التخليص الجمركي في جدة والدمام والرياض",
-      description: "خدمات متكاملة للاستيراد من الصين للسعودية مع التخليص الجمركي في جدة، الدمام، والرياض. توريد، فحص جودة، شحن، وتخليص جمركي.",
+      title: "استيراد من الصين للسعودية | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للسعودية بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في جدة والدمام والرياض. احصل على استشارة مجانية.",
       keywords: [
         "استيراد من الصين للسعودية", "التخليص الجمركي في جدة", "التخليص الجمركي في الدمام", "التخليص الجمركي في الرياض",
         "شركات استيراد من الصين للسعودية", "شركة استيراد من الصين موثوقة", "استيراد من الصين للرياض", "استيراد من الصين لجدة",
@@ -340,8 +340,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Import from China to Saudi Arabia | Dinoora - Customs Clearance in Jeddah, Dammam, Riyadh",
-      description: "Integrated services for importing from China to Saudi Arabia with customs clearance in Jeddah, Dammam, and Riyadh. Sourcing, quality inspection, shipping, customs clearance.",
+      title: "Import from China to Saudi Arabia | Comprehensive Services - Dinoora",
+      description: "Import from China to Saudi Arabia with ease. Sourcing, quality inspection, shipping, and customs clearance in Jeddah, Dammam, and Riyadh. Get a free consultation.",
       keywords: [
         "import from China to Saudi Arabia", "customs clearance in Jeddah", "customs clearance in Dammam", "customs clearance in Riyadh",
         "import companies from China to Saudi Arabia", "trusted import company from China", "import from China to Riyadh", "import from China to Jeddah",
@@ -383,8 +383,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/services/sourcing': {
     ar: {
-      title: "كيف أجد مورد موثوق في الصين لاستيراد المنتجات | دينورا",
-      description: "أفضل شركة توريد منتجات من الصين للسعودية. نساعدك في كيفية إيجاد مورد موثوق في الصين لاستيراد المنتجات بأسعار منافسة وجودة مضمونة.",
+      title: "خدمات التوريد من الصين | اعثر على أفضل الموردين - دينورا",
+      description: "نساعدك في العثور على موردين موثوقين في الصين بأسعار منافسة. فحص المصانع، التفاوض، وإدارة العينات. ابدأ الآن.",
       keywords: [
         "كيف أجد مورد موثوق في الصين", "أفضل شركة توريد منتجات من الصين", "شركة توريد صينية", "مورد صيني موثوق", "توريد من الصين", "استيراد بالجملة", "شركة توريد للسعودية",
         "البحث عن الموردين في الصين", "إيجاد موردين صينيين", "اختيار مورد صيني", "تقييم الموردين", "التحقق من الموردين", "فحص المصانع",
@@ -406,8 +406,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "How to Find Reliable Supplier in China for Import | Dinoora",
-      description: "Best sourcing company for products from China to Saudi Arabia. We help you find a reliable supplier in China for importing products at competitive prices with guaranteed quality.",
+      title: "Sourcing Services from China | Find Best Suppliers - Dinoora",
+      description: "We help you find reliable suppliers in China at competitive prices. Factory inspection, negotiation, and sample management. Start now.",
       keywords: [
         "how to find reliable supplier in China", "best sourcing company from China", "Chinese sourcing company", "reliable Chinese supplier", "sourcing from China", "wholesale import", "sourcing company for Saudi Arabia",
         "finding suppliers in China", "locating Chinese suppliers", "selecting Chinese supplier", "evaluating suppliers", "verifying suppliers", "factory inspection",
@@ -431,8 +431,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/services/inspection': {
     ar: {
-      title: "خدمات فحص جودة البضائع قبل الشحن من الصين | دينورا",
-      description: "شركة تفتيش ومراقبة جودة المنتجات في المصانع الصينية. نقدم خدمات فحص جودة البضائع قبل الشحن من الصين لضمان جودة المنتجات المستوردة.",
+      title: "فحص الجودة في الصين | ضمان جودة منتجاتك - دينورا",
+      description: "فحص شامل للمنتجات في المصانع الصينية قبل الشحن. فحص قبل الإنتاج، أثناء الإنتاج، وقبل الشحن. احمي استثمارك.",
       keywords: [
         "خدمات فحص جودة البضائع", "شركة تفتيش ومراقبة جودة", "فحص جودة منتجات", "فحص قبل الشحن", "خدمات التفتيش في الصين", "مراقبة جودة المصانع", "فحص جودة الاستيراد",
         "فحص الجودة في الصين", "مراقبة الجودة في الصين", "التفتيش في المصانع الصينية", "فحص قبل الشحن", "فحص أثناء الإنتاج", "فحص قبل الإنتاج",
@@ -452,8 +452,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Quality Inspection Services Before Shipping from China | Dinoora",
-      description: "Product inspection and quality control company in Chinese factories. We provide quality inspection services for goods before shipping from China to ensure imported product quality.",
+      title: "Quality Inspection in China | Protect Your Products - Dinoora",
+      description: "Comprehensive product inspection in Chinese factories before shipping. Pre-production, during production, and pre-shipment inspection. Protect your investment.",
       keywords: [
         "goods quality inspection services", "inspection and quality control company", "product quality inspection", "pre-shipment inspection", "inspection services in China", "factory quality control", "import quality inspection",
         "quality inspection in China", "quality control in China", "inspection in Chinese factories", "pre-shipment inspection", "during production inspection", "pre-production inspection",
@@ -475,8 +475,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/services/warehousing': {
     ar: {
-      title: "شركة تخزين وتجميع البضائع في الصين للمستوردين | دينورا",
-      description: "خدمات التخزين في الصين للمستوردين العرب. شركة تخزين وتجميع البضائع في الصين للمستوردين مع حلول تخزين آمنة واقتصادية.",
+      title: "التخزين في الصين | تجميع الشحنات بأمان - دينورا",
+      description: "خدمات تخزين وتجميع الشحنات في الصين. مستودعات آمنة واقتصادية للمستوردين العرب. وفر تكاليف الشحن.",
       keywords: [
         "شركة تخزين وتجميع البضائع", "خدمات التخزين في الصين", "تخزين بضائع الصين", "تجميع شحنات", "مستودعات في الصين", "تخزين للمستوردين", "خدمات التخزين والشحن",
         "التخزين في الصين", "مستودعات صينية", "مخازن في الصين", "مراكز تخزين في الصين", "مناطق تخزين في الصين",
@@ -495,8 +495,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Warehousing and Consolidation Company in China for Importers | Dinoora",
-      description: "Warehousing services in China for Arab importers. Warehousing and consolidation company in China for importers with secure and economical storage solutions.",
+      title: "Warehousing in China | Consolidate Shipments Safely - Dinoora",
+      description: "Warehousing and shipment consolidation services in China. Secure and economical warehouses for Arab importers. Save on shipping costs.",
       keywords: [
         "warehousing and consolidation company", "warehousing services in China", "China goods storage", "shipment consolidation", "warehouses in China", "storage for importers", "warehousing and shipping services",
         "storage in China", "Chinese warehouses", "warehouses in China", "storage centers in China", "storage areas in China",
@@ -517,8 +517,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/services/shipping': {
     ar: {
-      title: "شحن بحري وجوي من الصين إلى السعودية بأسعار منافسة | دينورا",
-      description: "أفضل شركة شحن جوي من الصين إلى السعودية. نقدم شحن بحري من الصين إلى السعودية بأسعار منافسة مع خدمات شحن دولية موثوقة.",
+      title: "شحن من الصين للسعودية | بحري وجوي بأسعار منافسة",
+      description: "شحن بحري وجوي من الصين للسعودية ودول الخليج. أسعار تنافسية، تتبع مباشر، وتسليم في الوقت المحدد. احصل على عرض سعر.",
       keywords: [
         "شحن بحري من الصين للسعودية", "أفضل شركة شحن جوي من الصين", "شحن جوي للصين", "شحن بحري صيني", "شركة شحن دولية", "خدمات الشحن من الصين", "شحن بضائع من الصين",
         "شحن من الصين", "شحن إلى السعودية", "شحن إلى الإمارات", "شحن إلى الكويت", "شحن إلى قطر", "شحن إلى البحرين", "شحن إلى عمان",
@@ -539,8 +539,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Sea and Air Shipping from China to Saudi Arabia at Competitive Prices | Dinoora",
-      description: "Best air shipping company from China to Saudi Arabia. We offer sea shipping from China to Saudi Arabia at competitive prices with reliable international shipping services.",
+      title: "Shipping from China to Saudi Arabia | Sea & Air at Competitive Prices",
+      description: "Sea and air shipping from China to Saudi Arabia and Gulf countries. Competitive prices, direct tracking, and on-time delivery. Get a quote.",
       keywords: [
         "sea shipping from China to Saudi Arabia", "best air shipping company from China", "air shipping to China", "Chinese sea shipping", "international shipping company", "shipping services from China", "shipping goods from China",
         "shipping from China", "shipping to Saudi Arabia", "shipping to UAE", "shipping to Kuwait", "shipping to Qatar", "shipping to Bahrain", "shipping to Oman",
@@ -563,8 +563,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/services/customs': {
     ar: {
-      title: "خدمات تخليص جمركي للبضائع المستوردة من الصين | دينورا",
-      description: "خدمات التخليص الجمركي في ميناء جدة للبضائع الصينية. نقدم خدمات تخليص جمركي للبضائع المستوردة من الصين بسرعة وكفاءة.",
+      title: "التخليص الجمركي في السعودية | تخليص سريع وآمن - دينورا",
+      description: "خدمات تخليص جمركي سريعة في جدة والدمام والرياض. نتعامل مع جميع المستندات والإجراءات. احصل على استشارة مجانية.",
       keywords: [
         "خدمات تخليص جمركي", "التخليص الجمركي في السعودية", "تخليص جمركي سعودي", "شركة شحن دولية", "تخليص جمركي جدة", "استيراد وتخليص", "خدمات الجمارك",
         "التخليص الجمركي", "خدمات الجمارك", "الجمارك السعودية", "إجراءات الجمارك", "رسوم الجمارك", "ضرائب الاستيراد",
@@ -584,8 +584,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Customs Clearance Services for Goods Imported from China | Dinoora",
-      description: "Customs clearance services at Jeddah port for Chinese goods. We provide customs clearance services for goods imported from China quickly and efficiently.",
+      title: "Customs Clearance in Saudi Arabia | Fast & Safe Clearance - Dinoora",
+      description: "Fast customs clearance services in Jeddah, Dammam, and Riyadh. We handle all documents and procedures. Get a free consultation.",
       keywords: [
         "customs clearance services", "customs clearance in Saudi Arabia", "Saudi customs clearance", "international shipping company", "Jeddah customs clearance", "import and clearance", "customs services",
         "customs clearance", "customs services", "Saudi customs", "customs procedures", "customs duties", "import taxes",
@@ -607,8 +607,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/services/logistics': {
     ar: {
-      title: "شركة لوجستيات متكاملة بين الصين والشرق الأوسط | دينورا",
-      description: "خدمات الشحن من الصين إلى السعودية بالدفع عند الاستلام. شركة لوجستيات متكاملة بين الصين والشرق الأوسط مع حلول شاملة.",
+      title: "خدمات لوجستيات متكاملة | من الصين حتى بابك - دينورا",
+      description: "حلول لوجستية شاملة من التوريد حتى التسليم. إدارة سلسلة التوريد، الشحن، التخزين، والتخليص. احصل على عرض سعر.",
       keywords: [
         "شركة لوجستيات متكاملة", "خدمات لوجستية صينية", "شركة شحن دولية", "خدمات الشحن من الصين", "حلول لوجستية", "شحن بالدفع عند الاستلام", "لوجستيات الاستيراد",
         "خدمات لوجستية", "حلول لوجستية شاملة", "إدارة سلسلة التوريد", "اللوجستيات الدولية", "النقل اللوجستي",
@@ -627,8 +627,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Integrated Logistics Company Between China and Middle East | Dinoora",
-      description: "Shipping services from China to Saudi Arabia with payment on delivery. Integrated logistics company between China and the Middle East with comprehensive solutions.",
+      title: "Integrated Logistics Services | From China to Your Door - Dinoora",
+      description: "Comprehensive logistics solutions from sourcing to delivery. Supply chain management, shipping, warehousing, and clearance. Get a quote.",
       keywords: [
         "integrated logistics company", "Chinese logistics services", "international shipping company", "shipping services from China", "logistics solutions", "payment on delivery shipping", "import logistics",
         "logistics services", "comprehensive logistics solutions", "supply chain management", "international logistics", "logistics transport",
@@ -649,8 +649,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/contact': {
     ar: {
-      title: "خدمات استيراد من الصين للشركات السعودية الصغيرة | دينورا",
-      description: "شركة استيراد من الصين للسعودية بأسعار منافسة. خدمات استيراد من الصين للشركات السعودية الصغيرة والمتوسطة مع دعم كامل.",
+      title: "تواصل معنا | ابدأ استيرادك من الصين اليوم - دينورا",
+      description: "تواصل معنا للحصول على استشارة مجانية عن الاستيراد من الصين. فريقنا جاهز لمساعدتك في كل خطوة. اتصل بنا الآن.",
       keywords: [
         "خدمات استيراد من الصين", "استيراد للسعودية", "شركة استيراد صينية", "تجارة مع الصين", "استيراد للشركات السعودية", "خدمات الاستيراد", "شركة تجارة دولية",
         "تواصل معنا", "اتصل بنا", "اتصال دينورا", "معلومات الاتصال", "عنوان الشركة", "رقم الهاتف", "البريد الإلكتروني",
@@ -665,8 +665,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Import Services from China for Small Saudi Companies | Dinoora",
-      description: "Import company from China to Saudi Arabia at competitive prices. Import services from China for small and medium Saudi companies with full support.",
+      title: "Contact Us | Start Your Import from China Today - Dinoora",
+      description: "Contact us for a free consultation about importing from China. Our team is ready to help you every step of the way. Call us now.",
       keywords: [
         "import services from China", "import to Saudi Arabia", "Chinese import company", "trade with China", "import for Saudi companies", "import services", "international trading company",
         "contact us", "get in touch", "Dinoora contact", "contact information", "company address", "phone number", "email address",
@@ -683,8 +683,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/quote': {
     ar: {
-      title: "كيف أستورد من الصين للسعودية بدون وسيط | دينورا",
-      description: "شركة توريد وشحن من الصين إلى دول الخليج. تعلم كيف تستورد من الصين للسعودية بدون وسيط مع دينورا.",
+      title: "احصل على عرض سعر مجاني | استيراد من الصين - دينورا",
+      description: "اطلب عرض سعر مجاني لاستيراد منتجاتك من الصين. نقدم أسعار تنافسية وخدمات متكاملة. احصل على عرض خلال 24 ساعة.",
       keywords: [
         "كيف أستورد من الصين للسعودية", "استيراد بدون وسيط", "استيراد بالجملة", "توريد من الصين", "شركة توريد وشحن", "استيراد مباشر", "طلب عرض سعر",
         "طلب عرض تجارة وشحن", "طلب عرض سعر استيراد", "طلب توريد من الصين", "طلب شحن من الصين",
@@ -699,8 +699,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "How to Import from China to Saudi Arabia Without Intermediary | Dinoora",
-      description: "Sourcing and shipping company from China to Gulf countries. Learn how to import from China to Saudi Arabia without intermediary with Dinoora.",
+      title: "Get a Free Quote | Import from China - Dinoora",
+      description: "Request a free quote for importing your products from China. We offer competitive prices and comprehensive services. Get a quote within 24 hours.",
       keywords: [
         "how to import from China to Saudi Arabia", "import without intermediary", "wholesale import", "sourcing from China", "sourcing and shipping company", "direct import", "request price quote",
         "request trade and shipping quote", "request import price quote", "request sourcing from China", "request shipping from China",
@@ -717,176 +717,176 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   },
   '/countries/uae': {
     ar: {
-      title: "استيراد من الصين إلى الإمارات | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى الإمارات مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للإمارات.",
+      title: "استيراد من الصين للإمارات | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للإمارات بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في دبي وأبوظبي. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى الإمارات", "شركة استيراد للإمارات", "شحن من الصين للإمارات", "توريد من الصين للإمارات", "استيرار لدبي", "استيرار لأبوظبي", "استيرار للشارقة"],
     },
     en: {
-      title: "Import from China to UAE | Dinoora International Trade",
-      description: "Comprehensive import services from China to UAE with sourcing, quality inspection, shipping, and customs clearance. Best import company for UAE.",
+      title: "Import from China to UAE | Comprehensive Services - Dinoora",
+      description: "Import from China to UAE with ease. Sourcing, quality inspection, shipping, and customs clearance in Dubai and Abu Dhabi. Get a free consultation.",
       keywords: ["import from China to UAE", "import company for UAE", "shipping from China to UAE", "sourcing from China to UAE", "import to Dubai", "import to Abu Dhabi", "import to Sharjah"],
     },
   },
   '/countries/kuwait': {
     ar: {
-      title: "استيراد من الصين إلى الكويت | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى الكويت مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للكويت.",
+      title: "استيراد من الصين للكويت | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للكويت بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى الكويت", "شركة استيراد للكويت", "شحن من الصين للكويت", "توريد من الصين للكويت", "استيرار لمدينة الكويت"],
     },
     en: {
-      title: "Import from China to Kuwait | Dinoora International Trade",
-      description: "Comprehensive import services from China to Kuwait with sourcing, quality inspection, shipping, and customs clearance. Best import company for Kuwait.",
+      title: "Import from China to Kuwait | Comprehensive Services - Dinoora",
+      description: "Import from China to Kuwait with ease. Sourcing, quality inspection, shipping, and customs clearance. Get a free consultation.",
       keywords: ["import from China to Kuwait", "import company for Kuwait", "shipping from China to Kuwait", "sourcing from China to Kuwait", "import to Kuwait City"],
     },
   },
   '/countries/qatar': {
     ar: {
-      title: "استيراد من الصين إلى قطر | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى قطر مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد لقطر.",
+      title: "استيراد من الصين لقطر | خدمات متكاملة - دينورا",
+      description: "استورد من الصين لقطر بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في الدوحة. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى قطر", "شركة استيراد لقطر", "شحن من الصين لقطر", "توريد من الصين لقطر", "استيرار للدوحة"],
     },
     en: {
-      title: "Import from China to Qatar | Dinoora International Trade",
-      description: "Comprehensive import services from China to Qatar with sourcing, quality inspection, shipping, and customs clearance. Best import company for Qatar.",
+      title: "Import from China to Qatar | Comprehensive Services - Dinoora",
+      description: "Import from China to Qatar with ease. Sourcing, quality inspection, shipping, and customs clearance in Doha. Get a free consultation.",
       keywords: ["import from China to Qatar", "import company for Qatar", "shipping from China to Qatar", "sourcing from China to Qatar", "import to Doha"],
     },
   },
   '/countries/bahrain': {
     ar: {
-      title: "استيراد من الصين إلى البحرين | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى البحرين مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للبحرين.",
+      title: "استيراد من الصين للبحرين | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للبحرين بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في المنامة. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى البحرين", "شركة استيراد للبحرين", "شحن من الصين للبحرين", "توريد من الصين للبحرين", "استيرار للمنامة"],
     },
     en: {
-      title: "Import from China to Bahrain | Dinoora International Trade",
-      description: "Comprehensive import services from China to Bahrain with sourcing, quality inspection, shipping, and customs clearance. Best import company for Bahrain.",
+      title: "Import from China to Bahrain | Comprehensive Services - Dinoora",
+      description: "Import from China to Bahrain with ease. Sourcing, quality inspection, shipping, and customs clearance in Manama. Get a free consultation.",
       keywords: ["import from China to Bahrain", "import company for Bahrain", "shipping from China to Bahrain", "sourcing from China to Bahrain", "import to Manama"],
     },
   },
   '/countries/oman': {
     ar: {
-      title: "استيراد من الصين إلى عمان | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى عمان مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد لعمان.",
+      title: "استيراد من الصين لعمان | خدمات متكاملة - دينورا",
+      description: "استورد من الصين لعمان بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في مسقط. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى عمان", "شركة استيراد لعمان", "شحن من الصين لعمان", "توريد من الصين لعمان", "استيرار لمسقط"],
     },
     en: {
-      title: "Import from China to Oman | Dinoora International Trade",
-      description: "Comprehensive import services from China to Oman with sourcing, quality inspection, shipping, and customs clearance. Best import company for Oman.",
+      title: "Import from China to Oman | Comprehensive Services - Dinoora",
+      description: "Import from China to Oman with ease. Sourcing, quality inspection, shipping, and customs clearance in Muscat. Get a free consultation.",
       keywords: ["import from China to Oman", "import company for Oman", "shipping from China to Oman", "sourcing from China to Oman", "import to Muscat"],
     },
   },
   '/countries/iraq': {
     ar: {
-      title: "استيراد من الصين إلى العراق | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى العراق مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للعراق.",
+      title: "استيراد من الصين للعراق | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للعراق بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في بغداد والبصرة. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى العراق", "شركة استيراد للعراق", "شحن من الصين للعراق", "توريد من الصين للعراق", "استيرار لبغداد", "استيرار للبصرة"],
     },
     en: {
-      title: "Import from China to Iraq | Dinoora International Trade",
-      description: "Comprehensive import services from China to Iraq with sourcing, quality inspection, shipping, and customs clearance. Best import company for Iraq.",
+      title: "Import from China to Iraq | Comprehensive Services - Dinoora",
+      description: "Import from China to Iraq with ease. Sourcing, quality inspection, shipping, and customs clearance in Baghdad and Basra. Get a free consultation.",
       keywords: ["import from China to Iraq", "import company for Iraq", "shipping from China to Iraq", "sourcing from China to Iraq", "import to Baghdad", "import to Basra"],
     },
   },
   '/countries/sudan': {
     ar: {
-      title: "استيراد من الصين إلى السودان | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى السودان مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للسودان.",
+      title: "استيراد من الصين للسودان | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للسودان بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في الخرطوم. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى السودان", "شركة استيراد للسودان", "شحن من الصين للسودان", "توريد من الصين للسودان", "استيرار للخرطوم"],
     },
     en: {
-      title: "Import from China to Sudan | Dinoora International Trade",
-      description: "Comprehensive import services from China to Sudan with sourcing, quality inspection, shipping, and customs clearance. Best import company for Sudan.",
+      title: "Import from China to Sudan | Comprehensive Services - Dinoora",
+      description: "Import from China to Sudan with ease. Sourcing, quality inspection, shipping, and customs clearance in Khartoum. Get a free consultation.",
       keywords: ["import from China to Sudan", "import company for Sudan", "shipping from China to Sudan", "sourcing from China to Sudan", "import to Khartoum"],
     },
   },
   '/countries/yemen': {
     ar: {
-      title: "استيراد من الصين إلى اليمن | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى اليمن مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد لليمن.",
+      title: "استيراد من الصين لليمن | خدمات متكاملة - دينورا",
+      description: "استورد من الصين لليمن بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في صنعاء وعدن. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى اليمن", "شركة استيراد لليمن", "شحن من الصين لليمن", "توريد من الصين لليمن", "استيرار لصنعاء", "استيرار لعدن"],
     },
     en: {
-      title: "Import from China to Yemen | Dinoora International Trade",
-      description: "Comprehensive import services from China to Yemen with sourcing, quality inspection, shipping, and customs clearance. Best import company for Yemen.",
+      title: "Import from China to Yemen | Comprehensive Services - Dinoora",
+      description: "Import from China to Yemen with ease. Sourcing, quality inspection, shipping, and customs clearance in Sana'a and Aden. Get a free consultation.",
       keywords: ["import from China to Yemen", "import company for Yemen", "shipping from China to Yemen", "sourcing from China to Yemen", "import to Sana'a", "import to Aden"],
     },
   },
   '/countries/morocco': {
     ar: {
-      title: "استيراد من الصين إلى المغرب | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى المغرب مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للمغرب.",
+      title: "استيراد من الصين للمغرب | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للمغرب بسهولة.. توريد، فحص جودة، شحن، وتخليص جمركي في الرباط والدار البيضاء. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى المغرب", "شركة استيراد للمغرب", "شحن من الصين للمغرب", "توريد من الصين للمغرب", "استيرار للرباط", "استيرار للدار البيضاء"],
     },
     en: {
-      title: "Import from China to Morocco | Dinoora International Trade",
-      description: "Comprehensive import services from China to Morocco with sourcing, quality inspection, shipping, and customs clearance. Best import company for Morocco.",
+      title: "Import from China to Morocco | Comprehensive Services - Dinoora",
+      description: "Import from China to Morocco with ease. Sourcing, quality inspection, shipping, and customs clearance in Rabat and Casablanca. Get a free consultation.",
       keywords: ["import from China to Morocco", "import company for Morocco", "shipping from China to Morocco", "sourcing from China to Morocco", "import to Rabat", "import to Casablanca"],
     },
   },
   '/countries/algeria': {
     ar: {
-      title: "استيراد من الصين إلى الجزائر | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى الجزائر مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للجزائر.",
+      title: "استيراد من الصين للجزائر | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للجزائر بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في الجزائر العاصمة. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى الجزائر", "شركة استيراد للجزائر", "شحن من الصين للجزائر", "توريد من الصين للجزائر", "استيرار للجزائر العاصمة"],
     },
     en: {
-      title: "Import from China to Algeria | Dinoora International Trade",
-      description: "Comprehensive import services from China to Algeria with sourcing, quality inspection, shipping, and customs clearance. Best import company for Algeria.",
+      title: "Import from China to Algeria | Comprehensive Services - Dinoora",
+      description: "Import from China to Algeria with ease. Sourcing, quality inspection, shipping, and customs clearance in Algiers. Get a free consultation.",
       keywords: ["import from China to Algeria", "import company for Algeria", "shipping from China to Algeria", "sourcing from China to Algeria", "import to Algiers"],
     },
   },
   '/countries/tunisia': {
     ar: {
-      title: "استيراد من الصين إلى تونس | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى تونس مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد لتونس.",
+      title: "استيراد من الصين لتونس | خدمات متكاملة - دينورا",
+      description: "استورد من الصين لتونس بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في تونس العاصمة. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى تونس", "شركة استيراد لتونس", "شحن من الصين لتونس", "توريد من الصين لتونس", "استيرار لتونس العاصمة"],
     },
     en: {
-      title: "Import from China to Tunisia | Dinoora International Trade",
-      description: "Comprehensive import services from China to Tunisia with sourcing, quality inspection, shipping, and customs clearance. Best import company for Tunisia.",
+      title: "Import from China to Tunisia | Comprehensive Services - Dinoora",
+      description: "Import from China to Tunisia with ease. Sourcing, quality inspection, shipping, and customs clearance in Tunis. Get a free consultation.",
       keywords: ["import from China to Tunisia", "import company for Tunisia", "shipping from China to Tunisia", "sourcing from China to Tunisia", "import to Tunis"],
     },
   },
   '/countries/libya': {
     ar: {
-      title: "استيراد من الصين إلى ليبيا | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى ليبيا مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد لليبيا.",
+      title: "استيراد من الصين لليبيا بسهولة | خدمات متكاملة - دينورا",
+      description: "احصل على استشارة مجانية لاستيراد من الصين لليبيا. خدمات توريد، فحص جودة، شحن، وتخليص جمركي في طرابلس وبنغازي.",
       keywords: ["استيراد من الصين إلى ليبيا", "شركة استيراد لليبيا", "شحن من الصين لليبيا", "توريد من الصين لليبيا", "استيرار لطرابلس", "استيرار لبنغازي"],
     },
     en: {
-      title: "Import from China to Libya | Dinoora International Trade",
-      description: "Comprehensive import services from China to Libya with sourcing, quality inspection, shipping, and customs clearance. Best import company for Libya.",
+      title: "Import from China to Libya Made Easy | Comprehensive Services - Dinoora",
+      description: "Get a free consultation for importing from China to Libya. Sourcing, quality inspection, shipping, and customs clearance services in Tripoli and Benghazi.",
       keywords: ["import from China to Libya", "import company for Libya", "shipping from China to Libya", "sourcing from China to Libya", "import to Tripoli", "import to Benghazi"],
     },
   },
   '/countries/jordan': {
     ar: {
-      title: "استيراد من الصين إلى الأردن | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى الأردن مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للأردن.",
+      title: "استيراد من الصين للأردن | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للأردن بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في عمان. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى الأردن", "شركة استيراد للأردن", "شحن من الصين للأردن", "توريد من الصين للأردن", "استيرار لعمان"],
     },
     en: {
-      title: "Import from China to Jordan | Dinoora International Trade",
-      description: "Comprehensive import services from China to Jordan with sourcing, quality inspection, shipping, and customs clearance. Best import company for Jordan.",
+      title: "Import from China to Jordan | Comprehensive Services - Dinoora",
+      description: "Import from China to Jordan with ease. Sourcing, quality inspection, shipping, and customs clearance in Amman. Get a free consultation.",
       keywords: ["import from China to Jordan", "import company for Jordan", "shipping from China to Jordan", "sourcing from China to Jordan", "import to Amman"],
     },
   },
   '/countries/lebanon': {
     ar: {
-      title: "استيراد من الصين إلى لبنان | دينورا للتجارة الدولية",
-      description: "خدمات استيراد شاملة من الصين إلى لبنان مع توريد، فحص جودة، شحن، وتخليص جمركي. أفضل شركة استيراد للبنان.",
+      title: "استيراد من الصين للبنان | خدمات متكاملة - دينورا",
+      description: "استورد من الصين للبنان بسهولة. توريد، فحص جودة، شحن، وتخليص جمركي في بيروت. احصل على استشارة مجانية.",
       keywords: ["استيراد من الصين إلى لبنان", "شركة استيراد للبنان", "شحن من الصين للبنان", "توريد من الصين للبنان", "استيرار لبيروت", "استيراد من الصين"],
     },
     en: {
-      title: "Import from China to Lebanon | Dinoora International Trade",
-      description: "Comprehensive import services from China to Lebanon with sourcing, quality inspection, shipping, and customs clearance. Best import company for Lebanon.",
+      title: "Import from China to Lebanon | Comprehensive Services - Dinoora",
+      description: "Import from China to Lebanon with ease. Sourcing, quality inspection, shipping, and customs clearance in Beirut. Get a free consultation.",
       keywords: ["import from China to Lebanon", "import company for Lebanon", "shipping from China to Lebanon", "sourcing from China to Lebanon", "import to Beirut", "import from China"],
     },
   },
   '/free-consultation': {
     ar: {
-      title: "استشارة مجانية لاستيراد من الصين | دينورا",
-      description: "احصل على استشارة مجانية مدتها 30 دقيقة مع خبراء الاستيراد من الصين. تقييم المنتج، تحليل السوق، وخطة عمل مخصصة لاستيراد منتجاتك.",
+      title: "استشارة مجانية | ابدأ استيرادك من الصين - دينورا",
+      description: "احصل على استشارة مجانية 30 دقيقة مع خبراء الاستيراد. تقييم المنتج، تحليل السوق، وخطة عمل مخصصة. احجز الآن.",
       keywords: [
         "استشارة مجانية للاستيراد", "استشارة استيراد من الصين", "استشارة تجارية مجانية", "استشارة استيراد للسعودية",
         "استشارة استيراد للإمارات", "استشارة استيراد للكويت", "استشارة استيراد لقطر", "استشارة استيراد للبحرين",
@@ -903,8 +903,8 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
     en: {
-      title: "Free Consultation for Importing from China | Dinoora",
-      description: "Get a free 30-minute consultation with China import experts. Product evaluation, market analysis, and custom action plan for importing your products.",
+      title: "Free Consultation | Start Your Import from China - Dinoora",
+      description: "Get a free 30-minute consultation with import experts. Product evaluation, market analysis, and custom action plan. Book now.",
       keywords: [
         "free import consultation", "China import consultation", "free business consultation", "import consultation for Saudi Arabia",
         "import consultation for UAE", "import consultation for Kuwait", "import consultation for Qatar", "import consultation for Bahrain",
@@ -952,6 +952,84 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
         "negotiating with Chinese suppliers", "China import terms", "import contracts",
         "shipping management from China", "storage of imported goods", "shipping insurance from China",
         "tracking shipments from China", "import decisions", "import plans",
+      ],
+    },
+  },
+  '/blog/importing-electronics-from-china': {
+    ar: {
+      title: "دليل استيراد الإلكترونيات من الصين | كل ما تحتاج معرفته - دينورا",
+      description: "دليل شامل لاستيراد الإلكترونيات من الصين: اختيار الموردين، فحص الجودة، الشحن، والامتثال للمعايير.",
+      keywords: [
+        "استيراد الإلكترونيات من الصين", "كيف أستورد إلكترونيات من الصين", "استيراد الهواتف من الصين",
+        "استيراد أجهزة الكمبيوتر من الصين", "استيراد الإلكترونيات للسعودية", "استيراد الإلكترونيات للإمارات",
+        "استيراد الإلكترونيات للكويت", "استيراد الإلكترونيات لقطر", "استيراد الإلكترونيات للبحرين",
+        "موردي الإلكترونيات في الصين", "أسواق الإلكترونيات في الصين", "شحن الإلكترونيات من الصين",
+        "فحص جودة الإلكترونيات", "شهادات الإلكترونيات", "معايير الإلكترونيات",
+      ],
+    },
+    en: {
+      title: "Guide to Importing Electronics from China | Everything You Need to Know - Dinoora",
+      description: "Comprehensive guide to importing electronics from China: selecting suppliers, quality inspection, shipping, and compliance standards.",
+      keywords: [
+        "importing electronics from China", "how to import electronics from China", "import phones from China",
+        "import computers from China", "import electronics to Saudi Arabia", "import electronics to UAE",
+        "import electronics to Kuwait", "import electronics to Qatar", "import electronics to Bahrain",
+        "electronics suppliers in China", "electronics markets in China", "shipping electronics from China",
+        "electronics quality inspection", "electronics certifications", "electronics standards",
+      ],
+    },
+  },
+  '/blog/complete-shipping-guide-from-china': {
+    ar: {
+      title: "دليل الشحن الشامل من الصين | كل ما تحتاج معرفته - دينورا",
+      description: "دليل شامل لطرق الشحن من الصين: بحري، جوي، بري. تعرف على التكاليف، المواعيد، وكيفية اختيار أفضل طريقة شحن.",
+      keywords: [
+        "طرق الشحن من الصين", "شحن بحري من الصين", "شحن جوي من الصين", "شحن بري من الصين",
+        "تكلفة الشحن من الصين", "زمن الشحن من الصين", "شحن الحاويات من الصين",
+        "شحن LCL من الصين", "شحن FCL من الصين", "شحن express من الصين",
+        "شحن من الصين للسعودية", "شحن من الصين للإمارات", "شحن من الصين للكويت",
+        "شحن من شنغهاي", "شحن من نينغبو", "شحن من شنتشن", "شحن من غوانزو",
+        "دليل الشحن من الصين", "كيف أشحن من الصين", "أفضل طرق الشحن من الصين",
+      ],
+    },
+    en: {
+      title: "Complete Shipping Guide from China | Everything You Need to Know - Dinoora",
+      description: "Comprehensive guide to shipping methods from China: sea, air, land. Learn about costs, timelines, and how to choose the best shipping method.",
+      keywords: [
+        "shipping methods from China", "sea shipping from China", "air shipping from China", "land shipping from China",
+        "shipping cost from China", "shipping time from China", "container shipping from China",
+        "LCL shipping from China", "FCL shipping from China", "express shipping from China",
+        "shipping from China to Saudi Arabia", "shipping from China to UAE", "shipping from China to Kuwait",
+        "shipping from Shanghai", "shipping from Ningbo", "shipping from Shenzhen", "shipping from Guangzhou",
+        "shipping guide from China", "how to ship from China", "best shipping methods from China",
+      ],
+    },
+  },
+  '/blog/quality-inspection-best-practices': {
+    ar: {
+      title: "أفضل ممارسات فحص الجودة في الصين | دليل شامل - دينورا",
+      description: "دليل شامل لفحص الجودة في الصين: أنواع الفحص، متى تجريه، وكيف تحمي استثمارك من المنتجات المعيبة.",
+      keywords: [
+        "فحص الجودة في الصين", "فحص المنتجات قبل الشحن", "فحص المصانع الصينية",
+        "فحص قبل الإنتاج", "فحص أثناء الإنتاج", "فحص قبل الشحن",
+        "مفتش جودة في الصين", "خدمات فحص الجودة", "شركة فحص جودة",
+        "تقييم الموردين", "فحص العينات", "فحص البضائع",
+        "ضمان الجودة", "التحكم في الجودة", "معايير الجودة",
+        "تجنب المنتجات المعيبة", "حماية الاستثمار", "فحص الإلكترونيات",
+        "فحص الملابس", "فحص الأثاث", "فحص الأدوات",
+      ],
+    },
+    en: {
+      title: "Quality Inspection Best Practices in China | Comprehensive Guide - Dinoora",
+      description: "Comprehensive guide to quality inspection in China: types of inspection, when to conduct it, and how to protect your investment from defective products.",
+      keywords: [
+        "quality inspection in China", "pre-shipment inspection", "Chinese factory inspection",
+        "pre-production inspection", "during production inspection", "pre-shipment inspection",
+        "quality inspector in China", "quality inspection services", "quality inspection company",
+        "supplier evaluation", "sample inspection", "goods inspection",
+        "quality assurance", "quality control", "quality standards",
+        "avoid defective products", "protect investment", "electronics inspection",
+        "clothing inspection", "furniture inspection", "tools inspection",
       ],
     },
   },
