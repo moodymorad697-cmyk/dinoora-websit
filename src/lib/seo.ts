@@ -979,60 +979,6 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
       ],
     },
   },
-  '/blog/complete-shipping-guide-from-china': {
-    ar: {
-      title: "دليل الشحن الشامل من الصين | كل ما تحتاج معرفته - دينورا",
-      description: "دليل شامل لطرق الشحن من الصين: بحري، جوي، بري. تعرف على التكاليف، المواعيد، وكيفية اختيار أفضل طريقة شحن.",
-      keywords: [
-        "طرق الشحن من الصين", "شحن بحري من الصين", "شحن جوي من الصين", "شحن بري من الصين",
-        "تكلفة الشحن من الصين", "زمن الشحن من الصين", "شحن الحاويات من الصين",
-        "شحن LCL من الصين", "شحن FCL من الصين", "شحن express من الصين",
-        "شحن من الصين للسعودية", "شحن من الصين للإمارات", "شحن من الصين للكويت",
-        "شحن من شنغهاي", "شحن من نينغبو", "شحن من شنتشن", "شحن من غوانزو",
-        "دليل الشحن من الصين", "كيف أشحن من الصين", "أفضل طرق الشحن من الصين",
-      ],
-    },
-    en: {
-      title: "Complete Shipping Guide from China | Everything You Need to Know - Dinoora",
-      description: "Comprehensive guide to shipping methods from China: sea, air, land. Learn about costs, timelines, and how to choose the best shipping method.",
-      keywords: [
-        "shipping methods from China", "sea shipping from China", "air shipping from China", "land shipping from China",
-        "shipping cost from China", "shipping time from China", "container shipping from China",
-        "LCL shipping from China", "FCL shipping from China", "express shipping from China",
-        "shipping from China to Saudi Arabia", "shipping from China to UAE", "shipping from China to Kuwait",
-        "shipping from Shanghai", "shipping from Ningbo", "shipping from Shenzhen", "shipping from Guangzhou",
-        "shipping guide from China", "how to ship from China", "best shipping methods from China",
-      ],
-    },
-  },
-  '/blog/quality-inspection-best-practices': {
-    ar: {
-      title: "أفضل ممارسات فحص الجودة في الصين | دليل شامل - دينورا",
-      description: "دليل شامل لفحص الجودة في الصين: أنواع الفحص، متى تجريه، وكيف تحمي استثمارك من المنتجات المعيبة.",
-      keywords: [
-        "فحص الجودة في الصين", "فحص المنتجات قبل الشحن", "فحص المصانع الصينية",
-        "فحص قبل الإنتاج", "فحص أثناء الإنتاج", "فحص قبل الشحن",
-        "مفتش جودة في الصين", "خدمات فحص الجودة", "شركة فحص جودة",
-        "تقييم الموردين", "فحص العينات", "فحص البضائع",
-        "ضمان الجودة", "التحكم في الجودة", "معايير الجودة",
-        "تجنب المنتجات المعيبة", "حماية الاستثمار", "فحص الإلكترونيات",
-        "فحص الملابس", "فحص الأثاث", "فحص الأدوات",
-      ],
-    },
-    en: {
-      title: "Quality Inspection Best Practices in China | Comprehensive Guide - Dinoora",
-      description: "Comprehensive guide to quality inspection in China: types of inspection, when to conduct it, and how to protect your investment from defective products.",
-      keywords: [
-        "quality inspection in China", "pre-shipment inspection", "Chinese factory inspection",
-        "pre-production inspection", "during production inspection", "pre-shipment inspection",
-        "quality inspector in China", "quality inspection services", "quality inspection company",
-        "supplier evaluation", "sample inspection", "goods inspection",
-        "quality assurance", "quality control", "quality standards",
-        "avoid defective products", "protect investment", "electronics inspection",
-        "clothing inspection", "furniture inspection", "tools inspection",
-      ],
-    },
-  },
   '/referral-program': {
     ar: {
       title: "برنامج الإحالة - اربح مع كل عميل جديد | دينورا",

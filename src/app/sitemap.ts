@@ -295,18 +295,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastmod: currentDate
     },
     {
-      path: '/blog/complete-shipping-guide-from-china',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/blog/quality-inspection-best-practices',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
       path: '/referral-program',
       priority: 0.8,
       changefreq: 'weekly' as const,
