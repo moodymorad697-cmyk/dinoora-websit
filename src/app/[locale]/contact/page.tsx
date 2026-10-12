@@ -82,34 +82,49 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
+    whatsappCountryCode: "+966",
+    whatsappNumber: "",
     company: "",
     subject: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create WhatsApp message
+    const whatsappNumber = formData.whatsappCountryCode + formData.whatsappNumber;
+    
     const message = locale === 'ar' 
-      ? `*رسالة جديدة من موقع دينورا*\n\n*الاسم:* ${formData.name}\n*البريد:* ${formData.email}\n*الهاتف:* ${formData.phone}\n*الشركة:* ${formData.company || 'غير محدد'}\n*الموضوع:* ${formData.subject}\n*الرسالة:* ${formData.message}`
-      : `*New message from Dinoora website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Company:* ${formData.company || 'Not specified'}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
+      ? `*📩 رسالة جديدة من موقع دينورا*\n\n*الاسم:* ${formData.name}\n*البريد:* ${formData.email}\n*الهاتف:* ${formData.phone}\n*الشركة:* ${formData.company || 'غير محدد'}\n*الموضوع:* ${formData.subject}\n*رقم الواتساب:* ${whatsappNumber}\n*الرسالة:* ${formData.message}`
+      : `*📩 New message from Dinoora website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Company:* ${formData.company || 'Not specified'}\n*Subject:* ${formData.subject}\n*WhatsApp Number:* ${whatsappNumber}\n*Message:* ${formData.message}`;
     
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `${WHATSAPP_LINK}?text=${encodedMessage}`;
-    
-    // Open WhatsApp with the message
-    window.open(whatsappUrl, '_blank');
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      subject: "",
-      message: "",
-    });
+    try {
+      const response = await fetch('/api/send-telegram', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message }),
+      });
+
+      if (response.ok) {
+        alert(locale === 'ar' ? 'تم الإرسال بنجاح!' : 'Sent successfully!');
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          whatsappCountryCode: "+966",
+          whatsappNumber: "",
+          company: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert(locale === 'ar' ? 'حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.' : 'Error sending. Please try again.');
+      }
+    } catch (error) {
+      alert(locale === 'ar' ? 'حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.' : 'Error sending. Please try again.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -313,6 +328,51 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
                     placeholder={locale === 'ar' ? '+966 50 123 4567' : '+966 50 123 4567'}
                   />
+                </div>
+
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-slate-300 mb-2">
+                    {locale === 'ar' ? 'رقم الواتساب (مطلوب)' : 'WhatsApp Number (Required)'}
+                  </label>
+                  <div className="flex gap-2">
+                    <select
+                      name="whatsappCountryCode"
+                      value={formData.whatsappCountryCode}
+                      onChange={handleChange}
+                      className="w-32 px-3 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white"
+                    >
+                      <option value="+966">+966</option>
+                      <option value="+971">+971</option>
+                      <option value="+965">+965</option>
+                      <option value="+974">+974</option>
+                      <option value="+973">+973</option>
+                      <option value="+968">+968</option>
+                      <option value="+962">+962</option>
+                      <option value="+20">+20</option>
+                      <option value="+212">+212</option>
+                      <option value="+213">+213</option>
+                      <option value="+216">+216</option>
+                      <option value="+218">+218</option>
+                      <option value="+961">+961</option>
+                      <option value="+1">+1</option>
+                      <option value="+44">+44</option>
+                      <option value="+61">+61</option>
+                      <option value="+7">+7</option>
+                      <option value="+380">+380</option>
+                      <option value="+55">+55</option>
+                      <option value="+27">+27</option>
+                      <option value="+234">+234</option>
+                    </select>
+                    <input
+                      type="tel"
+                      name="whatsappNumber"
+                      required
+                      value={formData.whatsappNumber}
+                      onChange={handleChange}
+                      className="flex-1 px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent text-white placeholder-slate-500"
+                      placeholder={locale === 'ar' ? '50 123 4567' : '50 123 4567'}
+                    />
+                  </div>
                 </div>
 
                 <div className="mb-6">

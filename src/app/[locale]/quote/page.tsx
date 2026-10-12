@@ -12,6 +12,8 @@ export default function QuotePage() {
   const [formData, setFormData] = useState({
     contact: "",
     contactType: "whatsapp",
+    whatsappCountryCode: "+966",
+    whatsappNumber: "",
     service: "",
     product: "",
     quantity: "",
@@ -30,10 +32,9 @@ export default function QuotePage() {
     { id: "complete", icon: "🌐", title: locale === 'ar' ? "خدمة كاملة" : "Complete Service", desc: locale === 'ar' ? "حل من أ إلى ز" : "From A to Z solution" },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create WhatsApp message
     const serviceNames: Record<string, string> = {
       sourcing: locale === 'ar' ? 'توريد المنتجات' : 'Product Sourcing',
       inspection: locale === 'ar' ? 'فحص الجودة' : 'Quality Check',
@@ -50,17 +51,29 @@ export default function QuotePage() {
     
     const selectedServices = formData.services.map(s => serviceLabels[s]).join(', ');
     
+    const whatsappNumber = formData.whatsappCountryCode + formData.whatsappNumber;
+    
     const message = locale === 'ar'
-      ? `*طلب عرض تجارة وشحن جديد من موقع دينورا*\n\n*الخدمة:* ${serviceNames[formData.service]}\n*المنتج:* ${formData.product}\n*الكمية:* ${formData.quantity}\n*البلد:* ${formData.country}\n*ميناء الوصول:* ${formData.port}\n*طريقة الشحن:* ${formData.shippingMethod}\n*الخدمات المطلوبة:* ${selectedServices}\n*طريقة التواصل:* ${formData.contactType === 'whatsapp' ? 'واتساب' : 'البريد الإلكتروني'}\n*معلومات التواصل:* ${formData.contact}\n*التفاصيل:* ${formData.details}`
-      : `*New trade and shipping quote request from Dinoora website*\n\n*Service:* ${serviceNames[formData.service]}\n*Product:* ${formData.product}\n*Quantity:* ${formData.quantity}\n*Country:* ${formData.country}\n*Port of Arrival:* ${formData.port}\n*Shipping Method:* ${formData.shippingMethod}\n*Required Services:* ${selectedServices}\n*Contact Method:* ${formData.contactType === 'whatsapp' ? 'WhatsApp' : 'Email'}\n*Contact Info:* ${formData.contact}\n*Details:* ${formData.details}`;
+      ? `*📦 طلب عرض تجارة وشحن جديد من موقع دينورا*\n\n*الخدمة:* ${serviceNames[formData.service]}\n*المنتج:* ${formData.product}\n*الكمية:* ${formData.quantity}\n*البلد:* ${formData.country}\n*ميناء الوصول:* ${formData.port}\n*طريقة الشحن:* ${formData.shippingMethod}\n*الخدمات المطلوبة:* ${selectedServices}\n*طريقة التواصل:* ${formData.contactType === 'whatsapp' ? 'واتساب' : 'البريد الإلكتروني'}\n*معلومات التواصل:* ${formData.contact}\n*رقم الواتساب:* ${whatsappNumber}\n*التفاصيل:* ${formData.details}`
+      : `*📦 New trade and shipping quote request from Dinoora website*\n\n*Service:* ${serviceNames[formData.service]}\n*Product:* ${formData.product}\n*Quantity:* ${formData.quantity}\n*Country:* ${formData.country}\n*Port of Arrival:* ${formData.port}\n*Shipping Method:* ${formData.shippingMethod}\n*Required Services:* ${selectedServices}\n*Contact Method:* ${formData.contactType === 'whatsapp' ? 'WhatsApp' : 'Email'}\n*Contact Info:* ${formData.contact}\n*WhatsApp Number:* ${whatsappNumber}\n*Details:* ${formData.details}`;
     
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `${WHATSAPP_LINK}?text=${encodedMessage}`;
-    
-    // Open WhatsApp with the message
-    window.open(whatsappUrl, '_blank');
-    
-    setSubmitted(true);
+    try {
+      const response = await fetch('/api/send-telegram', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert(locale === 'ar' ? 'حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.' : 'Error sending. Please try again.');
+      }
+    } catch (error) {
+      alert(locale === 'ar' ? 'حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.' : 'Error sending. Please try again.');
+    }
   };
 
   if (submitted) {
@@ -362,47 +375,62 @@ export default function QuotePage() {
           {step === 4 && (
             <div className="space-y-6">
               <h2 className="text-xl font-bold text-white">{locale === 'ar' ? 'معلومات الاتصال' : 'Contact Information'}</h2>
-              <p className="text-slate-400">{locale === 'ar' ? 'اختر طريقة التواصل المفضلة' : 'Choose your preferred contact method'}</p>
+              <p className="text-slate-400">{locale === 'ar' ? 'أدخل معلومات التواصل الخاصة بك' : 'Enter your contact information'}</p>
 
-              <div className="flex gap-4 mb-6">
-                <button
-                  type="button"
-                  onClick={() => setFormData({ ...formData, contactType: 'whatsapp' })}
-                  className={`flex-1 py-4 px-6 rounded-xl border-2 flex items-center justify-center gap-3 transition-all ${
-                    formData.contactType === 'whatsapp'
-                      ? 'border-green-500 bg-green-500/10'
-                      : 'border-slate-700 hover:border-slate-600 bg-slate-800/50'
-                  }`}
-                >
-                  <MessageCircle className="w-5 h-5 text-green-400" />
-                  <span className="font-semibold text-white">{locale === 'ar' ? 'واتساب' : 'WhatsApp'}</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setFormData({ ...formData, contactType: 'email' })}
-                  className={`flex-1 py-4 px-6 rounded-xl border-2 flex items-center justify-center gap-3 transition-all ${
-                    formData.contactType === 'email' 
-                      ? 'border-blue-500 bg-blue-500/10' 
-                      : 'border-slate-700 hover:border-slate-600 bg-slate-800/50'
-                  }`}
-                >
-                  <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="font-semibold text-white">{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</span>
-                </button>
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-slate-300 mb-2">
+                  {locale === 'ar' ? 'رقم الواتساب (مطلوب)' : 'WhatsApp Number (Required)'}
+                </label>
+                <div className="flex gap-2">
+                  <select
+                    value={formData.whatsappCountryCode}
+                    onChange={(e) => setFormData({ ...formData, whatsappCountryCode: e.target.value })}
+                    className="w-32 px-3 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white"
+                  >
+                    <option value="+966">+966</option>
+                    <option value="+971">+971</option>
+                    <option value="+965">+965</option>
+                    <option value="+974">+974</option>
+                    <option value="+973">+973</option>
+                    <option value="+968">+968</option>
+                    <option value="+962">+962</option>
+                    <option value="+20">+20</option>
+                    <option value="+212">+212</option>
+                    <option value="+213">+213</option>
+                    <option value="+216">+216</option>
+                    <option value="+218">+218</option>
+                    <option value="+961">+961</option>
+                    <option value="+1">+1</option>
+                    <option value="+44">+44</option>
+                    <option value="+61">+61</option>
+                    <option value="+7">+7</option>
+                    <option value="+380">+380</option>
+                    <option value="+55">+55</option>
+                    <option value="+27">+27</option>
+                    <option value="+234">+234</option>
+                  </select>
+                  <input
+                    type="tel"
+                    required
+                    value={formData.whatsappNumber}
+                    onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
+                    className="flex-1 px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-500"
+                    placeholder={locale === 'ar' ? '50 123 4567' : '50 123 4567'}
+                  />
+                </div>
               </div>
 
               <div className="mb-6">
                 <label className="block text-sm font-semibold text-slate-300 mb-2">
-                  {formData.contactType === 'whatsapp' ? (locale === 'ar' ? 'رقم واتساب' : 'WhatsApp Number') : (locale === 'ar' ? 'البريد الإلكتروني' : 'Email')} *
+                  {locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}
                 </label>
                 <input
-                  type={formData.contactType === 'whatsapp' ? 'tel' : 'email'}
+                  type="email"
                   name="contact"
-                  required
                   value={formData.contact}
                   onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
                   className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-slate-500"
-                  placeholder={formData.contactType === 'whatsapp' ? '+966 50 123 4567' : 'your@email.com'}
+                  placeholder="your@email.com"
                 />
               </div>
 
