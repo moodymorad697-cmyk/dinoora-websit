@@ -5,43 +5,43 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLocale } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Check, ClipboardCheck, Container, FileCheck2, PackageSearch, ShieldCheck, Warehouse, Truck, BarChart3, Clock, Globe, Users, Search, Mail, Phone, MessageCircle, Factory, Ship, Plane, Zap, Award, TrendingUp } from "lucide-react";
+import { ArrowRight, Check, ClipboardCheck, Container, FileCheck2, PackageSearch, ShieldCheck, Warehouse, Truck, BarChart3, Clock, Globe, Users, Search, Mail, Phone, MessageCircle, Factory, Ship, Plane, Zap, Award, TrendingUp, Calculator, Sparkles, Waves } from "lucide-react";
 
 export default function HomePage() {
   const locale = useLocale();
   const ar = locale === "ar";
   const text = ar ? {
-    eyebrow: "تجارة منظمة من الصين إلى أسواقك",
-    title: "استورد بثقة.\nوسلّم في الموعد.",
-    intro: "نحوّل التوريد والشحن من سلسلة اتصالات مبهمة إلى مسار واضح تديره جهة واحدة: نتحقق، نفحص، نجمع، ثم نوصل.",
-    quote: "ابدأ بطلب عرض سعر",
-    services: "استكشف الخدمات",
-    proof: ["استجابة أولية خلال 24 ساعة", "توثيق قبل الشحن", "تنسيق من المصنع حتى بابك"],
-    serviceTitle: "كل مرحلة لها مالك واضح",
-    serviceIntro: "اختر الدعم الذي تحتاجه أو اجمع المراحل كلها في خطة توريد واحدة.",
-    processTitle: "مسار عمل يمكن متابعته",
-    processIntro: "تستلم تحديثات مفهومة عند كل نقطة قرار، بدون تخمين أو مفاجآت في منتصف الطريق.",
-    caseTitle: "مثال على طريقة عملنا",
-    caseIntro: "شحنة إلكترونيات من شِنزن إلى دبي: راجعنا المواصفات، نسّقنا المورد، وفحصنا التجهيز قبل تسليمها للناقل.",
-    caseItems: ["مطابقة المواصفات والعينات", "صور فحص قبل الإرسال", "تجهيز مستندات الشحن", "تحديث واضح حتى التسليم"],
-    finalTitle: "لديك شحنة قادمة؟ لنضع لها مساراً واضحاً.",
-    finalIntro: "أرسل تفاصيل المنتج والوجهة، وسيعود إليك فريقنا بالخطوة التالية والتقدير الأولي.",
+    eyebrow: "شريكك الموثوق في الاستيراد من الصين",
+    title: "استورد من الصين\nبثقة وسهولة",
+    intro: "نقدم لك حلولاً متكاملة للاستيراد من الصين: توريد، فحص جودة، شحن، وتخليص جمركي. فريقنا يرافقك من المصنع حتى باب منزلك.",
+    quote: "احصل على عرض سعر مجاني",
+    services: "خدماتنا",
+    proof: ["استجابة خلال 24 ساعة", "فحص جودة قبل الشحن", "تتبع الشحنة في كل مرحلة"],
+    serviceTitle: "خدمات شاملة لكل احتياجاتك",
+    serviceIntro: "من توريد المنتجات إلى التوصيل النهائي، نحن نهتم بكل التفاصيل لضمان تجربة استيراد ناجحة.",
+    processTitle: "كيف نعمل؟",
+    processIntro: "نتبع عملية واضحة وشفافة تضمن جودة المنتجات ووصولها في الوقت المحدد.",
+    caseTitle: "لماذا تختار دينورا؟",
+    caseIntro: "نحن نجمع بين الخبرة والالتزام لضمان أفضل تجربة استيراد لك.",
+    caseItems: ["خبرة واسعة في السوق الصيني", "شبكة موردين موثوقين", "أسعار تنافسية وشفافة", "دعم متواصل على مدار الساعة"],
+    finalTitle: "جاهز لبدء الاستيراد؟",
+    finalIntro: "تواصل معنا الآن واحصل على استشارة مجانية حول كيفية استيراد منتجاتك من الصين.",
   } : {
-    eyebrow: "Organized trade from China to your market",
-    title: "Import with confidence.\nDeliver on schedule.",
-    intro: "We turn sourcing and shipping from a chain of unclear conversations into one visible operating path: verify, inspect, consolidate, and deliver.",
-    quote: "Start a quote",
-    services: "Explore services",
-    proof: ["First response within 24 hours", "Pre-shipment documentation", "One team from factory to door"],
-    serviceTitle: "Every stage has a clear owner",
-    serviceIntro: "Choose the support you need, or combine every stage into one sourcing plan.",
-    processTitle: "A workflow you can follow",
-    processIntro: "You receive clear updates at each decision point, without guessing or mid-shipment surprises.",
-    caseTitle: "A glimpse at our operating model",
-    caseIntro: "An electronics shipment from Shenzhen to Dubai: we checked specifications, coordinated the supplier, and inspected the cargo before carrier handoff.",
-    caseItems: ["Specification and sample matching", "Pre-dispatch inspection photos", "Shipping document preparation", "Clear updates through delivery"],
-    finalTitle: "Have an upcoming shipment? Give it a clear path.",
-    finalIntro: "Send us the product and destination details. Our team will return with the next step and an initial estimate.",
+    eyebrow: "Your Trusted Partner for Importing from China",
+    title: "Import from China\nwith Confidence",
+    intro: "We offer comprehensive solutions for importing from China: sourcing, quality inspection, shipping, and customs clearance. Our team accompanies you from the factory to your doorstep.",
+    quote: "Get a Free Quote",
+    services: "Our Services",
+    proof: ["Response within 24 hours", "Pre-shipment quality inspection", "Track your shipment at every stage"],
+    serviceTitle: "Comprehensive Services for All Your Needs",
+    serviceIntro: "From product sourcing to final delivery, we take care of every detail to ensure a successful importing experience.",
+    processTitle: "How We Work?",
+    processIntro: "We follow a clear and transparent process that ensures product quality and on-time delivery.",
+    caseTitle: "Why Choose Dinoora?",
+    caseIntro: "We combine expertise and commitment to ensure the best importing experience for you.",
+    caseItems: ["Extensive experience in the Chinese market", "Network of reliable suppliers", "Competitive and transparent pricing", "24/7 continuous support"],
+    finalTitle: "Ready to Start Importing?",
+    finalIntro: "Contact us now and get a free consultation on how to import your products from China.",
   };
 
   const services = [
@@ -61,22 +61,121 @@ export default function HomePage() {
 
   const { scrollY } = useScroll();
   const heroY = useTransform(scrollY, [0, 500], [0, 200]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   return <main className="home-page site-palette bg-slate-950 text-white">
     <section className="relative isolate min-h-[680px] overflow-hidden bg-[#102a43] text-white">
+      {/* Animated Background Elements - simplified on mobile for performance */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {!isMobile && (
+          <>
+            <motion.div 
+              animate={{ 
+                scale: [1, 1.5, 1],
+                x: [0, 100, 0],
+                y: [0, -80, 0],
+                opacity: [0.4, 0.6, 0.4],
+              }}
+              transition={{ 
+                duration: 20, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute top-0 left-0 w-[800px] h-[800px] bg-cyan-500/30 rounded-full blur-3xl"
+            />
+            <motion.div 
+              animate={{ 
+                scale: [1.5, 1, 1.5],
+                x: [-100, 0, -100],
+                y: [80, 0, 80],
+                opacity: [0.4, 0.6, 0.4],
+              }}
+              transition={{ 
+                duration: 25, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-blue-500/30 rounded-full blur-3xl"
+            />
+            <motion.div 
+              animate={{ 
+                scale: [1, 1.4, 1],
+                opacity: [0.3, 0.5, 0.3],
+                rotate: [0, 360, 0],
+              }}
+              transition={{ 
+                duration: 30, 
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-3xl"
+            />
+            <motion.div 
+              animate={{ 
+                scale: [1, 1.3, 1],
+                opacity: [0.2, 0.4, 0.2],
+              }}
+              transition={{ 
+                duration: 15, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-500/20 rounded-full blur-2xl"
+            />
+            <motion.div 
+              animate={{ 
+                scale: [1.3, 1, 1.3],
+                opacity: [0.2, 0.4, 0.2],
+              }}
+              transition={{ 
+                duration: 18, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute bottom-1/4 left-1/4 w-[350px] h-[350px] bg-amber-500/15 rounded-full blur-2xl"
+            />
+          </>
+        )}
+        {/* Floating particles - reduced on mobile for performance */}
+        {[...Array(isMobile ? 8 : 30)].map((_, i) => (
+          <motion.div
+            key={i}
+            animate={{
+              y: [0, -150, 0],
+              x: [0, Math.random() * 50 - 25, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 6 + Math.random() * 8,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+            }}
+            className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
       <motion.div className="absolute inset-0 -z-10" style={{ y: heroY }}>
         <Image
           src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80"
           alt="Container ship at port - international shipping and logistics"
           fill
           priority
-          sizes="100vw"
-          quality={80}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+          quality={85}
           className="object-cover"
         />
       </motion.div>
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,22,38,0.96),rgba(9,39,62,0.78)_52%,rgba(9,39,62,0.5))]" />
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_50%,rgba(34,211,238,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_50%,rgba(34,211,238,0.15),transparent_50%)]" />
       <div className="mx-auto flex min-h-[680px] max-w-7xl items-end px-5 pb-20 pt-40 sm:px-8 lg:px-12">
         <div className="max-w-3xl">
           <motion.div
@@ -87,13 +186,13 @@ export default function HomePage() {
             <p className="mb-6 border-s-2 border-cyan-300 ps-4 text-sm font-bold uppercase tracking-[0.14em] text-cyan-200">{text.eyebrow}</p>
             <h1 className="max-w-3xl whitespace-pre-line text-5xl font-black leading-[1.02] tracking-tight sm:text-7xl">{text.title}</h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">{text.intro}</p>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row"><Link href={`/${locale}/quote`} className="inline-flex items-center justify-center gap-3 rounded-lg bg-cyan-300 px-6 py-4 font-bold text-[#082238] transition hover:bg-white hover:scale-105 duration-300">{text.quote}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link><a href="#services" className="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-4 font-bold transition hover:bg-white/10 hover:scale-105 duration-300">{text.services}</a></div>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row"><Link href={`/${locale}/quote`} className="inline-flex items-center justify-center gap-3 rounded-lg bg-cyan-300 px-6 py-4 font-bold text-[#082238] transition hover:bg-white hover:scale-105 duration-300">{text.quote}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link><Link href={`/${locale}/calculator`} className="inline-flex items-center justify-center gap-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-4 font-bold text-white transition hover:from-cyan-400 hover:to-blue-400 hover:scale-105 duration-300 shadow-lg shadow-cyan-500/30">{ar ? 'حاسبة الشحن' : 'Shipping Calculator'}<Calculator className="h-5 w-5" /></Link></div>
           </motion.div>
         </div>
       </div>
     </section>
 
-    <section className="border-b border-cyan-500/20 bg-slate-900"><div className="mx-auto grid max-w-7xl gap-5 px-5 py-7 sm:grid-cols-3 sm:px-8 lg:px-12">{text.proof.map((item, index) => <motion.div key={item} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="flex items-center gap-3 text-sm font-semibold text-slate-300"><motion.span className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400" animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 2 }}>0{index + 1}</motion.span>{item}</motion.div>)}</div></section>
+    <section className="border-b border-cyan-500/20 bg-slate-900"><div className="mx-auto grid max-w-7xl gap-5 px-5 py-7 sm:grid-cols-3 sm:px-8 lg:px-12">{text.proof.map((item, index) => <motion.div key={item} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="flex items-center gap-3 text-sm font-semibold text-slate-300"><motion.span className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400" animate={!isMobile ? { scale: [1, 1.1, 1] } : {}} transition={{ duration: 2, repeat: Infinity, repeatDelay: 2 }}>0{index + 1}</motion.span>{item}</motion.div>)}</div></section>
 
     <section id="services" className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Services</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl text-white">{text.serviceTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.serviceIntro}</p></div><div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{services.map((service, index) => <motion.div key={service.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative"><div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">0{index + 1}</div><Link href={`/${locale}${service.href}`} className={`group relative flex flex-col gap-5 rounded-2xl border-2 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] ${service.borderColor}`}><div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${service.iconBg}`} /><span className={`relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconBg} ${service.iconColor} transition-all duration-300 group-hover:scale-110 group-hover:animate-pulse`}><service.icon className="h-7 w-7" /></span><span className="relative"><span className="flex items-center gap-3 text-xl font-bold text-white">{service.title}<ArrowRight className={`h-4 w-4 ${service.iconColor} opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1`} /></span><span className="mt-3 block leading-7 text-slate-300">{service.body}</span><div className="mt-4 flex flex-wrap gap-2"><span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{service.tags}</span></div></span></Link></motion.div>)}</div></section>
 
@@ -120,7 +219,7 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.02 }}
-            className="relative h-64 md:h-80 rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl"
+            className="relative h-64 md:h-80 w-full rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl"
           >
             <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80')" }} />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
@@ -167,13 +266,13 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="relative min-h-[400px] overflow-hidden rounded-2xl border-2 border-cyan-500/30 shadow-2xl"
+            className="relative min-h-[400px] w-full overflow-hidden rounded-2xl border-2 border-cyan-500/30 shadow-2xl"
           >
             <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=85')" }} />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
             <div className="absolute bottom-6 left-6 flex items-center gap-3">
               <motion.div
-                animate={{ rotate: 360 }}
+                animate={!isMobile ? { rotate: 360 } : {}}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="h-12 w-12 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/50"
               >

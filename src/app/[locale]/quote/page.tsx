@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { ArrowLeft, Send, Mail, MessageCircle } from "lucide-react";
@@ -9,6 +9,11 @@ import { WHATSAPP_LINK } from "@/config/contact";
 export default function QuotePage() {
   const locale = useLocale();
   const [step, setStep] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
   const [formData, setFormData] = useState({
     contact: "",
     contactType: "whatsapp",
@@ -120,16 +125,16 @@ export default function QuotePage() {
           <p className="text-slate-400">{locale === 'ar' ? 'املأ النموذج أدناه للحصول على عرض سعر مخصص' : 'Fill out the form below to get a custom quote'}</p>
         </div>
 
-        {/* Progress Steps */}
-        <div className="flex items-center justify-center gap-4 mb-12">
+        {/* Progress Steps - simplified on mobile */}
+        <div className={`flex items-center justify-center gap-2 mb-12 ${isMobile ? 'gap-1' : 'gap-4'}`}>
           {[1, 2, 3, 4, 5].map((s) => (
-            <div key={s} className="flex items-center gap-4">
-              <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${
+            <div key={s} className="flex items-center gap-2">
+              <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-sm sm:text-base transition-colors ${
                 step >= s ? 'bg-gradient-to-r from-indigo-600 to-purple-500 text-white' : 'bg-slate-800 text-slate-500'
               }`}>
                 {s}
               </div>
-              {s < 5 && <div className={`w-16 h-1 rounded ${step > s ? 'bg-gradient-to-r from-indigo-600 to-purple-500' : 'bg-slate-800'}`} />}
+              {s < 5 && <div className={`w-8 sm:w-16 h-1 rounded ${step > s ? 'bg-gradient-to-r from-indigo-600 to-purple-500' : 'bg-slate-800'}`} />}
             </div>
           ))}
         </div>

@@ -8,7 +8,13 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { message } = body;
 
+    console.log('Telegram API called');
+    console.log('Bot Token exists:', !!TELEGRAM_BOT_TOKEN);
+    console.log('Chat ID exists:', !!TELEGRAM_CHAT_ID);
+    console.log('Message length:', message?.length);
+
     if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+      console.error('Missing Telegram configuration');
       return NextResponse.json(
         { error: 'Telegram configuration missing' },
         { status: 500 }
@@ -16,6 +22,8 @@ export async function POST(request: Request) {
     }
 
     const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+    console.log('Sending to Telegram URL:', telegramUrl.replace(TELEGRAM_BOT_TOKEN, '***'));
 
     const response = await fetch(telegramUrl, {
       method: 'POST',
@@ -29,18 +37,21 @@ export async function POST(request: Request) {
       }),
     });
 
+    const responseData = await response.json();
+    console.log('Telegram response:', responseData);
+
     if (!response.ok) {
-      const error = await response.json();
       return NextResponse.json(
-        { error: 'Failed to send Telegram message', details: error },
+        { error: 'Failed to send Telegram message', details: responseData },
         { status: 500 }
       );
     }
 
     return NextResponse.json({ success: true });
   } catch (error) {
+    console.error('Telegram API error:', error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Internal server error', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }

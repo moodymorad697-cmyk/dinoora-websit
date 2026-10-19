@@ -365,6 +365,8 @@ export default async function LocaleLayout({
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload critical images for LCP */}
+        <link rel="preload" href="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80" as="image" fetchPriority="high" />
       </head>
       <body className={`${inter.variable} ${cairo.variable} ${locale === 'ar' ? 'font-[family-name:var(--font-cairo)]' : 'font-[family-name:var(--font-inter)]'}`}>
         <StructuredData locale={locale} />
