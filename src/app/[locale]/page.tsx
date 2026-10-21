@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale } from "next-intl";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, Check, ClipboardCheck, Container, FileCheck2, PackageSearch, ShieldCheck, Warehouse, Truck, BarChart3, Clock, Globe, Users, Search, Mail, Phone, MessageCircle, Factory, Ship, Plane, Zap, Award, TrendingUp, Calculator, Sparkles, Waves } from "lucide-react";
 
 export default function HomePage() {
@@ -59,121 +59,21 @@ export default function HomePage() {
     ["04", ar ? "نشحن ونتابع" : "Ship and follow through", ar ? "ننسق الناقل ونبقيك على اطلاع حتى التسليم." : "Coordinate the carrier and keep you updated to delivery."],
   ];
 
-  const { scrollY } = useScroll();
-  const heroY = useTransform(scrollY, [0, 500], [0, 200]);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
-  }, []);
 
   return <main className="home-page site-palette bg-slate-950 text-white">
     <section className="relative isolate min-h-[680px] overflow-hidden bg-[#102a43] text-white">
-      {/* Animated Background Elements - simplified on mobile for performance */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {!isMobile && (
-          <>
-            <motion.div 
-              animate={{ 
-                scale: [1, 1.5, 1],
-                x: [0, 100, 0],
-                y: [0, -80, 0],
-                opacity: [0.4, 0.6, 0.4],
-              }}
-              transition={{ 
-                duration: 20, 
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute top-0 left-0 w-[800px] h-[800px] bg-cyan-500/30 rounded-full blur-3xl"
-            />
-            <motion.div 
-              animate={{ 
-                scale: [1.5, 1, 1.5],
-                x: [-100, 0, -100],
-                y: [80, 0, 80],
-                opacity: [0.4, 0.6, 0.4],
-              }}
-              transition={{ 
-                duration: 25, 
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-blue-500/30 rounded-full blur-3xl"
-            />
-            <motion.div 
-              animate={{ 
-                scale: [1, 1.4, 1],
-                opacity: [0.3, 0.5, 0.3],
-                rotate: [0, 360, 0],
-              }}
-              transition={{ 
-                duration: 30, 
-                repeat: Infinity,
-                ease: "linear"
-              }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-3xl"
-            />
-            <motion.div 
-              animate={{ 
-                scale: [1, 1.3, 1],
-                opacity: [0.2, 0.4, 0.2],
-              }}
-              transition={{ 
-                duration: 15, 
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-500/20 rounded-full blur-2xl"
-            />
-            <motion.div 
-              animate={{ 
-                scale: [1.3, 1, 1.3],
-                opacity: [0.2, 0.4, 0.2],
-              }}
-              transition={{ 
-                duration: 18, 
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute bottom-1/4 left-1/4 w-[350px] h-[350px] bg-amber-500/15 rounded-full blur-2xl"
-            />
-          </>
-        )}
-        {/* Floating particles - reduced on mobile for performance */}
-        {[...Array(isMobile ? 8 : 30)].map((_, i) => (
-          <motion.div
-            key={i}
-            animate={{
-              y: [0, -150, 0],
-              x: [0, Math.random() * 50 - 25, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 6 + Math.random() * 8,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
-            className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
-      </div>
-
-      <motion.div className="absolute inset-0 -z-10" style={{ y: heroY }}>
+      <div className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80"
-          alt="Container ship at port - international shipping and logistics"
+          src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=90"
+          alt="Port containers and international shipping logistics"
           fill
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
-          quality={85}
+          quality={90}
           className="object-cover"
         />
-      </motion.div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1929]/70 via-[#102a43]/50 to-[#102a43]/80" />
+      </div>
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,22,38,0.96),rgba(9,39,62,0.78)_52%,rgba(9,39,62,0.5))]" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_50%,rgba(34,211,238,0.15),transparent_50%)]" />
       <div className="mx-auto flex min-h-[680px] max-w-7xl items-end px-5 pb-20 pt-40 sm:px-8 lg:px-12">
@@ -192,12 +92,12 @@ export default function HomePage() {
       </div>
     </section>
 
-    <section className="border-b border-cyan-500/20 bg-slate-900"><div className="mx-auto grid max-w-7xl gap-5 px-5 py-7 sm:grid-cols-3 sm:px-8 lg:px-12">{text.proof.map((item, index) => <motion.div key={item} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="flex items-center gap-3 text-sm font-semibold text-slate-300"><motion.span className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400" animate={!isMobile ? { scale: [1, 1.1, 1] } : {}} transition={{ duration: 2, repeat: Infinity, repeatDelay: 2 }}>0{index + 1}</motion.span>{item}</motion.div>)}</div></section>
+    <section className="border-b border-cyan-500/20 bg-slate-900"><div className="mx-auto grid max-w-7xl gap-5 px-5 py-7 sm:grid-cols-3 sm:px-8 lg:px-12">{text.proof.map((item, index) => <motion.div key={item} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="flex items-center gap-3 text-sm font-semibold text-slate-300"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400">0{index + 1}</span>{item}</motion.div>)}</div></section>
 
-    <section id="services" className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Services</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl text-white">{text.serviceTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.serviceIntro}</p></div><div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{services.map((service, index) => <motion.div key={service.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="relative"><div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">0{index + 1}</div><Link href={`/${locale}${service.href}`} className={`group relative flex flex-col gap-5 rounded-2xl border-2 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] ${service.borderColor}`}><div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${service.iconBg}`} /><span className={`relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconBg} ${service.iconColor} transition-all duration-300 group-hover:scale-110 group-hover:animate-pulse`}><service.icon className="h-7 w-7" /></span><span className="relative"><span className="flex items-center gap-3 text-xl font-bold text-white">{service.title}<ArrowRight className={`h-4 w-4 ${service.iconColor} opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1`} /></span><span className="mt-3 block leading-7 text-slate-300">{service.body}</span><div className="mt-4 flex flex-wrap gap-2"><span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{service.tags}</span></div></span></Link></motion.div>)}</div></section>
+    <section id="services" className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Services</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl text-white">{text.serviceTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.serviceIntro}</p></div><div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{services.map((service, index) => <div key={service.title} className="relative"><div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">0{index + 1}</div><Link href={`/${locale}${service.href}`} className={`group relative flex flex-col gap-5 rounded-2xl border-2 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] ${service.borderColor}`}><div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${service.iconBg}`} /><span className={`relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconBg} ${service.iconColor} transition-all duration-300 group-hover:scale-110`}><service.icon className="h-7 w-7" /></span><span className="relative"><span className="flex items-center gap-3 text-xl font-bold text-white">{service.title}<ArrowRight className={`h-4 w-4 ${service.iconColor} opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1`} /></span><span className="mt-3 block leading-7 text-slate-300">{service.body}</span><div className="mt-4 flex flex-wrap gap-2"><span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{service.tags}</span></div></span></Link></div>)}</div></section>
 
     {/* Brief About Us Section */}
-    <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
+    <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
       <div className="relative">
         <div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">07</div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -215,11 +115,8 @@ export default function HomePage() {
               <ArrowRight className="h-4 w-4 rtl:rotate-180" />
             </Link>
           </div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.02 }}
-            className="relative h-64 md:h-80 w-full rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl"
+          <div
+            className="relative h-64 md:h-80 w-full rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl hover:scale-102 transition-transform duration-300"
           >
             <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80')" }} />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
@@ -234,16 +131,16 @@ export default function HomePage() {
               </div>
               <p className="text-xs text-slate-300">{ar ? "نربطك بأفضل الموردين في الصين" : "Connecting you to China's best suppliers"}</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.section>
+    </section>
 
-    <section id="process" className="border-y border-cyan-500/20 bg-slate-900 px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><div className="max-w-2xl relative"><div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">08</div><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Workflow</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl text-white">{text.processTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.processIntro}</p></div><div className="mt-14 relative"><div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent hidden md:block" /><div className="grid gap-4 md:grid-cols-4">{steps.map(([number, title, body], index) => <motion.div key={number} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} whileHover={{ y: -8 }} className="relative border-t-2 border-cyan-500 bg-gradient-to-br from-slate-800 to-slate-900 p-6 shadow-lg hover:shadow-xl hover:shadow-cyan-500/20 transition-all"><span className="text-sm font-black text-cyan-400">{number}</span><h3 className="mt-5 text-xl font-bold text-white">{title}</h3><p className="mt-3 leading-7 text-slate-300">{body}</p></motion.div>)}</div></div></div></section>
+    <section id="process" className="border-y border-cyan-500/20 bg-slate-900 px-5 py-24 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><div className="max-w-2xl relative"><div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">08</div><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Workflow</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl text-white">{text.processTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.processIntro}</p></div><div className="mt-14 relative"><div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent hidden md:block" /><div className="grid gap-4 md:grid-cols-4">{steps.map(([number, title, body], index) => <div key={number} className="relative border-t-2 border-cyan-500 bg-gradient-to-br from-slate-800 to-slate-900 p-6 shadow-lg hover:shadow-xl hover:shadow-cyan-500/20 transition-all hover:-translate-y-1"><span className="text-sm font-black text-cyan-400">{number}</span><h3 className="mt-5 text-xl font-bold text-white">{title}</h3><p className="mt-3 leading-7 text-slate-300">{body}</p></div>)}</div></div></div></section>
 
 
     {/* Unified CTA Section - Simplified */}
-    <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-600 px-5 py-20 sm:px-8">
+    <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-600 px-5 py-20 sm:px-8">
       <div className="mx-auto max-w-4xl text-center text-white">
         <h2 className="text-3xl sm:text-4xl font-black mb-4">{ar ? "جاهز للبدء؟" : "Ready to get started?"}</h2>
         <p className="text-xl mb-8 opacity-90">{ar ? "تواصل معنا اليوم للحصول على استشارة مجانية" : "Contact us today for a free consultation"}</p>
@@ -254,35 +151,29 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-    </motion.section>
+    </section>
+
       {/* Enhanced Case Study Section with Visual Effects */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+      <section
         className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
       >
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="relative min-h-[400px] w-full overflow-hidden rounded-2xl border-2 border-cyan-500/30 shadow-2xl"
           >
             <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-110" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=85')" }} />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent" />
             <div className="absolute bottom-6 left-6 flex items-center gap-3">
-              <motion.div
-                animate={!isMobile ? { rotate: 360 } : {}}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              <div
                 className="h-12 w-12 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/50"
               >
                 <ShieldCheck className="h-6 w-6 text-cyan-400" />
-              </motion.div>
+              </div>
               <span className="text-sm font-bold text-white bg-slate-900/80 px-3 py-1 rounded-full">
                 {ar ? "توثيق قبل القرار" : "Evidence before decisions"}
               </span>
             </div>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">
@@ -296,31 +187,25 @@ export default function HomePage() {
             </p>
             <ul className="grid gap-4 sm:grid-cols-2">
               {text.caseItems.map((item, index) => (
-                <motion.li
+                <li
                   key={item}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   className="flex gap-3 text-sm font-semibold text-slate-300 items-start"
                 >
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 10 }}
+                  <div
                     className="h-6 w-6 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0 mt-0.5"
                   >
                     <Check className="h-4 w-4 text-emerald-400" />
-                  </motion.div>
+                  </div>
                   {item}
-                </motion.li>
+                </li>
               ))}
             </ul>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* New: Global Network Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+      <section
         className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-5 py-24 sm:px-8 lg:px-12"
       >
         <div className="absolute inset-0 opacity-30">
@@ -364,36 +249,28 @@ export default function HomePage() {
                 color: "from-emerald-500 to-teal-500",
               },
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="relative group"
+                className="relative group hover:-translate-y-2 transition-transform duration-300"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl blur-xl`} />
                 <div className="relative bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 h-full">
-                  <motion.div
-                    whileHover={{ rotate: 360, scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
+                  <div
                     className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-6`}
                   >
                     <item.icon className="h-8 w-8 text-white" />
-                  </motion.div>
+                  </div>
                   <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
                   <p className="text-slate-300">{item.desc}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* New: Promotional/Advertisement Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+      <section
         className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-5 py-24 sm:px-8 lg:px-12"
       >
         <div className="absolute inset-0 opacity-30">
@@ -404,15 +281,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl relative">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                className="inline-block"
-              >
+              <div className="inline-block">
                 <span className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold rounded-full">
                   {ar ? "عرض خاص" : "Special Offer"}
                 </span>
-              </motion.div>
+              </div>
               
               <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
                 {ar
@@ -452,12 +325,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              whileHover={{ scale: 1.02 }}
-              className="relative"
+            <div
+              className="relative hover:scale-102 transition-transform duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-3xl blur-2xl" />
               <div className="relative bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-cyan-500/30 rounded-3xl p-8 shadow-2xl">
@@ -500,15 +369,13 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* New: Industry Showcase Section with Images */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+      <section
         className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
       >
         <div className="text-center mb-16">
@@ -552,13 +419,9 @@ export default function HomePage() {
               icon: Warehouse,
             },
           ].map((industry, index) => (
-            <motion.div
+            <div
               key={industry.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="relative group overflow-hidden rounded-2xl border border-slate-700"
+              className="relative group overflow-hidden rounded-2xl border border-slate-700 hover:-translate-y-2 hover:scale-102 transition-all duration-300"
             >
               <div className="relative h-64 overflow-hidden">
                 <div
@@ -576,15 +439,13 @@ export default function HomePage() {
                 <h3 className="text-lg font-bold text-white mb-2">{industry.title}</h3>
                 <p className="text-sm text-slate-300">{industry.desc}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.section>
+      </section>
 
       {/* New: Shipping Methods Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+      <section
         className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-5 py-24 sm:px-8 lg:px-12"
       >
         <div className="absolute inset-0 opacity-20">
@@ -633,13 +494,9 @@ export default function HomePage() {
                 time: ar ? "15-25 يوم" : "15-25 days",
               },
             ].map((method, index) => (
-              <motion.div
+              <div
                 key={method.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="relative group"
+                className="relative group hover:-translate-y-2 transition-transform duration-300"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${method.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl blur-xl`} />
                 <div className="relative bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl overflow-hidden h-full">
@@ -650,13 +507,11 @@ export default function HomePage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
                     <div className="absolute top-4 left-4">
-                      <motion.div
-                        whileHover={{ rotate: 360, scale: 1.1 }}
-                        transition={{ duration: 0.6 }}
+                      <div
                         className={`h-12 w-12 rounded-xl bg-gradient-to-br ${method.color} flex items-center justify-center shadow-lg`}
                       >
                         <method.icon className="h-6 w-6 text-white" />
-                      </motion.div>
+                      </div>
                     </div>
                     <div className="absolute bottom-4 right-4 bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full border border-cyan-500/30">
                       <span className="text-xs font-bold text-cyan-400">{method.time}</span>
@@ -667,16 +522,14 @@ export default function HomePage() {
                     <p className="text-slate-300">{method.desc}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* New: Why Choose Us Section with Visual Stats */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+      <section
         className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
       >
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -713,32 +566,25 @@ export default function HomePage() {
                   desc: ar ? "متابعة دقيقة للشحنات" : "Precise tracking of shipments",
                 },
               ].map((item, index) => (
-                <motion.div
+                <div
                   key={item.title}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   className="flex gap-4 items-start"
                 >
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
+                  <div
                     className="h-12 w-12 rounded-xl bg-cyan-500/20 flex items-center justify-center flex-shrink-0 border border-cyan-500/30"
                   >
                     <item.icon className="h-6 w-6 text-cyan-400" />
-                  </motion.div>
+                  </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
                     <p className="text-slate-300">{item.desc}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="relative"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl" />
@@ -749,13 +595,9 @@ export default function HomePage() {
                 { value: "50+", label: ar ? "دولة مخدومة" : "Countries Served", image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=400&q=85" },
                 { value: "24/7", label: ar ? "دعم متاح" : "Support Available", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&q=85" },
               ].map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="relative group overflow-hidden rounded-2xl border border-slate-700"
+                  className="relative group overflow-hidden rounded-2xl border border-slate-700 hover:scale-105 transition-transform duration-300"
                 >
                   <div className="relative h-40">
                     <div
@@ -768,17 +610,15 @@ export default function HomePage() {
                       <div className="text-xs font-semibold text-slate-300 text-center">{stat.label}</div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* FAQ Section with Schema.org FAQPage */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+      <section
         className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"
       >
         <div className="max-w-3xl mx-auto">
@@ -832,11 +672,8 @@ export default function HomePage() {
                 a: ar ? "يمكنك طلب عرض سعر من خلال صفحة 'اطلب عرض سعر' على موقعنا أو التواصل معنا مباشرة. فريقنا سيرد عليك خلال 24 ساعة بتفاصيل الأسعار والخدمات." : "You can request a quote through the 'Request a Quote' page on our website or contact us directly. Our team will respond within 24 hours with price details and services."
               }
             ].map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <div className="p-6">
@@ -850,11 +687,11 @@ export default function HomePage() {
                     {faq.a}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Schema.org FAQPage */}
       <script
