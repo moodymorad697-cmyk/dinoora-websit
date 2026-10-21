@@ -4,8 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale } from "next-intl";
-import { motion } from "framer-motion";
-import { ArrowRight, Check, ClipboardCheck, Container, FileCheck2, PackageSearch, ShieldCheck, Warehouse, Truck, BarChart3, Clock, Globe, Users, Search, Mail, Phone, MessageCircle, Factory, Ship, Plane, Zap, Award, TrendingUp, Calculator, Sparkles, Waves } from "lucide-react";
+import { ArrowRight, Check, ClipboardCheck, Container, PackageSearch, ShieldCheck, Warehouse, Truck, Clock, Globe, Factory, Ship, Plane, Calculator } from "lucide-react";
 
 export default function HomePage() {
   const locale = useLocale();
@@ -78,21 +77,17 @@ export default function HomePage() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_50%,rgba(34,211,238,0.15),transparent_50%)]" />
       <div className="mx-auto flex min-h-[680px] max-w-7xl items-end px-5 pb-20 pt-40 sm:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <p className="mb-6 border-s-2 border-cyan-300 ps-4 text-sm font-bold uppercase tracking-[0.14em] text-cyan-200">{text.eyebrow}</p>
             <h1 className="max-w-3xl whitespace-pre-line text-5xl font-black leading-[1.02] tracking-tight sm:text-7xl">{text.title}</h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">{text.intro}</p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row"><Link href={`/${locale}/quote`} className="inline-flex items-center justify-center gap-3 rounded-lg bg-cyan-300 px-6 py-4 font-bold text-[#082238] transition hover:bg-white hover:scale-105 duration-300">{text.quote}<ArrowRight className="h-5 w-5 rtl:rotate-180" /></Link><Link href={`/${locale}/calculator`} className="inline-flex items-center justify-center gap-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-4 font-bold text-white transition hover:from-cyan-400 hover:to-blue-400 hover:scale-105 duration-300 shadow-lg shadow-cyan-500/30">{ar ? 'حاسبة الشحن' : 'Shipping Calculator'}<Calculator className="h-5 w-5" /></Link></div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section className="border-b border-cyan-500/20 bg-slate-900"><div className="mx-auto grid max-w-7xl gap-5 px-5 py-7 sm:grid-cols-3 sm:px-8 lg:px-12">{text.proof.map((item, index) => <motion.div key={item} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.1 }} className="flex items-center gap-3 text-sm font-semibold text-slate-300"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400">0{index + 1}</span>{item}</motion.div>)}</div></section>
+    <section className="border-b border-cyan-500/20 bg-slate-900"><div className="mx-auto grid max-w-7xl gap-5 px-5 py-7 sm:grid-cols-3 sm:px-8 lg:px-12">{text.proof.map((item, index) => <div key={item} className="flex items-center gap-3 text-sm font-semibold text-slate-300"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-400">0{index + 1}</span>{item}</div>)}</div></section>
 
     <section id="services" className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12"><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400">Dinoora / Services</p><h2 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl text-white">{text.serviceTitle}</h2><p className="mt-5 text-lg leading-8 text-slate-300">{text.serviceIntro}</p></div><div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{services.map((service, index) => <div key={service.title} className="relative"><div className="absolute -top-4 -right-4 text-9xl font-black text-slate-800/30 select-none pointer-events-none">0{index + 1}</div><Link href={`/${locale}${service.href}`} className={`group relative flex flex-col gap-5 rounded-2xl border-2 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] ${service.borderColor}`}><div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${service.iconBg}`} /><span className={`relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconBg} ${service.iconColor} transition-all duration-300 group-hover:scale-110`}><service.icon className="h-7 w-7" /></span><span className="relative"><span className="flex items-center gap-3 text-xl font-bold text-white">{service.title}<ArrowRight className={`h-4 w-4 ${service.iconColor} opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1`} /></span><span className="mt-3 block leading-7 text-slate-300">{service.body}</span><div className="mt-4 flex flex-wrap gap-2"><span className="px-3 py-1 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-full border border-amber-500/30">{service.tags}</span></div></span></Link></div>)}</div></section>
 
