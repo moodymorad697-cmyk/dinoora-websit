@@ -42,19 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Destination pages
   const destinationPages = [
-    { path: '/destinations/saudi-arabia', priority: 0.9, changeFreq: 'weekly' as const },
-    { path: '/destinations/uae', priority: 0.9, changeFreq: 'weekly' as const },
-    { path: '/destinations/kuwait', priority: 0.9, changeFreq: 'weekly' as const },
-    { path: '/destinations/qatar', priority: 0.9, changeFreq: 'weekly' as const },
-    { path: '/destinations/bahrain', priority: 0.9, changeFreq: 'weekly' as const },
-    { path: '/destinations/oman', priority: 0.9, changeFreq: 'weekly' as const },
-    { path: '/destinations/iraq', priority: 0.8, changeFreq: 'weekly' as const },
-    { path: '/destinations/sudan', priority: 0.8, changeFreq: 'weekly' as const },
-    { path: '/destinations/yemen', priority: 0.8, changeFreq: 'weekly' as const },
-    { path: '/destinations/morocco', priority: 0.8, changeFreq: 'weekly' as const },
-    { path: '/destinations/algeria', priority: 0.8, changeFreq: 'weekly' as const },
-    { path: '/destinations/egypt', priority: 0.8, changeFreq: 'weekly' as const },
-  ]
+    { path: '/destinations/saudi-arabia', priority: 1.0, changeFreq: 'daily' as const },
+    { path: '/destinations/uae', priority: 1.0, changeFreq: 'daily' as const },
+    { path: '/destinations/kuwait', priority: 0.9, changeFreq: 'daily' as const },
+    { path: '/destinations/qatar', priority: 0.9, changeFreq: 'daily' as const },
+    { path: '/destinations/bahrain', priority: 0.9, changeFreq: 'daily' as const },
+    { path: '/destinations/oman', priority: 0.9, changeFreq: 'daily' as const },
+  ];
 
   const allPages = [...staticPages, ...servicePages, ...guidePages, ...productPages, ...destinationPages]
 

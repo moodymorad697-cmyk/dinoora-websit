@@ -264,6 +264,59 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Destinations Section with Internal Links */}
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:px-12">
+        <div className="text-center mb-12">
+          <p className="text-sm font-bold uppercase tracking-[0.14em] text-cyan-400 mb-4">
+            Dinoora / {ar ? "الوجهات" : "Destinations"}
+          </p>
+          <h2 className="text-4xl font-black text-white mb-6">
+            {ar ? "نخدم جميع دول الخليج والشرق الأوسط" : "We Serve All GCC and Middle East Countries"}
+          </h2>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            {ar
+              ? "اختر دولتك لمعرفة المزيد عن خدمات الاستيراد المتخصصة"
+              : "Select your country to learn more about specialized import services"}
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            { name: ar ? "السعودية" : "Saudi Arabia", path: "saudi-arabia", flag: "🇸🇦" },
+            { name: ar ? "الإمارات" : "UAE", path: "uae", flag: "🇦🇪" },
+            { name: ar ? "الكويت" : "Kuwait", path: "kuwait", flag: "🇰🇼" },
+            { name: ar ? "قطر" : "Qatar", path: "qatar", flag: "🇶🇦" },
+            { name: ar ? "البحرين" : "Bahrain", path: "bahrain", flag: "🇧🇭" },
+            { name: ar ? "عمان" : "Oman", path: "oman", flag: "🇴🇲" },
+          ].map((country) => (
+            <Link
+              key={country.path}
+              href={`/${locale}/destinations/${country.path}`}
+              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-4xl">{country.flag}</span>
+                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    {country.name}
+                  </h3>
+                </div>
+                <p className="text-slate-400 text-sm mb-4">
+                  {ar
+                    ? `استيراد من الصين إلى ${country.name}`
+                    : `Import from China to ${country.name}`}
+                </p>
+                <div className="flex items-center gap-2 text-cyan-400 font-semibold text-sm">
+                  <span>{ar ? "اعرف المزيد" : "Learn More"}</span>
+                  <ArrowRight className="h-4 w-4 rtl:rotate-180 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* New: Promotional/Advertisement Section */}
       <section
         className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 px-5 py-24 sm:px-8 lg:px-12"
