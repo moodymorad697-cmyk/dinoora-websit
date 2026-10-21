@@ -1,0 +1,27 @@
+{
+  "name": "Dinoora - Import from China",
+  "short_name": "Dinoora",
+  "description": "Import from China to Saudi Arabia and Arab countries with comprehensive services including sourcing, quality inspection, shipping, and customs clearance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance", "shopping"],
+  "lang": "ar",
+  "dir": "rtl"
+}

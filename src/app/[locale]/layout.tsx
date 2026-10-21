@@ -365,8 +365,22 @@ export default async function LocaleLayout({
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
         {/* Preload critical images for LCP */}
-        <link rel="preload" href="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80" as="image" fetchPriority="high" />
+        <link rel="preload" href="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=90" as="image" fetchPriority="high" />
+        {/* Preload critical fonts */}
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" as="style" />
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="https://api.telegram.org" />
+        {/* Viewport meta tag for mobile optimization */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        {/* Theme color for PWA */}
+        <meta name="theme-color" content="#0f172a" />
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/manifest.json" />
+        {/* Apple Touch Icon */}
+        <link rel="apple-touch-icon" href="/icon-192.png" />
       </head>
       <body className={`${inter.variable} ${cairo.variable} ${locale === 'ar' ? 'font-[family-name:var(--font-cairo)]' : 'font-[family-name:var(--font-inter)]'}`}>
         <StructuredData locale={locale} />
