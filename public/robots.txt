@@ -13,3 +13,17 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
 Disallow: /admin/
+
+# Allow specific important crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow low-value paths
+Disallow: /*.json$
+Disallow: /*.xml$

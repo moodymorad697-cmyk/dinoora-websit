@@ -405,6 +405,131 @@ export default function StructuredData({ locale }: { locale: string }) {
     }
   };
 
+  // HowTo Schema for guides
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": locale === 'ar' ? "كيف تستورد من الصين خطوة بخطوة" : "How to Import from China Step by Step",
+    "description": locale === 'ar'
+      ? "دليل شامل للاستيراد من الصين من اختيار المورد حتى استلام البضائع"
+      : "Comprehensive guide to import from China from selecting supplier to receiving goods",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": locale === 'ar' ? "حدد المنتجات والكميات" : "Define products and quantities",
+        "text": locale === 'ar'
+          ? "حدد المنتجات التي تريد استيرادها والكميات المطلوبة"
+          : "Define the products you want to import and the required quantities"
+      },
+      {
+        "@type": "HowToStep",
+        "name": locale === 'ar' ? "ابحث عن موردين موثوقين" : "Find reliable suppliers",
+        "text": locale === 'ar'
+          ? "ابحث عن موردين موثوقين في الصين وقارن بين الأسعار"
+          : "Search for reliable suppliers in China and compare prices"
+      },
+      {
+        "@type": "HowToStep",
+        "name": locale === 'ar' ? "اطلب عينات وافحص الجودة" : "Request samples and inspect quality",
+        "text": locale === 'ar'
+          ? "اطلب عينات من الموردين وافحص جودة المنتجات"
+          : "Request samples from suppliers and inspect product quality"
+      },
+      {
+        "@type": "HowToStep",
+        "name": locale === 'ar' ? "اختر طريقة الشحن المناسبة" : "Choose appropriate shipping method",
+        "text": locale === 'ar'
+          ? "اختر طريقة الشحن المناسبة (بحري، جوي، أو بري)"
+          : "Choose the appropriate shipping method (sea, air, or land)"
+      },
+      {
+        "@type": "HowToStep",
+        "name": locale === 'ar' ? "أكمل الإجراءات الجمركية" : "Complete customs procedures",
+        "text": locale === 'ar'
+          ? "أكمل إجراءات التخليص الجمركي في بلدك"
+          : "Complete customs clearance procedures in your country"
+      }
+    ]
+  };
+
+  // Service Schema for each service
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": locale === 'ar' ? "خدمات الاستيراد من الصين" : "Import from China Services",
+    "description": locale === 'ar'
+      ? "خدمات متكاملة للاستيراد من الصين تشمل التوريد، فحص الجودة، الشحن، والتخليص الجمركي"
+      : "Integrated services for import from China including sourcing, quality inspection, shipping, and customs clearance",
+    "provider": {
+      "@type": "Organization",
+      "name": "دينورا للتجارة الدولية",
+      "url": "https://www.dinooratrade.com"
+    },
+    "serviceType": [
+      locale === 'ar' ? "توريد المنتجات" : "Product Sourcing",
+      locale === 'ar' ? "فحص الجودة" : "Quality Inspection",
+      locale === 'ar' ? "التخزين والتجميع" : "Warehousing & Consolidation",
+      locale === 'ar' ? "الشحن الدولي" : "International Shipping",
+      locale === 'ar' ? "التخليص الجمركي" : "Customs Clearance"
+    ],
+    "areaServed": [
+      { "@type": "Country", "name": "Saudi Arabia" },
+      { "@type": "Country", "name": "United Arab Emirates" },
+      { "@type": "Country", "name": "Qatar" },
+      { "@type": "Country", "name": "Kuwait" },
+      { "@type": "Country", "name": "Bahrain" },
+      { "@type": "Country", "name": "Oman" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": locale === 'ar' ? "خدمات الاستيراد" : "Import Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": locale === 'ar' ? "توريد من الصين" : "Sourcing from China"
+          },
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": locale === 'ar' ? "فحص الجودة" : "Quality Inspection"
+          },
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": locale === 'ar' ? "الشحن والتخليص" : "Shipping & Customs"
+          },
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+  };
+
+  // Speakable Schema for voice search
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "xpath": [
+      "/html/head/title",
+      "/html/body/h1"
+    ]
+  };
+
   return (
     <>
       <script
@@ -438,6 +563,18 @@ export default function StructuredData({ locale }: { locale: string }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
     </>
   );

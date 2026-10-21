@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale } from "next-intl";
-import { ArrowRight, Check, ClipboardCheck, Container, PackageSearch, ShieldCheck, Warehouse, Truck, Clock, Globe, Factory, Ship, Plane, Calculator } from "lucide-react";
+import { ArrowRight, Check, ClipboardCheck, Container, PackageSearch, ShieldCheck, Warehouse, Truck, Clock, Globe, Factory, Ship, Plane, Calculator, Zap, Award, TrendingUp } from "lucide-react";
 
 export default function HomePage() {
   const locale = useLocale();
@@ -64,7 +64,7 @@ export default function HomePage() {
       <div className="absolute inset-0 -z-10">
         <Image
           src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=90"
-          alt="Port containers and international shipping logistics"
+          alt={ar ? "شحن حاويات من الصين إلى السعودية والدول العربية - خدمات استيراد وتوريد من الصين" : "Shipping containers from China to Saudi Arabia and Arab countries - import and sourcing services from China"}
           fill
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"

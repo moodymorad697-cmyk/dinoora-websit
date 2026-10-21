@@ -45,8 +45,8 @@ export async function generateMetadata({
   // Arabic SEO metadata for homepage
   if (locale === 'ar') {
     return {
-      title: "استيراد من الصين بسهولة | دينورا - شركة استيراد موثوقة للسعودية والدول العربية",
-      description: "استورد من الصين بأسعار تنافسية وخدمات متكاملة. توريد، فحص جودة، شحن، وتخليص جمركي. احصل على استشارة مجانية الآن!",
+      title: "استيراد من الصين للسعودية والدول العربية | دينورا - شركة استيراد موثوقة - توريد، فحص جودة، شحن، تخليص جمركي",
+      description: "استورد من الصين بأسعار تنافسية وخدمات متكاملة مع دينورا. توريد من المصانع، فحص جودة، شحن بحري وجوي، تخليص جمركي للسعودية والإمارات والكويت وقطر والبحرين وعمان. احصل على استشارة مجانية الآن!",
       alternates: {
         canonical: canonicalUrl,
         languages: {
@@ -179,22 +179,22 @@ export async function generateMetadata({
         type: 'website',
         locale: 'ar_SA',
         url: 'https://www.dinooratrade.com/ar',
-        title: 'أفضل شركة استيراد من الصين للسعودية | دينورا للتجارة الدولية',
-        description: 'دينورا للتجارة الدولية هي شركة عربية متخصصة في الاستيراد والتجارة الدولية من الصين إلى الدول العربية. نقدم خدمات التوريد، فحص الجودة، الشحن، والتخليص الجمركي بأسعار منافسة.',
+        title: 'استيراد من الصين للسعودية والدول العربية | دينورا - شركة استيراد موثوقة - توريد، فحص جودة، شحن، تخليص جمركي',
+        description: 'استورد من الصين بأسعار تنافسية وخدمات متكاملة مع دينورا. توريد من المصانع، فحص جودة، شحن بحري وجوي، تخليص جمركي للسعودية والإمارات والكويت وقطر والبحرين وعمان. احصل على استشارة مجانية الآن!',
         siteName: 'دينورا للتجارة الدولية',
         images: [
           {
             url: 'https://www.dinooratrade.com/og-image-ar.jpg',
             width: 1200,
             height: 630,
-            alt: 'دينورا للتجارة الدولية - استيراد من الصين'
+            alt: 'دينورا للتجارة الدولية - استيراد من الصين للسعودية والدول العربية'
           }
         ]
       },
       twitter: {
         card: 'summary_large_image',
-        title: 'أفضل شركة استيراد من الصين للسعودية | دينورا للتجارة الدولية',
-        description: 'دينورا للتجارة الدولية هي شركة عربية متخصصة في الاستيراد والتجارة الدولية من الصين إلى الدول العربية.',
+        title: 'استيراد من الصين للسعودية والدول العربية | دينورا - شركة استيراد موثوقة',
+        description: 'استورد من الصين بأسعار تنافسية وخدمات متكاملة مع دينورا. توريد من المصانع، فحص جودة، شحن بحري وجوي، تخليص جمركي.',
         images: ['https://www.dinooratrade.com/og-image-ar.jpg']
       },
       ...seoMetadata,
@@ -203,8 +203,8 @@ export async function generateMetadata({
   
   // English SEO metadata for homepage
   return {
-    title: "Import from China Made Easy | Dinoora - Trusted Import Company for Saudi Arabia & Arab Countries",
-    description: "Import from China at competitive prices with comprehensive services. Sourcing, quality inspection, shipping, and customs clearance. Get a free consultation now!",
+    title: "Import from China to Saudi Arabia & Arab Countries | Dinoora - Trusted Import Company - Sourcing, Quality Inspection, Shipping, Customs Clearance",
+    description: "Import from China at competitive prices with comprehensive services from Dinoora. Factory sourcing, quality inspection, sea and air freight, customs clearance for Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, and Oman. Get a free consultation now!",
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -318,22 +318,22 @@ export async function generateMetadata({
       type: 'website',
       locale: 'en_US',
       url: 'https://www.dinooratrade.com/en',
-      title: 'Best Import Company from China to Saudi Arabia | Dinoora International Trade',
-      description: 'Dinoora International Trade is an Arab company specializing in international trade and import from China to Arab countries. We offer sourcing, quality inspection, shipping, and customs clearance services with competitive prices.',
+      title: 'Import from China to Saudi Arabia & Arab Countries | Dinoora - Trusted Import Company - Sourcing, Quality Inspection, Shipping, Customs Clearance',
+      description: 'Import from China at competitive prices with comprehensive services from Dinoora. Factory sourcing, quality inspection, sea and air freight, customs clearance for Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, and Oman. Get a free consultation now!',
       siteName: 'Dinoora International Trade',
       images: [
         {
           url: 'https://www.dinooratrade.com/og-image-en.jpg',
           width: 1200,
           height: 630,
-          alt: 'Dinoora International Trade - Import from China'
+          alt: 'Dinoora International Trade - Import from China to Saudi Arabia and Arab Countries'
         }
       ]
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Best Import Company from China to Saudi Arabia | Dinoora International Trade',
-      description: 'Dinoora International Trade is an Arab company specializing in international trade and import from China to Arab countries.',
+      title: 'Import from China to Saudi Arabia & Arab Countries | Dinoora - Trusted Import Company',
+      description: 'Import from China at competitive prices with comprehensive services from Dinoora. Factory sourcing, quality inspection, sea and air freight, customs clearance.',
       images: ['https://www.dinooratrade.com/og-image-en.jpg']
     },
     ...seoMetadata,
