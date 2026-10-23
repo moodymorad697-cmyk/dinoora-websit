@@ -20,7 +20,7 @@ export default function Navigation() {
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'ar';
   const targetLocale = locale === 'ar' ? 'en' : 'ar';
-  const serviceText = (key: string, field: 'title' | 'description') => locale === 'zh' ? t(`services.${key}.${field}`) : t(`services.${key}${field === 'description' ? 'Desc' : ''}`);
+  const serviceText = (key: string, field: 'title' | 'description') => t(`services.${key}${field === 'description' ? 'Desc' : ''}`);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,7 +140,7 @@ export default function Navigation() {
             <div className="w-px h-6 bg-white/10 mx-3" />
 
             <Link
-              href={`/${targetLocale}${pathname.replace(/^\/(ar|en|zh)/, '')}`}
+              href={`/${targetLocale}${pathname.replace(/^\/(ar|en)/, '')}`}
               className="flex items-center gap-2 text-slate-400 hover:text-indigo-400 transition-all duration-300 px-3 py-2 rounded-xl hover:bg-indigo-500/5"
             >
               <Globe className="w-4 h-4" />
@@ -158,7 +158,7 @@ export default function Navigation() {
 
           <div className="lg:hidden flex items-center gap-2">
             <Link
-              href={`/${targetLocale}${pathname.replace(/^\/(ar|en|zh)/, '')}`}
+              href={`/${targetLocale}${pathname.replace(/^\/(ar|en)/, '')}`}
               aria-label={locale === 'ar' ? 'تغيير اللغة إلى الإنجليزية' : 'Switch language to Arabic'}
               className="flex items-center justify-center w-11 h-11 rounded-xl hover:bg-white/10 transition-colors text-slate-400 hover:text-indigo-400"
             >

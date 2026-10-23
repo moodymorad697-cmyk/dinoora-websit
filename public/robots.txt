@@ -1,29 +1,9 @@
-# Allow all crawlers
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://www.dinooratrade.com/sitemap.xml
-
-# Crawl-delay (optional, to prevent overloading the server)
-Crawl-delay: 1
-
-# Disallow specific paths if needed
 Disallow: /api/
 Disallow: /_next/
+Disallow: /static/
 Disallow: /private/
 Disallow: /admin/
 
-# Allow specific important crawlers
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Disallow low-value paths
-Disallow: /*.json$
-Disallow: /*.xml$
+Sitemap: https://www.dinooratrade.com/sitemap.xml

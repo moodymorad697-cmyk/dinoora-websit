@@ -59,13 +59,13 @@ export default function AboutPage() {
   };
 
   const trustCards = ar ? [
-    ["حماية استثمارك", "تأمين تجاري، ضمان استرداد، حماية مدفوعات عبر Escrow، وكفالة جودة ضمن خطة واضحة.", "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=85"],
-    ["توفير مدروس", "مقارنة أسعار فورية عبر أكثر من 500 مصنع، مع توضيح الفرق بين السعر والتكلفة النهائية.", "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=85"],
+    ["وضوح قبل الالتزام", "نوضح شروط الدفع والفحص والمسؤوليات المتفق عليها قبل بدء الطلب.", "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=85"],
+    ["مقارنة مدروسة", "نقارن عروض الموردين المتاحة ونوضح الفرق بين سعر المنتج والتكلفة المتوقعة.", "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=85"],
     ["فريق عربي-صيني", "مديرو حسابات يتقنون العربية والصينية والإنجليزية ويفهمون ثقافة المصنع والعميل.", "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=900&q=85"],
     ["تنفيذ أسرع", "معالجة متوازية للتوريد والفحص والشحن حتى تصل المنتجات إلى السوق في وقت أقصر.", "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=85"],
   ] : [
-    ["Protecting your investment", "Trade cover, refund assurance, Escrow payment protection, and quality accountability within a clear plan.", "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=85"],
-    ["Cost-aware sourcing", "Live comparison across 500+ factories, with a clear view of price and total landed cost.", "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=85"],
+    ["Clarity before commitment", "We make agreed payment, inspection, and responsibility terms clear before an order starts.", "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=85"],
+    ["Informed comparison", "We compare available supplier offers and clarify product price versus estimated landed cost.", "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&q=85"],
     ["Arabic-Chinese team", "Account managers fluent in Arabic, Chinese, and English who understand both sides of the factory relationship.", "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=900&q=85"],
     ["Parallel execution", "Sourcing, inspection, and shipping move together so your products reach market sooner.", "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=900&q=85"],
   ];

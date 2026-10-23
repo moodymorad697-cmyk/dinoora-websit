@@ -9,6 +9,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 import { generateSEOMetadata } from "@/lib/seo";
+import { BASE_URL } from "@/lib/seo-config";
+import { routing } from "@/i18n/routing";
 
 const inter = Inter({ 
   subsets: ["latin"], 
@@ -23,10 +25,13 @@ const cairo = Cairo({
   preload: true
 });
 
-const locales = ['en', 'ar', 'zh'];
+function omitKeywords(metadata: Metadata): Metadata {
+  const { keywords: _keywords, ...metadataWithoutKeywords } = metadata;
+  return metadataWithoutKeywords;
+}
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
@@ -39,22 +44,13 @@ export async function generateMetadata({
   // Default metadata for homepage (path is empty)
   const seoMetadata = generateSEOMetadata('', locale);
   
-  // Canonical URL
-  const canonicalUrl = `https://www.dinooratrade.com/${locale}`;
-  
   // Arabic SEO metadata for homepage
   if (locale === 'ar') {
-    return {
+    return omitKeywords({
+      metadataBase: new URL(BASE_URL),
       title: "استيراد من الصين للسعودية والدول العربية | دينورا - شركة استيراد موثوقة - توريد، فحص جودة، شحن، تخليص جمركي",
       description: "استورد من الصين بأسعار تنافسية وخدمات متكاملة مع دينورا. توريد من المصانع، فحص جودة، شحن بحري وجوي، تخليص جمركي للسعودية والإمارات والكويت وقطر والبحرين وعمان. احصل على استشارة مجانية الآن!",
-      alternates: {
-        canonical: canonicalUrl,
-        languages: {
-          'ar': 'https://www.dinooratrade.com/ar',
-          'en': 'https://www.dinooratrade.com/en',
-          'zh': 'https://www.dinooratrade.com/zh',
-        },
-      },
+      alternates: seoMetadata.alternates,
       keywords: [
         "أفضل شركة استيراد من الصين للسعودية", "شركة توريد وشحن من الصين", "استيراد من الصين", "شحن بضائع من الصين", "خدمات تخليص جمركي", "فحص جودة البضائع", "تخزين بضائع في الصين", "شركة لوجستيات صينية", "استيراد للسعودية", "تجارة مع الصين", "دينورا للتجارة الدولية",
         "استيراد من الصين للسعودية", "استيراد من الصين للإمارات", "استيراد من الصين للكويت", "استيراد من الصين لقطر", "استيراد من الصين للبحرين", "استيراد من الصين لعمان", "استيراد من الصين للأردن", "استيراد من الصين للعراق", "استيراد من الصين للمغرب", "استيراد من الصين للجزائر", "استيراد من الصين لتونس", "استيراد من الصين لمصر", "استيراد من الصين للسودان", "استيراد من الصين لليمن", "استيراد من الصين لليبيا", "استيراد من الصين للبنان",
@@ -198,21 +194,15 @@ export async function generateMetadata({
         images: ['https://www.dinooratrade.com/og-image-ar.jpg']
       },
       ...seoMetadata,
-    };
+    });
   }
   
   // English SEO metadata for homepage
-  return {
+  return omitKeywords({
+    metadataBase: new URL(BASE_URL),
     title: "Import from China to Saudi Arabia & Arab Countries | Dinoora - Trusted Import Company - Sourcing, Quality Inspection, Shipping, Customs Clearance",
     description: "Import from China at competitive prices with comprehensive services from Dinoora. Factory sourcing, quality inspection, sea and air freight, customs clearance for Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, and Oman. Get a free consultation now!",
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'ar': 'https://www.dinooratrade.com/ar',
-        'en': 'https://www.dinooratrade.com/en',
-        'zh': 'https://www.dinooratrade.com/zh',
-      },
-    },
+    alternates: seoMetadata.alternates,
     keywords: [
       "best import company from China to Saudi Arabia", "sourcing and shipping from China", "import from China", "shipping goods from China", "customs clearance services", "goods quality inspection", "warehousing in China", "Chinese logistics company", "import to Saudi Arabia", "trade with China", "Dinoora International Trade", "دينورا للتجارة الدولية",
       "import from China to Saudi Arabia", "import from China to UAE", "import from China to Kuwait", "import from China to Qatar", "import from China to Bahrain", "import from China to Oman", "import from China to Jordan", "import from China to Iraq", "import from China to Morocco", "import from China to Algeria", "import from China to Tunisia", "import from China to Egypt", "import from China to Sudan", "import from China to Yemen", "import from China to Libya", "import from China to Lebanon",
@@ -337,7 +327,7 @@ export async function generateMetadata({
       images: ['https://www.dinooratrade.com/og-image-en.jpg']
     },
     ...seoMetadata,
-  };
+  });
 }
 
 export default async function LocaleLayout({
@@ -349,18 +339,18 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   
-  if (!locales.includes(locale as any)) notFound();
+  if (!(routing.locales as readonly string[]).includes(locale)) notFound();
 
   const messages = await getMessages();
   const headersList = await headers();
-  const pathname = headersList.get('x-pathname') || '';
-  const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '';
-  const canonicalUrl = `https://www.dinooratrade.com/${locale}${pathWithoutLocale}`;
+  const pathname = headersList.get('x-pathname') || `/${locale}`;
+  const pathWithoutLocale = pathname.replace(new RegExp(`^/${locale}(?=/|$)`), '');
+  const canonicalPath = pathWithoutLocale.replace(/\/+$/, '');
+  const canonicalUrl = `${BASE_URL}/${locale}${canonicalPath}`;
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
-        {/* Canonical URL */}
         <link rel="canonical" href={canonicalUrl} />
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

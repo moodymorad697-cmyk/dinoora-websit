@@ -39,44 +39,6 @@ const TikTokIcon = () => (
 
 export default function ContactPage() {
   const locale = useLocale();
-  const ar = locale === 'ar';
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "دينورا للتجارة الدولية",
-    "alternateName": "Dinoora International Trade",
-    "description": ar ? "خدمات استيراد وشحن متكاملة من الصين إلى الدول العربية" : "Integrated import and shipping services from China to Arab countries",
-    "url": "https://www.dinooratrade.com",
-    "telephone": "+966500000000",
-    "email": "info@dinooratrade.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "King Fahd Road",
-      "addressLocality": "Riyadh",
-      "addressRegion": "Riyadh Province",
-      "postalCode": "12345",
-      "addressCountry": "SA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "24.7136",
-      "longitude": "46.6753"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Sunday"
-      ],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    "priceRange": "$$"
-  };
 
   const [formData, setFormData] = useState({
     name: "",
@@ -136,10 +98,6 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       {/* Hero Section */}
       <section className="relative py-32 section-logistics overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -450,7 +408,7 @@ export default function ContactPage() {
                       <h3 className="font-bold text-white mb-1">{locale === 'ar' ? 'المقر الرئيسي' : 'Headquarters'}</h3>
                       <p className="text-slate-400">
                         {locale === 'ar' ? 'إيوو، مقاطعة تشجيانغ، الصين' : 'Yiwu, Zhejiang Province, China'}<br />
-                        {locale === 'ar' ? 'منطقة الأعمال التجارية' : 'Commercial Business District'}
+                        {locale === 'ar' ? 'الصين' : 'China'}
                       </p>
                     </div>
                   </div>
@@ -509,11 +467,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* China Offices */}
+              {/* China sourcing and logistics hubs */}
               <div className="bg-gradient-to-br from-[#0C2340] to-[#1E3A5F] rounded-2xl p-8 border border-amber-500/20">
                 <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
                   <Globe className="w-6 h-6 text-amber-400" />
-                  {locale === 'ar' ? 'أماكن تواجدنا في الصين' : 'Our Presence in China'}
+                  {locale === 'ar' ? 'مراكز التوريد والشحن في الصين' : 'Sourcing and shipping hubs in China'}
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">

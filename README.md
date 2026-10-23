@@ -130,7 +130,7 @@ china-trade-platform/
 
 ## Future Enhancements
 
-- Multilingual support (Arabic, English, Chinese)
+- Multilingual support (Arabic and English), with Arabic as the default language
 - User dashboard for account management
 - Advanced analytics and reporting
 - AI-powered product recommendations

@@ -20,12 +20,29 @@ export default function middleware(request: NextRequest) {
     url.hostname = 'www.dinooratrade.com';
     return Response.redirect(url, 308);
   }
+
+  // This country page is Arabic-only; avoid serving Arabic copy from an English URL.
+  if (
+    pathname === '/en/countries/saudi-arabia' ||
+    pathname.startsWith('/en/countries/saudi-arabia/')
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/ar${pathname.slice(3)}`;
+    return Response.redirect(url, 308);
+  }
+
+  // Keep previously indexed Chinese-locale URLs available under the Arabic default locale.
+  if (pathname === '/zh' || pathname.startsWith('/zh/')) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/ar${pathname.slice(3)}`;
+    return Response.redirect(url, 308);
+  }
   
   // Redirect root to Arabic locale
   if (pathname === '/') {
     const url = request.nextUrl.clone();
     url.pathname = '/ar';
-    return Response.redirect(url, 307);
+    return Response.redirect(url, 308);
   }
   
   const response = createMiddleware(routing)(request);

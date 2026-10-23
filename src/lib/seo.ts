@@ -1,22 +1,15 @@
 import type { Metadata } from "next";
-import { BASE_URL, LOCALES, getHreflangUrls, getCanonicalUrl, type Locale } from "./seo-config";
+import { getHreflangUrls } from "./seo-config";
 
 /**
- * Generate hreflang and canonical tags for multilingual SEO
+ * Generate hreflang links for the supported site locales.
  * @param pathname - The path without the locale prefix (e.g., "/about", "/services/sourcing", "" for homepage)
  * @param locale - The current locale
- * @returns Metadata alternates object with hreflang and canonical tags
+ * @returns Metadata alternates object with hreflang links
  */
-export function generateSEOMetadata(pathname: string, locale: string): Pick<Metadata, 'alternates'> {
+export function generateSEOMetadata(pathname: string, _locale: string): Pick<Metadata, 'alternates'> {
   const hreflangUrls = getHreflangUrls(pathname);
-  const canonicalUrl = getCanonicalUrl(pathname, locale as Locale);
-  
-  const alternates = {
-    canonical: canonicalUrl,
-    languages: hreflangUrls,
-  };
-
-  return { alternates };
+  return { alternates: { languages: hreflangUrls } };
 }
 
 /**
@@ -48,7 +41,7 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
   '/about': {
     ar: {
       title: "من نحن | دينورا - فريق عربي صيني لاستيراد آمن من الصين",
-      description: "تعرف على دينورا - فريق عربي صيني متخصص في الاستيراد من الصين. 10+ سنوات خبرة، 500+ عميل سعيد، خدمات متكاملة من التوريد حتى التسليم.",
+      description: "تعرف على دينورا وفريقها الذي ينسق خدمات التوريد وفحص الجودة والشحن من الصين إلى الأسواق العربية.",
       keywords: [
         "شركة لوجستيات متكاملة", "استيراد من الصين للسعودية", "شركة استيراد صينية", "خدمات لوجستية", "شركة تجارة صينية", "استيراد بضائع من الصين", "شركة شحن دولية",
         "من نحن دينورا", "عن دينورا", "تاريخ دينورا", "فريق دينورا", "خبرة دينورا", "خدمات دينورا", "مهمة دينورا", "رؤية دينورا", "قيم دينورا",
@@ -108,7 +101,7 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
     },
     en: {
       title: "About Us | Dinoora - Arabic Chinese Team for Safe Import from China",
-      description: "Learn about Dinoora - an Arabic Chinese team specializing in importing from China. 10+ years experience, 500+ happy clients, comprehensive services from sourcing to delivery.",
+      description: "Learn about Dinoora and its team coordinating sourcing, quality inspection, and shipping from China to Arab markets.",
       keywords: [
         "integrated logistics company", "import from China to Saudi Arabia", "Chinese import company", "logistics services", "Chinese trading company", "import goods from China", "international shipping company",
         "about Dinoora", "who we are Dinoora", "Dinoora history", "Dinoora team", "Dinoora experience", "Dinoora services", "Dinoora mission", "Dinoora vision", "Dinoora values",
@@ -1016,7 +1009,7 @@ const pageSEOConfigs: Record<string, PageSEOConfig> = {
 /**
  * Get page-specific SEO metadata
  * @param pathname - The path without locale prefix
- * @param locale - The current locale (ar, en, zh)
+ * @param locale - The current locale (ar or en)
  * @returns Metadata object with title, description, keywords
  */
 export function getPageMetadata(pathname: string, locale: string): Pick<Metadata, 'title' | 'description' | 'keywords'> {
@@ -1029,7 +1022,7 @@ export function getPageMetadata(pathname: string, locale: string): Pick<Metadata
       description: locale === 'ar' 
         ? 'دينورا تقدم حلول تجارة متكاملة بين الصين والشرق الأوسط'
         : 'Dinoora offers integrated trade solutions between China and the Middle East',
-      keywords: [],
+      keywords: undefined,
     };
   }
   
@@ -1038,6 +1031,15 @@ export function getPageMetadata(pathname: string, locale: string): Pick<Metadata
   return {
     title: localeConfig.title,
     description: localeConfig.description,
-    keywords: localeConfig.keywords,
+    keywords: undefined,
+  };
+}
+
+export function getCountryMetadata(country: string, locale: string): Metadata {
+  const pathname = `/countries/${country}`;
+
+  return {
+    ...getPageMetadata(pathname, locale),
+    ...generateSEOMetadata(pathname, locale),
   };
 }

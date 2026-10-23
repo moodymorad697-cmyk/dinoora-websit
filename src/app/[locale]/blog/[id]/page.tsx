@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { useLocale } from "next-intl";
-import { ArrowRight, BookOpen, Clock, Calendar, User, Share2 } from "lucide-react";
+import { ArrowRight, BookOpen, Clock, User, Share2 } from "lucide-react";
 import Link from "next/link";
 import { blogArticles } from "@/lib/blog-content";
 import { BASE_URL } from "@/lib/seo-config";
@@ -52,8 +52,6 @@ export default function BlogPostPage() {
       },
       "url": BASE_URL
     },
-    "datePublished": new Date().toISOString(),
-    "dateModified": new Date().toISOString(),
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": articleUrl
@@ -90,10 +88,6 @@ export default function BlogPostPage() {
             <div className="flex items-center gap-2">
               <User className="w-4 h-4" />
               <span>{ar ? "فريق دينورا" : "Dinoora Team"}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              <span>{new Date().toLocaleDateString(ar ? 'ar-SA' : 'en-US')}</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />

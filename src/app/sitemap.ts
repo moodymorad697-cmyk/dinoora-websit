@@ -1,325 +1,79 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
+import { blogArticles } from '@/lib/blog-content'
 import { BASE_URL, LOCALES, getHreflangUrls } from '@/lib/seo-config'
 
+const pages = [
+  { path: '', priority: 1 },
+  { path: '/about', priority: 0.7 },
+  { path: '/blog', priority: 0.8 },
+  { path: '/blog/best-products-to-import-from-china-2024', priority: 0.7 },
+  { path: '/blog/how-to-avoid-common-import-mistakes', priority: 0.7 },
+  { path: '/blog/how-to-import-from-china-saudi-arabia', priority: 0.8 },
+  { path: '/blog/importing-electronics-from-china', priority: 0.7 },
+  { path: '/calculator', priority: 0.7 },
+  { path: '/comparison/china-vs-sourcing', priority: 0.6 },
+  { path: '/countries', priority: 0.8 },
+  { path: '/countries/algeria', priority: 0.6 },
+  { path: '/countries/bahrain', priority: 0.7 },
+  { path: '/countries/iraq', priority: 0.8 },
+  { path: '/countries/jordan', priority: 0.6 },
+  { path: '/countries/kuwait', priority: 0.7 },
+  { path: '/countries/lebanon', priority: 0.6 },
+  { path: '/countries/libya', priority: 0.8 },
+  { path: '/countries/morocco', priority: 0.6 },
+  { path: '/countries/oman', priority: 0.7 },
+  { path: '/countries/qatar', priority: 0.7 },
+  { path: '/countries/saudi-arabia', priority: 0.9 },
+  { path: '/countries/sudan', priority: 0.8 },
+  { path: '/countries/tunisia', priority: 0.6 },
+  { path: '/countries/uae', priority: 0.9 },
+  { path: '/countries/yemen', priority: 0.8 },
+  { path: '/destinations/bahrain', priority: 0.7 },
+  { path: '/destinations/kuwait', priority: 0.7 },
+  { path: '/destinations/oman', priority: 0.7 },
+  { path: '/destinations/qatar', priority: 0.7 },
+  { path: '/destinations/saudi-arabia', priority: 0.8 },
+  { path: '/destinations/uae', priority: 0.8 },
+  { path: '/faq', priority: 0.7 },
+  { path: '/guide/how-to-import-from-china', priority: 0.8 },
+  { path: '/products/clothing-import', priority: 0.7 },
+  { path: '/products/electronics-import', priority: 0.7 },
+  { path: '/products/medical-supplies', priority: 0.7 },
+  { path: '/products/solar-energy-import', priority: 0.7 },
+  { path: '/products/textiles-fabrics', priority: 0.7 },
+  { path: '/referral-program', priority: 0.5 },
+  { path: '/services', priority: 0.8 },
+  { path: '/services/cold-chain-shipping', priority: 0.6 },
+  { path: '/services/customs', priority: 0.7 },
+  { path: '/services/inspection', priority: 0.7 },
+  { path: '/services/logistics', priority: 0.7 },
+  { path: '/services/shipping', priority: 0.8 },
+  { path: '/services/sourcing', priority: 0.8 },
+  { path: '/services/vip-shipping', priority: 0.6 },
+  { path: '/services/warehousing', priority: 0.7 },
+  { path: '/wholesale/beginners', priority: 0.7 },
+  { path: '/wholesale/bulk-orders', priority: 0.7 },
+  ...blogArticles.map(({ id }) => ({ path: `/blog/${id}`, priority: 0.6 })),
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const currentDate = new Date().toISOString().split('T')[0]
-  
-  // Define all pages with their priorities and change frequencies
-  const pages = [
-    {
-      path: '',
-      priority: 1.0,
-      changefreq: 'daily' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/about',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/services',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/services/sourcing',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/services/inspection',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/services/warehousing',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/services/shipping',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/services/customs',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/services/logistics',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/contact',
-      priority: 0.7,
-      changefreq: 'monthly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/quote',
-      priority: 0.7,
-      changefreq: 'monthly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/track',
-      priority: 0.6,
-      changefreq: 'monthly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/blog',
-      priority: 0.6,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/faq',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/guide/how-to-import-from-china',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/products/electronics-import',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/products/clothing-import',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/products/solar-energy-import',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/saudi-arabia',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/comparison/china-vs-sourcing',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/micro-services',
-      priority: 0.5,
-      changefreq: 'monthly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/query',
-      priority: 0.6,
-      changefreq: 'monthly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/privacy',
-      priority: 0.3,
-      changefreq: 'yearly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/terms',
-      priority: 0.3,
-      changefreq: 'yearly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/iraq',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/yemen',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/sudan',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/uae',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/kuwait',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/bahrain',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/oman',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/jordan',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/morocco',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/qatar',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/algeria',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/tunisia',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/libya',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries/lebanon',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/countries',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/products/medical-supplies',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/products/textiles-fabrics',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/services/cold-chain-shipping',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/services/vip-shipping',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/wholesale/beginners',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/wholesale/bulk-orders',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/free-consultation',
-      priority: 0.9,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/blog/how-to-avoid-common-import-mistakes',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/blog/importing-electronics-from-china',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-    {
-      path: '/referral-program',
-      priority: 0.8,
-      changefreq: 'weekly' as const,
-      lastmod: currentDate
-    },
-  ]
+  const uniquePages = Array.from(
+    new Map(pages.map((page) => [page.path, page])).values(),
+  ).sort((first, second) => first.path.localeCompare(second.path))
 
-  // Generate sitemap entries for all locales
-  const sitemap: MetadataRoute.Sitemap = []
-  
-  pages.forEach(page => {
-    LOCALES.forEach(locale => {
-      const hreflangUrls = getHreflangUrls(page.path)
-      
-      sitemap.push({
-        url: `${BASE_URL}/${locale}${page.path}`,
-        lastModified: page.lastmod,
-        changeFrequency: page.changefreq,
-        priority: page.priority,
-        alternates: {
-          languages: hreflangUrls,
-        },
-      })
-    })
-  })
-
-  return sitemap
+  return uniquePages.flatMap(({ path, priority }) =>
+    LOCALES.filter((locale) => path !== '/countries/saudi-arabia' || locale === 'ar').map((locale) => ({
+      url: `${BASE_URL}/${locale}${path}`,
+      changeFrequency: path === '' || path === '/blog' ? 'weekly' : 'monthly',
+      priority,
+      alternates: {
+        languages: path === '/countries/saudi-arabia'
+          ? {
+              ar: `${BASE_URL}/ar${path}`,
+              'x-default': `${BASE_URL}/ar${path}`,
+            }
+          : getHreflangUrls(path),
+      },
+    })),
+  )
 }

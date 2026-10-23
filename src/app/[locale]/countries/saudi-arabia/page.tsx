@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BASE_URL } from '@/lib/seo-config'
 
 export default function SaudiArabiaPage() {
   const breadcrumbSchema = {
@@ -9,19 +10,19 @@ export default function SaudiArabiaPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "الرئيسية",
-        "item": "https://www.dinooratrade.com"
+        "item": `${BASE_URL}/ar`
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "الدول",
-        "item": "https://www.dinooratrade.com/countries"
+        "item": `${BASE_URL}/ar/countries`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "السعودية",
-        "item": "https://www.dinooratrade.com/countries/saudi-arabia"
+        "item": `${BASE_URL}/ar/countries/saudi-arabia`
       }
     ]
   };
@@ -96,7 +97,7 @@ export default function SaudiArabiaPage() {
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-3">🏢 الرياض</h3>
-            <p className="text-slate-300 text-sm mb-4">مقرنا الرئيسي في الرياض يخدم جميع مناطق المملكة</p>
+            <p className="text-slate-300 text-sm mb-4">تنسيق خدمات الاستيراد والتوزيع إلى الرياض ومناطق المملكة</p>
             <ul className="space-y-2 text-slate-300 text-sm">
               <li>• التخليص الجمركي في الرياض</li>
               <li>• التوزيع لجميع المدن</li>
@@ -154,11 +155,11 @@ export default function SaudiArabiaPage() {
               <ul className="space-y-2 text-slate-300">
                 <li className="flex items-start">
                   <span className="text-blue-500 ml-2 mt-1">•</span>
-                  <span>ضريبة القيمة المضافة: 15%</span>
+                  <span>ضريبة القيمة المضافة والرسوم المقررة وفق الأنظمة السارية</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 ml-2 mt-1">•</span>
-                  <span>الرسوم الجمركية: 5-15% حسب المنتج</span>
+                  <span>تختلف الرسوم الجمركية ومتطلبات المطابقة حسب تصنيف المنتج</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 ml-2 mt-1">•</span>
@@ -177,16 +178,16 @@ export default function SaudiArabiaPage() {
           <h2 className="text-2xl font-bold text-amber-500 mb-4">🎯 لماذا دينورا للاستيراد للسعودية؟</h2>
           <div className="grid md:grid-cols-2 gap-6 text-slate-300">
             <div>
-              <h3 className="font-bold text-white mb-2">فريق محلي</h3>
-              <p>فريقنا يتحدث العربية ويفهم القوانين السعودية والإجراءات المحلية.</p>
+              <h3 className="font-bold text-white mb-2">دعم باللغة العربية</h3>
+              <p>ننسق معك باللغة العربية ونراجع متطلبات الشحنة قبل الترتيب لها.</p>
             </div>
             <div>
-              <h3 className="font-bold text-white mb-2">خبرة واسعة</h3>
-              <p>أكثر من 10 سنوات خبرة في الاستيراد للسعودية من الصين.</p>
+              <h3 className="font-bold text-white mb-2">تخطيط واضح</h3>
+              <p>نوضح مراحل التوريد والفحص والشحن والتكاليف التي تحتاج إلى تأكيد.</p>
             </div>
             <div>
-              <h3 className="font-bold text-white mb-2">شبكة قوية</h3>
-              <p>علاقات قوية مع الجمارك السعودية والجهات المختصة.</p>
+              <h3 className="font-bold text-white mb-2">تنسيق المستندات</h3>
+              <p>نساعد في ترتيب مستندات الشحنة والتنسيق مع مقدم التخليص عند الحاجة.</p>
             </div>
             <div>
               <h3 className="font-bold text-white mb-2">خدمة متكاملة</h3>

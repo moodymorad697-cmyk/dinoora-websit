@@ -14,7 +14,6 @@ const countries = [
   { code: 'algeria', ar: 'الجزائر', en: 'Algeria', port: 'Algiers Port' },
   { code: 'morocco', ar: 'المغرب', en: 'Morocco', port: 'Casablanca Port' },
   { code: 'tunisia', ar: 'تونس', en: 'Tunisia', port: 'Tunis Port' },
-  { code: 'egypt', ar: 'مصر', en: 'Egypt', port: 'Alexandria Port' },
   { code: 'lebanon', ar: 'لبنان', en: 'Lebanon', port: 'Beirut Port' },
   { code: 'libya', ar: 'ليبيا', en: 'Libya', port: 'Tripoli Port' },
   { code: 'sudan', ar: 'السودان', en: 'Sudan', port: 'Port Sudan' },
@@ -34,8 +33,8 @@ export default function CountriesPage() {
           </h1>
           <p className="text-slate-400 text-lg max-w-3xl mx-auto">
             {ar 
-              ? 'دينورا تقدم خدمات استيراد وشحن من الصين لجميع الدول العربية'
-              : 'Dinoora offers import and shipping services from China to all Arab countries'
+              ? 'استكشف خدمات الاستيراد والشحن من الصين إلى الأسواق العربية التي نخدمها.'
+              : 'Explore import and shipping services from China to the Arab markets we serve.'
             }
           </p>
         </div>

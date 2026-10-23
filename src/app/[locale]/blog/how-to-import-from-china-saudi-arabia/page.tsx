@@ -8,7 +8,7 @@ export default function ImportFromChinaSaudiArabiaGuide() {
   const ar = locale === 'ar';
 
   const content = ar ? {
-    title: "كيف تستورد من الصين إلى السعودية خطوة بخطوة 2024",
+    title: "كيف تستورد من الصين إلى السعودية خطوة بخطوة",
     subtitle: "دليل شامل للمبتدئين للاستيراد من الصين إلى المملكة العربية السعودية",
     intro: "تعلم كيفية الاستيراد من الصين إلى السعودية من البداية للنهاية. هذا الدليل يغطي كل ما تحتاج معرفته من اختيار المنتجات إلى استلام البضائع في جدة أو الرياض.",
     sections: [
@@ -67,7 +67,7 @@ export default function ImportFromChinaSaudiArabiaGuide() {
     cta: "ابدأ استيرادك من الصين الآن",
     ctaSub: "دينورا تساعدك في كل خطوة من الاستيراد من الصين إلى السعودية"
   } : {
-    title: "How to Import from China to Saudi Arabia Step by Step 2024",
+    title: "How to Import from China to Saudi Arabia: Step by Step",
     subtitle: "Comprehensive guide for beginners to import from China to Saudi Arabia",
     intro: "Learn how to import from China to Saudi Arabia from start to finish. This guide covers everything you need to know from selecting products to receiving goods in Jeddah or Riyadh.",
     sections: [

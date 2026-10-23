@@ -15,8 +15,8 @@ export async function generateMetadata({
     return {
       title: "الشحن والاستيراد من الصين إلى السودان | دينورا",
       description: "دينورا تقدم خدمات استيراد وشحن من الصين إلى السودان عبر بورتسودان والخرطوم. تشمل خدماتنا التوريد، فحص الجودة، التخزين، التخليص الجمركي، والشحن البحري والجوي.",
-      keywords: ["الشحن من الصين للسودان", "استيراد من الصين للسودان", "بورتسودان", "ميناء الخرطوم", "شركة استيراد سودانية", "تخليص جمركي السودان", "شحن بضائع للسودان", "توريد من الصين للسودان"],
       ...seoMetadata,
+      keywords: undefined,
     };
   }
   
@@ -24,8 +24,8 @@ export async function generateMetadata({
   return {
     title: "Shipping and Import from China to Sudan | Dinoora",
     description: "Dinoora offers import and shipping services from China to Sudan via Port Sudan and Khartoum. Our services include sourcing, quality inspection, warehousing, customs clearance, and sea and air shipping.",
-    keywords: ["shipping from China to Sudan", "import from China to Sudan", "Port Sudan", "Khartoum Port", "Sudanese import company", "Sudan customs clearance", "shipping goods to Sudan", "sourcing from China to Sudan"],
     ...seoMetadata,
+    keywords: undefined,
   };
 }
 

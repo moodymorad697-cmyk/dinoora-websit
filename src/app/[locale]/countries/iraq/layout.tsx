@@ -15,8 +15,8 @@ export async function generateMetadata({
     return {
       title: "الشحن والاستيراد من الصين إلى العراق | دينورا",
       description: "دينورا تقدم خدمات استيراد وشحن من الصين إلى العراق عبر ميناء أم قصر. تشمل خدماتنا التوريد، فحص الجودة، التخزين، التخليص الجمركي، والشحن البحري والجوي.",
-      keywords: ["الشحن من الصين للعراق", "استيراد من الصين للعراق", "ميناء أم قصر", "شركة استيراد عراقية", "تخليص جمركي العراق", "شحن بضائع للعراق", "توريد من الصين للعراق"],
       ...seoMetadata,
+      keywords: undefined,
     };
   }
   
@@ -24,8 +24,8 @@ export async function generateMetadata({
   return {
     title: "Shipping and Import from China to Iraq | Dinoora",
     description: "Dinoora offers import and shipping services from China to Iraq via Umm Qasr Port. Our services include sourcing, quality inspection, warehousing, customs clearance, and sea and air shipping.",
-    keywords: ["shipping from China to Iraq", "import from China to Iraq", "Umm Qasr Port", "Iraqi import company", "Iraq customs clearance", "shipping goods to Iraq", "sourcing from China to Iraq"],
     ...seoMetadata,
+    keywords: undefined,
   };
 }
 

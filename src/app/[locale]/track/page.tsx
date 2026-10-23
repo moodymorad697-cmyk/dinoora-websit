@@ -112,8 +112,7 @@ const generateDynamicShipments = () => {
 const SAMPLE_SHIPMENTS = generateDynamicShipments();
 
 // Helper function for translations
-const t = (ar: string, en: string, zh: string, locale: string) => {
-  if (locale === 'zh') return zh;
+const t = (ar: string, en: string, _zh: string, locale: string) => {
   if (locale === 'en') return en;
   return ar;
 };
@@ -1011,4 +1010,3 @@ _0%,_transparent_50%)]" />
     </main>
   );
 }
-

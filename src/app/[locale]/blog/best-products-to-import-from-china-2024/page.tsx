@@ -1,16 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
-import { ArrowRight, Check, TrendingUp, DollarSign, Package } from 'lucide-react';
+import { ArrowRight, Check, TrendingUp, Package } from 'lucide-react';
 
-export default function BestProductsToImportFromChina2024() {
+export default function BestProductsToImportFromChina() {
   const locale = useLocale();
   const ar = locale === 'ar';
 
   const content = ar ? {
-    title: "أفضل المنتجات للاستيراد من الصين 2024 - دليل شامل للمستوردين العرب",
-    subtitle: "اكتشف أكثر المنتجات ربحية ومطلوبة للاستيراد من الصين إلى الشرق الأوسط",
-    intro: "تعرف على أفضل المنتجات للاستيراد من الصين في 2024. هذا الدليل يغطي المنتجات الأكثر ربحية والمطلوبة في الأسواق العربية مع تحليل الربحية والطلب.",
+    title: "اختيار المنتجات المناسبة للاستيراد من الصين - دليل للمستوردين العرب",
+    subtitle: "قيّم المنتجات المرشحة للاستيراد وفق طلب السوق والتكلفة ومتطلبات الجودة",
+    intro: "تعرف على طريقة تقييم المنتجات المرشحة للاستيراد من الصين وفق الطلب المحلي والتكلفة ومتطلبات الجودة، بدلاً من الاعتماد على قوائم أرباح عامة لا تناسب كل مشروع.",
     products: [
       {
         name: "الإلكترونيات والأجهزة الذكية",
@@ -78,7 +78,7 @@ export default function BestProductsToImportFromChina2024() {
       }
     ],
     factors: {
-      title: "عوامل اختيار المنتجات المربحة",
+      title: "عوامل تقييم المنتجات",
       items: [
         "دراسة الطلب في السوق المحلي",
         "تحليل المنافسة والأسعار",
@@ -102,9 +102,9 @@ export default function BestProductsToImportFromChina2024() {
     cta: "ابدأ استيراد منتجات مربحة من الصين",
     ctaSub: "دينورا تساعدك في اختيار أفضل المنتجات وتوريدها من الصين"
   } : {
-    title: "Best Products to Import from China 2024 - Comprehensive Guide for Arab Importers",
-    subtitle: "Discover the most profitable and in-demand products to import from China to the Middle East",
-    intro: "Learn about the best products to import from China in 2024. This guide covers the most profitable and in-demand products in Arab markets with profitability and demand analysis.",
+    title: "Choosing Products to Import from China - A Guide for Arab Importers",
+    subtitle: "Assess product opportunities based on market demand, total cost, and quality requirements",
+    intro: "Learn how to assess products for import from China based on local demand, total costs, and quality requirements instead of relying on generic profit lists.",
     products: [
       {
         name: "Electronics and Smart Devices",
@@ -172,7 +172,7 @@ export default function BestProductsToImportFromChina2024() {
       }
     ],
     factors: {
-      title: "Factors for Choosing Profitable Products",
+      title: "Factors for Evaluating Products",
       items: [
         "Study local market demand",
         "Analyze competition and prices",
@@ -221,16 +221,6 @@ export default function BestProductsToImportFromChina2024() {
                   <span className="text-4xl">{product.icon}</span>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>
-                    <div className="flex gap-4 mb-3">
-                      <div className="flex items-center gap-2 text-sm">
-                        <TrendingUp className="h-4 w-4 text-cyan-400" />
-                        <span className="text-slate-400">{ar ? "الطلب:" : "Demand:"} {product.demand}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <DollarSign className="h-4 w-4 text-green-400" />
-                        <span className="text-slate-400">{ar ? "الربح:" : "Profit:"} {product.profit}</span>
-                      </div>
-                    </div>
                     <p className="text-slate-300 mb-4">{product.description}</p>
                     <div className="rounded-xl bg-slate-800 p-4">
                       <h4 className="font-bold text-cyan-400 mb-2">{ar ? "نصائح:" : "Tips:"}</h4>

@@ -6,23 +6,24 @@
 
 export const BASE_URL = 'https://www.dinooratrade.com';
 
-export const LOCALES = ['en', 'ar', 'zh'] as const;
+export const LOCALES = ['ar', 'en'] as const;
 export type Locale = typeof LOCALES[number];
 
-export const DEFAULT_LOCALE: Locale = 'en';
+export const DEFAULT_LOCALE: Locale = 'ar';
 
 /**
  * Get full URL for a given path and locale
  */
 export function getUrl(path: string, locale: Locale = DEFAULT_LOCALE): string {
-  return `${BASE_URL}/${locale}${path}`;
+  const normalizedPath = path === '' || path === '/' ? '' : `/${path.replace(/^\/+/, '')}`;
+  return `${BASE_URL}/${locale}${normalizedPath}`;
 }
 
 /**
  * Get canonical URL for a given path and locale
  */
 export function getCanonicalUrl(path: string, locale: Locale = DEFAULT_LOCALE): string {
-  return `${BASE_URL}/${locale}${path}`;
+  return getUrl(path, locale);
 }
 
 /**
@@ -35,10 +36,7 @@ export function getHreflangUrls(path: string): Record<string, string> {
     urls[locale] = getUrl(path, locale);
   });
   
-  // Add x-default only for homepage
-  if (path === '') {
-    urls['x-default'] = getUrl('', DEFAULT_LOCALE);
-  }
-  
+  urls['x-default'] = getUrl(path, DEFAULT_LOCALE);
+
   return urls;
 }

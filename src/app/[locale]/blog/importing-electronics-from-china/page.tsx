@@ -22,25 +22,6 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: locale === 'ar' ? [
-      "استيراد الإلكترونيات من الصين", "شحن الإلكترونيات من الصين", "استيراد الهواتف من الصين", "استيراد الحواسيب من الصين", "استيراد الأجهزة المنزلية من الصين",
-      "استيراد التلفزيونات من الصين", "استيراد السماعات من الصين", "استيراد الشواحن من الصين", "استيراد الكابلات من الصين", "استيراد الإكسسوارات من الصين",
-      "استيراد الإلكترونيات للسعودية", "استيراد الإلكترونيات للإمارات", "استيراد الإلكترونيات للكويت", "استيراد الإلكترونيات لقطر", "استيراد الإلكترونيات للبحرين",
-      "استيراد الإلكترونيات لعمان", "استيراد الإلكترونيات للأردن", "استيراد الإلكترونيات للعراق", "استيراد الإلكترونيات للمغرب", "استيراد الإلكترونيات للجزائر",
-      "استيراد الإلكترونيات من شنتشن", "استيراد الإلكترونيات من غوانزو", "استيراد الإلكترونيات من شنغهاي", "استيراد الإلكترونيات من هوا تشي",
-      "فحص جودة الإلكترونيات", "شهادات الإلكترونيات", "شهادة CE", "شهادة FCC", "شهادة RoHS",
-      "شحن الإلكترونيات جوي", "شحن الإلكترونيات بحري", "شحن الإلكترونيات سريع", "شحن الإلكترونيات اقتصادي",
-      "تخليص جمركي للإلكترونيات", "رسوم جمركية للإلكترونيات", "ضرائب الإلكترونيات",
-    ] : [
-      "import electronics from China", "ship electronics from China", "import phones from China", "import computers from China", "import home appliances from China",
-      "import TVs from China", "import headphones from China", "import chargers from China", "import cables from China", "import accessories from China",
-      "import electronics to Saudi Arabia", "import electronics to UAE", "import electronics to Kuwait", "import electronics to Qatar", "import electronics to Bahrain",
-      "import electronics to Oman", "import electronics to Jordan", "import electronics to Iraq", "import electronics to Morocco", "import electronics to Algeria",
-      "import electronics from Shenzhen", "import electronics from Guangzhou", "import electronics from Shanghai", "import electronics from Huaqiangbei",
-      "electronics quality inspection", "electronics certifications", "CE certificate", "FCC certificate", "RoHS certificate",
-      "air freight electronics", "sea freight electronics", "express shipping electronics", "economic shipping electronics",
-      "customs clearance electronics", "customs duties electronics", "electronics taxes",
-    ],
   };
 }
 
