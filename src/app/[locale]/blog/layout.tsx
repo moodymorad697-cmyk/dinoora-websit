@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { generateSEOMetadata, getPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -7,8 +8,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  
-  const seoMetadata = generateSEOMetadata('/blog', locale);
+  const requestHeaders = await headers();
+  const currentPath = requestHeaders.get('x-pathname') || `/${locale}/blog`;
+  const pathWithoutLocale = currentPath
+    .replace(new RegExp(`^/${locale}(?=/|$)`), '')
+    .replace(/\/+$/, '') || '/blog';
+
+  const seoMetadata = generateSEOMetadata(pathWithoutLocale, locale);
   const pageMetadata = getPageMetadata('/blog', locale);
   
   if (locale === 'ar') {

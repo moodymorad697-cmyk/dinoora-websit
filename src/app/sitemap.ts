@@ -57,14 +57,18 @@ const pages = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const normalizedPages = pages.map((page) => ({
+    ...page,
+    path: page.path.replace(/\/+$/, ''),
+  }));
   const uniquePages = Array.from(
-    new Map(pages.map((page) => [page.path, page])).values(),
+    new Map(normalizedPages.map((page) => [page.path, page])).values(),
   ).sort((first, second) => first.path.localeCompare(second.path))
 
-  return uniquePages.flatMap(({ path, priority }) =>
+  const entries = uniquePages.flatMap(({ path, priority }) =>
     LOCALES.filter((locale) => path !== '/countries/saudi-arabia' || locale === 'ar').map((locale) => ({
       url: `${BASE_URL}/${locale}${path}`,
-      changeFrequency: path === '' || path === '/blog' ? 'weekly' : 'monthly',
+      changeFrequency: path === '' || path === '/blog' ? 'weekly' as const : 'monthly' as const,
       priority,
       alternates: {
         languages: path === '/countries/saudi-arabia'
@@ -75,5 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           : getHreflangUrls(path),
       },
     })),
-  )
+  );
+
+  return Array.from(new Map(entries.map((entry) => [entry.url, entry])).values());
 }

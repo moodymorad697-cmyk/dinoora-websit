@@ -1,33 +1,40 @@
-"use client";
-
-import { useParams } from "next/navigation";
-import { useLocale } from "next-intl";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { ArrowRight, BookOpen, Clock, User, Share2 } from "lucide-react";
 import Link from "next/link";
 import { blogArticles } from "@/lib/blog-content";
 import { BASE_URL } from "@/lib/seo-config";
 
-export default function BlogPostPage() {
-  const params = useParams();
-  const locale = useLocale();
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; id: string }>;
+}): Promise<Metadata> {
+  const { locale, id } = await params;
+  const article = blogArticles.find((entry) => entry.id === id);
+
+  if (!article) {
+    return {
+      title: locale === "ar" ? "المقال غير موجود" : "Article not found",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const content = locale === "ar" ? article.ar : article.en;
+  return { title: content.title, description: content.description };
+}
+
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ locale: string; id: string }>;
+}) {
+  const { locale, id } = await params;
   const ar = locale === "ar";
-  const id = params.id as string;
   
   const article = blogArticles.find(a => a.id === id);
-  const content = article ? (ar ? article.ar : article.en) : null;
-
-  if (!article || !content) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-950">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">{ar ? "المقال غير موجود" : "Article not found"}</h1>
-          <Link href={`/${locale}/blog`} className="text-cyan-400 hover:underline">
-            {ar ? "العودة إلى المدونة" : "Back to Blog"}
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  if (!article) notFound();
+  const content = ar ? article.ar : article.en;
 
   const articleUrl = `${BASE_URL}/${locale}/blog/${id}`;
   const imageUrl = `${BASE_URL}${article.image}`;

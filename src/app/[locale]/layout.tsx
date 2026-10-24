@@ -41,8 +41,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   
-  // Default metadata for homepage (path is empty)
-  const seoMetadata = generateSEOMetadata('', locale);
+  const requestHeaders = await headers();
+  const currentPath = requestHeaders.get('x-pathname') || `/${locale}`;
+  const pathWithoutLocale = currentPath
+    .replace(new RegExp(`^/${locale}(?=/|$)`), '')
+    .replace(/\/+$/, '');
+  const seoMetadata = generateSEOMetadata(pathWithoutLocale, locale);
   
   // Arabic SEO metadata for homepage
   if (locale === 'ar') {
