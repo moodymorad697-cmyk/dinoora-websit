@@ -370,7 +370,7 @@ export default async function LocaleLayout({
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
         {/* Apple Touch Icon */}
-        <link rel="apple-touch-icon" href="/icon-192.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className={`${inter.variable} ${cairo.variable} ${locale === 'ar' ? 'font-[family-name:var(--font-cairo)]' : 'font-[family-name:var(--font-inter)]'}`}>
         <StructuredData locale={locale} />
