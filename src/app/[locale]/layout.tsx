@@ -47,14 +47,37 @@ export async function generateMetadata({
     .replace(new RegExp(`^/${locale}(?=/|$)`), '')
     .replace(/\/+$/, '');
   const seoMetadata = generateSEOMetadata(pathWithoutLocale, locale);
+  const icons = {
+    icon: [
+      { url: '/dinoora-favicon.png', type: 'image/png', sizes: '512x512' },
+      { url: '/favicon-48x48.png', type: 'image/png', sizes: '48x48' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
+    apple: '/apple-touch-icon.png',
+  };
+
+  if (pathWithoutLocale !== '') {
+    return {
+      metadataBase: new URL(BASE_URL),
+      title: locale === 'ar' ? 'دينورا للتجارة الدولية' : 'Dinoora International Trade',
+      description: locale === 'ar'
+        ? 'خدمات توريد وفحص وشحن من الصين إلى الأسواق العربية.'
+        : 'Sourcing, inspection, and shipping services from China to Arab markets.',
+      alternates: seoMetadata.alternates,
+      icons,
+    };
+  }
   
   // Arabic SEO metadata for homepage
   if (locale === 'ar') {
     return omitKeywords({
       metadataBase: new URL(BASE_URL),
       title: "استيراد من الصين للسعودية والدول العربية | دينورا - شركة استيراد موثوقة - توريد، فحص جودة، شحن، تخليص جمركي",
-      description: "استورد من الصين بأسعار تنافسية وخدمات متكاملة مع دينورا. توريد من المصانع، فحص جودة، شحن بحري وجوي، تخليص جمركي للسعودية والإمارات والكويت وقطر والبحرين وعمان. احصل على استشارة مجانية الآن!",
+      description: "توريد وفحص جودة وشحن من الصين إلى الخليج والعراق واليمن والسودان وليبيا. أرسل المنتج والكمية والوجهة لتحصل على خطوات واضحة وعرض مناسب من دينورا.",
       alternates: seoMetadata.alternates,
+      icons,
       keywords: [
         "أفضل شركة استيراد من الصين للسعودية", "شركة توريد وشحن من الصين", "استيراد من الصين", "شحن بضائع من الصين", "خدمات تخليص جمركي", "فحص جودة البضائع", "تخزين بضائع في الصين", "شركة لوجستيات صينية", "استيراد للسعودية", "تجارة مع الصين", "دينورا للتجارة الدولية",
         "استيراد من الصين للسعودية", "استيراد من الصين للإمارات", "استيراد من الصين للكويت", "استيراد من الصين لقطر", "استيراد من الصين للبحرين", "استيراد من الصين لعمان", "استيراد من الصين للأردن", "استيراد من الصين للعراق", "استيراد من الصين للمغرب", "استيراد من الصين للجزائر", "استيراد من الصين لتونس", "استيراد من الصين لمصر", "استيراد من الصين للسودان", "استيراد من الصين لليمن", "استيراد من الصين لليبيا", "استيراد من الصين للبنان",
@@ -205,8 +228,9 @@ export async function generateMetadata({
   return omitKeywords({
     metadataBase: new URL(BASE_URL),
     title: "Import from China to Saudi Arabia & Arab Countries | Dinoora - Trusted Import Company - Sourcing, Quality Inspection, Shipping, Customs Clearance",
-    description: "Import from China at competitive prices with comprehensive services from Dinoora. Factory sourcing, quality inspection, sea and air freight, customs clearance for Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, and Oman. Get a free consultation now!",
+    description: "Source, inspect, and ship from China to the Gulf, Iraq, Yemen, Sudan, and Libya. Share your product, quantity, and destination for clear next steps and a tailored quote from Dinoora.",
     alternates: seoMetadata.alternates,
+    icons,
     keywords: [
       "best import company from China to Saudi Arabia", "sourcing and shipping from China", "import from China", "shipping goods from China", "customs clearance services", "goods quality inspection", "warehousing in China", "Chinese logistics company", "import to Saudi Arabia", "trade with China", "Dinoora International Trade", "دينورا للتجارة الدولية",
       "import from China to Saudi Arabia", "import from China to UAE", "import from China to Kuwait", "import from China to Qatar", "import from China to Bahrain", "import from China to Oman", "import from China to Jordan", "import from China to Iraq", "import from China to Morocco", "import from China to Algeria", "import from China to Tunisia", "import from China to Egypt", "import from China to Sudan", "import from China to Yemen", "import from China to Libya", "import from China to Lebanon",

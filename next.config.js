@@ -1,6 +1,38 @@
 const createNextIntlPlugin = require('next-intl/plugin');
 
 const withNextIntl = createNextIntlPlugin();
+const destinationCountries = ['bahrain', 'kuwait', 'oman', 'qatar', 'saudi-arabia', 'uae'];
+const countryDestinationRedirects = ['ar', 'en'].flatMap((locale) =>
+  destinationCountries.map((country) => ({
+    source: `/${locale}/destinations/${country}`,
+    destination: country === 'saudi-arabia'
+      ? '/ar/countries/saudi-arabia'
+      : `/${locale}/countries/${country}`,
+    permanent: true,
+  })),
+);
+const legacyPageRedirects = [
+  { source: '/comparison', destination: '/ar/comparison/china-vs-sourcing', permanent: true },
+  { source: '/guide', destination: '/ar/guide/how-to-import-from-china', permanent: true },
+  { source: '/blog/quality', destination: '/ar/blog/quality-inspection', permanent: true },
+  ...['ar', 'en'].flatMap((locale) => [
+    {
+      source: `/${locale}/comparison`,
+      destination: `/${locale}/comparison/china-vs-sourcing`,
+      permanent: true,
+    },
+    {
+      source: `/${locale}/guide`,
+      destination: `/${locale}/guide/how-to-import-from-china`,
+      permanent: true,
+    },
+    {
+      source: `/${locale}/blog/quality`,
+      destination: `/${locale}/blog/quality-inspection`,
+      permanent: true,
+    },
+  ]),
+];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -24,6 +56,9 @@ const nextConfig = {
   generateEtags: true,
   httpAgentOptions: {
     keepAlive: true,
+  },
+  async redirects() {
+    return [...countryDestinationRedirects, ...legacyPageRedirects];
   },
   async headers() {
     return [

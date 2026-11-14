@@ -1,3 +1,5 @@
+import { regionalBlogArticles } from "./regional-blog-articles";
+
 export interface BlogArticle {
   id: string;
   type: string;
@@ -14,7 +16,7 @@ export interface BlogArticle {
   };
 }
 
-export const blogArticles: BlogArticle[] = [
+const coreBlogArticles: BlogArticle[] = [
   {
     id: "sourcing-1",
     type: "sourcing",
@@ -2879,4 +2881,9 @@ Logistics services include all operations related to moving goods from the facto
 Dinoora offers integrated logistics services from China, with a team of experts and comprehensive supply chain management.`,
     },
   },
+];
+
+export const blogArticles: BlogArticle[] = [
+  ...coreBlogArticles,
+  ...regionalBlogArticles,
 ];

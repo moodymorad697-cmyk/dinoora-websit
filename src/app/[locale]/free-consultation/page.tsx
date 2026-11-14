@@ -18,6 +18,8 @@ export default function FreeConsultationPage() {
     message: ""
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const content = ar ? {
     title: "استشارة مجانية لاستيراد من الصين",
@@ -93,10 +95,38 @@ export default function FreeConsultationPage() {
     ]
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    // In production, this would send data to your backend
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    const message = [
+      ar ? "طلب استشارة مجانية جديد" : "New free consultation request",
+      `${content.nameLabel}: ${formData.name}`,
+      `${content.emailLabel}: ${formData.email}`,
+      `${content.phoneLabel}: ${formData.phone}`,
+      `${content.companyLabel}: ${formData.company || "-"}`,
+      `${content.productLabel}: ${formData.product}`,
+      `${content.quantityLabel}: ${formData.quantity || "-"}`,
+      `${content.messageLabel}: ${formData.message || "-"}`,
+    ].join("\n");
+
+    try {
+      const response = await fetch("/api/send-telegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+      setSubmitted(true);
+    } catch {
+      setSubmitError(ar
+        ? "تعذر إرسال الطلب الآن. يرجى المحاولة مرة أخرى أو التواصل عبر واتساب."
+        : "We couldn't send your request. Please try again or contact us on WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -257,11 +287,15 @@ export default function FreeConsultationPage() {
                   />
                 </div>
 
+                {submitError && <p role="alert" className="text-sm text-red-400">{submitError}</p>}
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
                 >
-                  {content.submitBtn}
+                  {isSubmitting
+                    ? ar ? "جارٍ الإرسال..." : "Sending..."
+                    : content.submitBtn}
                   <Calendar className="h-5 w-5" />
                 </button>
               </form>

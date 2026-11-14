@@ -8,11 +8,6 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { message } = body;
 
-    console.log('Telegram API called');
-    console.log('Bot Token exists:', !!TELEGRAM_BOT_TOKEN);
-    console.log('Chat ID exists:', !!TELEGRAM_CHAT_ID);
-    console.log('Message length:', message?.length);
-
     if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
       console.error('Missing Telegram configuration');
       return NextResponse.json(
@@ -23,8 +18,6 @@ export async function POST(request: Request) {
 
     const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
-    console.log('Sending to Telegram URL:', telegramUrl.replace(TELEGRAM_BOT_TOKEN, '***'));
-
     const response = await fetch(telegramUrl, {
       method: 'POST',
       headers: {
@@ -33,13 +26,10 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         chat_id: TELEGRAM_CHAT_ID,
         text: message,
-        parse_mode: 'Markdown',
       }),
     });
 
     const responseData = await response.json();
-    console.log('Telegram response:', responseData);
-
     if (!response.ok) {
       return NextResponse.json(
         { error: 'Failed to send Telegram message', details: responseData },

@@ -10,11 +10,13 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
   const sections = arabic ? [
     ["البيانات التي نجمعها", "نجمع بيانات التواصل ومعلومات الطلب التي ترسلها طوعاً حتى نتمكن من إعداد عرض مناسب والتواصل معك."],
     ["استخدام البيانات", "نستخدم البيانات للرد على الاستفسارات، تنفيذ الخدمات، تحسين تجربة الموقع، ومنع إساءة الاستخدام."],
+    ["مشاركة البيانات", "تُرسل تفاصيل الطلبات عبر النماذج إلى Telegram لتصل إلى فريقنا ويتمكن من الرد. قد يعالج مزود الخدمة البيانات خارج بلدك. لا ترسل بيانات دفع أو معلومات حساسة عبر النماذج."],
     ["حماية البيانات", "نطبق ضوابط وصول وإجراءات تشغيلية مناسبة لحماية البيانات من الوصول أو الاستخدام غير المصرح به."],
     ["حقوقك", "يمكنك طلب معرفة بياناتك أو تصحيحها أو حذفها عبر التواصل معنا من خلال صفحة التواصل."],
   ] : [
     ["Information we collect", "We collect contact details and request information that you voluntarily submit so we can prepare a suitable proposal and contact you."],
     ["How we use information", "We use information to answer enquiries, deliver services, improve the website, and prevent misuse."],
+    ["Service providers", "Form submissions are sent to Telegram so our team can respond. The provider may process data outside your country. Do not submit payment credentials or other sensitive information through the forms."],
     ["Data protection", "We use appropriate access controls and operational safeguards to protect information from unauthorized access or use."],
     ["Your rights", "You may ask to access, correct, or delete your information by contacting us through the contact page."],
   ];

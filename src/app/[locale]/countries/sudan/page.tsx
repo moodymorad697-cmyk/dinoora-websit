@@ -12,7 +12,7 @@ export default function SudanPage() {
 
   const content = ar ? {
     title: "خدمات استيراد وشحن البضائع من الصين إلى السودان",
-    intro: "دينورا هي شركة عربية متخصصة في خدمات الاستيراد والشحن من الصين إلى السودان. نفهم تحديات السوق السوداني وخصوصيته. بعكس شركات الشحن الصينية العامة التي تقدم محتوى مترجم آلياً لكل دول العالم بنفس القالب، نحن نقدم حلولاً مخصصة تفهم الواقع المحلي السوداني.\n\nنقدم خدماتنا من الصين إلى السودان عبر ميناء بورتسودان وميناء الخرطوم. خدماتنا تشمل البحث عن الموردين، التفاوض مع الموردين، فحص الجودة قبل الشحن، التخزين في الصين، تجميع الشحنات، وتنسيق الشحن البحري والجوي. نتعامل مع جميع أنواع البضائع: الإلكترونيات، المنسوجات، المواد الغذائية، الأدوية، والمعدات الصناعية.\n\nتتميز دينورا بفهم للواقع السوداني. فريقنا يتحدث العربية بطلاقة ويفهم الثقافة المحلية، مما يجعل التواصل سهلاً وفعالاً. نقدم دعماً من البحث عن المنتج في الصين حتى وصول الشحنة، مع متابعة مستمرة وتحديثات واضحة في كل مرحلة.",
+    intro: "دينورا تنسق خدمات الاستيراد والشحن من الصين إلى السودان، من البحث عن المورد وفحص البضاعة إلى ترتيب الشحن. نبدأ بتحديد المنتج والكمية والمدينة النهائية، ثم نراجع خيارات النقل والتكلفة المتاحة للشحنة.\n\nيصل الشحن البحري إلى بورتسودان، ثم يحتاج التوصيل إلى الخرطوم أو المدن الأخرى إلى ترتيب نقل داخلي منفصل. تختلف المواعيد وتوفر المسارات، لذلك نؤكد الخيار الحالي مع الناقل قبل اعتماد الحجز.\n\nلإعداد عرض أدق، نحتاج وصف المنتج ورمز HS إن توفر والوزن والأبعاد والمدينة النهائية. تُراجع متطلبات الاستيراد والمستندات لكل صنف مع مخلّص محلي قبل الشحن.",
     whyTitle: "لماذا تختار دينورا للسودان؟",
     whyPoints: [
       "فريق عربي يتحدث لغتك: فريقنا يتحدث العربية بطلاقة ويفهم ثقافتك، بدون حواجز لغوية.",
@@ -20,7 +20,7 @@ export default function SudanPage() {
       "فحص وتوثيق قبل الشحن: نفحص البضائع قبل الشحن ونوثق حالتها."
     ],
     services: [
-      { icon: Ship, title: "الشحن البحري عبر بورتسودان والخرطوم", desc: "ننسق شحن البضائع من الصين إلى موانئ بورتسودان والخرطوم" },
+      { icon: Ship, title: "الشحن البحري إلى بورتسودان", desc: "نراجع خيارات الوصول البحري ثم نرتب النقل الداخلي إلى مدينة التسليم" },
       { icon: Plane, title: "الشحن الجوي السريع", desc: "ننسق الشحن الجوي من الصين للسودان للبضائع العاجلة" },
       { icon: Warehouse, title: "التخزين في الصين", desc: "نخزن بضائعك في الصين لحين جاهزية الشحن مع تجميع الشحنات" },
       { icon: Package, title: "البحث عن الموردين", desc: "نبحث لك عن المورد المناسب في الصين" },
@@ -30,7 +30,7 @@ export default function SudanPage() {
     cta: "اطلب عرض تجارة وشحن"
   } : {
     title: "Import and Shipping Services from China to Sudan",
-    intro: "Dinoora is an Arab company specializing in import and shipping services from China to Sudan. We understand the challenges and uniqueness of the Sudanese market. Unlike general Chinese shipping companies that offer auto-translated content for every country in the world using the same template, we provide customized solutions that understand the Sudanese local reality.\n\nWe offer our services from China to Sudan via Port Sudan and Khartoum Port. Our services include searching for suppliers, negotiating with suppliers, pre-shipment quality inspection, storage in China, shipment consolidation, and coordinating sea and air shipping. We handle all types of goods: electronics, textiles, food products, medicines, and industrial equipment.\n\nDinoora stands out with understanding of the Sudanese reality. Our team speaks Arabic fluently and understands the local culture, making communication easy and effective. We provide support from searching for the product in China until shipment arrival, with continuous follow-up and clear updates at every stage.",
+    intro: "Dinoora coordinates import and shipping from China to Sudan, from supplier search and inspection to freight planning. We start with the product, quantity, and final city, then review the available transport options and costs for the specific shipment.\n\nSea freight arrives through Port Sudan. Delivery to Khartoum or another city requires a separate inland transport arrangement. Schedules and route availability vary, so we confirm the current option with the carrier before booking.\n\nFor a useful quote, provide the product description, HS code if available, weight, dimensions, and final city. Confirm product-specific import requirements and documents with a local customs broker before dispatch.",
     whyTitle: "Why Choose Dinoora for Sudan?",
     whyPoints: [
       "Arabic-speaking team: Our team speaks Arabic fluently and understands your culture, without language barriers.",
@@ -38,7 +38,7 @@ export default function SudanPage() {
       "Inspection and documentation before shipment: We inspect goods before shipment and document their condition."
     ],
     services: [
-      { icon: Ship, title: "Sea Shipping via Port Sudan and Khartoum", desc: "We coordinate shipping goods from China to Port Sudan and Khartoum ports" },
+      { icon: Ship, title: "Sea Freight to Port Sudan", desc: "We review sea arrival options and arrange inland transport to the delivery city" },
       { icon: Plane, title: "Fast Air Shipping", desc: "We coordinate air shipping from China to Sudan for urgent goods" },
       { icon: Warehouse, title: "Storage in China", desc: "We store your goods in China until ready for shipment with consolidation" },
       { icon: Package, title: "Supplier Search", desc: "We search for the right supplier in China for you" },

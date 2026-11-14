@@ -14,7 +14,7 @@ export async function generateMetadata({
   if (locale === 'ar') {
     return {
       title: "الشحن والاستيراد من الصين إلى السودان | دينورا",
-      description: "دينورا تقدم خدمات استيراد وشحن من الصين إلى السودان عبر بورتسودان والخرطوم. تشمل خدماتنا التوريد، فحص الجودة، التخزين، التخليص الجمركي، والشحن البحري والجوي.",
+      description: "دينورا تنسق الاستيراد من الصين إلى السودان عبر بورتسودان مع خيارات نقل داخلي إلى مدينة التسليم، إضافة إلى التوريد وفحص الجودة وتجميع الشحنات.",
       ...seoMetadata,
       keywords: undefined,
     };
@@ -23,7 +23,7 @@ export async function generateMetadata({
   // English SEO metadata for Sudan
   return {
     title: "Shipping and Import from China to Sudan | Dinoora",
-    description: "Dinoora offers import and shipping services from China to Sudan via Port Sudan and Khartoum. Our services include sourcing, quality inspection, warehousing, customs clearance, and sea and air shipping.",
+    description: "Dinoora coordinates imports from China to Sudan through Port Sudan, with inland transport options to the destination city, plus sourcing, inspection, and shipment consolidation.",
     ...seoMetadata,
     keywords: undefined,
   };
